@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{background:#111827}
+    @keyframes reisFadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+    @keyframes reisPop{from{opacity:0;transform:scale(.96)}to{opacity:1;transform:none}}
+  </style>
+</helmet>
+<div style="--surface-primary:#1f2937;--surface-secondary:#111827;--surface-tertiary:#0f172a;--surface-muted:#374151;--content-primary:#f3f4f6;--content-secondary:#d1d5db;--content-muted:#9ca3af;--color-primary:#79be15;--color-primary-hover:#6aab12;--brand-accent:#8DC843;--font-sans:'DM Sans',system-ui,sans-serif;--font-ui:'Inter',system-ui,sans-serif;min-height:100vh;background:var(--surface-secondary);font-family:var(--font-sans);color:var(--content-primary);-webkit-font-smoothing:antialiased;padding:20px 18px 56px;display:flex;justify-content:center">
+  <div style="width:100%;max-width:520px">
+
+    <!-- HEADER -->
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:40px">
+      <div style="display:flex;align-items:center;gap:11px">
+        <svg viewBox="0 0 128 128" width="44" height="44" style="display:block">
+          <rect width="128" height="128" rx="28" fill="#0f172a"></rect>
+          <g transform="translate(7,0)">
+            <path d="M38 88V86h4V42h-4V40h24c12 0 20 8 20 18s-7 17-17 18l18 12H69L55 76H54v10h4v2H38z M54 66h10c6 0 10-4 10-10s-4-8-10-8H54v18z" fill="#f3f4f6" fill-rule="evenodd"></path>
+            <circle cx="32" cy="96" r="16" fill="#79be15" stroke="#0f172a" stroke-width="4"></circle>
+          </g>
+        </svg>
+        <div style="font-weight:800;font-size:24px;letter-spacing:-0.01em;color:var(--content-primary)">reIS</div>
+      </div>
+      <button onClick="{{ toggleLang }}" style="{{ langToggleStyle }}">{{ langToggleLabel }}</button>
+    </div>
+
+    <!-- HERO -->
+    <div style="margin-bottom:36px">
+      <h1 style="margin:0 0 12px;font-weight:800;font-size:34px;line-height:1.08;letter-spacing:-0.02em;color:var(--content-primary);text-wrap:balance">{{ t.heroTitle }}</h1>
+      <p style="margin:0;font-family:var(--font-ui);font-size:16px;line-height:1.5;color:var(--content-secondary);max-width:38ch;text-wrap:pretty">{{ t.heroSub }}</p>
+    </div>
+
+    <!-- STEP 1: DEVICE -->
+    <div style="margin-bottom:14px;display:flex;align-items:center;gap:10px">
+      <div style="display:flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:9999px;background:rgba(121,190,21,.14);color:var(--color-primary);font-weight:700;font-size:13px;font-family:var(--font-ui)">1</div>
+      <div style="font-weight:600;font-size:15px;color:var(--content-secondary);font-family:var(--font-ui)">{{ t.s1 }}</div>
+    </div>
+
+    <!-- DESKTOP -->
+    <div style="{{ wrapDesktop }}">
+      <button onClick="{{ onDesktop }}" style="{{ cardBtnStyle }}">
+        <div style="{{ iconTileStyle }}">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"></rect><line x1="8" x2="16" y1="21" y2="21"></line><line x1="12" x2="12" y1="17" y2="21"></line></svg>
+        </div>
+        <div style="flex:1;text-align:left">
+          <div style="font-weight:700;font-size:17px;color:var(--content-primary)">{{ t.dev_desktop }}</div>
+          <div style="font-family:var(--font-ui);font-size:13px;color:var(--content-muted);margin-top:2px">{{ t.hint_desktop }}</div>
+        </div>
+        <div style="{{ chevDesktop }}">{{ chevGlyphDesktop }}</div>
+      </button>
+    </div>
+
+    <!-- TABLET -->
+    <div style="{{ wrapTablet }}">
+      <button onClick="{{ onTablet }}" style="{{ cardBtnStyle }}">
+        <div style="{{ iconTileStyle }}">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="20" x="4" y="2" rx="2"></rect><line x1="12" x2="12.01" y1="18" y2="18"></line></svg>
+        </div>
+        <div style="flex:1;text-align:left">
+          <div style="font-weight:700;font-size:17px;color:var(--content-primary)">{{ t.dev_tablet }}</div>
+          <div style="font-family:var(--font-ui);font-size:13px;color:var(--content-muted);margin-top:2px">{{ t.hint_tablet }}</div>
+        </div>
+        <div style="{{ chevTablet }}">{{ chevGlyphTablet }}</div>
+      </button>
+    </div>
+
+    <!-- PHONE -->
+    <div style="{{ wrapPhone }}">
+      <button onClick="{{ onPhone }}" style="{{ cardBtnStyle }}">
+        <div style="{{ iconTileStyle }}">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2"></rect><line x1="12" x2="12.01" y1="18" y2="18"></line></svg>
+        </div>
+        <div style="flex:1;text-align:left">
+          <div style="font-weight:700;font-size:17px;color:var(--content-primary)">{{ t.dev_phone }}</div>
+          <div style="font-family:var(--font-ui);font-size:13px;color:var(--content-muted);margin-top:2px">{{ t.hint_phone }}</div>
+        </div>
+        <div style="{{ chevPhone }}">{{ chevGlyphPhone }}</div>
+      </button>
+    </div>
+
+    <!-- STEP 2: BROWSER -->
+    <sc-if value="{{ deviceChosen }}" hint-placeholder-val="{{ false }}">
+      <div style="margin-top:30px;animation:reisFadeUp .34s ease both">
+        <div style="margin-bottom:14px;display:flex;align-items:center;gap:10px">
+          <div style="display:flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:9999px;background:rgba(121,190,21,.14);color:var(--color-primary);font-weight:700;font-size:13px;font-family:var(--font-ui)">2</div>
+          <div style="font-weight:600;font-size:15px;color:var(--content-secondary);font-family:var(--font-ui)">{{ t.s2 }}</div>
+        </div>
+
+        <sc-if value="{{ showChrome }}" hint-placeholder-val="{{ false }}">
+          <div style="{{ wrapChrome }}">
+            <button onClick="{{ onChrome }}" style="{{ cardBtnStyle }}">
+              <div style="{{ logoTileStyle }}">
+                <img src="https://cdn.jsdelivr.net/npm/@browser-logos/chrome/chrome.svg" width="30" height="30" style="display:block">
+              </div>
+              <div style="flex:1;text-align:left"><div style="font-weight:700;font-size:17px;color:var(--content-primary)">Chrome</div></div>
+              <div style="{{ chevChrome }}">{{ chevGlyphChrome }}</div>
+            </button>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ showSafari }}" hint-placeholder-val="{{ false }}">
+          <div style="{{ wrapSafari }}">
+            <button onClick="{{ onSafari }}" style="{{ cardBtnStyle }}">
+              <div style="{{ logoTileStyle }}">
+                <img src="https://cdn.jsdelivr.net/npm/@browser-logos/safari/safari.svg" width="30" height="30" style="display:block">
+              </div>
+              <div style="flex:1;text-align:left"><div style="font-weight:700;font-size:17px;color:var(--content-primary)">Safari</div></div>
+              <div style="{{ chevSafari }}">{{ chevGlyphSafari }}</div>
+            </button>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ showFirefox }}" hint-placeholder-val="{{ false }}">
+          <div style="{{ wrapFirefox }}">
+            <button onClick="{{ onFirefox }}" style="{{ cardBtnStyle }}">
+              <div style="{{ logoTileStyle }}">
+                <img src="https://cdn.jsdelivr.net/npm/@browser-logos/firefox/firefox.svg" width="30" height="30" style="display:block">
+              </div>
+              <div style="flex:1;text-align:left"><div style="font-weight:700;font-size:17px;color:var(--content-primary)">Firefox</div></div>
+              <div style="{{ chevFirefox }}">{{ chevGlyphFirefox }}</div>
+            </button>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ showEdge }}" hint-placeholder-val="{{ false }}">
+          <div style="{{ wrapEdge }}">
+            <button onClick="{{ onEdge }}" style="{{ cardBtnStyle }}">
+              <div style="{{ logoTileStyle }}">
+                <img src="https://cdn.jsdelivr.net/npm/@browser-logos/edge/edge.svg" width="30" height="30" style="display:block">
+              </div>
+              <div style="flex:1;text-align:left"><div style="font-weight:700;font-size:17px;color:var(--content-primary)">Edge</div></div>
+              <div style="{{ chevEdge }}">{{ chevGlyphEdge }}</div>
+            </button>
+          </div>
+        </sc-if>
+      </div>
+    </sc-if>
+
+    <!-- STEP 3: TUTORIAL -->
+    <sc-if value="{{ browserChosen }}" hint-placeholder-val="{{ false }}">
+      <div style="margin-top:30px;animation:reisFadeUp .34s ease both">
+        <div style="margin-bottom:16px;display:flex;align-items:center;gap:10px">
+          <div style="display:flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:9999px;background:rgba(121,190,21,.14);color:var(--color-primary);font-weight:700;font-size:13px;font-family:var(--font-ui)">3</div>
+          <div style="font-weight:600;font-size:15px;color:var(--content-secondary);font-family:var(--font-ui)">{{ tut.title }}</div>
+        </div>
+
+        <!-- store CTA -->
+        <sc-if value="{{ hasStore }}" hint-placeholder-val="{{ false }}">
+          <a href="{{ storeUrl }}" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:9px;width:100%;padding:14px;margin-bottom:8px;background:var(--surface-primary);color:var(--content-primary);font-family:var(--font-sans);font-weight:600;font-size:15px;text-decoration:none;border-radius:12px;border:1px solid rgba(121,190,21,.45);transition:background .15s ease,border-color .15s ease" style-hover="background:rgba(121,190,21,.1);border-color:var(--color-primary)" style-active="transform:scale(.99)">
+            <span>{{ tut.cta }}</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
+          </a>
+        </sc-if>
+        <sc-if value="{{ noStore }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:16px;margin-bottom:8px;background:var(--surface-primary);color:var(--content-muted);font-weight:600;font-size:15px;border:1px dashed rgba(255,255,255,.16);border-radius:12px">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            <span>{{ tut.cta }}</span>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ hasNote }}" hint-placeholder-val="{{ false }}">
+          <div style="font-family:var(--font-ui);font-size:13px;line-height:1.45;color:var(--content-muted);margin:0 2px 18px;text-wrap:pretty">{{ tut.note }}</div>
+        </sc-if>
+        <sc-if value="{{ noNote }}" hint-placeholder-val="{{ false }}"><div style="height:14px"></div></sc-if>
+
+        <!-- steps -->
+        <sc-for list="{{ tutSteps }}" as="step" hint-placeholder-count="3">
+          <div style="display:flex;gap:14px;margin-bottom:18px">
+            <div style="display:flex;flex-direction:column;align-items:center;flex-shrink:0">
+              <div style="display:flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:9999px;background:var(--surface-primary);border:1px solid rgba(255,255,255,.1);color:var(--content-primary);font-weight:700;font-size:14px;font-family:var(--font-ui)">{{ step.n }}</div>
+              <div style="width:1px;flex:1;background:linear-gradient(to bottom,rgba(255,255,255,.12),transparent);margin-top:4px;min-height:8px"></div>
+            </div>
+            <div style="flex:1;padding-bottom:4px">
+              <div style="font-family:var(--font-ui);font-size:15px;line-height:1.5;color:var(--content-primary);margin-bottom:10px;text-wrap:pretty">{{ step.text }}</div>
+              <div style="position:relative;width:100%;aspect-ratio:16/9;border-radius:12px;border:1px dashed rgba(255,255,255,.16);background:var(--surface-tertiary);display:flex;align-items:center;justify-content:center;overflow:hidden">
+                <div style="display:flex;flex-direction:column;align-items:center;gap:6px;color:var(--content-muted)">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"></rect><circle cx="9" cy="9" r="2"></circle><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></svg>
+                  <span style="font-family:var(--font-ui);font-size:12px;font-weight:500">{{ shotLabel }}</span>
+                </div>
+                <div style="position:absolute;top:10px;right:10px;width:30px;height:30px;border-radius:9999px;border:2px solid var(--color-primary);opacity:.55"></div>
+              </div>
+            </div>
+          </div>
+        </sc-for>
+
+        <!-- done note -->
+        <div style="display:flex;align-items:flex-start;gap:11px;margin-top:6px;padding:15px 16px;background:rgba(121,190,21,.1);border:1px solid rgba(121,190,21,.3);border-radius:12px">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:1px"><path d="M20 6 9 17l-5-5"></path></svg>
+          <div style="font-family:var(--font-ui);font-size:14px;line-height:1.5;color:var(--content-secondary);text-wrap:pretty">{{ t.done }}</div>
+        </div>
+
+        <!-- restart -->
+        <button onClick="{{ restart }}" style="display:flex;align-items:center;gap:7px;margin:22px auto 0;padding:9px 16px;background:transparent;border:none;color:var(--content-muted);font-family:var(--font-ui);font-size:13px;font-weight:500;cursor:pointer;border-radius:9999px;transition:color .15s ease" style-hover="color:var(--content-primary)">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path></svg>
+          <span>{{ t.restart }}</span>
+        </button>
+      </div>
+    </sc-if>
+
+    <!-- FOOTER -->
+    <div style="margin-top:48px;padding-top:24px;border-top:1px solid rgba(255,255,255,.07);text-align:center">
+      <div style="font-family:var(--font-ui);font-weight:600;font-size:13px;color:var(--content-secondary)">{{ t.footer }}</div>
+      <div style="font-family:var(--font-ui);font-size:12px;color:var(--content-muted);margin-top:5px">{{ t.footerSub }}</div>
+    </div>
+
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;: {&quot;width&quot;: 520, &quot;height&quot;: 920}}">
+class Component extends DCLogic {
+  state = { lang: 'cs', device: 'phone', browser: 'firefox' };
+
+  DICT = {
+    cs: {
+      eyebrow: 'reIS · MENDELU',
+      heroTitle: 'Nainstaluj reIS za dvě minuty',
+      heroSub: 'Vyber zařízení a prohlížeč — zbytek tě provedeme krok po kroku.',
+      s1: 'Vyber zařízení, které nejvíce preferuješ',
+      s2: 'Vyber prohlížeč',
+      dev_desktop: 'Počítač',
+      dev_tablet: 'iPad',
+      dev_phone: 'Telefon',
+      hint_desktop: 'Chrome · Safari · Firefox · Edge',
+      hint_tablet: 'Safari',
+      hint_phone: 'Firefox',
+      done: 'A je to! Otevři is.mendelu.cz a reIS naskočí sám.',
+      restart: 'Začít znovu',
+      footer: 'Vytvořeno studenty pro studenty',
+      footerSub: 'reIS · studentská iniciativa PEF MENDELU'
+    },
+    en: {
+      eyebrow: 'reIS · MENDELU',
+      heroTitle: 'Install reIS in two minutes',
+      heroSub: 'Pick your device and browser — we\u2019ll walk you through the rest, step by step.',
+      s1: 'Pick the device you use most',
+      s2: 'Pick your browser',
+      dev_desktop: 'Desktop',
+      dev_tablet: 'iPad',
+      dev_phone: 'Phone',
+      hint_desktop: 'Chrome · Safari · Firefox · Edge',
+      hint_tablet: 'Safari',
+      hint_phone: 'Firefox',
+      done: 'That\u2019s it! Open is.mendelu.cz and reIS loads automatically.',
+      restart: 'Start over',
+      footer: 'Built by students, for students',
+      footerSub: 'reIS · a student initiative at PEF MENDELU'
+    }
+  };
+
+  AVAIL = {
+    desktop: ['chrome', 'safari', 'firefox', 'edge'],
+    tablet: ['safari'],
+    phone: ['firefox']
+  };
+
+  NAMES = { chrome: 'Chrome', safari: 'Safari', firefox: 'Firefox', edge: 'Edge' };
+
+  STORE = {
+    chrome: 'https://chromewebstore.google.com/detail/reis/feildjaginpppijbpplcghalabdeibdb?pli=1',
+    firefox: 'https://addons.mozilla.org/cs/firefox/addon/reis/',
+    edge: 'https://chromewebstore.google.com/detail/reis/feildjaginpppijbpplcghalabdeibdb?pli=1',
+    safari: null
+  };
+
+  TUT = {
+    chrome: {
+      cs: { title: 'Nainstaluj v Chromu', cta: 'Otevřít v Chrome Web Store', note: '', steps: [
+        'Klikni na „Přidat do Chromu“ a potvrď „Přidat rozšíření“.',
+        'Vpravo nahoře klikni na ikonu skládačky a připni si reIS do lišty.',
+        'Otevři is.mendelu.cz — reIS se spustí automaticky.'
+      ]},
+      en: { title: 'Install on Chrome', cta: 'Open in Chrome Web Store', note: '', steps: [
+        'Click “Add to Chrome”, then confirm “Add extension”.',
+        'Top-right, click the puzzle icon and pin reIS to your toolbar.',
+        'Open is.mendelu.cz — reIS starts automatically.'
+      ]}
+    },
+    firefox: {
+      cs: { title: 'Nainstaluj ve Firefoxu', cta: 'Otevřít na Firefox Add-ons', note: '', steps: [
+        'Klikni na „Přidat do Firefoxu“ a potvrď „Přidat“.',
+        'Povol reIS a připni si ho do lišty.',
+        'Otevři is.mendelu.cz a jsi v cíli.'
+      ]},
+      en: { title: 'Install on Firefox', cta: 'Open on Firefox Add-ons', note: '', steps: [
+        'Click “Add to Firefox”, then confirm “Add”.',
+        'Allow reIS and pin it to your toolbar.',
+        'Open is.mendelu.cz and you\u2019re done.'
+      ]}
+    },
+    edge: {
+      cs: { title: 'Nainstaluj v Edge', cta: 'Otevřít v Chrome Web Store', note: 'Edge umí rozšíření z Chrome Web Store — funguje úplně stejně.', steps: [
+        'Když Edge nabídne „Povolit rozšíření z jiných obchodů“, potvrď.',
+        'Klikni na „Získat“ a potvrď „Přidat rozšíření“.',
+        'Otevři is.mendelu.cz — reIS naskočí sám.'
+      ]},
+      en: { title: 'Install on Edge', cta: 'Open in Chrome Web Store', note: 'Edge runs Chrome Web Store extensions — it works exactly the same.', steps: [
+        'When Edge offers “Allow extensions from other stores”, confirm it.',
+        'Click “Get”, then confirm “Add extension”.',
+        'Open is.mendelu.cz — reIS loads automatically.'
+      ]}
+    },
+    safari: {
+      cs: { title: 'Nainstaluj v Safari', cta: 'Brzy v App Store', note: 'Verzi pro Safari dokončujeme — odkaz sem brzy doplníme.', steps: [
+        'Otevři reIS v App Store a nainstaluj ho.',
+        'V Safari → Nastavení → Rozšíření zapni reIS.',
+        'Povol reIS na is.mendelu.cz.'
+      ]},
+      en: { title: 'Install on Safari', cta: 'Coming soon to App Store', note: 'The Safari build is on the way — we\u2019ll drop the link here soon.', steps: [
+        'Open reIS in the App Store and install it.',
+        'In Safari → Settings → Extensions, turn reIS on.',
+        'Allow reIS on is.mendelu.cz.'
+      ]}
+    }
+  };
+
+  setLang(l) { this.setState({ lang: l }); }
+  toggleLang() { this.setLang(this.state.lang === 'cs' ? 'en' : 'cs'); }
+  pickDevice(id) { this.setState({ device: this.state.device === id ? null : id, browser: null }); }
+  pickBrowser(id) { this.setState({ browser: this.state.browser === id ? null : id }); }
+  restart() { this.setState({ device: null, browser: null }); }
+
+  langToggle() {
+    return {
+      border: '1px solid rgba(255,255,255,.13)', cursor: 'pointer', borderRadius: '7px',
+      padding: '5px 12px', fontFamily: 'var(--font-ui)', fontWeight: 600,
+      fontSize: '12px', letterSpacing: '0.06em',
+      background: 'transparent', color: 'var(--content-muted)',
+      transition: 'color .15s ease, border-color .15s ease'
+    };
+  }
+
+  cardBase() {
+    return {
+      display: 'flex', alignItems: 'center', gap: '14px', width: '100%',
+      padding: '15px 16px', background: 'var(--surface-primary)',
+      border: '1px solid rgba(255,255,255,.09)', borderRadius: '16px',
+      cursor: 'pointer', textAlign: 'left', fontFamily: 'var(--font-sans)',
+      boxShadow: '0 1px 3px 0 rgba(0,0,0,.25)',
+      transition: 'border-color .15s ease, box-shadow .15s ease, background .15s ease'
+    };
+  }
+
+  iconTile(sel) {
+    return {
+      display: 'flex', alignItems: 'center', justifyContent: 'center',
+      width: '46px', height: '46px', flexShrink: 0, borderRadius: '12px',
+      background: sel ? 'rgba(121,190,21,.16)' : 'var(--surface-tertiary)',
+      color: sel ? 'var(--color-primary)' : 'var(--content-secondary)',
+      transition: 'all .15s ease'
+    };
+  }
+
+  logoTile() {
+    return {
+      display: 'flex', alignItems: 'center', justifyContent: 'center',
+      width: '46px', height: '46px', flexShrink: 0, borderRadius: '12px',
+      background: 'var(--surface-tertiary)'
+    };
+  }
+
+  // collapse wrapper for a card in a group
+  wrap(id, kind) {
+    const cur = kind === 'device' ? this.state.device : this.state.browser;
+    const chosen = !!cur;
+    const sel = cur === id;
+    const collapsed = chosen && !sel;
+    return {
+      overflow: 'hidden', borderRadius: '16px', marginBottom: collapsed ? '0px' : '11px',
+      maxHeight: collapsed ? '0px' : '120px',
+      opacity: collapsed ? 0 : 1,
+      transform: collapsed ? 'translateY(-10px)' : 'none',
+      pointerEvents: collapsed ? 'none' : 'auto',
+      boxShadow: sel ? '0 0 0 2px var(--color-primary)' : 'none',
+      transition: 'max-height .3s ease, opacity .26s ease, transform .28s ease, margin .28s ease, box-shadow .15s ease'
+    };
+  }
+
+  chev(id, kind) {
+    const cur = kind === 'device' ? this.state.device : this.state.browser;
+    const sel = cur === id;
+    return {
+      display: 'flex', alignItems: 'center', justifyContent: 'center',
+      width: '26px', height: '26px', flexShrink: 0, borderRadius: '9999px',
+      color: sel ? 'var(--color-primary)' : 'var(--content-muted)',
+      fontSize: '18px', fontWeight: 700, fontFamily: 'var(--font-ui)',
+      transition: 'color .15s ease'
+    };
+  }
+
+  renderVals() {
+    const { lang, device, browser } = this.state;
+    const T = this.DICT[lang];
+    const av = this.AVAIL[device] || [];
+    const tut = browser ? this.TUT[browser][lang] : { title: '', cta: '', note: '', steps: [] };
+    const hasStore = !!(browser && this.STORE[browser]);
+    const hasNote = !!(browser && tut.note);
+
+    const chevGlyph = (id, kind) => (kind === 'device' ? device : browser) === id ? '✓' : '›';
+
+    return {
+      t: T,
+      toggleLang: () => this.toggleLang(),
+      langToggleLabel: lang === 'cs' ? 'EN' : 'CZ',
+      langToggleStyle: this.langToggle(),
+
+      cardBtnStyle: this.cardBase(),
+      iconTileStyle: this.iconTile(false),
+      logoTileStyle: this.logoTile(),
+
+      onDesktop: () => this.pickDevice('desktop'),
+      onTablet: () => this.pickDevice('tablet'),
+      onPhone: () => this.pickDevice('phone'),
+      onChrome: () => this.pickBrowser('chrome'),
+      onSafari: () => this.pickBrowser('safari'),
+      onFirefox: () => this.pickBrowser('firefox'),
+      onEdge: () => this.pickBrowser('edge'),
+      restart: () => this.restart(),
+
+      deviceChosen: !!device,
+      browserChosen: !!browser,
+      showChrome: av.includes('chrome'),
+      showSafari: av.includes('safari'),
+      showFirefox: av.includes('firefox'),
+      showEdge: av.includes('edge'),
+
+      wrapDesktop: this.wrap('desktop', 'device'),
+      wrapTablet: this.wrap('tablet', 'device'),
+      wrapPhone: this.wrap('phone', 'device'),
+      wrapChrome: this.wrap('chrome', 'browser'),
+      wrapSafari: this.wrap('safari', 'browser'),
+      wrapFirefox: this.wrap('firefox', 'browser'),
+      wrapEdge: this.wrap('edge', 'browser'),
+
+      chevDesktop: this.chev('desktop', 'device'), chevGlyphDesktop: chevGlyph('desktop', 'device'),
+      chevTablet: this.chev('tablet', 'device'), chevGlyphTablet: chevGlyph('tablet', 'device'),
+      chevPhone: this.chev('phone', 'device'), chevGlyphPhone: chevGlyph('phone', 'device'),
+      chevChrome: this.chev('chrome', 'browser'), chevGlyphChrome: chevGlyph('chrome', 'browser'),
+      chevSafari: this.chev('safari', 'browser'), chevGlyphSafari: chevGlyph('safari', 'browser'),
+      chevFirefox: this.chev('firefox', 'browser'), chevGlyphFirefox: chevGlyph('firefox', 'browser'),
+      chevEdge: this.chev('edge', 'browser'), chevGlyphEdge: chevGlyph('edge', 'browser'),
+
+      tut,
+      tutSteps: tut.steps.map((s, i) => ({ n: String(i + 1), text: s })),
+      shotLabel: lang === 'cs' ? 'Snímek brzy doplníme' : 'Screenshot coming soon',
+      hasStore, noStore: !hasStore,
+      storeUrl: hasStore ? this.STORE[browser] : '#',
+      hasNote, noNote: !hasNote
+    };
+  }
+}
+</script>
+</body>
+</html>
