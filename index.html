@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="cs">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>reIS – Nainstaluj za dvě minuty</title>
+<meta name="description" content="Nainstaluj reIS rozšíření za dvě minuty. Vyber zařízení a prohlížeč — zbytek tě provedeme krok po kroku.">
 <script src="./support.js"></script>
 </head>
 <body>
@@ -51,7 +53,7 @@
     <!-- DESKTOP -->
     <div style="{{ wrapDesktop }}">
       <button onClick="{{ onDesktop }}" style="{{ cardBtnStyle }}">
-        <div style="{{ iconTileStyle }}">
+        <div style="{{ iconTileDesktop }}">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"></rect><line x1="8" x2="16" y1="21" y2="21"></line><line x1="12" x2="12" y1="17" y2="21"></line></svg>
         </div>
         <div style="flex:1;text-align:left">
@@ -65,7 +67,7 @@
     <!-- TABLET -->
     <div style="{{ wrapTablet }}">
       <button onClick="{{ onTablet }}" style="{{ cardBtnStyle }}">
-        <div style="{{ iconTileStyle }}">
+        <div style="{{ iconTileTablet }}">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="20" x="4" y="2" rx="2"></rect><line x1="12" x2="12.01" y1="18" y2="18"></line></svg>
         </div>
         <div style="flex:1;text-align:left">
@@ -79,7 +81,7 @@
     <!-- PHONE -->
     <div style="{{ wrapPhone }}">
       <button onClick="{{ onPhone }}" style="{{ cardBtnStyle }}">
-        <div style="{{ iconTileStyle }}">
+        <div style="{{ iconTilePhone }}">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2"></rect><line x1="12" x2="12.01" y1="18" y2="18"></line></svg>
         </div>
         <div style="flex:1;text-align:left">
@@ -190,6 +192,7 @@
                   <span style="font-family:var(--font-ui);font-size:12px;font-weight:500">{{ shotLabel }}</span>
                 </div>
                 <div style="position:absolute;top:10px;right:10px;width:30px;height:30px;border-radius:9999px;border:2px solid var(--color-primary);opacity:.55"></div>
+                <img src="{{ step.img }}" style="{{ step.imgStyle }}" alt="" loading="lazy">
               </div>
             </div>
           </div>
@@ -220,7 +223,7 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;: {&quot;width&quot;: 520, &quot;height&quot;: 920}}">
 class Component extends DCLogic {
-  state = { lang: 'cs', device: 'phone', browser: 'firefox' };
+  state = { lang: 'cs', device: null, browser: null };
 
   DICT = {
     cs: {
@@ -229,11 +232,11 @@ class Component extends DCLogic {
       s1: 'Vyber zařízení, které nejvíce preferuješ',
       s2: 'Vyber prohlížeč',
       dev_desktop: 'Počítač',
-      dev_tablet: 'iPad',
+      dev_tablet: 'Tablet',
       dev_phone: 'Telefon',
       hint_desktop: 'Chrome · Safari · Firefox · Edge',
-      hint_tablet: 'Safari',
-      hint_phone: 'Firefox',
+      hint_tablet: 'Android · iPad',
+      hint_phone: 'Android · iPhone',
       done: 'A je to! Otevři is.mendelu.cz a reIS naskočí sám.',
       restart: 'Začít znovu',
       footer: 'Vytvořeno studenty pro studenty',
@@ -245,11 +248,11 @@ class Component extends DCLogic {
       s1: 'Pick the device you use most',
       s2: 'Pick your browser',
       dev_desktop: 'Desktop',
-      dev_tablet: 'iPad',
+      dev_tablet: 'Tablet',
       dev_phone: 'Phone',
       hint_desktop: 'Chrome · Safari · Firefox · Edge',
-      hint_tablet: 'Safari',
-      hint_phone: 'Firefox',
+      hint_tablet: 'Android · iPad',
+      hint_phone: 'Android · iPhone',
       done: 'That\u2019s it! Open is.mendelu.cz and reIS loads automatically.',
       restart: 'Start over',
       footer: 'Built by students, for students',
@@ -259,11 +262,18 @@ class Component extends DCLogic {
 
   AVAIL = {
     desktop: ['chrome', 'safari', 'firefox', 'edge'],
-    tablet: ['safari'],
-    phone: ['firefox']
+    tablet: ['firefox', 'safari'],
+    phone: ['firefox', 'safari']
   };
 
   NAMES = { chrome: 'Chrome', safari: 'Safari', firefox: 'Firefox', edge: 'Edge' };
+
+  IMGS = {
+    chrome:  ['screenshots/chrome-1.png',  '', 'screenshots/chrome-3.png'],
+    firefox: ['screenshots/firefox-1.png', '', 'screenshots/firefox-3.png'],
+    edge:    ['screenshots/edge-1.png',    '', 'screenshots/edge-3.png'],
+    safari:  []
+  };
 
   STORE = {
     chrome: 'https://chromewebstore.google.com/detail/reis/feildjaginpppijbpplcghalabdeibdb?pli=1',
@@ -414,7 +424,9 @@ class Component extends DCLogic {
       langToggleStyle: this.langToggle(),
 
       cardBtnStyle: this.cardBase(),
-      iconTileStyle: this.iconTile(false),
+      iconTileDesktop: this.iconTile(device === 'desktop'),
+      iconTileTablet: this.iconTile(device === 'tablet'),
+      iconTilePhone: this.iconTile(device === 'phone'),
       logoTileStyle: this.logoTile(),
 
       onDesktop: () => this.pickDevice('desktop'),
@@ -450,7 +462,11 @@ class Component extends DCLogic {
       chevEdge: this.chev('edge', 'browser'), chevGlyphEdge: chevGlyph('edge', 'browser'),
 
       tut,
-      tutSteps: tut.steps.map((s, i) => ({ n: String(i + 1), text: s })),
+      tutSteps: tut.steps.map((s, i) => {
+        const img = (this.IMGS[browser] || [])[i] || '';
+        const imgStyle = img ? 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:12px' : 'display:none';
+        return { n: String(i + 1), text: s, img, imgStyle };
+      }),
       shotLabel: lang === 'cs' ? 'Snímek brzy doplníme' : 'Screenshot coming soon',
       hasStore, noStore: !hasStore,
       storeUrl: hasStore ? this.STORE[browser] : '#',
