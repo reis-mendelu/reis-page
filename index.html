@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>reIS – Nainstaluj za dvě minuty</title>
 <meta name="description" content="Nainstaluj reIS rozšíření za dvě minuty. Vyber zařízení a prohlížeč — zbytek tě provedeme krok po kroku.">
+<link rel="icon" type="image/svg+xml" href="./favicon.svg">
 <script src="./support.js"></script>
 </head>
 <body>
@@ -19,10 +20,15 @@
     body{background:#111827}
     @keyframes reisFadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
     @keyframes reisPop{from{opacity:0;transform:scale(.96)}to{opacity:1;transform:none}}
+    /* Mobile-first column stays 520px; widen on larger screens so the
+       sections and screenshots aren't tiny on a laptop. Stylesheet
+       !important is required to override the element's inline max-width. */
+    @media (min-width:820px){ .reis-col{ max-width:720px !important; } }
+    @media (min-width:1200px){ .reis-col{ max-width:820px !important; } }
   </style>
 </helmet>
 <div style="--surface-primary:#1f2937;--surface-secondary:#111827;--surface-tertiary:#0f172a;--surface-muted:#374151;--content-primary:#f3f4f6;--content-secondary:#d1d5db;--content-muted:#9ca3af;--color-primary:#79be15;--color-primary-hover:#6aab12;--brand-accent:#8DC843;--font-sans:'DM Sans',system-ui,sans-serif;--font-ui:'Inter',system-ui,sans-serif;min-height:100vh;background:var(--surface-secondary);font-family:var(--font-sans);color:var(--content-primary);-webkit-font-smoothing:antialiased;padding:20px 18px 56px;display:flex;justify-content:center">
-  <div style="width:100%;max-width:520px">
+  <div class="reis-col" style="width:100%;max-width:520px">
 
     <!-- HEADER -->
     <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:40px">
@@ -324,14 +330,14 @@ class Component extends DCLogic {
     },
     edge: {
       cs: { title: 'Nainstaluj v Edge', cta: 'Otevřít v Chrome Web Store', note: 'Edge umí rozšíření z Chrome Web Store — funguje úplně stejně.', steps: [
-        'Když Edge nabídne „Povolit rozšíření z jiných obchodů“, potvrď.',
-        'Klikni na „Získat“ a potvrď „Přidat rozšíření“.',
-        'Otevři is.mendelu.cz — reIS naskočí sám.'
+        'Otevři reIS v Chrome Web Store a klikni na „Přidat do Chromu“.',
+        'Přejdi na is.mendelu.cz a klikni na „Přihlášení do osobní administrativy UIS“.',
+        'A je to — reIS se načte sám a rozvrh se promění.'
       ]},
       en: { title: 'Install on Edge', cta: 'Open in Chrome Web Store', note: 'Edge runs Chrome Web Store extensions — it works exactly the same.', steps: [
-        'When Edge offers “Allow extensions from other stores”, confirm it.',
-        'Click “Get”, then confirm “Add extension”.',
-        'Open is.mendelu.cz — reIS loads automatically.'
+        'Open reIS in the Chrome Web Store and click “Add to Chrome”.',
+        'Go to is.mendelu.cz and click “Log in to the Personal administration of UIS”.',
+        'That’s it — reIS loads itself and your schedule transforms.'
       ]}
     },
     safari: {
