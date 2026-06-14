@@ -230,29 +230,31 @@
 class Component extends DCLogic {
   state = { lang: 'cs', device: null, browser: null, shots: {}, dims: {} };
 
-  // Screenshots follow the convention screenshots/<browser>-<step>.png
-  // (e.g. screenshots/chrome-2.png). On mount we probe which of those files
-  // actually exist and remember them in state.shots; renderVals only emits an
-  // <img> for a step whose file is present, otherwise the "coming soon"
-  // placeholder shows. To add a screenshot: drop a correctly named PNG into
-  // screenshots/ and reload — no code change needed.
+  // Screenshots follow the convention screenshots/<device>-<browser>-<step>.png
+  // (e.g. screenshots/desktop-chrome-2.png, screenshots/phone-firefox-1.png).
+  // On mount we probe which files actually exist; renderVals only emits an <img>
+  // for a step whose file is present. To add a screenshot: drop a correctly
+  // named PNG into screenshots/ and reload — no code change needed.
   componentDidMount() {
     const found = {}, dims = {};
     let pending = 0;
-    Object.keys(this.TUT).forEach((b) => {
-      for (let i = 1; i <= 3; i++) {
-        const path = `screenshots/${b}-${i}.png`;
-        pending++;
-        const probe = new Image();
-        const done = (ok) => {
-          if (ok) { found[path] = true; dims[path] = { w: probe.naturalWidth, h: probe.naturalHeight }; }
-          if (--pending === 0) this.setState({ shots: found, dims });
-        };
-        probe.onload = () => done(true);
-        probe.onerror = () => done(false);
-        probe.src = path;
-      }
+    Object.entries(this.AVAIL).forEach(([device, browsers]) => {
+      browsers.forEach(browser => {
+        for (let i = 1; i <= 3; i++) {
+          const path = `screenshots/${device}-${browser}-${i}.png`;
+          pending++;
+          const probe = new Image();
+          const done = (ok) => {
+            if (ok) { found[path] = true; dims[path] = { w: probe.naturalWidth, h: probe.naturalHeight }; }
+            if (--pending === 0) this.setState({ shots: found, dims });
+          };
+          probe.onload = () => done(true);
+          probe.onerror = () => done(false);
+          probe.src = path;
+        }
+      });
     });
+    if (pending === 0) this.setState({ shots: {} });
   }
 
   DICT = {
@@ -304,7 +306,7 @@ class Component extends DCLogic {
   };
 
   TUT = {
-    chrome: {
+    'desktop-chrome': {
       cs: { title: 'Nainstaluj v Chromu', cta: 'Otevřít v Chrome Web Store', note: '', steps: [
         'Otevři reIS v Chrome Web Store a klikni na „Přidat do Chromu“.',
         'Přejdi na is.mendelu.cz a klikni na „Přihlášení do osobní administrativy UIS“.',
@@ -316,7 +318,7 @@ class Component extends DCLogic {
         'That’s it — reIS loads itself and your schedule transforms.'
       ]}
     },
-    firefox: {
+    'desktop-firefox': {
       cs: { title: 'Nainstaluj ve Firefoxu', cta: 'Otevřít na Firefox Add-ons', note: '', steps: [
         'Otevři reIS na Firefox Add-ons a klikni na „Přidat do Firefoxu“.',
         'Přejdi na is.mendelu.cz a klikni na „Přihlášení do osobní administrativy UIS“.',
@@ -325,10 +327,10 @@ class Component extends DCLogic {
       en: { title: 'Install on Firefox', cta: 'Open on Firefox Add-ons', note: '', steps: [
         'Open reIS on Firefox Add-ons and click “Add to Firefox”.',
         'Go to is.mendelu.cz and click “Log in to the Personal administration of UIS”.',
-        'That\u2019s it \u2014 reIS loads itself and your schedule transforms.'
+        'That’s it — reIS loads itself and your schedule transforms.'
       ]}
     },
-    edge: {
+    'desktop-edge': {
       cs: { title: 'Nainstaluj v Edge', cta: 'Otevřít v Chrome Web Store', note: 'Edge umí rozšíření z Chrome Web Store — funguje úplně stejně.', steps: [
         'Otevři reIS v Chrome Web Store a klikni na „Přidat do Chromu“.',
         'Přejdi na is.mendelu.cz a klikni na „Přihlášení do osobní administrativy UIS“.',
@@ -340,13 +342,61 @@ class Component extends DCLogic {
         'That’s it — reIS loads itself and your schedule transforms.'
       ]}
     },
-    safari: {
+    'desktop-safari': {
       cs: { title: 'Nainstaluj v Safari', cta: 'Brzy v App Store', note: 'Verzi pro Safari dokončujeme — odkaz sem brzy doplníme.', steps: [
         'Otevři reIS v App Store a nainstaluj ho.',
         'V Safari → Nastavení → Rozšíření zapni reIS.',
         'Povol reIS na is.mendelu.cz.'
       ]},
-      en: { title: 'Install on Safari', cta: 'Coming soon to App Store', note: 'The Safari build is on the way — we\u2019ll drop the link here soon.', steps: [
+      en: { title: 'Install on Safari', cta: 'Coming soon to App Store', note: 'The Safari build is on the way — we’ll drop the link here soon.', steps: [
+        'Open reIS in the App Store and install it.',
+        'In Safari → Settings → Extensions, turn reIS on.',
+        'Allow reIS on is.mendelu.cz.'
+      ]}
+    },
+    'phone-firefox': {
+      cs: { title: 'Firefox na telefonu', cta: 'Otevřít na Firefox Add-ons', note: '', steps: [
+        'Otevři reIS na Firefox Add-ons a klepni na „Přidat do Firefoxu“.',
+        'Potvrď instalaci a povol reIS.',
+        'Otevři is.mendelu.cz — reIS naskočí sám.'
+      ]},
+      en: { title: 'Firefox on phone', cta: 'Open on Firefox Add-ons', note: '', steps: [
+        'Open reIS on Firefox Add-ons and tap “Add to Firefox”.',
+        'Confirm the installation and allow reIS.',
+        'Open is.mendelu.cz — reIS loads automatically.'
+      ]}
+    },
+    'phone-safari': {
+      cs: { title: 'Safari na iPhone', cta: 'Brzy v App Store', note: 'Verzi pro Safari dokončujeme — odkaz sem brzy doplníme.', steps: [
+        'Otevři reIS v App Store a nainstaluj ho.',
+        'V Safari → Nastavení → Rozšíření zapni reIS.',
+        'Povol reIS na is.mendelu.cz.'
+      ]},
+      en: { title: 'Safari on iPhone', cta: 'Coming soon to App Store', note: 'The Safari build is on the way — we’ll drop the link here soon.', steps: [
+        'Open reIS in the App Store and install it.',
+        'In Safari → Settings → Extensions, turn reIS on.',
+        'Allow reIS on is.mendelu.cz.'
+      ]}
+    },
+    'tablet-firefox': {
+      cs: { title: 'Firefox na tabletu', cta: 'Otevřít na Firefox Add-ons', note: '', steps: [
+        'Otevři reIS na Firefox Add-ons a klepni na „Přidat do Firefoxu“.',
+        'Potvrď instalaci a povol reIS.',
+        'Otevři is.mendelu.cz — reIS naskočí sám.'
+      ]},
+      en: { title: 'Firefox on tablet', cta: 'Open on Firefox Add-ons', note: '', steps: [
+        'Open reIS on Firefox Add-ons and tap “Add to Firefox”.',
+        'Confirm the installation and allow reIS.',
+        'Open is.mendelu.cz — reIS loads automatically.'
+      ]}
+    },
+    'tablet-safari': {
+      cs: { title: 'Safari na iPadu', cta: 'Brzy v App Store', note: 'Verzi pro Safari dokončujeme — odkaz sem brzy doplníme.', steps: [
+        'Otevři reIS v App Store a nainstaluj ho.',
+        'V Safari → Nastavení → Rozšíření zapni reIS.',
+        'Povol reIS na is.mendelu.cz.'
+      ]},
+      en: { title: 'Safari on iPad', cta: 'Coming soon to App Store', note: 'The Safari build is on the way — we’ll drop the link here soon.', steps: [
         'Open reIS in the App Store and install it.',
         'In Safari → Settings → Extensions, turn reIS on.',
         'Allow reIS on is.mendelu.cz.'
@@ -432,7 +482,8 @@ class Component extends DCLogic {
     const { lang, device, browser } = this.state;
     const T = this.DICT[lang];
     const av = this.AVAIL[device] || [];
-    const tut = browser ? this.TUT[browser][lang] : { title: '', cta: '', note: '', steps: [] };
+    const tutKey = device && browser ? `${device}-${browser}` : null;
+    const tut = tutKey && this.TUT[tutKey] ? this.TUT[tutKey][lang] : { title: '', cta: '', note: '', steps: [] };
     const hasStore = !!(browser && this.STORE[browser]);
     const hasNote = !!(browser && tut.note);
 
@@ -484,7 +535,7 @@ class Component extends DCLogic {
 
       tut,
       tutSteps: tut.steps.map((s, i) => {
-        const path = browser ? `screenshots/${browser}-${i + 1}.png` : '';
+        const path = tutKey ? `screenshots/${tutKey}-${i + 1}.png` : '';
         const has = !!(path && this.state.shots[path]);
         const dim = this.state.dims[path];
         const portrait = dim && dim.h > dim.w;
