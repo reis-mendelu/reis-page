@@ -330,7 +330,7 @@ class Component extends DCLogic {
         'That’s it — reIS loads itself and your schedule transforms.'
       ]}
     },
-    'desktop-edge': {
+    'desktop-edge': { shots: 'desktop-chrome',
       cs: { title: 'Nainstaluj v Edge', cta: 'Otevřít v Chrome Web Store', note: 'Edge umí rozšíření z Chrome Web Store — funguje úplně stejně.', steps: [
         'Otevři reIS v Chrome Web Store a klikni na „Přidat do Chromu“.',
         'Přejdi na is.mendelu.cz a klikni na „Přihlášení do osobní administrativy UIS“.',
@@ -535,7 +535,8 @@ class Component extends DCLogic {
 
       tut,
       tutSteps: tut.steps.map((s, i) => {
-        const path = tutKey ? `screenshots/${tutKey}-${i + 1}.png` : '';
+        const shotKey = (tutKey && this.TUT[tutKey] && this.TUT[tutKey].shots) || tutKey;
+        const path = shotKey ? `screenshots/${shotKey}-${i + 1}.png` : '';
         const has = !!(path && this.state.shots[path]);
         const dim = this.state.dims[path];
         const portrait = dim && dim.h > dim.w;
