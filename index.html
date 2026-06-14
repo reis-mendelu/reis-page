@@ -228,7 +228,7 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;: {&quot;width&quot;: 520, &quot;height&quot;: 920}}">
 class Component extends DCLogic {
-  state = { lang: 'cs', device: null, browser: null, shots: {} };
+  state = { lang: 'cs', device: null, browser: null, shots: {}, dims: {} };
 
   // Screenshots follow the convention screenshots/<browser>-<step>.png
   // (e.g. screenshots/chrome-2.png). On mount we probe which of those files
@@ -237,14 +237,17 @@ class Component extends DCLogic {
   // placeholder shows. To add a screenshot: drop a correctly named PNG into
   // screenshots/ and reload — no code change needed.
   componentDidMount() {
-    const found = {};
+    const found = {}, dims = {};
     let pending = 0;
     Object.keys(this.TUT).forEach((b) => {
       for (let i = 1; i <= 3; i++) {
         const path = `screenshots/${b}-${i}.png`;
         pending++;
         const probe = new Image();
-        const done = (ok) => { if (ok) found[path] = true; if (--pending === 0) this.setState({ shots: found }); };
+        const done = (ok) => {
+          if (ok) { found[path] = true; dims[path] = { w: probe.naturalWidth, h: probe.naturalHeight }; }
+          if (--pending === 0) this.setState({ shots: found, dims });
+        };
         probe.onload = () => done(true);
         probe.onerror = () => done(false);
         probe.src = path;
@@ -483,7 +486,13 @@ class Component extends DCLogic {
       tutSteps: tut.steps.map((s, i) => {
         const path = browser ? `screenshots/${browser}-${i + 1}.png` : '';
         const has = !!(path && this.state.shots[path]);
-        const imgStyle = has ? 'width:100%;height:auto;display:block;border-radius:12px' : 'display:none';
+        const dim = this.state.dims[path];
+        const portrait = dim && dim.h > dim.w;
+        const imgStyle = has
+          ? (portrait
+              ? 'max-width:220px;width:100%;height:auto;display:block;border-radius:12px;margin:0 auto'
+              : 'width:100%;height:auto;display:block;border-radius:12px')
+          : 'display:none';
         const containerStyle = has
           ? 'width:100%;border-radius:12px;overflow:hidden'
           : 'position:relative;width:100%;aspect-ratio:16/9;border-radius:12px;border:1px dashed rgba(255,255,255,.16);background:var(--surface-tertiary);display:flex;align-items:center;justify-content:center;overflow:hidden';
