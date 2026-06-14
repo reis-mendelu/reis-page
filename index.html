@@ -120,13 +120,13 @@
 
         <sc-if value="{{ showSafari }}" hint-placeholder-val="{{ false }}">
           <div style="{{ wrapSafari }}">
-            <button onClick="{{ onSafari }}" style="{{ cardBtnStyle }}">
-              <div style="{{ logoTileStyle }}">
-                <img src="https://cdn.jsdelivr.net/npm/@browser-logos/safari/safari.svg" width="30" height="30" style="display:block">
+            <div style="{{ cardSafariStyle }}" aria-disabled="true">
+              <div style="{{ logoTileSafari }}">
+                <img src="https://cdn.jsdelivr.net/npm/@browser-logos/safari/safari.svg" width="30" height="30" style="display:block;opacity:.5">
               </div>
-              <div style="flex:1;text-align:left"><div style="font-weight:700;font-size:17px;color:var(--content-primary)">Safari</div></div>
-              <div style="{{ chevSafari }}">{{ chevGlyphSafari }}</div>
-            </button>
+              <div style="flex:1;text-align:left"><div style="font-weight:700;font-size:17px;color:var(--content-muted)">Safari</div></div>
+              <div style="{{ pillSafariStyle }}"><span style="{{ pillDotStyle }}"></span>{{ t.safari_pill }}</div>
+            </div>
           </div>
         </sc-if>
 
@@ -269,6 +269,7 @@ class Component extends DCLogic {
       hint_desktop: 'Chrome · Safari · Firefox · Edge',
       hint_tablet: 'Android · iPad',
       hint_phone: 'Android · iPhone',
+      safari_pill: 'Připravujeme',
       done: 'A je to! Otevři is.mendelu.cz a reIS naskočí sám.',
       restart: 'Začít znovu',
       footer: 'Vytvořeno studenty pro studenty'
@@ -284,6 +285,7 @@ class Component extends DCLogic {
       hint_desktop: 'Chrome · Safari · Firefox · Edge',
       hint_tablet: 'Android · iPad',
       hint_phone: 'Android · iPhone',
+      safari_pill: 'Coming soon',
       done: 'That\u2019s it! Open is.mendelu.cz and reIS loads automatically.',
       restart: 'Start over',
       footer: 'Built by students, for students'
@@ -478,6 +480,42 @@ class Component extends DCLogic {
     };
   }
 
+  // Safari isn't shipped yet: a non-clickable card that reads as disabled.
+  cardSafariStyle() {
+    return {
+      display: 'flex', alignItems: 'center', gap: '14px', width: '100%',
+      padding: '15px 16px', background: 'var(--surface-primary)',
+      border: '1px dashed rgba(255,255,255,.12)', borderRadius: '16px',
+      cursor: 'not-allowed', textAlign: 'left', fontFamily: 'var(--font-sans)',
+      boxShadow: 'none'
+    };
+  }
+
+  logoTileSafari() {
+    return {
+      display: 'flex', alignItems: 'center', justifyContent: 'center',
+      width: '46px', height: '46px', flexShrink: 0, borderRadius: '12px',
+      background: 'var(--surface-tertiary)', opacity: 0.7
+    };
+  }
+
+  pillSafariStyle() {
+    return {
+      display: 'inline-flex', alignItems: 'center', gap: '6px', flexShrink: 0,
+      padding: '4px 11px', borderRadius: '9999px',
+      background: 'rgba(245,166,35,.12)', border: '1px solid rgba(245,166,35,.28)',
+      color: '#f0b454', fontFamily: 'var(--font-ui)', fontSize: '11px',
+      fontWeight: 700, letterSpacing: '.02em', whiteSpace: 'nowrap'
+    };
+  }
+
+  pillDotStyle() {
+    return {
+      width: '6px', height: '6px', borderRadius: '9999px',
+      background: '#f0b454', flexShrink: 0, display: 'block'
+    };
+  }
+
   renderVals() {
     const { lang, device, browser } = this.state;
     const T = this.DICT[lang];
@@ -505,7 +543,6 @@ class Component extends DCLogic {
       onTablet: () => this.pickDevice('tablet'),
       onPhone: () => this.pickDevice('phone'),
       onChrome: () => this.pickBrowser('chrome'),
-      onSafari: () => this.pickBrowser('safari'),
       onFirefox: () => this.pickBrowser('firefox'),
       onEdge: () => this.pickBrowser('edge'),
       restart: () => this.restart(),
@@ -522,6 +559,10 @@ class Component extends DCLogic {
       wrapPhone: this.wrap('phone', 'device'),
       wrapChrome: this.wrap('chrome', 'browser'),
       wrapSafari: this.wrap('safari', 'browser'),
+      cardSafariStyle: this.cardSafariStyle(),
+      logoTileSafari: this.logoTileSafari(),
+      pillSafariStyle: this.pillSafariStyle(),
+      pillDotStyle: this.pillDotStyle(),
       wrapFirefox: this.wrap('firefox', 'browser'),
       wrapEdge: this.wrap('edge', 'browser'),
 
@@ -529,7 +570,6 @@ class Component extends DCLogic {
       chevTablet: this.chev('tablet', 'device'), chevGlyphTablet: chevGlyph('tablet', 'device'),
       chevPhone: this.chev('phone', 'device'), chevGlyphPhone: chevGlyph('phone', 'device'),
       chevChrome: this.chev('chrome', 'browser'), chevGlyphChrome: chevGlyph('chrome', 'browser'),
-      chevSafari: this.chev('safari', 'browser'), chevGlyphSafari: chevGlyph('safari', 'browser'),
       chevFirefox: this.chev('firefox', 'browser'), chevGlyphFirefox: chevGlyph('firefox', 'browser'),
       chevEdge: this.chev('edge', 'browser'), chevGlyphEdge: chevGlyph('edge', 'browser'),
 
