@@ -127,7 +127,10 @@
               <div style="{{ logoTileSafari }}">
                 <img src="https://cdn.jsdelivr.net/npm/@browser-logos/safari/safari.svg" width="30" height="30" style="display:block;opacity:.5">
               </div>
-              <div style="flex:1;text-align:left"><div style="font-weight:700;font-size:17px;color:var(--content-muted)">Safari</div></div>
+              <div style="flex:1;text-align:left">
+                <div style="font-weight:700;font-size:17px;color:var(--content-muted)">Safari</div>
+                <sc-if value="{{ showSafariHint }}" hint-placeholder-val="{{ false }}"><div style="font-family:var(--font-ui);font-size:13px;color:var(--content-muted);margin-top:2px">{{ safariHint }}</div></sc-if>
+              </div>
               <div style="{{ pillSafariStyle }}"><span style="{{ pillDotStyle }}"></span>{{ t.safari_pill }}</div>
             </div>
           </div>
@@ -139,7 +142,10 @@
               <div style="{{ logoTileStyle }}">
                 <img src="https://cdn.jsdelivr.net/npm/@browser-logos/firefox/firefox.svg" width="30" height="30" style="display:block">
               </div>
-              <div style="flex:1;text-align:left"><div style="font-weight:700;font-size:17px;color:var(--content-primary)">Firefox</div></div>
+              <div style="flex:1;text-align:left">
+                <div style="font-weight:700;font-size:17px;color:var(--content-primary)">Firefox</div>
+                <sc-if value="{{ showFirefoxHint }}" hint-placeholder-val="{{ false }}"><div style="font-family:var(--font-ui);font-size:13px;color:var(--content-muted);margin-top:2px">{{ firefoxHint }}</div></sc-if>
+              </div>
               <div style="{{ chevFirefox }}">{{ chevGlyphFirefox }}</div>
             </button>
           </div>
@@ -542,6 +548,10 @@ class Component extends DCLogic {
 
     const chevGlyph = (id, kind) => (kind === 'device' ? device : browser) === id ? '✓' : '›';
 
+    // OS hint under browser name (tablet/phone only; laptop runs any browser)
+    const firefoxHint = (device === 'phone' || device === 'tablet') ? 'Android' : '';
+    const safariHint = device === 'phone' ? 'iPhone' : (device === 'tablet' ? 'iPad' : '');
+
     return {
       t: T,
       toggleLang: () => this.toggleLang(),
@@ -579,6 +589,8 @@ class Component extends DCLogic {
       pillSafariStyle: this.pillSafariStyle(),
       pillDotStyle: this.pillDotStyle(),
       pillRecommendStyle: this.pillRecommendStyle(),
+      firefoxHint, showFirefoxHint: !!firefoxHint,
+      safariHint, showSafariHint: !!safariHint,
       wrapFirefox: this.wrap('firefox', 'browser'),
       wrapEdge: this.wrap('edge', 'browser'),
 
