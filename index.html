@@ -63,7 +63,10 @@
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"></rect><line x1="8" x2="16" y1="21" y2="21"></line><line x1="12" x2="12" y1="17" y2="21"></line></svg>
         </div>
         <div style="flex:1;text-align:left">
-          <div style="font-weight:700;font-size:17px;color:var(--content-primary)">{{ t.dev_desktop }}</div>
+          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+            <div style="font-weight:700;font-size:17px;color:var(--content-primary)">{{ t.dev_desktop }}</div>
+            <div style="{{ pillRecommendStyle }}">{{ t.dev_recommend }}</div>
+          </div>
           <div style="font-family:var(--font-ui);font-size:13px;color:var(--content-muted);margin-top:2px">{{ t.hint_desktop }}</div>
         </div>
         <div style="{{ chevDesktop }}">{{ chevGlyphDesktop }}</div>
@@ -269,6 +272,7 @@ class Component extends DCLogic {
       hint_desktop: 'Chrome · Safari · Firefox · Edge',
       hint_tablet: 'Android · iPad',
       hint_phone: 'Android · iPhone',
+      dev_recommend: 'Doporučujeme',
       safari_pill: 'Připravujeme',
       done: 'A je to! Otevři is.mendelu.cz a reIS naskočí sám.',
       restart: 'Začít znovu',
@@ -285,6 +289,7 @@ class Component extends DCLogic {
       hint_desktop: 'Chrome · Safari · Firefox · Edge',
       hint_tablet: 'Android · iPad',
       hint_phone: 'Android · iPhone',
+      dev_recommend: 'Recommended',
       safari_pill: 'Coming soon',
       done: 'That\u2019s it! Open is.mendelu.cz and reIS loads automatically.',
       restart: 'Start over',
@@ -516,6 +521,16 @@ class Component extends DCLogic {
     };
   }
 
+  pillRecommendStyle() {
+    return {
+      display: 'inline-flex', alignItems: 'center', flexShrink: 0,
+      padding: '3px 9px', borderRadius: '9999px',
+      background: 'rgba(121,190,21,.14)', border: '1px solid rgba(121,190,21,.32)',
+      color: 'var(--color-primary)', fontFamily: 'var(--font-ui)', fontSize: '11px',
+      fontWeight: 700, letterSpacing: '.02em', whiteSpace: 'nowrap'
+    };
+  }
+
   renderVals() {
     const { lang, device, browser } = this.state;
     const T = this.DICT[lang];
@@ -563,6 +578,7 @@ class Component extends DCLogic {
       logoTileSafari: this.logoTileSafari(),
       pillSafariStyle: this.pillSafariStyle(),
       pillDotStyle: this.pillDotStyle(),
+      pillRecommendStyle: this.pillRecommendStyle(),
       wrapFirefox: this.wrap('firefox', 'browser'),
       wrapEdge: this.wrap('edge', 'browser'),
 
