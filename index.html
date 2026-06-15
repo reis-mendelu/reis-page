@@ -237,9 +237,9 @@
       <div style="position:fixed;inset:0;z-index:1000">
         <div onClick="{{ closeLightbox }}" style="position:absolute;inset:0;background:rgba(0,0,0,.8);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)"></div>
         <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:5vmin;pointer-events:none">
-          <img src="{{ lightboxImg }}" alt="" style="max-width:90vw;max-height:90vh;width:auto;height:auto;border-radius:12px;box-shadow:0 16px 50px rgba(0,0,0,.55);pointer-events:auto">
+          <img src="{{ lightboxImg }}" alt="{{ lightboxAlt }}" style="max-width:90vw;max-height:90vh;width:auto;height:auto;border-radius:12px;box-shadow:0 16px 50px rgba(0,0,0,.55);pointer-events:auto">
         </div>
-        <button onClick="{{ closeLightbox }}" aria-label="Close" style="position:fixed;top:16px;right:16px;width:40px;height:40px;border-radius:9999px;border:none;background:rgba(0,0,0,.55);color:#fff;font-size:24px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:1001">&times;</button>
+        <button onClick="{{ closeLightbox }}" aria-label="Close" style="position:absolute;top:16px;right:16px;width:40px;height:40px;border-radius:9999px;border:none;background:rgba(0,0,0,.55);color:#fff;font-size:24px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:1001">&times;</button>
       </div>
     </sc-if>
 
@@ -248,7 +248,7 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;: {&quot;width&quot;: 520, &quot;height&quot;: 920}}">
 class Component extends DCLogic {
-  state = { lang: 'cs', device: null, browser: null, shots: {}, dims: {}, lightbox: null };
+  state = { lang: 'cs', device: null, browser: null, shots: {}, dims: {}, lightbox: null, lightboxAlt: '' };
 
   // Screenshots follow the convention screenshots/<device>-<browser>-<step>.png
   // (e.g. screenshots/desktop-chrome-2.png, screenshots/phone-firefox-1.png).
@@ -434,22 +434,23 @@ class Component extends DCLogic {
   pickBrowser(id) { this.setState({ browser: this.state.browser === id ? null : id }); }
   restart() { this.setState({ device: null, browser: null }); }
 
-  openLightbox(src) {
-      if (!src) return;
-      this.setState({ lightbox: src });
-      document.body.style.overflow = 'hidden';
-      this._onLightboxKey = (e) => { if (e.key === 'Escape') this.closeLightbox(); };
-      document.addEventListener('keydown', this._onLightboxKey);
+  openLightbox(src, alt) {
+    if (!src) return;
+    if (this.state.lightbox) this.closeLightbox();
+    this.setState({ lightbox: src, lightboxAlt: alt || '' });
+    document.body.style.overflow = 'hidden';
+    this._onLightboxKey = (e) => { if (e.key === 'Escape') this.closeLightbox(); };
+    document.addEventListener('keydown', this._onLightboxKey);
   }
 
   closeLightbox() {
-      if (!this.state.lightbox) return;
-      this.setState({ lightbox: null });
-      document.body.style.overflow = '';
-      if (this._onLightboxKey) {
-          document.removeEventListener('keydown', this._onLightboxKey);
-          this._onLightboxKey = null;
-      }
+    if (!this.state.lightbox) return;
+    this.setState({ lightbox: null, lightboxAlt: '' });
+    document.body.style.overflow = '';
+    if (this._onLightboxKey) {
+      document.removeEventListener('keydown', this._onLightboxKey);
+      this._onLightboxKey = null;
+    }
   }
 
   langToggle() {
@@ -647,7 +648,7 @@ class Component extends DCLogic {
           : 'position:relative;width:100%;aspect-ratio:16/9;border-radius:12px;border:1px dashed rgba(255,255,255,.16);background:var(--surface-tertiary);display:flex;align-items:center;justify-content:center;overflow:hidden';
         const placeholderStyle = has ? 'display:none' : 'display:flex;flex-direction:column;align-items:center;gap:6px;color:var(--content-muted)';
         const dotStyle = has ? 'display:none' : 'position:absolute;top:10px;right:10px;width:30px;height:30px;border-radius:9999px;border:2px solid var(--color-primary);opacity:.55';
-        return { n: String(i + 1), text: s, img: has ? path : '', imgStyle, containerStyle, placeholderStyle, dotStyle, openShot: () => this.openLightbox(has ? path : '') };
+        return { n: String(i + 1), text: s, img: has ? path : '', imgStyle, containerStyle, placeholderStyle, dotStyle, openShot: () => this.openLightbox(has ? path : '', s) };
       }),
       shotLabel: lang === 'cs' ? 'Snímek brzy doplníme' : 'Screenshot coming soon',
       hasStore, noStore: !hasStore,
@@ -655,6 +656,7 @@ class Component extends DCLogic {
       hasNote, noNote: !hasNote,
       hasLightbox: !!this.state.lightbox,
       lightboxImg: this.state.lightbox || '',
+      lightboxAlt: this.state.lightboxAlt || '',
       closeLightbox: () => this.closeLightbox()
     };
   }
