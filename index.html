@@ -237,7 +237,7 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;: {&quot;width&quot;: 520, &quot;height&quot;: 920}}">
 class Component extends DCLogic {
-  state = { lang: 'cs', device: null, browser: null, shots: {}, dims: {} };
+  state = { lang: 'cs', device: null, browser: null, shots: {}, dims: {}, lightbox: null };
 
   // Screenshots follow the convention screenshots/<device>-<browser>-<step>.png
   // (e.g. screenshots/desktop-chrome-2.png, screenshots/phone-firefox-1.png).
@@ -422,6 +422,24 @@ class Component extends DCLogic {
   pickDevice(id) { this.setState({ device: this.state.device === id ? null : id, browser: null }); }
   pickBrowser(id) { this.setState({ browser: this.state.browser === id ? null : id }); }
   restart() { this.setState({ device: null, browser: null }); }
+
+  openLightbox(src) {
+      if (!src) return;
+      this.setState({ lightbox: src });
+      document.body.style.overflow = 'hidden';
+      this._onLightboxKey = (e) => { if (e.key === 'Escape') this.closeLightbox(); };
+      document.addEventListener('keydown', this._onLightboxKey);
+  }
+
+  closeLightbox() {
+      if (!this.state.lightbox) return;
+      this.setState({ lightbox: null });
+      document.body.style.overflow = '';
+      if (this._onLightboxKey) {
+          document.removeEventListener('keydown', this._onLightboxKey);
+          this._onLightboxKey = null;
+      }
+  }
 
   langToggle() {
     return {
