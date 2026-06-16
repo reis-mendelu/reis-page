@@ -16,7 +16,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0}
+    html,body{margin:0;padding:0;overscroll-behavior-x:none}
     body{background:#111827}
     @keyframes reisFadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
     @keyframes reisPop{from{opacity:0;transform:scale(.96)}to{opacity:1;transform:none}}
@@ -381,13 +381,13 @@ class Component extends DCLogic {
     'phone-firefox': {
       cs: { title: 'Firefox na telefonu', cta: 'Otevřít na Firefox Add-ons', note: '', steps: [
         'Otevři reIS na Firefox Add-ons a klepni na „Přidat do Firefoxu“.',
-        'Potvrď instalaci a povol reIS.',
-        'Otevři is.mendelu.cz — reIS naskočí sám.'
+        'Přejdi na is.mendelu.cz a klepni na „Přihlášení do osobní administrativy UIS“.',
+        'A je to — reIS se načte sám a rozvrh se promění.'
       ]},
       en: { title: 'Firefox on phone', cta: 'Open on Firefox Add-ons', note: '', steps: [
         'Open reIS on Firefox Add-ons and tap “Add to Firefox”.',
-        'Confirm the installation and allow reIS.',
-        'Open is.mendelu.cz — reIS loads automatically.'
+        'Open is.mendelu.cz and tap “Log in to the Personal administration of UIS”.',
+        'That’s it — reIS loads itself and your schedule transforms.'
       ]}
     },
     'phone-safari': {
@@ -405,13 +405,13 @@ class Component extends DCLogic {
     'tablet-firefox': { shots: 'phone-firefox',
       cs: { title: 'Firefox na tabletu', cta: 'Otevřít na Firefox Add-ons', note: '', steps: [
         'Otevři reIS na Firefox Add-ons a klepni na „Přidat do Firefoxu“.',
-        'Potvrď instalaci a povol reIS.',
-        'Otevři is.mendelu.cz — reIS naskočí sám.'
+        'Přejdi na is.mendelu.cz a klepni na „Přihlášení do osobní administrativy UIS“.',
+        'A je to — reIS se načte sám a rozvrh se promění.'
       ]},
       en: { title: 'Firefox on tablet', cta: 'Open on Firefox Add-ons', note: '', steps: [
         'Open reIS on Firefox Add-ons and tap “Add to Firefox”.',
-        'Confirm the installation and allow reIS.',
-        'Open is.mendelu.cz — reIS loads automatically.'
+        'Open is.mendelu.cz and tap “Log in to the Personal administration of UIS”.',
+        'That’s it — reIS loads itself and your schedule transforms.'
       ]}
     },
     'tablet-safari': {
