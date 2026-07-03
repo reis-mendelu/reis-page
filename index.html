@@ -430,7 +430,15 @@ class Component extends DCLogic {
 
   setLang(l) { this.setState({ lang: l }); }
   toggleLang() { this.setLang(this.state.lang === 'cs' ? 'en' : 'cs'); }
-  pickDevice(id) { this.setState({ device: this.state.device === id ? null : id, browser: null }); }
+  pickDevice(id) {
+    if (this.state.device === id) {
+      // Re-clicking the selected card is the "back" gesture — step back one
+      // level (drop the browser choice) instead of collapsing to step 1.
+      this.setState(this.state.browser ? { browser: null } : { device: null });
+    } else {
+      this.setState({ device: id, browser: null });
+    }
+  }
   pickBrowser(id) { this.setState({ browser: this.state.browser === id ? null : id }); }
   restart() { this.setState({ device: null, browser: null }); }
 
