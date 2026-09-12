@@ -106,7 +106,7 @@
       <div style="margin-top:30px;animation:reisFadeUp .34s ease both">
         <div style="margin-bottom:14px;display:flex;align-items:center;gap:10px">
           <div style="display:flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:9999px;background:rgba(121,190,21,.14);color:var(--color-primary);font-weight:700;font-size:13px;font-family:var(--font-ui)">2</div>
-          <div style="font-weight:600;font-size:15px;color:var(--content-secondary);font-family:var(--font-ui)">{{ t.s2 }}</div>
+          <div style="font-weight:600;font-size:15px;color:var(--content-secondary);font-family:var(--font-ui)">{{ s2Label }}</div>
         </div>
 
         <sc-if value="{{ showChrome }}" hint-placeholder-val="{{ false }}">
@@ -123,15 +123,14 @@
 
         <sc-if value="{{ showSafari }}" hint-placeholder-val="{{ false }}">
           <div style="{{ wrapSafari }}">
-            <div style="{{ cardSafariStyle }}" aria-disabled="true">
-              <div style="{{ logoTileSafari }}">
+            <div style="{{ cardSoonStyle }}" aria-disabled="true">
+              <div style="{{ logoTileSoon }}">
                 <img src="https://cdn.jsdelivr.net/npm/@browser-logos/safari/safari.svg" width="30" height="30" style="display:block;opacity:.5">
               </div>
               <div style="flex:1;text-align:left">
                 <div style="font-weight:700;font-size:17px;color:var(--content-muted)">Safari</div>
-                <sc-if value="{{ showSafariHint }}" hint-placeholder-val="{{ false }}"><div style="font-family:var(--font-ui);font-size:13px;color:var(--content-muted);margin-top:2px">{{ safariHint }}</div></sc-if>
               </div>
-              <div style="{{ pillSafariStyle }}"><span style="{{ pillDotStyle }}"></span>{{ t.safari_pill }}</div>
+              <div style="{{ pillSoonStyle }}"><span style="{{ pillDotStyle }}"></span>{{ t.safari_pill }}</div>
             </div>
           </div>
         </sc-if>
@@ -144,10 +143,29 @@
               </div>
               <div style="flex:1;text-align:left">
                 <div style="font-weight:700;font-size:17px;color:var(--content-primary)">Firefox</div>
-                <sc-if value="{{ showFirefoxHint }}" hint-placeholder-val="{{ false }}"><div style="font-family:var(--font-ui);font-size:13px;color:var(--content-muted);margin-top:2px">{{ firefoxHint }}</div></sc-if>
               </div>
               <div style="{{ chevFirefox }}">{{ chevGlyphFirefox }}</div>
             </button>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ showIos }}" hint-placeholder-val="{{ false }}">
+          <div style="{{ wrapIos }}">
+            <button onClick="{{ onIos }}" style="{{ cardBtnStyle }}">
+              <div style="{{ logoTileStyle }}"><span style="color:var(--content-primary);display:flex"><svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.53 4.08zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"></path></svg></span></div>
+              <div style="flex:1;text-align:left"><div style="font-weight:700;font-size:17px;color:var(--content-primary)">{{ iosLabel }}</div></div>
+              <div style="{{ chevIos }}">{{ chevGlyphIos }}</div>
+            </button>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ showAndroid }}" hint-placeholder-val="{{ false }}">
+          <div style="{{ wrapAndroid }}">
+            <div style="{{ cardSoonStyle }}" aria-disabled="true">
+              <div style="{{ logoTileSoon }}"><span style="color:var(--content-muted);display:flex;opacity:.7"><svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 18c0 .55.45 1 1 1h1v3.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5V19h2v3.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5V19h1c.55 0 1-.45 1-1V8H6v10zM3.5 8C2.67 8 2 8.67 2 9.5v7c0 .83.67 1.5 1.5 1.5S5 17.33 5 16.5v-7C5 8.67 4.33 8 3.5 8zm17 0c-.83 0-1.5.67-1.5 1.5v7c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5v-7c0-.83-.67-1.5-1.5-1.5zm-4.97-5.84l1.3-1.3c.2-.2.2-.51 0-.71-.2-.2-.51-.2-.71 0l-1.48 1.48C13.85 1.23 12.95 1 12 1c-.96 0-1.86.23-2.66.63L7.85.15c-.2-.2-.51-.2-.71 0-.2.2-.2.51 0 .71l1.31 1.31C6.97 3.26 6 5.01 6 7h12c0-1.99-.97-3.75-2.47-4.84zM10 5H9V4h1v1zm5 0h-1V4h1v1z"></path></svg></span></div>
+              <div style="flex:1;text-align:left"><div style="font-weight:700;font-size:17px;color:var(--content-muted)">Android</div></div>
+              <div style="{{ pillSoonStyle }}"><span style="{{ pillDotStyle }}"></span>{{ t.soon_pill }}</div>
+            </div>
           </div>
         </sc-if>
 
@@ -172,6 +190,13 @@
           <div style="display:flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:9999px;background:rgba(121,190,21,.14);color:var(--color-primary);font-weight:700;font-size:13px;font-family:var(--font-ui)">3</div>
           <div style="font-weight:600;font-size:15px;color:var(--content-secondary);font-family:var(--font-ui)">{{ tut.title }}</div>
         </div>
+
+        <!-- App Store badge (iPhone/iPad): Apple's own artwork, at its own size -->
+        <sc-if value="{{ showBadge }}" hint-placeholder-val="{{ false }}">
+          <a href="{{ storeUrl }}" target="_blank" rel="noopener" style="display:inline-flex;margin:2px 0 10px;border-radius:8px;transition:opacity .15s ease" style-hover="opacity:.85" style-active="transform:scale(.99)">
+            <img src="{{ badgeSrc }}" alt="{{ badgeAlt }}" width="180" height="60" style="display:block;width:180px;max-width:100%;height:auto">
+          </a>
+        </sc-if>
 
         <!-- store CTA -->
         <sc-if value="{{ hasStore }}" hint-placeholder-val="{{ false }}">
@@ -214,10 +239,12 @@
         </sc-for>
 
         <!-- done note -->
+        <sc-if value="{{ hasDone }}" hint-placeholder-val="{{ false }}">
         <div style="display:flex;align-items:flex-start;gap:11px;margin-top:6px;padding:15px 16px;background:rgba(121,190,21,.1);border:1px solid rgba(121,190,21,.3);border-radius:12px">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:1px"><path d="M20 6 9 17l-5-5"></path></svg>
-          <div style="font-family:var(--font-ui);font-size:14px;line-height:1.5;color:var(--content-secondary);text-wrap:pretty">{{ t.done }}</div>
+          <div style="font-family:var(--font-ui);font-size:14px;line-height:1.5;color:var(--content-secondary);text-wrap:pretty">{{ doneText }}</div>
         </div>
+        </sc-if>
 
         <!-- restart -->
         <button onClick="{{ restart }}" style="display:flex;align-items:center;gap:7px;margin:22px auto 0;padding:9px 16px;background:transparent;border:none;color:var(--content-muted);font-family:var(--font-ui);font-size:13px;font-weight:500;cursor:pointer;border-radius:9999px;transition:color .15s ease" style-hover="color:var(--content-primary)">
@@ -260,6 +287,8 @@ class Component extends DCLogic {
     let pending = 0;
     Object.entries(this.AVAIL).forEach(([device, browsers]) => {
       browsers.forEach(browser => {
+        const entry = this.TUT[`${device}-${browser}`];
+        if (!entry || !entry.cs.steps.length) return;
         for (let i = 1; i <= 3; i++) {
           const path = `screenshots/${device}-${browser}-${i}.png`;
           pending++;
@@ -283,6 +312,7 @@ class Component extends DCLogic {
       heroTitle: 'Nainstaluj reIS za dvě minuty',
       s1: 'Vyber zařízení, které nejvíce preferuješ',
       s2: 'Vyber prohlížeč',
+      s2_system: 'Vyber systém',
       dev_desktop: 'Počítač',
       dev_tablet: 'Tablet',
       dev_phone: 'Telefon',
@@ -291,6 +321,7 @@ class Component extends DCLogic {
       hint_phone: 'Android · iPhone',
       dev_recommend: 'Doporučujeme',
       safari_pill: 'Připravujeme',
+      soon_pill: 'Připravujeme',
       done: 'A je to! Otevři is.mendelu.cz a reIS naskočí sám.',
       restart: 'Začít znovu',
       footer: 'Vytvořeno studenty pro studenty'
@@ -300,6 +331,7 @@ class Component extends DCLogic {
       heroTitle: 'Install reIS in two minutes',
       s1: 'Pick the device you use most',
       s2: 'Pick your browser',
+      s2_system: 'Pick your system',
       dev_desktop: 'Desktop',
       dev_tablet: 'Tablet',
       dev_phone: 'Phone',
@@ -308,6 +340,7 @@ class Component extends DCLogic {
       hint_phone: 'Android · iPhone',
       dev_recommend: 'Recommended',
       safari_pill: 'Coming soon',
+      soon_pill: 'Coming soon',
       done: 'That\u2019s it! Open is.mendelu.cz and reIS loads automatically.',
       restart: 'Start over',
       footer: 'Built by students, for students'
@@ -316,17 +349,20 @@ class Component extends DCLogic {
 
   AVAIL = {
     desktop: ['chrome', 'safari', 'firefox', 'edge'],
-    tablet: ['firefox', 'safari'],
-    phone: ['firefox', 'safari']
+    tablet: ['ios', 'android'],
+    phone: ['ios', 'android']
   };
 
-  NAMES = { chrome: 'Chrome', safari: 'Safari', firefox: 'Firefox', edge: 'Edge' };
+  NAMES = { chrome: 'Chrome', safari: 'Safari', firefox: 'Firefox', edge: 'Edge', ios: 'iPhone', android: 'Android' };
 
   STORE = {
     chrome: 'https://chromewebstore.google.com/detail/reis/feildjaginpppijbpplcghalabdeibdb?pli=1',
     firefox: 'https://addons.mozilla.org/cs/firefox/addon/reis/',
     edge: 'https://chromewebstore.google.com/detail/reis/feildjaginpppijbpplcghalabdeibdb?pli=1',
-    safari: null
+    safari: null,
+    // iPhone and iPad run the native reIS app, not a Safari extension.
+    ios: 'https://apps.apple.com/cz/app/id6804832714',
+    android: null
   };
 
   TUT = {
@@ -378,53 +414,24 @@ class Component extends DCLogic {
         'Allow reIS on is.mendelu.cz.'
       ]}
     },
-    'phone-firefox': {
-      cs: { title: 'Firefox na telefonu', cta: 'Otevřít na Firefox Add-ons', note: '', steps: [
-        'Otevři reIS na Firefox Add-ons a klepni na „Přidat do Firefoxu“.',
-        'Přejdi na is.mendelu.cz a klepni na „Přihlášení do osobní administrativy UIS“.',
-        'A je to — reIS se načte sám a rozvrh se promění.'
-      ]},
-      en: { title: 'Firefox on phone', cta: 'Open on Firefox Add-ons', note: '', steps: [
-        'Open reIS on Firefox Add-ons and tap “Add to Firefox”.',
-        'Open is.mendelu.cz and tap “Log in to the Personal administration of UIS”.',
-        'That’s it — reIS loads itself and your schedule transforms.'
-      ]}
+    // Phone and tablet run the native reIS app, so there is nothing to walk
+    // through: the App Store badge is the whole instruction. `steps: []` means
+    // the numbered list and its screenshot slots render nothing at all.
+    'phone-ios': { badge: true,
+      cs: { title: 'Stáhni reIS pro iPhone', cta: '', note: 'Přihlásíš se svým běžným univerzitním účtem přímo na stránce IS — reIS tvoje heslo nikdy nevidí.', steps: [], done: '' },
+      en: { title: 'Get reIS for iPhone', cta: '', note: 'You sign in with your usual university account on the IS page itself — reIS never sees your password.', steps: [], done: '' }
     },
-    'phone-safari': {
-      cs: { title: 'Safari na iPhone', cta: 'Brzy v App Store', note: 'Verzi pro Safari dokončujeme — odkaz sem brzy doplníme.', steps: [
-        'Otevři reIS v App Store a nainstaluj ho.',
-        'V Safari → Nastavení → Rozšíření zapni reIS.',
-        'Povol reIS na is.mendelu.cz.'
-      ]},
-      en: { title: 'Safari on iPhone', cta: 'Coming soon to App Store', note: 'The Safari build is on the way — we’ll drop the link here soon.', steps: [
-        'Open reIS in the App Store and install it.',
-        'In Safari → Settings → Extensions, turn reIS on.',
-        'Allow reIS on is.mendelu.cz.'
-      ]}
+    'phone-android': {
+      cs: { title: 'reIS pro Android', cta: 'Připravujeme', note: 'Na aplikaci pro Android pracujeme — až vyjde, najdeš ji tady.', steps: [], done: '' },
+      en: { title: 'reIS for Android', cta: 'Coming soon', note: 'The Android app is in the works — it will show up here when it ships.', steps: [], done: '' }
     },
-    'tablet-firefox': { shots: 'phone-firefox',
-      cs: { title: 'Firefox na tabletu', cta: 'Otevřít na Firefox Add-ons', note: '', steps: [
-        'Otevři reIS na Firefox Add-ons a klepni na „Přidat do Firefoxu“.',
-        'Přejdi na is.mendelu.cz a klepni na „Přihlášení do osobní administrativy UIS“.',
-        'A je to — reIS se načte sám a rozvrh se promění.'
-      ]},
-      en: { title: 'Firefox on tablet', cta: 'Open on Firefox Add-ons', note: '', steps: [
-        'Open reIS on Firefox Add-ons and tap “Add to Firefox”.',
-        'Open is.mendelu.cz and tap “Log in to the Personal administration of UIS”.',
-        'That’s it — reIS loads itself and your schedule transforms.'
-      ]}
+    'tablet-ios': { badge: true,
+      cs: { title: 'Stáhni reIS pro iPad', cta: '', note: 'Přihlásíš se svým běžným univerzitním účtem přímo na stránce IS — reIS tvoje heslo nikdy nevidí.', steps: [], done: '' },
+      en: { title: 'Get reIS for iPad', cta: '', note: 'You sign in with your usual university account on the IS page itself — reIS never sees your password.', steps: [], done: '' }
     },
-    'tablet-safari': {
-      cs: { title: 'Safari na iPadu', cta: 'Brzy v App Store', note: 'Verzi pro Safari dokončujeme — odkaz sem brzy doplníme.', steps: [
-        'Otevři reIS v App Store a nainstaluj ho.',
-        'V Safari → Nastavení → Rozšíření zapni reIS.',
-        'Povol reIS na is.mendelu.cz.'
-      ]},
-      en: { title: 'Safari on iPad', cta: 'Coming soon to App Store', note: 'The Safari build is on the way — we’ll drop the link here soon.', steps: [
-        'Open reIS in the App Store and install it.',
-        'In Safari → Settings → Extensions, turn reIS on.',
-        'Allow reIS on is.mendelu.cz.'
-      ]}
+    'tablet-android': {
+      cs: { title: 'reIS pro Android', cta: 'Připravujeme', note: 'Na aplikaci pro Android pracujeme — až vyjde, najdeš ji tady.', steps: [], done: '' },
+      en: { title: 'reIS for Android', cta: 'Coming soon', note: 'The Android app is in the works — it will show up here when it ships.', steps: [], done: '' }
     }
   };
 
@@ -529,8 +536,9 @@ class Component extends DCLogic {
     };
   }
 
-  // Safari isn't shipped yet: a non-clickable card that reads as disabled.
-  cardSafariStyle() {
+  // A platform we haven't shipped yet: a non-clickable card that reads as
+  // disabled. Shared by desktop Safari and by Android on phone/tablet.
+  cardSoonStyle() {
     return {
       display: 'flex', alignItems: 'center', gap: '14px', width: '100%',
       padding: '15px 16px', background: 'var(--surface-primary)',
@@ -540,7 +548,7 @@ class Component extends DCLogic {
     };
   }
 
-  logoTileSafari() {
+  logoTileSoon() {
     return {
       display: 'flex', alignItems: 'center', justifyContent: 'center',
       width: '46px', height: '46px', flexShrink: 0, borderRadius: '12px',
@@ -548,7 +556,7 @@ class Component extends DCLogic {
     };
   }
 
-  pillSafariStyle() {
+  pillSoonStyle() {
     return {
       display: 'inline-flex', alignItems: 'center', gap: '6px', flexShrink: 0,
       padding: '4px 11px', borderRadius: '9999px',
@@ -583,12 +591,14 @@ class Component extends DCLogic {
     const tut = tutKey && this.TUT[tutKey] ? this.TUT[tutKey][lang] : { title: '', cta: '', note: '', steps: [] };
     const hasStore = !!(browser && this.STORE[browser]);
     const hasNote = !!(browser && tut.note);
+    // iPhone/iPad get Apple's badge instead of the generic text CTA, so exactly
+    // one of the two ever renders.
+    const useBadge = !!(tutKey && this.TUT[tutKey] && this.TUT[tutKey].badge && hasStore);
+    // A tutorial may override the closing note, or silence it with '' — nothing
+    // was installed on a "coming soon" path, so there is no "that's it".
+    const doneText = tut.done !== undefined ? tut.done : T.done;
 
     const chevGlyph = (id, kind) => (kind === 'device' ? device : browser) === id ? '✓' : '›';
-
-    // OS hint under browser name (tablet/phone only; laptop runs any browser)
-    const firefoxHint = (device === 'phone' || device === 'tablet') ? 'Android' : '';
-    const safariHint = device === 'phone' ? 'iPhone' : (device === 'tablet' ? 'iPad' : '');
 
     return {
       t: T,
@@ -608,6 +618,7 @@ class Component extends DCLogic {
       onChrome: () => this.pickBrowser('chrome'),
       onFirefox: () => this.pickBrowser('firefox'),
       onEdge: () => this.pickBrowser('edge'),
+      onIos: () => this.pickBrowser('ios'),
       restart: () => this.restart(),
 
       deviceChosen: !!device,
@@ -616,21 +627,25 @@ class Component extends DCLogic {
       showSafari: av.includes('safari'),
       showFirefox: av.includes('firefox'),
       showEdge: av.includes('edge'),
+      showIos: av.includes('ios'),
+      showAndroid: av.includes('android'),
+      iosLabel: device === 'tablet' ? 'iPad' : 'iPhone',
+      s2Label: (device === 'phone' || device === 'tablet') ? T.s2_system : T.s2,
 
       wrapDesktop: this.wrap('desktop', 'device'),
       wrapTablet: this.wrap('tablet', 'device'),
       wrapPhone: this.wrap('phone', 'device'),
       wrapChrome: this.wrap('chrome', 'browser'),
       wrapSafari: this.wrap('safari', 'browser'),
-      cardSafariStyle: this.cardSafariStyle(),
-      logoTileSafari: this.logoTileSafari(),
-      pillSafariStyle: this.pillSafariStyle(),
+      cardSoonStyle: this.cardSoonStyle(),
+      logoTileSoon: this.logoTileSoon(),
+      pillSoonStyle: this.pillSoonStyle(),
       pillDotStyle: this.pillDotStyle(),
       pillRecommendStyle: this.pillRecommendStyle(),
-      firefoxHint, showFirefoxHint: !!firefoxHint,
-      safariHint, showSafariHint: !!safariHint,
       wrapFirefox: this.wrap('firefox', 'browser'),
       wrapEdge: this.wrap('edge', 'browser'),
+      wrapIos: this.wrap('ios', 'browser'),
+      wrapAndroid: this.wrap('android', 'browser'),
 
       chevDesktop: this.chev('desktop', 'device'), chevGlyphDesktop: chevGlyph('desktop', 'device'),
       chevTablet: this.chev('tablet', 'device'), chevGlyphTablet: chevGlyph('tablet', 'device'),
@@ -638,6 +653,7 @@ class Component extends DCLogic {
       chevChrome: this.chev('chrome', 'browser'), chevGlyphChrome: chevGlyph('chrome', 'browser'),
       chevFirefox: this.chev('firefox', 'browser'), chevGlyphFirefox: chevGlyph('firefox', 'browser'),
       chevEdge: this.chev('edge', 'browser'), chevGlyphEdge: chevGlyph('edge', 'browser'),
+      chevIos: this.chev('ios', 'browser'), chevGlyphIos: chevGlyph('ios', 'browser'),
 
       tut,
       tutSteps: tut.steps.map((s, i) => {
@@ -659,8 +675,12 @@ class Component extends DCLogic {
         return { n: String(i + 1), text: s, img: has ? path : '', imgStyle, containerStyle, placeholderStyle, dotStyle, openShot: () => this.openLightbox(has ? path : '', s) };
       }),
       shotLabel: lang === 'cs' ? 'Snímek brzy doplníme' : 'Screenshot coming soon',
-      hasStore, noStore: !hasStore,
+      hasStore: hasStore && !useBadge, noStore: !hasStore,
       storeUrl: hasStore ? this.STORE[browser] : '#',
+      showBadge: useBadge,
+      badgeSrc: lang === 'cs' ? 'appstore-badge-cs.svg' : 'appstore-badge-en.svg',
+      badgeAlt: lang === 'cs' ? 'Stáhnout v App Store' : 'Download on the App Store',
+      doneText, hasDone: !!doneText,
       hasNote, noNote: !hasNote,
       hasLightbox: !!this.state.lightbox,
       lightboxImg: this.state.lightbox || '',
