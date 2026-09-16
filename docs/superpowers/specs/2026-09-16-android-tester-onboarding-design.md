@@ -157,3 +157,68 @@ Ask Dominik for the **raw screenshots** first — he has them ready. Then: crop/
 with `circle.py`, name them `phone-android-{1,2,3}.png`, make the `index.html` edits
 above, and open a PR against `main` (this repo has no `test` branch; PR #1 went straight
 to `main`).
+
+---
+
+## As built (2026-09-16)
+
+Implemented on `feat/android-tester-onboarding`. Four deviations from the design
+above, each forced by something the design did not know:
+
+**1. Four steps, not three.** Dominik's screenshots showed a step the spec had
+missed: after "Become a tester", Play does *not* send you to the app — you have
+to tap **"download it on Google Play"** on that same page. A closed-test build
+does not surface in Play Store search, so a student who goes hunting for reIS
+finds nothing. That is now step 3, with its own screenshot.
+
+**2. The links sit under their own screenshot, not stacked at the top.**
+Dominik's call, and it is the better one: you read the step, see where the
+button is, then tap through. Implemented as an entry-level `stepLinks` array
+index-aligned to `steps`, each `{ key, url }` where `key` names the per-language
+label (`cta` / `cta2`). `renderVals` attaches `linkUrl` / `linkText` /
+`linkStyle` per step, hiding the anchor with `display:none` where there is no
+link — the same idiom the file already uses for absent screenshots. An entry
+with `stepLinks` suppresses the CTA button above the steps (`hasStepLinks`), so
+no link is offered twice. `cta2` therefore exists as the design said, but as a
+*label*, not a second stacked button.
+
+**3. The Android picker card had to be un-disabled.** The design only planned to
+fill `TUT`, but the Android card at step 2 was a `<div>` with `cardSoonStyle` and
+`aria-disabled="true"` — not a button. With `TUT` filled and the card still
+disabled, the tutorial was reachable only by deep link. It is now a real
+`<button onClick="{{ onAndroid }}">` matching the iOS card, carrying a muted
+`testovací verze` / `test version` subtitle so the closed test is signalled
+before the tap, not after.
+
+**4. The screenshot probe loop was bounded at three.** `componentDidMount` ran
+`for (let i = 1; i <= 3; i++)`, so a fourth screenshot would never have been
+found. Now `i <= entry.cs.steps.length`, which generalises rather than
+hardcoding four.
+
+Screenshots were cropped to their action region before annotating — at the
+220px portrait cap an 864×1277 phone screenshot renders the target a few pixels
+tall. Cropping made all four landscape, so they render full width. The crop of
+step 1 also drops Google Groups' "You don't have permission to access this
+content", which is what an un-joined visitor sees and is not the first thing a
+student should read.
+
+Verified on a local static server: deep link lands on the steps, an invalid
+`browser` for the chosen `device` is rejected and falls back to the picker, both
+links resolve to the right URLs, `tablet-android` reuses the phone screenshots,
+`desktop-chrome` is unchanged, CZ and EN both complete, and there is no
+horizontal overflow at 375px.
+
+### Merge preconditions — both still open
+
+1. **The Alpha track must serve 5.2.4.** It currently serves **5.0.6** from
+   August, which predates #282 and still contains the error telemetry the
+   published privacy policy says was removed. The opt-in link *works* today —
+   that is not the question. Merging this page before the new bundle is on the
+   track points students at a build that contradicts our own policy. No bundle
+   can be uploaded until the upload-key reset lands on **2026-09-18 12:03 UTC**.
+
+2. **The Alpha track's Testers tab must be switched from Email list to the
+   Google Group** `reis-testers@googlegroups.com`. Until then, joining the group
+   grants nothing and step 1 is a dead end. Note that the "You are a tester"
+   screenshot does *not* prove this is done — it was taken on an account already
+   on the email list.
