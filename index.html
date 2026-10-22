@@ -56,6 +56,20 @@
       <div style="font-weight:600;font-size:15px;color:var(--content-secondary);font-family:var(--font-ui)">{{ t.s1 }}</div>
     </div>
 
+    <!-- PHONE -->
+    <div style="{{ wrapPhone }}">
+      <button onClick="{{ onPhone }}" style="{{ cardBtnStyle }}">
+        <div style="{{ iconTilePhone }}">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2"></rect><line x1="12" x2="12.01" y1="18" y2="18"></line></svg>
+        </div>
+        <div style="flex:1;text-align:left">
+          <div style="font-weight:700;font-size:17px;color:var(--content-primary)">{{ t.dev_phone }}</div>
+          <div style="font-family:var(--font-ui);font-size:13px;color:var(--content-muted);margin-top:2px">{{ t.hint_phone }}</div>
+        </div>
+        <div style="{{ chevPhone }}">{{ chevGlyphPhone }}</div>
+      </button>
+    </div>
+
     <!-- DESKTOP -->
     <div style="{{ wrapDesktop }}">
       <button onClick="{{ onDesktop }}" style="{{ cardBtnStyle }}">
@@ -81,20 +95,6 @@
           <div style="font-family:var(--font-ui);font-size:13px;color:var(--content-muted);margin-top:2px">{{ t.hint_tablet }}</div>
         </div>
         <div style="{{ chevTablet }}">{{ chevGlyphTablet }}</div>
-      </button>
-    </div>
-
-    <!-- PHONE -->
-    <div style="{{ wrapPhone }}">
-      <button onClick="{{ onPhone }}" style="{{ cardBtnStyle }}">
-        <div style="{{ iconTilePhone }}">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2"></rect><line x1="12" x2="12.01" y1="18" y2="18"></line></svg>
-        </div>
-        <div style="flex:1;text-align:left">
-          <div style="font-weight:700;font-size:17px;color:var(--content-primary)">{{ t.dev_phone }}</div>
-          <div style="font-family:var(--font-ui);font-size:13px;color:var(--content-muted);margin-top:2px">{{ t.hint_phone }}</div>
-        </div>
-        <div style="{{ chevPhone }}">{{ chevGlyphPhone }}</div>
       </button>
     </div>
 
