@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UIS MENDELU přehledně: rozvrh, zkoušky a známky | reIS</title>
+<meta name="description" content="reIS je neoficiální studentská aplikace, která zpřehlední UIS MENDELU (IS Mendelu): rozvrh, zkoušky a přihlašování, známky, kredity, odevzdávárny a mapa kampusu.">
+<link rel="canonical" href="https://project-4v9ef.vercel.app/uis-mendelu/">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="cs_CZ">
+<meta property="og:site_name" content="reIS">
+<meta property="og:title" content="UIS MENDELU přehledně: rozvrh, zkoušky a známky | reIS">
+<meta property="og:description" content="Neoficiální studentská aplikace pro UIS MENDELU. Rozvrh, zkoušky, známky, kredity, odevzdávárny a mapa kampusu na jednom místě. Zdarma.">
+<meta property="og:url" content="https://project-4v9ef.vercel.app/uis-mendelu/">
+<meta property="og:image" content="https://project-4v9ef.vercel.app/screenshots/desktop-chrome-3.png">
+<meta property="og:image:width" content="2930">
+<meta property="og:image:height" content="1656">
+<meta property="og:image:alt" content="Týdenní rozvrh MENDELU v reIS">
+<meta name="twitter:card" content="summary_large_image">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "reIS",
+      "description": "Neoficiální aplikace a rozšíření prohlížeče, které zpřehlední Univerzitní informační systém Mendelovy univerzity v Brně (UIS MENDELU, IS Mendelu): rozvrh, zkoušky a přihlašování na ně, známky a kredity, soubory a odevzdávárny, mapa kampusu a upozornění. Nezávislý studentský projekt.",
+      "url": "https://project-4v9ef.vercel.app/uis-mendelu/",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "Chrome, Firefox, iOS, iPadOS, Android",
+      "inLanguage": ["cs", "en"],
+      "isAccessibleForFree": true,
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CZK" },
+      "image": "https://project-4v9ef.vercel.app/screenshots/desktop-chrome-3.png",
+      "author": [
+        { "@type": "Person", "name": "Dominik Holek" },
+        { "@type": "Person", "name": "Antonín Dědeček" }
+      ],
+      "sameAs": [
+        "https://chromewebstore.google.com/detail/reis/feildjaginpppijbpplcghalabdeibdb",
+        "https://addons.mozilla.org/cs/firefox/addon/reis/",
+        "https://apps.apple.com/cz/app/id6804832714",
+        "https://play.google.com/store/apps/details?id=cz.reis.app",
+        "https://github.com/reis-mendelu/reis-extension"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "inLanguage": "cs",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Je reIS oficiální aplikace MENDELU?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Ne. reIS je nezávislý studentský projekt, který vytvářejí studenti MENDELU. Univerzita ho nevydává ani nespravuje. Oficiální systém je UIS na is.mendelu.cz a reIS z něj jen načítá tvoje data a zobrazuje je přehledněji." }
+        },
+        {
+          "@type": "Question",
+          "name": "Kde zůstávají moje data?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Na tvém zařízení. Rozvrh, známky, zkoušky i soubory si reIS načítá přímo z UIS a ukládá je jen u tebe, na žádný server reIS je neposílá. Odesílá se jen statistika používání bez jména, studentského čísla a účtu v UIS (například počet instalací podle fakulty) a to, co sám napíšeš do hlášení chyby nebo nápadu. Podrobnosti jsou v zásadách ochrany soukromí." }
+        },
+        {
+          "@type": "Question",
+          "name": "Vidí reIS moje heslo do UIS?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Ne. Přihlašuješ se svým běžným univerzitním účtem přímo na stránce UIS, reIS tvoje heslo nevidí." }
+        },
+        {
+          "@type": "Question",
+          "name": "Kolik reIS stojí?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Nic, reIS je zdarma." }
+        },
+        {
+          "@type": "Question",
+          "name": "Jak reIS nainstaluju?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Otevři návod k instalaci, vyber zařízení a prohlížeč a postupuj podle kroků. Do počítače se reIS instaluje jako rozšíření z Chrome Web Store nebo Firefox Add-ons, do telefonu a tabletu jako aplikace z App Store nebo Google Play. Zabere to zhruba dvě minuty." }
+        },
+        {
+          "@type": "Question",
+          "name": "Funguje reIS i na telefonu?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Ano. Pro iPhone a iPad je aplikace v App Store, pro Android v Google Play. Na telefonu ti navíc přijde upozornění na nové body v záznamníku a připomínka hodinu před otevřením přihlašování na zkoušku." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  /* Same tokens and look as the install guide (../index.html). This page is
+     plain static HTML, not the x-dc template, so crawlers read it as served. */
+  :root{
+    --surface-primary:#1f2937;--surface-secondary:#111827;--surface-tertiary:#0f172a;
+    --content-primary:#f3f4f6;--content-secondary:#d1d5db;--content-muted:#9ca3af;
+    --color-primary:#79be15;--color-primary-hover:#6aab12;
+    --font-sans:'DM Sans',system-ui,sans-serif;--font-ui:'Inter',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{background:var(--surface-secondary);color:var(--content-primary);font-family:var(--font-sans);-webkit-font-smoothing:antialiased}
+  a{color:var(--color-primary)}
+  .page{display:flex;justify-content:center;padding:20px 18px 56px}
+  .col{width:100%;max-width:520px}
+  @media (min-width:820px){.col{max-width:720px}}
+  @media (min-width:1200px){.col{max-width:820px}}
+
+  .top{display:flex;align-items:center;justify-content:space-between;margin-bottom:40px}
+  .brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--content-primary)}
+  .brand span{font-weight:800;font-size:24px;letter-spacing:-.01em}
+  .top-link{font-family:var(--font-ui);font-weight:600;font-size:13px;color:var(--content-muted);text-decoration:none;border:1px solid rgba(255,255,255,.13);border-radius:7px;padding:6px 12px}
+  .top-link:hover{color:var(--content-primary)}
+
+  h1{margin:0 0 16px;font-weight:800;font-size:34px;line-height:1.08;letter-spacing:-.02em;text-wrap:balance}
+  h2{margin:0 0 14px;font-weight:700;font-size:22px;line-height:1.2;letter-spacing:-.01em}
+  h3{margin:0 0 6px;font-weight:700;font-size:17px}
+  p,li{font-family:var(--font-ui);font-size:15px;line-height:1.55;color:var(--content-secondary);text-wrap:pretty}
+  p{margin:0 0 12px}
+  .lead{font-size:17px;color:var(--content-secondary)}
+  section{margin-top:44px}
+
+  .notice{display:flex;gap:11px;align-items:flex-start;padding:14px 16px;margin:18px 0 22px;background:rgba(245,166,35,.08);border:1px solid rgba(245,166,35,.28);border-radius:12px}
+  .notice p{margin:0;font-size:14px}
+  .notice svg{flex-shrink:0;margin-top:2px}
+
+  .cta{display:flex;align-items:center;justify-content:center;gap:9px;width:100%;padding:14px;background:var(--color-primary);color:#0f172a;font-weight:700;font-size:16px;text-decoration:none;border-radius:12px;transition:background .15s ease}
+  .cta:hover{background:var(--color-primary-hover)}
+  .cta-sub{text-align:center;font-family:var(--font-ui);font-size:13px;color:var(--content-muted);margin-top:8px}
+
+  .shot{width:100%;height:auto;display:block;border-radius:12px;border:1px solid rgba(255,255,255,.09);margin-top:18px}
+  .shot-cap{font-family:var(--font-ui);font-size:12px;color:var(--content-muted);margin-top:6px;text-align:center}
+
+  .grid{display:grid;grid-template-columns:1fr;gap:11px}
+  @media (min-width:640px){.grid{grid-template-columns:1fr 1fr}}
+  .card{padding:16px;background:var(--surface-primary);border:1px solid rgba(255,255,255,.09);border-radius:16px;box-shadow:0 1px 3px 0 rgba(0,0,0,.25)}
+  .card p{margin:0;font-size:14px}
+  .icon{display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:11px;background:rgba(121,190,21,.14);color:var(--color-primary);margin-bottom:10px}
+
+  ol.steps{margin:0;padding-left:20px}
+  ol.steps li{margin-bottom:8px}
+
+  .platforms{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+  .platforms li{display:flex;justify-content:space-between;gap:12px;padding:12px 14px;background:var(--surface-primary);border:1px solid rgba(255,255,255,.09);border-radius:12px;font-size:14px}
+  .platforms li b{color:var(--content-primary);font-weight:600}
+  .platforms li span{color:var(--content-muted);text-align:right}
+
+  details{background:var(--surface-primary);border:1px solid rgba(255,255,255,.09);border-radius:12px;margin-bottom:9px}
+  summary{cursor:pointer;padding:14px 16px;font-weight:700;font-size:16px;list-style:none;display:flex;justify-content:space-between;gap:12px}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:'+';color:var(--content-muted);font-family:var(--font-ui);font-weight:600}
+  details[open] summary::after{content:'−'}
+  details p{padding:0 16px 14px;margin:0}
+
+  .en{padding:18px;border:1px dashed rgba(255,255,255,.16);border-radius:16px}
+  .en p:last-child{margin-bottom:0}
+
+  footer{margin-top:48px;padding-top:24px;border-top:1px solid rgba(255,255,255,.07);text-align:center}
+  footer .made{font-family:var(--font-ui);font-weight:600;font-size:13px;color:var(--content-secondary)}
+  footer .small{font-family:var(--font-ui);font-size:12px;color:var(--content-muted);margin-top:8px;line-height:1.5}
+  footer nav{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 16px;margin-top:12px;font-family:var(--font-ui);font-size:13px}
+  footer nav a{color:var(--content-muted);text-decoration:none}
+  footer nav a:hover{color:var(--content-primary)}
+</style>
+</head>
+<body>
+<div class="page">
+<div class="col">
+
+  <header class="top">
+    <a class="brand" href="/" aria-label="reIS – návod k instalaci">
+      <svg viewBox="0 0 128 128" width="44" height="44" aria-hidden="true" style="display:block">
+        <rect width="128" height="128" rx="28" fill="#0f172a"></rect>
+        <g transform="translate(7,0)">
+          <path d="M38 88V86h4V42h-4V40h24c12 0 20 8 20 18s-7 17-17 18l18 12H69L55 76H54v10h4v2H38z M54 66h10c6 0 10-4 10-10s-4-8-10-8H54v18z" fill="#f3f4f6" fill-rule="evenodd"></path>
+          <circle cx="32" cy="96" r="16" fill="#79be15" stroke="#0f172a" stroke-width="4"></circle>
+        </g>
+      </svg>
+      <span>reIS</span>
+    </a>
+    <a class="top-link" href="#english" hreflang="en">EN</a>
+  </header>
+
+  <main>
+    <h1>UIS MENDELU přehledně: rozvrh, zkoušky a známky na jednom místě</h1>
+    <p class="lead">reIS je bezplatná aplikace a rozšíření prohlížeče, které zpřehlední Univerzitní informační systém Mendelovy univerzity v Brně (UIS MENDELU, často jen IS Mendelu nebo is.mendelu.cz). Rozvrh, zkoušky, známky, kredity i odevzdávárny máš v jednom rychlém rozhraní, na počítači i v telefonu.</p>
+
+    <div class="notice" role="note">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f0b454" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" x2="12" y1="8" y2="12"></line><line x1="12" x2="12.01" y1="16" y2="16"></line></svg>
+      <p><strong>reIS není oficiální aplikace MENDELU.</strong> Je to nezávislý studentský projekt. Oficiální systém je UIS na <a href="https://is.mendelu.cz/">is.mendelu.cz</a>; reIS z něj jen načítá tvoje data a ukazuje je přehledněji.</p>
+    </div>
+
+    <a class="cta" href="/">Nainstalovat reIS
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+    </a>
+    <div class="cta-sub">Zdarma · zabere to zhruba dvě minuty</div>
+
+    <section aria-labelledby="co-umi">
+      <h2 id="co-umi">Co reIS dělá s UIS MENDELU</h2>
+      <div class="grid">
+        <div class="card">
+          <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line></svg></div>
+          <h3>Rozvrh MENDELU</h3>
+          <p>Celý týden najednou a u každé hodiny místnost, ve které se učí. Bez proklikávání tabulek v UIS.</p>
+        </div>
+        <div class="card">
+          <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg></div>
+          <h3>Zkoušky a přihlašování</h3>
+          <p>Termíny zkoušek MENDELU na jednom místě a přihlášení na ně. Telefon ti hodinu před otevřením přihlašování připomene, ať termín nepropásneš.</p>
+        </div>
+        <div class="card">
+          <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg></div>
+          <h3>Známky a kredity</h3>
+          <p>Známky z předmětů, body ze záznamníku a přehled kreditů. Nové body uvidíš hned.</p>
+        </div>
+        <div class="card">
+          <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></div>
+          <h3>Soubory a odevzdávárny</h3>
+          <p>Studijní materiály a PDF k předmětům a odevzdávárny i s pokyny vyučujícího. Nová odevzdávárna se ti ukáže v Novinkách.</p>
+        </div>
+        <div class="card">
+          <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"></polygon><line x1="9" x2="9" y1="3" y2="18"></line><line x1="15" x2="15" y1="6" y2="21"></line></svg></div>
+          <h3>Mapa kampusu</h3>
+          <p>Mapa areálu MENDELU, na které najdeš budovy a učebny.</p>
+        </div>
+        <div class="card">
+          <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path></svg></div>
+          <h3>Upozornění</h3>
+          <p>Na telefonu ti přijde upozornění na nové body v záznamníku a připomínka před přihlašováním na zkoušky.</p>
+        </div>
+      </div>
+      <img class="shot" src="/screenshots/desktop-chrome-3.png" width="2930" height="1656" loading="lazy" alt="Týdenní rozvrh v reIS: předměty po dnech, u každé hodiny místnost a čas">
+      <div class="shot-cap">Týdenní rozvrh v reIS (rozšíření pro Chrome)</div>
+    </section>
+
+    <section aria-labelledby="prihlaseni">
+      <h2 id="prihlaseni">Přihlášení do UIS MENDELU s reIS</h2>
+      <p>Přihlašuješ se pořád stejně, svým běžným univerzitním účtem přímo na stránce UIS. reIS tvoje heslo nevidí.</p>
+      <ol class="steps">
+        <li><strong>V prohlížeči:</strong> otevři <a href="https://is.mendelu.cz/">is.mendelu.cz</a> a klikni na „Přihlášení do osobní administrativy UIS“. Po přihlášení se reIS načte sám.</li>
+        <li><strong>V telefonu nebo tabletu:</strong> otevři aplikaci reIS a přihlas se na přihlašovací stránce UIS, kterou ti aplikace ukáže.</li>
+      </ol>
+    </section>
+
+    <section aria-labelledby="kde">
+      <h2 id="kde">Kde reIS funguje</h2>
+      <ul class="platforms">
+        <li><b>Chrome</b><span>i Edge, Brave a Opera · Chrome Web Store</span></li>
+        <li><b>Firefox</b><span>Firefox Add-ons</span></li>
+        <li><b>iPhone a iPad</b><span>App Store</span></li>
+        <li><b>Android</b><span>Google Play</span></li>
+        <li><b>Safari</b><span>připravujeme</span></li>
+      </ul>
+      <p style="margin-top:14px">Odkazy do obchodů i postup krok za krokem najdeš v <a href="/">návodu k instalaci</a>.</p>
+    </section>
+
+    <section aria-labelledby="faq">
+      <h2 id="faq">Časté otázky</h2>
+      <details>
+        <summary>Je reIS oficiální aplikace MENDELU?</summary>
+        <p>Ne. reIS je nezávislý studentský projekt, který vytvářejí studenti MENDELU. Univerzita ho nevydává ani nespravuje. Oficiální systém je UIS na is.mendelu.cz a reIS z něj jen načítá tvoje data a zobrazuje je přehledněji.</p>
+      </details>
+      <details>
+        <summary>Kde zůstávají moje data?</summary>
+        <p>Na tvém zařízení. Rozvrh, známky, zkoušky i soubory si reIS načítá přímo z UIS a ukládá je jen u tebe, na žádný server reIS je neposílá. Odesílá se jen statistika používání bez jména, studentského čísla a účtu v UIS (například počet instalací podle fakulty) a to, co sám napíšeš do hlášení chyby nebo nápadu. Podrobnosti jsou v <a href="https://github.com/reis-mendelu/reis-extension/blob/main/PRIVACY.md">zásadách ochrany soukromí</a>.</p>
+      </details>
+      <details>
+        <summary>Vidí reIS moje heslo do UIS?</summary>
+        <p>Ne. Přihlašuješ se svým běžným univerzitním účtem přímo na stránce UIS, reIS tvoje heslo nevidí.</p>
+      </details>
+      <details>
+        <summary>Kolik reIS stojí?</summary>
+        <p>Nic, reIS je zdarma.</p>
+      </details>
+      <details>
+        <summary>Jak reIS nainstaluju?</summary>
+        <p>Otevři <a href="/">návod k instalaci</a>, vyber zařízení a prohlížeč a postupuj podle kroků. Do počítače se reIS instaluje jako rozšíření z Chrome Web Store nebo Firefox Add-ons, do telefonu a tabletu jako aplikace z App Store nebo Google Play. Zabere to zhruba dvě minuty.</p>
+      </details>
+      <details>
+        <summary>Funguje reIS i na telefonu?</summary>
+        <p>Ano. Pro iPhone a iPad je aplikace v App Store, pro Android v Google Play. Na telefonu ti navíc přijde upozornění na nové body v záznamníku a připomínka hodinu před otevřením přihlašování na zkoušku.</p>
+      </details>
+    </section>
+
+    <section id="english" lang="en" aria-labelledby="en-h" class="en">
+      <h2 id="en-h">In English</h2>
+      <p>reIS is a free browser extension and app that makes MENDELU’s student information system (UIS, IS Mendelu) easier to use: your timetable, exams and exam registration, grades and credits, course files and assignment submissions, and a campus map, in one place. It is an <strong>unofficial, independent student project</strong>, not made or run by Mendel University.</p>
+      <p>Your timetable, grades and files are loaded from UIS and kept on your own device. You sign in on the UIS page itself, and reIS never sees your password.</p>
+      <p>It works in Chrome (and Edge, Brave, Opera), Firefox, and as an app for iPhone, iPad and Android. <a href="/">Install guide</a> (switch it to English with the EN button).</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="made">Vytvořeno studenty pro studenty</div>
+    <div class="small">reIS je nezávislý studentský projekt, není oficiální aplikací Mendelovy univerzity v Brně.</div>
+    <nav aria-label="Odkazy">
+      <a href="/">Návod k instalaci</a>
+      <a href="https://is.mendelu.cz/">UIS MENDELU (oficiální)</a>
+      <a href="https://github.com/reis-mendelu/reis-extension/blob/main/PRIVACY.md">Ochrana soukromí</a>
+      <a href="https://github.com/reis-mendelu/reis-extension">Zdrojový kód</a>
+    </nav>
+  </footer>
+
+</div>
+</div>
+</body>
+</html>
