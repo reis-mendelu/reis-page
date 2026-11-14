@@ -2,11 +2,6 @@
   "cleanUrls": true,
   "redirects": [
     {
-      "source": "/soukromi",
-      "destination": "https://gist.github.com/ElijaahInverted/e3007a015e24c210a017d21743f83784",
-      "permanent": false
-    },
-    {
       "source": "/",
       "has": [{ "type": "host", "value": "reis-navod.cz" }],
       "destination": "/navod",
@@ -18,5 +13,8 @@
       "destination": "/navod",
       "permanent": false
     }
+  ],
+  "rewrites": [
+    { "source": "/rx/:path*", "destination": "https://eu.i.posthog.com/:path*" }
   ]
 }

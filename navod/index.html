@@ -9,6 +9,7 @@
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <script src="/vendor/react.production.min.js"></script>
 <script src="/vendor/react-dom.production.min.js"></script>
+<script src="/ph.js"></script>
 <script src="./support.js"></script>
 </head>
 <body>
@@ -45,6 +46,16 @@
       <h1 style="margin:0;font-weight:700;font-size:clamp(32px,4.4vw,44px);line-height:1.08;letter-spacing:-0.03em;color:var(--content-primary);text-wrap:balance">{{ t.heroTitle }}</h1>
     </div>
 
+    <!-- COMPACT (phone/tablet recognised automatically): one line instead of steps 1-2 -->
+    <sc-if value="{{ compact }}" hint-placeholder-val="{{ false }}">
+      <div style="display:flex;align-items:center;flex-wrap:wrap;gap:6px 10px;margin:-14px 0 6px;font-family:var(--font-ui);font-size:15px;color:var(--content-secondary)">
+        <span>{{ t.your_device }}: <strong style="color:var(--content-primary)">{{ deviceLabel }}</strong></span>
+        <span aria-hidden="true" style="color:#d1d5db">·</span>
+        <button onClick="{{ onChangeDevice }}" style="all:unset;cursor:pointer;color:var(--color-primary-ink);font-weight:600;border-bottom:1.5px solid #79be15">{{ t.change }}</button>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ showPicker }}" hint-placeholder-val="{{ true }}">
     <!-- STEP 1: DEVICE -->
     <div style="margin-bottom:14px;display:flex;align-items:center;gap:10px">
       <div style="display:flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:9999px;background:rgba(121,190,21,.16);color:var(--color-primary-ink);font-weight:700;font-size:13px;font-family:var(--font-ui)">1</div>
@@ -73,7 +84,7 @@
         </div>
         <div style="flex:1;text-align:left">
           <div style="font-weight:700;font-size:17px;color:var(--content-primary)">{{ t.dev_desktop }}</div>
-          <div style="font-family:var(--font-ui);font-size:13px;color:var(--content-muted);margin-top:2px">{{ t.hint_desktop }}</div>
+          <div style="font-family:var(--font-ui);font-size:13px;color:var(--content-muted);margin-top:2px">{{ hintDesktop }}</div>
         </div>
         <div style="{{ chevDesktop }}">{{ chevGlyphDesktop }}</div>
       </button>
@@ -101,6 +112,20 @@
           <div style="font-weight:600;font-size:15px;color:var(--content-secondary);font-family:var(--font-ui)">{{ s2Label }}</div>
         </div>
 
+        <!-- Mac: the iPhone/iPad app from the same App Store listing installs on Macs with an Apple chip. Shown first to Mac visitors. -->
+        <sc-if value="{{ showMac }}" hint-placeholder-val="{{ false }}">
+          <div style="{{ wrapMac }}">
+            <button onClick="{{ onMac }}" style="{{ cardBtnStyle }}">
+              <div style="{{ logoTileStyle }}"><span style="color:var(--content-primary);display:flex"><svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.53 4.08zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"></path></svg></span></div>
+              <div style="flex:1;text-align:left">
+                <div style="font-weight:700;font-size:17px;color:var(--content-primary)">{{ t.mac_title }}</div>
+                <div style="font-family:var(--font-ui);font-size:13px;color:var(--content-muted);margin-top:2px">{{ t.mac_hint }}</div>
+              </div>
+              <div style="{{ chevMac }}">{{ chevGlyphMac }}</div>
+            </button>
+          </div>
+        </sc-if>
+
         <sc-if value="{{ showChrome }}" hint-placeholder-val="{{ false }}">
           <div style="{{ wrapChrome }}">
             <button onClick="{{ onChrome }}" style="{{ cardBtnStyle }}">
@@ -109,10 +134,25 @@
               </div>
               <div style="flex:1;text-align:left">
                 <div style="font-weight:700;font-size:17px;color:var(--content-primary)">Chrome</div>
-                <!-- Edge, Brave and Opera run on Chromium and install from the Chrome Web Store, so they share this card -->
-                <div style="font-family:var(--font-ui);font-size:13px;color:var(--content-muted);margin-top:2px">Edge · Brave · Opera</div>
+                <!-- Brave and Opera run on Chromium and install from the Chrome Web Store, so they share this card -->
+                <div style="font-family:var(--font-ui);font-size:13px;color:var(--content-muted);margin-top:2px">Brave · Opera</div>
               </div>
               <div style="{{ chevChrome }}">{{ chevGlyphChrome }}</div>
+            </button>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ showEdge }}" hint-placeholder-val="{{ false }}">
+          <div style="{{ wrapEdge }}">
+            <button onClick="{{ onEdge }}" style="{{ cardBtnStyle }}">
+              <div style="{{ logoTileStyle }}">
+                <img src="logos/edge.svg" width="30" height="30" style="display:block">
+              </div>
+              <div style="flex:1;text-align:left">
+                <div style="font-weight:700;font-size:17px;color:var(--content-primary)">Edge</div>
+                <div style="font-family:var(--font-ui);font-size:13px;color:var(--content-muted);margin-top:2px">{{ t.edge_hint }}</div>
+              </div>
+              <div style="{{ chevEdge }}">{{ chevGlyphEdge }}</div>
             </button>
           </div>
         </sc-if>
@@ -167,11 +207,13 @@
       </div>
     </sc-if>
 
+    </sc-if>
+
     <!-- STEP 3: TUTORIAL -->
     <sc-if value="{{ browserChosen }}" hint-placeholder-val="{{ false }}">
       <div style="margin-top:30px;animation:reisFadeUp .34s ease both">
         <div style="margin-bottom:16px;display:flex;align-items:center;gap:10px">
-          <div style="display:flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:9999px;background:rgba(121,190,21,.16);color:var(--color-primary-ink);font-weight:700;font-size:13px;font-family:var(--font-ui)">3</div>
+          <sc-if value="{{ showPicker }}" hint-placeholder-val="{{ true }}"><div style="display:flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:9999px;background:rgba(121,190,21,.16);color:var(--color-primary-ink);font-weight:700;font-size:13px;font-family:var(--font-ui)">3</div></sc-if>
           <div style="font-weight:600;font-size:15px;color:var(--content-secondary);font-family:var(--font-ui)">{{ tut.title }}</div>
         </div>
 
@@ -268,7 +310,7 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;: {&quot;width&quot;: 520, &quot;height&quot;: 920}}">
 class Component extends DCLogic {
-  state = { lang: 'cs', device: null, browser: null, shots: {}, dims: {}, lightbox: null, lightboxAlt: '' };
+  state = { lang: 'cs', device: null, browser: null, shots: {}, dims: {}, lightbox: null, lightboxAlt: '', mac: false, auto: false };
 
   // Screenshots follow the convention screenshots/<device>-<browser>-<step>.png
   // (e.g. screenshots/desktop-chrome-2.png, screenshots/phone-firefox-1.png).
@@ -283,7 +325,7 @@ class Component extends DCLogic {
         const entry = this.TUT[`${device}-${browser}`];
         if (!entry || !entry.cs.steps.length) return;
         for (let i = 1; i <= 3; i++) {
-          const path = `screenshots/${device}-${browser}-${i}.png`;
+          const path = `screenshots/${entry.shots || device + '-' + browser}-${i}.png`;
           pending++;
           const probe = new Image();
           const done = (ok) => {
@@ -298,15 +340,20 @@ class Component extends DCLogic {
     });
     if (pending === 0) this.setState({ shots: {} });
 
-    // Deep link: ?device=phone&browser=android lands straight on the steps, so
-    // a "link in bio" can skip the picker. Both params are validated against
-    // AVAIL — never set state from an unchecked query string. Edge was folded
-    // into Chrome, so old ?browser=edge links land on the Chrome guide.
-    const ALIAS = { edge: 'chrome' };
+    // Deep link: ?device=phone&browser=android lands straight on the steps.
+    // Both params are validated against AVAIL — never set state from an
+    // unchecked query string. Without a deep link, the device is recognised
+    // from the browser (detect) and pre-selected; when unsure, nothing is.
+    const mac = this.isMacVisitor();
     const q = new URLSearchParams(location.search);
-    const d = q.get('device'), b = ALIAS[q.get('browser')] || q.get('browser');
+    const d = q.get('device'), b = q.get('browser');
     if (d && this.AVAIL[d] && (!b || this.AVAIL[d].includes(b))) {
-      this.setState({ device: d, browser: b || null });
+      this.setState({ device: d, browser: b || null, mac });
+      this.track('guide_opened', { via: 'link', device: d, option: b || null });
+    } else {
+      const det = this.detect();
+      this.setState({ mac, ...(det ? { device: det.device, browser: det.browser, auto: true } : {}) });
+      this.track('guide_opened', { via: det ? 'auto' : 'none', device: det ? det.device : null, option: det ? det.browser : null });
     }
   }
 
@@ -320,10 +367,17 @@ class Component extends DCLogic {
       dev_desktop: 'Počítač',
       dev_tablet: 'Tablet',
       dev_phone: 'Telefon',
-      hint_desktop: 'Chrome · Safari · Firefox · Edge',
+      hint_desktop: 'Chrome · Edge · Firefox · Safari',
       hint_tablet: 'Android · iPad',
       hint_phone: 'Android · iPhone',
       safari_pill: 'Připravujeme',
+      mac_title: 'reIS pro Mac',
+      mac_hint: 'Aplikace z App Store · Mac s čipem Apple',
+      s2_mac: 'Vyber aplikaci nebo prohlížeč',
+      edge_hint: 'Rozšíření z Chrome Web Store',
+      your_device: 'Tvoje zařízení',
+      change: 'změnit',
+      hint_desktop_mac: 'Mac · Chrome · Edge · Firefox',
       done: 'A je to! Otevři is.mendelu.cz a reIS naskočí sám.',
       restart: 'Začít znovu',
       footer: 'Nezávislý studentský projekt, není oficiální produkt MENDELU.',
@@ -339,10 +393,17 @@ class Component extends DCLogic {
       dev_desktop: 'Desktop',
       dev_tablet: 'Tablet',
       dev_phone: 'Phone',
-      hint_desktop: 'Chrome · Safari · Firefox · Edge',
+      hint_desktop: 'Chrome · Edge · Firefox · Safari',
       hint_tablet: 'Android · iPad',
       hint_phone: 'Android · iPhone',
       safari_pill: 'Coming soon',
+      mac_title: 'reIS for Mac',
+      mac_hint: 'App Store app · Mac with Apple chip',
+      s2_mac: 'Pick the app or a browser',
+      edge_hint: 'Extension from the Chrome Web Store',
+      your_device: 'Your device',
+      change: 'change',
+      hint_desktop_mac: 'Mac · Chrome · Edge · Firefox',
       done: 'That\u2019s it! Open is.mendelu.cz and reIS loads automatically.',
       restart: 'Start over',
       footer: 'An independent student project, not an official MENDELU product.',
@@ -352,12 +413,12 @@ class Component extends DCLogic {
   };
 
   AVAIL = {
-    desktop: ['chrome', 'safari', 'firefox'],
+    desktop: ['mac', 'chrome', 'edge', 'safari', 'firefox'],
     tablet: ['ios', 'android'],
     phone: ['ios', 'android']
   };
 
-  NAMES = { chrome: 'Chrome', safari: 'Safari', firefox: 'Firefox', ios: 'iPhone', android: 'Android' };
+  NAMES = { chrome: 'Chrome', edge: 'Edge', safari: 'Safari', firefox: 'Firefox', ios: 'iPhone', android: 'Android', mac: 'Mac' };
 
   STORE = {
     chrome: 'https://chromewebstore.google.com/detail/reis/feildjaginpppijbpplcghalabdeibdb?pli=1',
@@ -365,17 +426,21 @@ class Component extends DCLogic {
     safari: null,
     // iPhone and iPad run the native reIS app, not a Safari extension.
     ios: 'https://apps.apple.com/cz/app/id6804832714',
+    // The same iPhone/iPad listing: it installs on Macs with an Apple chip.
+    mac: 'https://apps.apple.com/cz/app/id6804832714',
+    // Edge installs Chrome Web Store extensions.
+    edge: 'https://chromewebstore.google.com/detail/reis/feildjaginpppijbpplcghalabdeibdb?pli=1',
     android: 'https://play.google.com/store/apps/details?id=cz.reis.app'
   };
 
   TUT = {
     'desktop-chrome': {
-      cs: { title: 'Nainstaluj v Chromu', cta: 'Otevřít v Chrome Web Store', note: 'Máš Edge, Brave nebo Operu? Postup je stejný — rozšíření z Chrome Web Store fungují i tam.', steps: [
+      cs: { title: 'Nainstaluj v Chromu', cta: 'Otevřít v Chrome Web Store', note: 'Máš Brave nebo Operu? Postup je stejný — rozšíření z Chrome Web Store fungují i tam.', steps: [
         'Otevři reIS v Chrome Web Store a klikni na „Přidat do Chromu“.',
         'Přejdi na is.mendelu.cz a klikni na „Přihlášení do osobní administrativy UIS“.',
         'A je to — reIS se načte sám a rozvrh se promění.'
       ]},
-      en: { title: 'Install on Chrome', cta: 'Open in Chrome Web Store', note: 'On Edge, Brave or Opera? Same steps — Chrome Web Store extensions work there too.', steps: [
+      en: { title: 'Install on Chrome', cta: 'Open in Chrome Web Store', note: 'On Brave or Opera? Same steps — Chrome Web Store extensions work there too.', steps: [
         'Open reIS in the Chrome Web Store and click “Add to Chrome”.',
         'Go to is.mendelu.cz and click “Log in to the Personal administration of UIS”.',
         'That’s it — reIS loads itself and your schedule transforms.'
@@ -393,17 +458,26 @@ class Component extends DCLogic {
         'That’s it — reIS loads itself and your schedule transforms.'
       ]}
     },
-    'desktop-safari': {
-      cs: { title: 'Nainstaluj v Safari', cta: 'Brzy v App Store', note: 'Verzi pro Safari dokončujeme — odkaz sem brzy doplníme.', steps: [
-        'Otevři reIS v App Store a nainstaluj ho.',
-        'V Safari → Nastavení → Rozšíření zapni reIS.',
-        'Povol reIS na is.mendelu.cz.'
+    'desktop-edge': { shots: 'desktop-chrome',
+      cs: { title: 'Nainstaluj v Edge', cta: 'Otevřít v Chrome Web Store', note: 'Edge umí rozšíření z Chrome Web Store. Poprvé se nahoře zeptá „Povolit rozšíření z jiných obchodů“ — klikni na Povolit.', steps: [
+        'Otevři reIS v Chrome Web Store, povol rozšíření z jiných obchodů a klikni na „Získat“.',
+        'Přejdi na is.mendelu.cz a klikni na „Přihlášení do osobní administrativy UIS“.',
+        'A je to — reIS se načte sám a rozvrh se promění.'
       ]},
-      en: { title: 'Install on Safari', cta: 'Coming soon to App Store', note: 'The Safari build is on the way — we’ll drop the link here soon.', steps: [
-        'Open reIS in the App Store and install it.',
-        'In Safari → Settings → Extensions, turn reIS on.',
-        'Allow reIS on is.mendelu.cz.'
+      en: { title: 'Install on Edge', cta: 'Open in Chrome Web Store', note: 'Edge installs Chrome Web Store extensions. The first time, it asks at the top to “Allow extensions from other stores” — click Allow.', steps: [
+        'Open reIS in the Chrome Web Store, allow extensions from other stores and click “Get”.',
+        'Go to is.mendelu.cz and click “Log in to the Personal administration of UIS”.',
+        'That’s it — reIS loads itself and your schedule transforms.'
       ]}
+    },
+    // The Safari extension is not out yet, but the reIS app for Mac is.
+    'desktop-safari': {
+      cs: { title: 'Nainstaluj v Safari', cta: 'Rozšíření pro Safari připravujeme', note: 'Rozšíření pro Safari dokončujeme. Máš Mac s čipem Apple? Aplikace reIS pro Mac už v App Store je.', steps: [], done: '' },
+      en: { title: 'Install on Safari', cta: 'Safari extension coming soon', note: 'The Safari extension is on the way. On a Mac with an Apple chip? The reIS app for Mac is already in the App Store.', steps: [], done: '' }
+    },
+    'desktop-mac': { badge: true,
+      cs: { title: 'Stáhni reIS pro Mac', cta: '', note: 'Pro Mac s čipem Apple (M1 a novější). Starší Mac? Použij rozšíření pro Chrome nebo Firefox. Přihlásíš se svým běžným univerzitním účtem přímo na stránce IS — reIS tvoje heslo nikdy nevidí.', steps: [], done: '' },
+      en: { title: 'Get reIS for Mac', cta: '', note: 'For Macs with an Apple chip (M1 and newer). Older Mac? Use the extension for Chrome or Firefox. You sign in with your usual university account on the IS page itself — reIS never sees your password.', steps: [], done: '' }
     },
     // Phone and tablet run the native reIS app, so there is nothing to walk
     // through: the store badge is the whole instruction. `steps: []` means
@@ -426,6 +500,33 @@ class Component extends DCLogic {
     }
   };
 
+  // Analytics (reisapp.cz/ph.js): named events only, no identity. Safe when
+  // PostHog is absent (localhost, blocked): window.reisTrack is a no-op then.
+  track(name, props) { try { if (window.reisTrack) window.reisTrack(name, props); } catch (e) {} }
+
+  // macOS, but not an iPad: iPadOS Safari sends a Macintosh user agent, so a
+  // touch screen tells them apart. Intel vs Apple chip can't be read.
+  isMacVisitor() {
+    if (typeof navigator === 'undefined') return false;
+    const ua = navigator.userAgent || '';
+    return /Macintosh|Mac OS X/.test(ua) && !/iPhone|iPad|iPod/.test(ua) && (navigator.maxTouchPoints || 0) < 2;
+  }
+
+  // Recognise the visitor's device; null when unsure (nothing gets ticked).
+  detect() {
+    if (typeof navigator === 'undefined') return null;
+    const ua = navigator.userAgent || '', touch = navigator.maxTouchPoints || 0;
+    if (/iPhone|iPod/.test(ua)) return { device: 'phone', browser: 'ios' };
+    if (/iPad/.test(ua) || (/Macintosh/.test(ua) && touch > 1)) return { device: 'tablet', browser: 'ios' };
+    if (/Android/.test(ua)) return { device: /Mobile/.test(ua) ? 'phone' : 'tablet', browser: 'android' };
+    if (/Mobi|Tablet/.test(ua)) return null;
+    if (/Edg\//.test(ua)) return { device: 'desktop', browser: 'edge' };
+    if (/Firefox\//.test(ua)) return { device: 'desktop', browser: 'firefox' };
+    if (this.isMacVisitor() && /Safari\//.test(ua) && !/Chrome|Chromium|CriOS|OPR|Firefox/.test(ua)) return { device: 'desktop', browser: 'mac' };
+    if (/Chrome\//.test(ua)) return { device: 'desktop', browser: 'chrome' };
+    return null;
+  }
+
   setLang(l) { this.setState({ lang: l }); }
   toggleLang() { this.setLang(this.state.lang === 'cs' ? 'en' : 'cs'); }
   pickDevice(id) {
@@ -434,11 +535,16 @@ class Component extends DCLogic {
       // level (drop the browser choice) instead of collapsing to step 1.
       this.setState(this.state.browser ? { browser: null } : { device: null });
     } else {
-      this.setState({ device: id, browser: null });
+      this.setState({ device: id, browser: null, auto: false });
+      this.track('guide_device_selected', { device: id });
     }
   }
-  pickBrowser(id) { this.setState({ browser: this.state.browser === id ? null : id }); }
-  restart() { this.setState({ device: null, browser: null }); }
+  pickBrowser(id) {
+    const next = this.state.browser === id ? null : id;
+    this.setState({ browser: next, auto: false });
+    if (next) this.track('guide_option_selected', { device: this.state.device, option: next });
+  }
+  restart() { this.setState({ device: null, browser: null, auto: false }); }
 
   openLightbox(src, alt) {
     if (!src) return;
@@ -592,6 +698,11 @@ class Component extends DCLogic {
     const doneText = tut.done !== undefined ? tut.done : T.done;
 
     const chevGlyph = (id, kind) => (kind === 'device' ? device : browser) === id ? '✓' : '›';
+    const showMac = av.includes('mac') && (this.state.mac || browser === 'mac');
+    const compact = !!(this.state.auto && browser && (device === 'phone' || device === 'tablet'));
+    const deviceLabel = browser === 'android' ? (device === 'tablet' ? 'Android tablet' : 'Android') : (device === 'tablet' ? 'iPad' : 'iPhone');
+    // Read by /ph.js so a store click carries where in the guide it happened.
+    if (typeof window !== 'undefined') window.__reisGuide = { device, option: browser, auto: this.state.auto };
 
     return {
       t: T,
@@ -612,6 +723,10 @@ class Component extends DCLogic {
       onFirefox: () => this.pickBrowser('firefox'),
       onIos: () => this.pickBrowser('ios'),
       onAndroid: () => this.pickBrowser('android'),
+      onEdge: () => this.pickBrowser('edge'),
+      onMac: () => this.pickBrowser('mac'),
+      onChangeDevice: () => { this.track('guide_change_device', { device, option: browser }); this.restart(); },
+      compact, showPicker: !compact, deviceLabel,
       restart: () => this.restart(),
 
       deviceChosen: !!device,
@@ -621,8 +736,11 @@ class Component extends DCLogic {
       showFirefox: av.includes('firefox'),
       showIos: av.includes('ios'),
       showAndroid: av.includes('android'),
+      showEdge: av.includes('edge'),
+      showMac,
       iosLabel: device === 'tablet' ? 'iPad' : 'iPhone',
-      s2Label: (device === 'phone' || device === 'tablet') ? T.s2_system : T.s2,
+      s2Label: (device === 'phone' || device === 'tablet') ? T.s2_system : (showMac ? T.s2_mac : T.s2),
+      hintDesktop: this.state.mac ? T.hint_desktop_mac : T.hint_desktop,
 
       wrapDesktop: this.wrap('desktop', 'device'),
       wrapTablet: this.wrap('tablet', 'device'),
@@ -636,6 +754,8 @@ class Component extends DCLogic {
       wrapFirefox: this.wrap('firefox', 'browser'),
       wrapIos: this.wrap('ios', 'browser'),
       wrapAndroid: this.wrap('android', 'browser'),
+      wrapEdge: this.wrap('edge', 'browser'),
+      wrapMac: this.wrap('mac', 'browser'),
 
       chevDesktop: this.chev('desktop', 'device'), chevGlyphDesktop: chevGlyph('desktop', 'device'),
       chevTablet: this.chev('tablet', 'device'), chevGlyphTablet: chevGlyph('tablet', 'device'),
@@ -644,6 +764,8 @@ class Component extends DCLogic {
       chevFirefox: this.chev('firefox', 'browser'), chevGlyphFirefox: chevGlyph('firefox', 'browser'),
       chevIos: this.chev('ios', 'browser'), chevGlyphIos: chevGlyph('ios', 'browser'),
       chevAndroid: this.chev('android', 'browser'), chevGlyphAndroid: chevGlyph('android', 'browser'),
+      chevEdge: this.chev('edge', 'browser'), chevGlyphEdge: chevGlyph('edge', 'browser'),
+      chevMac: this.chev('mac', 'browser'), chevGlyphMac: chevGlyph('mac', 'browser'),
 
       tut,
       tutSteps: tut.steps.map((s, i) => {
