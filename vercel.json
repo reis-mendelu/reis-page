@@ -15,6 +15,6 @@
     }
   ],
   "rewrites": [
-    { "source": "/rx/:path*", "destination": "https://eu.i.posthog.com/:path*" }
+    { "source": "/rx/:path(.*)", "destination": "https://eu.i.posthog.com/:path" }
   ]
 }
