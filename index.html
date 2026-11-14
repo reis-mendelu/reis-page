@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>reIS – studium na MENDELU v jedné aplikaci</title>
-<meta name="description" content="Nezávislý studentský projekt. Rozvrh, zkoušky, soubory předmětů, mapa kampusu a eduroam přehledně v telefonu i v prohlížeči. Studijní data zůstávají ve vašem zařízení.">
+<meta name="description" content="Nezávislý studentský projekt. Rozvrh, zkoušky, soubory předmětů, mapa kampusu a eduroam přehledně v telefonu i v prohlížeči. Známky, rozvrh a soubory zůstávají ve vašem zařízení.">
 <link rel="canonical" href="https://reisapp.cz/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="cs_CZ">
 <meta property="og:site_name" content="reIS">
 <meta property="og:url" content="https://reisapp.cz/">
 <meta property="og:title" content="reIS – studium na MENDELU v jedné aplikaci">
-<meta property="og:description" content="Nezávislý studentský projekt. Studijní data zůstávají ve vašem zařízení.">
+<meta property="og:description" content="Nezávislý studentský projekt. Známky, rozvrh a soubory zůstávají ve vašem zařízení.">
 <meta property="og:image" content="https://reisapp.cz/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -25,7 +25,6 @@
 <x-dc>
 <helmet>
 <link rel="icon" href="/assets/reIS_logo.svg" type="image/svg+xml">
-<script src="/image-slot.js"></script>
 <style>
 @font-face{font-family:Inter;font-style:normal;font-display:swap;font-weight:400;src:url(/fonts/inter-latin-ext-400-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
 @font-face{font-family:Inter;font-style:normal;font-display:swap;font-weight:500;src:url(/fonts/inter-latin-ext-500-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
@@ -40,6 +39,7 @@ html{scroll-behavior:smooth}
 body{margin:0;background:#ffffff;color:#111827;font-family:Inter,system-ui,-apple-system,'Segoe UI',sans-serif;-webkit-font-smoothing:antialiased}
 a{color:#111827}
 a:hover{color:#3f6212}
+button:focus-visible,a:focus-visible,[role="button"]:focus-visible{outline:2px solid #3f6212;outline-offset:3px;border-radius:4px}
 </style>
 </helmet>
 
@@ -150,7 +150,7 @@ a:hover{color:#3f6212}
       </div>
       <div style="border:1.5px dashed #d1d5db;border-radius:12px;padding:12px 14px;display:flex;flex-direction:column;gap:4px;background:#ffffff">
         <span style="font-size:13px;font-weight:600">Databáze reIS</span>
-        <span style="font-size:12px;color:#4b5563;line-height:1.45">Statistiky používání: náhodné ID instalace, fakulta, studijní program, platforma, verze a které obrazovky se otevírají. Bez jména, čísla studenta, studijních dat a hesla.</span>
+        <span style="font-size:12px;color:#4b5563;line-height:1.45">Statistiky používání: náhodné ID instalace, fakulta, studijní program, platforma, verze a které obrazovky se otevírají. Bez jména, čísla studenta, známek, rozvrhu, souborů a hesla.</span>
       </div>
     </figure>
   </div>
@@ -187,7 +187,7 @@ a:hover{color:#3f6212}
     <h2 style="margin:0;font-size:clamp(24px,2.6vw,30px);font-weight:700;letter-spacing:-0.02em;line-height:1.2">Časté otázky</h2>
     <dl style="margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:28px 40px">
       <div style="display:flex;flex-direction:column;gap:6px;padding-top:16px;border-top:1px solid #e5e7eb"><dt style="font-size:17px;font-weight:600">Je reIS oficiální aplikace MENDELU?</dt><dd style="margin:0;font-size:15.5px;line-height:1.6;color:#4b5563">Ne. reIS je nezávislý studentský projekt. IS i všechna data v něm patří Mendelově univerzitě.</dd></div>
-      <div style="display:flex;flex-direction:column;gap:6px;padding-top:16px;border-top:1px solid #e5e7eb"><dt style="font-size:17px;font-weight:600">Je reIS bezpečný?</dt><dd style="margin:0;font-size:15.5px;line-height:1.6;color:#4b5563">Studijní data neopouštějí vaše zařízení a kód je veřejný. Podrobnosti v části <a href="#data" style="color:#111827">Data a bezpečnost</a>.</dd></div>
+      <div style="display:flex;flex-direction:column;gap:6px;padding-top:16px;border-top:1px solid #e5e7eb"><dt style="font-size:17px;font-weight:600">Je reIS bezpečný?</dt><dd style="margin:0;font-size:15.5px;line-height:1.6;color:#4b5563">Známky, rozvrh ani soubory neopouštějí vaše zařízení a kód je veřejný. Podrobnosti v části <a href="#data" style="color:#111827">Data a bezpečnost</a>.</dd></div>
       <div style="display:flex;flex-direction:column;gap:6px;padding-top:16px;border-top:1px solid #e5e7eb"><dt style="font-size:17px;font-weight:600">Kolik reIS stojí?</dt><dd style="margin:0;font-size:15.5px;line-height:1.6;color:#4b5563">Pro studenty je zdarma.</dd></div>
       <div style="display:flex;flex-direction:column;gap:6px;padding-top:16px;border-top:1px solid #e5e7eb"><dt style="font-size:17px;font-weight:600">Kde reIS stáhnu?</dt><dd style="margin:0;font-size:15.5px;line-height:1.6;color:#4b5563">V App Storu, na Google Play a jako rozšíření pro Chrome a Firefox. Návod: <a href="/navod" style="color:#111827">reisapp.cz/navod</a>.</dd></div>
     </dl>

@@ -20,6 +20,7 @@
     *{box-sizing:border-box}
     html,body{margin:0;padding:0;overscroll-behavior-x:none}
     body{background:#ffffff}
+    button:focus-visible,a:focus-visible,[role="button"]:focus-visible{outline:2px solid #3f6212;outline-offset:3px;border-radius:4px}
     @keyframes reisFadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
     @keyframes reisPop{from{opacity:0;transform:scale(.96)}to{opacity:1;transform:none}}
     /* Mobile-first column stays 520px; widen on larger screens so the
@@ -258,7 +259,7 @@
                   <span style="font-family:var(--font-ui);font-size:12px;font-weight:500">{{ shotLabel }}</span>
                 </div>
                 <div style="{{ step.dotStyle }}"></div>
-                <img src="{{ step.img }}" style="{{ step.imgStyle }}" alt="" loading="lazy" onClick="{{ step.openShot }}">
+                <img src="{{ step.img }}" style="{{ step.imgStyle }}" alt="{{ step.text }}" loading="lazy" role="button" tabindex="0" aria-label="{{ step.zoomLabel }}" onClick="{{ step.openShot }}" onKeyDown="{{ step.keyShot }}">
               </div>
             </div>
           </div>
@@ -351,7 +352,7 @@ class Component extends DCLogic {
     if (!/^(cs|sk)/.test(langs[0])) this.setState({ lang: 'en' });
     const q = new URLSearchParams(location.search);
     const d = q.get('device'), b = q.get('browser');
-    if (d && this.AVAIL[d] && (!b || this.AVAIL[d].includes(b))) {
+    if (d && Object.prototype.hasOwnProperty.call(this.AVAIL, d) && (!b || this.AVAIL[d].includes(b))) {
       this.setState({ device: d, browser: b || null, mac });
       this.track('guide_opened', { via: 'link', device: d, option: b || null });
     } else {
@@ -712,6 +713,7 @@ class Component extends DCLogic {
       t: T,
       toggleLang: () => this.toggleLang(),
       langToggleLabel: lang === 'cs' ? 'EN' : 'CZ',
+      _lang: (typeof document !== 'undefined' && (document.documentElement.lang = lang === 'cs' ? 'cs' : 'en')),
       langToggleStyle: this.langToggle(),
 
       cardBtnStyle: this.cardBase(),
@@ -788,7 +790,7 @@ class Component extends DCLogic {
           : 'position:relative;width:100%;aspect-ratio:16/9;border-radius:12px;border:1px dashed #e5e7eb;background:var(--surface-tertiary);display:flex;align-items:center;justify-content:center;overflow:hidden';
         const placeholderStyle = has ? 'display:none' : 'display:flex;flex-direction:column;align-items:center;gap:6px;color:var(--content-muted)';
         const dotStyle = has ? 'display:none' : 'position:absolute;top:10px;right:10px;width:30px;height:30px;border-radius:9999px;border:2px solid var(--color-primary);opacity:.55';
-        return { n: String(i + 1), text: s, img: has ? path : '', imgStyle, containerStyle, placeholderStyle, dotStyle, openShot: () => this.openLightbox(has ? path : '', s) };
+        return { n: String(i + 1), text: s, img: has ? path : '', imgStyle, containerStyle, placeholderStyle, dotStyle, openShot: () => this.openLightbox(has ? path : '', s), keyShot: (e) => { if (e && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); this.openLightbox(has ? path : '', s); } }, zoomLabel: (lang === 'cs' ? 'Zvětšit snímek: ' : 'Enlarge screenshot: ') + s };
       }),
       shotLabel: lang === 'cs' ? 'Snímek brzy doplníme' : 'Screenshot coming soon',
       hasStore: hasStore && !useBadge, noStore: !hasStore,

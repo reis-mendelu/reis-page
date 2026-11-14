@@ -8,12 +8,12 @@
 <body>
 <x-dc>
 <header style="background:rgba(255,255,255,0.94);backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid #e5e7eb;font-family:Inter,system-ui,-apple-system,'Segoe UI',sans-serif;position:relative">
-  <div style="max-width:1160px;margin:0 auto;height:64px;padding:0 24px;display:flex;align-items:center;justify-content:space-between;gap:24px">
+  <div style="max-width:1160px;margin:0 auto;height:64px;padding:0 clamp(14px,5vw,24px);display:flex;align-items:center;justify-content:space-between;gap:clamp(10px,4vw,24px)">
     <a href="/" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:#111827">
       <img src="/assets/reIS_logo.svg" alt="reIS" width="40" height="40" style="display:block;width:40px;height:40px">
       <span style="font-weight:700;font-size:22px;letter-spacing:-0.02em">reIS</span>
     </a>
-    <div style="display:flex;align-items:center;gap:24px">
+    <div style="display:flex;align-items:center;gap:clamp(8px,3vw,24px)">
       <sc-if value="{{ wide }}" hint-placeholder-val="{{ true }}">
         <nav style="display:flex;align-items:center;gap:26px;font-size:14.5px;font-weight:500;height:64px">
           <a href="/#funkce" style="text-decoration:none;color:#374151;position:relative;height:64px;display:flex;align-items:center">Co umí</a>
@@ -31,9 +31,9 @@
   </div>
   <sc-if value="{{ menuVisible }}" hint-placeholder-val="{{ false }}">
     <nav style="border-top:1px solid #e5e7eb;background:#ffffff;padding:8px 24px 16px;display:flex;flex-direction:column;font-size:16px;font-weight:500">
-      <a href="/#funkce" style="text-decoration:none;color:#111827;padding:12px 0;border-bottom:1px solid #f3f4f6">Co umí</a>
-      <a href="/#data" style="text-decoration:none;color:#111827;padding:12px 0;border-bottom:1px solid #f3f4f6">Data a bezpečnost</a>
-      <a href="/#univerzita" style="text-decoration:none;color:#111827;padding:12px 0">Pro univerzitu</a>
+      <a href="/#funkce" onClick="{{ closeMenu }}" style="text-decoration:none;color:#111827;padding:12px 0;border-bottom:1px solid #f3f4f6">Co umí</a>
+      <a href="/#data" onClick="{{ closeMenu }}" style="text-decoration:none;color:#111827;padding:12px 0;border-bottom:1px solid #f3f4f6">Data a bezpečnost</a>
+      <a href="/#univerzita" onClick="{{ closeMenu }}" style="text-decoration:none;color:#111827;padding:12px 0">Pro univerzitu</a>
     </nav>
   </sc-if>
 </header>
@@ -53,7 +53,8 @@ class Component extends DCLogic {
     return {
       wide, narrow: !wide, menuOpen, menuVisible: !wide && menuOpen,
       toggleMenu: () => this.setState(s => ({ menuOpen: !s.menuOpen })),
-      aData: a === 'data', aTym: a === 'tym', aUni: a === 'univerzita',
+      aData: a === 'data', aUni: a === 'univerzita',
+      closeMenu: () => this.setState({ menuOpen: false }),
     };
   }
 }

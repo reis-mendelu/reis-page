@@ -11,13 +11,15 @@
  *   autocapture, no session recording, no heatmaps, no surveys, no flags.
  *
  * window.reisTrack(name, props) is always defined, and is a no-op when
- * analytics is off (localhost).
+ * analytics is off (anything but reisapp.cz / reis-navod.cz).
  */
 (function () {
   // The PostHog project token is public by design (it only allows sending events).
   var TOKEN = 'phc_kt2LTXYX5hA2uHdsGd4j4BWMxAcPQNRQFnWhUPGQYPko';
   var host = location.hostname;
-  var off = host === 'localhost' || host === '127.0.0.1';
+  // Only the real site sends events; previews and localhost stay out of the
+  // shared project.
+  var off = !/^(www\.)?(reisapp\.cz|reis-navod\.cz)$/.test(host);
 
   window.reisTrack = function (name, props) {
     if (off) return;

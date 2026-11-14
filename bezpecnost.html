@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Data a bezpečnost – reIS</title>
-<meta name="description" content="reIS čte IS MENDELU přímo z vašeho zařízení. Studijní data nikam neposíláme a celý kód je veřejný.">
+<meta name="description" content="reIS čte IS MENDELU přímo z vašeho zařízení. Známky, rozvrh ani soubory nikam neposíláme a celý kód je veřejný.">
 <link rel="canonical" href="https://reisapp.cz/bezpecnost">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="cs_CZ">
 <meta property="og:site_name" content="reIS">
 <meta property="og:url" content="https://reisapp.cz/bezpecnost">
 <meta property="og:title" content="Data a bezpečnost – reIS">
-<meta property="og:description" content="reIS čte IS MENDELU přímo z vašeho zařízení. Studijní data nikam neposíláme a celý kód je veřejný.">
+<meta property="og:description" content="reIS čte IS MENDELU přímo z vašeho zařízení. Známky, rozvrh ani soubory nikam neposíláme a celý kód je veřejný.">
 <meta property="og:image" content="https://reisapp.cz/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -38,6 +38,7 @@
 body{margin:0;background:#ffffff;color:#111827;font-family:Inter,system-ui,-apple-system,'Segoe UI',sans-serif;-webkit-font-smoothing:antialiased}
 a{color:#111827}
 a:hover{color:#3f6212}
+button:focus-visible,a:focus-visible,[role="button"]:focus-visible{outline:2px solid #3f6212;outline-offset:3px;border-radius:4px}
 </style>
 </helmet>
 
@@ -98,9 +99,9 @@ a:hover{color:#3f6212}
       </div>
       <div style="border:1.5px dashed #d1d5db;border-radius:12px;padding:12px 14px;display:flex;flex-direction:column;gap:4px;background:#ffffff">
         <span style="font-size:13px;font-weight:600">Databáze reIS</span>
-        <span style="font-size:12px;color:#4b5563;line-height:1.45">Statistiky používání: náhodné ID instalace, fakulta, studijní program, platforma, verze a které obrazovky se otevírají. Bez jména, čísla studenta, studijních dat a hesla.</span>
+        <span style="font-size:12px;color:#4b5563;line-height:1.45">Statistiky používání: náhodné ID instalace, fakulta, studijní program, platforma, verze a které obrazovky se otevírají. Bez jména, čísla studenta, známek, rozvrhu, souborů a hesla.</span>
       </div>
-      <figcaption style="font-size:13.5px;line-height:1.55;color:#4b5563;border-top:1px solid #e5e7eb;padding-top:16px;margin-top:12px">Studijní data putují jen mezi vaším zařízením a IS MENDELU. reIS nemá server, kam by je ukládal.</figcaption>
+      <figcaption style="font-size:13.5px;line-height:1.55;color:#4b5563;border-top:1px solid #e5e7eb;padding-top:16px;margin-top:12px">Známky, rozvrh a soubory putují jen mezi vaším zařízením a IS MENDELU. reIS nemá server, kam by je ukládal.</figcaption>
     </figure>
   </div>
 </section>
@@ -122,10 +123,10 @@ a:hover{color:#3f6212}
 <dc-import name="SiteFooter" hint-size="100%,220px"></dc-import>
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;showOitNote&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Sekce&quot;}}">
+<script type="text/x-dc" data-dc-script data-props="{}">
 class Component extends DCLogic {
   renderVals() {
-    return { flags: this.props.reviewFlags ?? true, oitNote: this.props.showOitNote ?? false };
+    return { flags: this.props.reviewFlags ?? true };
   }
 }
 </script>
