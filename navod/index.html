@@ -272,11 +272,13 @@
         </div>
         </sc-if>
 
-        <!-- restart -->
+        <!-- restart (not in the one-tap phone view, which has "změnit") -->
+        <sc-if value="{{ showPicker }}" hint-placeholder-val="{{ true }}">
         <button onClick="{{ restart }}" style="display:flex;align-items:center;gap:7px;margin:22px auto 0;padding:9px 16px;background:transparent;border:none;color:var(--content-muted);font-family:var(--font-ui);font-size:13px;font-weight:500;cursor:pointer;border-radius:9999px;transition:color .15s ease" style-hover="color:var(--content-primary)">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path></svg>
           <span>{{ t.restart }}</span>
         </button>
+        </sc-if>
       </div>
     </sc-if>
 
@@ -345,6 +347,8 @@ class Component extends DCLogic {
     // unchecked query string. Without a deep link, the device is recognised
     // from the browser (detect) and pre-selected; when unsure, nothing is.
     const mac = this.isMacVisitor();
+    const langs = (navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || 'cs']).map(l => String(l).toLowerCase());
+    if (!/^(cs|sk)/.test(langs[0])) this.setState({ lang: 'en' });
     const q = new URLSearchParams(location.search);
     const d = q.get('device'), b = q.get('browser');
     if (d && this.AVAIL[d] && (!b || this.AVAIL[d].includes(b))) {
@@ -361,7 +365,7 @@ class Component extends DCLogic {
     cs: {
       eyebrow: 'reIS · MENDELU',
       heroTitle: 'Nainstaluj reIS za dvě minuty',
-      s1: 'Vyber zařízení, které nejvíce preferuješ',
+      s1: 'Na čem budeš reIS používat?',
       s2: 'Vyber prohlížeč',
       s2_system: 'Vyber systém',
       dev_desktop: 'Počítač',
@@ -387,7 +391,7 @@ class Component extends DCLogic {
     en: {
       eyebrow: 'reIS · MENDELU',
       heroTitle: 'Install reIS in two minutes',
-      s1: 'Pick the device you use most',
+      s1: 'Where will you use reIS?',
       s2: 'Pick your browser',
       s2_system: 'Pick your system',
       dev_desktop: 'Desktop',
