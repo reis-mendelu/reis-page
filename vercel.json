@@ -1,0 +1,22 @@
+{
+  "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/soukromi",
+      "destination": "https://gist.github.com/ElijaahInverted/e3007a015e24c210a017d21743f83784",
+      "permanent": false
+    },
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "reis-navod.cz" }],
+      "destination": "/navod",
+      "permanent": false
+    },
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "www.reis-navod.cz" }],
+      "destination": "/navod",
+      "permanent": false
+    }
+  ]
+}

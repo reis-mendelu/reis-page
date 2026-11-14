@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<footer style="background:#f9fafb;border-top:1px solid #e5e7eb;padding:0 24px 32px;font-family:Inter,system-ui,-apple-system,'Segoe UI',sans-serif;color:#111827">
+  <sc-if value="{{ showPartners }}" hint-placeholder-val="{{ true }}">
+  <div style="max-width:1160px;margin:0 auto;padding:28px 0 24px;border-bottom:1px solid #e5e7eb;display:flex;flex-wrap:wrap;align-items:center;gap:16px 40px">
+    <span style="font-size:14px;font-weight:600;color:#4b5563">Spolupracují s námi</span>
+    <div style="display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center">
+      <img src="/assets/logos/ey.png" alt="EY" title="EY" width="48" height="48" style="display:block;width:48px;height:48px;object-fit:contain;border-radius:10px">
+      <img src="/assets/logos/su-pef.png" alt="SU PEF" title="SU PEF" width="48" height="48" style="display:block;width:48px;height:48px;object-fit:contain;border-radius:10px">
+      <img src="/assets/logos/esn-mendelu.png" alt="ESN MENDELU" title="ESN MENDELU" width="48" height="48" style="display:block;width:48px;height:48px;object-fit:contain;border-radius:10px">
+      <img src="/assets/logos/usaf.png" alt="US.AF" title="US.AF" width="48" height="48" style="display:block;width:48px;height:48px;object-fit:contain;border-radius:10px">
+      <img src="/assets/logos/sklub-pixie.png" alt="S-klub Pixie" title="S-klub Pixie" width="48" height="48" style="display:block;width:48px;height:48px;object-fit:contain;border-radius:10px">
+      <img src="/assets/logos/vazbic.png" alt="Vazbic" title="Vazbic" width="48" height="48" style="display:block;width:48px;height:48px;object-fit:contain;border-radius:10px">
+    </div>
+  </div>
+  </sc-if>
+  <div style="max-width:1160px;margin:0 auto;padding-top:24px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 32px;font-size:14px">
+    <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;min-width:0">
+      <img src="/assets/reIS_logo.svg" alt="reIS" width="28" height="28" style="display:block;width:28px;height:28px">
+      <span style="color:#4b5563;line-height:1.5">Nezávislý studentský projekt, není oficiální produkt MENDELU.</span>
+    </div>
+    <nav style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 24px">
+      <a href="/o-nas" style="color:#374151;text-decoration:none" style-hover="color:#3f6212">O nás</a>
+      <a href="/bezpecnost" style="color:#374151;text-decoration:none" style-hover="color:#3f6212">Bezpečnost</a>
+      <a href="/soukromi" style="color:#374151;text-decoration:none" style-hover="color:#3f6212">Soukromí</a>
+      <a href="https://github.com/reis-mendelu" style="color:#374151;text-decoration:none" style-hover="color:#3f6212">GitHub</a>
+      <a href="https://www.instagram.com/reis.mendelu/" style="color:#374151;text-decoration:none" style-hover="color:#3f6212">Instagram</a>
+      <a href="mailto:reis.mendelu@gmail.com" style="color:#374151;text-decoration:none" style-hover="color:#3f6212">reis.mendelu@gmail.com</a>
+    </nav>
+  </div>
+</footer>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;100%&quot;,&quot;height&quot;:&quot;300px&quot;},&quot;showPartners&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const p = this.props.showPartners;
+    return { showPartners: p === true || p === 'true' };
+  }
+}
+</script>
+</body>
+</html>
