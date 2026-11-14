@@ -2,19 +2,43 @@
   "cleanUrls": true,
   "redirects": [
     {
-      "source": "/",
-      "has": [{ "type": "host", "value": "reis-navod.cz" }],
-      "destination": "/navod",
-      "permanent": false
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "reis-navod.cz"
+        }
+      ],
+      "destination": "https://reisapp.cz/navod",
+      "permanent": true
     },
     {
-      "source": "/",
-      "has": [{ "type": "host", "value": "www.reis-navod.cz" }],
-      "destination": "/navod",
-      "permanent": false
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.reis-navod.cz"
+        }
+      ],
+      "destination": "https://reisapp.cz/navod",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.reisapp.cz"
+        }
+      ],
+      "destination": "https://reisapp.cz/:path*",
+      "permanent": true
     }
   ],
   "rewrites": [
-    { "source": "/rx/:path(.*)", "destination": "https://eu.i.posthog.com/:path" }
+    {
+      "source": "/rx/:path(.*)",
+      "destination": "https://eu.i.posthog.com/:path"
+    }
   ]
 }
