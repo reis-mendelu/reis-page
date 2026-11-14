@@ -1,5 +1,6 @@
 /*
- * Website analytics for reisapp.cz (PostHog EU, project "reIS web").
+ * Website analytics for reisapp.cz (PostHog EU, the reIS organisation's only
+ * project, shared with reByt; every event carries site=reisapp.cz).
  *
  * - Cookieless: PostHog stores nothing in the browser (no cookies, no
  *   local/session storage), so no consent banner is needed. Unique visitors
@@ -10,12 +11,13 @@
  *   autocapture, no session recording, no heatmaps, no surveys, no flags.
  *
  * window.reisTrack(name, props) is always defined, and is a no-op when
- * analytics is off (localhost, no token yet).
+ * analytics is off (localhost).
  */
 (function () {
-  var TOKEN = 'phc_REPLACE_WITH_REIS_WEB_PROJECT_TOKEN';
+  // The PostHog project token is public by design (it only allows sending events).
+  var TOKEN = 'phc_kt2LTXYX5hA2uHdsGd4j4BWMxAcPQNRQFnWhUPGQYPko';
   var host = location.hostname;
-  var off = TOKEN.indexOf('REPLACE') !== -1 || host === 'localhost' || host === '127.0.0.1';
+  var off = host === 'localhost' || host === '127.0.0.1';
 
   window.reisTrack = function (name, props) {
     if (off) return;
@@ -47,6 +49,8 @@
     disable_product_tours: true,
     advanced_disable_flags: true
   });
+  // The project is shared: tag every event from this site.
+  ph.register({ site: 'reisapp.cz' });
   var s = document.createElement('script');
   s.async = true;
   s.src = '/vendor/posthog-1.449.2.no-external.js';
