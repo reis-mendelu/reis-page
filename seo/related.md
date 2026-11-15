@@ -138,3 +138,51 @@ _nothing suggested_
 
 _nothing suggested_
 
+## vysoké školy brno
+
+_nothing suggested_
+
+## vysoká škola brno ekonomie
+
+_nothing suggested_
+
+## kde studovat informatiku brno
+
+_nothing suggested_
+
+## zemědělská vysoká škola
+
+_nothing suggested_
+
+## lesnictví vysoká škola
+
+_nothing suggested_
+
+## koleje brno
+
+_nothing suggested_
+
+## přijímačky mendelu
+
+_nothing suggested_
+
+## mendelu obory
+
+_nothing suggested_
+
+## předškolovák mendelu
+
+_nothing suggested_
+
+## zápis do prvního ročníku mendelu
+
+_nothing suggested_
+
+## první ročník vysoká škola
+
+_nothing suggested_
+
+## mendelu recenze
+
+_nothing suggested_
+
