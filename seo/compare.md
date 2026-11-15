@@ -5,7 +5,7 @@ Words = text served without JS. H = h1/h2 count. SEO = Lighthouse SEO score (onl
 | Topic | Page | Words | H | Img | JSON-LD | Flags | SEO | Title |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | eduroam · MENDELU | https://eduroam.mendelu.cz/ | 452 | 1/6 | 6 | – | no date, no canonical | 92 | Úvod - Eduroam |
-| eduroam · reIS | https://reisapp.cz/navody/eduroam | 339 | 1/0 | 15 | TechArticle, BreadcrumbList | dated, canonical | 100 | eduroam na MENDELU: nastavení na iPhonu, Androidu, Windows i |
+| eduroam · reIS | https://reisapp.cz/navody/eduroam | 371 | 1/0 | 15 | TechArticle, BreadcrumbList | dated, canonical | 100 | eduroam MENDELU: návod na připojení k Wi-Fi (iPhone, Android |
 | zkousky · MENDELU | https://zf.mendelu.cz/vyska-na-zkousku/ | 1036 | 1/6 | 0 | WebPage, ImageObject, WebSite, Organization | no date, canonical | 92 | Výška na zkoušku - Zahradnická fakulta MENDELU |
 | zkousky · reIS | https://reisapp.cz/navody/prihlaseni-na-zkousku | HTTP 404 | | | | | | |
 | mapa · MENDELU | https://frrms.mendelu.cz/mapa-kampusu-mendelu/ | 853 | 1/1 | 1 | WebPage, ImageObject, WebSite | no date, canonical | 85 | Mapa kampusu MENDELU - Fakulta regionálního rozvoje a meziná |

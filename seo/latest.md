@@ -32,3 +32,9 @@ Google, gl=cz, top 10 organic results (Serper). "–" = not in the top 10.
 | menza | mendelu canteen menu (en) | – | 1 https://skm.mendelu.cz/en/catering/28604-menu | https://skm.mendelu.cz/en/catering/28604-menu |
 | brand | reis mendelu | – | 3 https://is.mendelu.cz/ | https://apps.apple.com/us/app/reis-is-mendelu-jednodu%C5%A1e/id6804832714 |
 | brand | mendelu aplikace | – | 1 https://moje.mendelu.cz/ | https://moje.mendelu.cz/ |
+| uis | uis mendelu | – | 1 https://is.mendelu.cz/ | https://is.mendelu.cz/ |
+| uis | mendelu uis | – | 1 https://is.mendelu.cz/ | https://is.mendelu.cz/ |
+| uis | is mendelu | – | 1 https://is.mendelu.cz/ | https://is.mendelu.cz/ |
+| uis | uis mendelu přihlášení | – | 1 https://is.mendelu.cz/ | https://is.mendelu.cz/ |
+| uis | iskam mendelu | – | 1 https://webiskam.mendelu.cz/ | https://webiskam.mendelu.cz/ |
+| uis | mendelu aplikace pro studenty | – | 1 https://mendelu.cz/mendelu-rozviji-aplikaci-pro-studenty-i-zamestnance-2/ | https://mendelu.cz/mendelu-rozviji-aplikaci-pro-studenty-i-zamestnance-2/ |

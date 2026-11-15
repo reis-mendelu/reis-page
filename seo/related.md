@@ -114,3 +114,27 @@ _nothing suggested_
 
 _nothing suggested_
 
+## uis mendelu
+
+_nothing suggested_
+
+## mendelu uis
+
+_nothing suggested_
+
+## is mendelu
+
+_nothing suggested_
+
+## uis mendelu přihlášení
+
+_nothing suggested_
+
+## iskam mendelu
+
+_nothing suggested_
+
+## mendelu aplikace pro studenty
+
+_nothing suggested_
+
