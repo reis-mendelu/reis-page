@@ -1,11 +1,10 @@
 name: SEO positions
 
-# Every Monday: Google positions (gl=cz) for seo/keywords.json via Serper, plus the
-# page comparison. Results are committed to seo/; vercel.json's ignoreCommand skips
-# the deploy for a commit that only touches seo/.
+# Run by hand (Actions → SEO positions → Run workflow, or `gh workflow run seo-rank.yml`):
+# Google positions (gl=cz) for seo/keywords.json via Serper, plus the page comparison.
+# Results are committed to seo/; vercel.json's ignoreCommand skips the deploy for a
+# commit that only touches seo/. No schedule: Dominik wants it on demand only.
 on:
-  schedule:
-    - cron: '0 6 * * 1'
   workflow_dispatch:
 
 permissions:
@@ -36,6 +35,7 @@ jobs:
       - name: Page comparison
         run: node seo/compare.mjs --lighthouse >> "$GITHUB_STEP_SUMMARY"
       - name: Commit results
+        if: always()
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898283+github-actions[bot]@users.noreply.github.com'
