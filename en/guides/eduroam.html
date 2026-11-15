@@ -34,119 +34,77 @@
   <main>
     <p class="crumbs"><a href="/en">reIS</a> › Guides › eduroam</p>
     <h1>eduroam at MENDELU: set up in 3 taps</h1>
-    <p class="lead">To use eduroam, the university Wi-Fi, you need a personal certificate from UIS that is valid for one year. The reIS app fetches it and sets eduroam up for you. If you'd rather not use the app, the full official procedure is below.</p>
-    <p class="checked">Checked on 15 Nov 2026 against the official guides at <a href="https://eduroam.mendelu.cz/en/">eduroam.mendelu.cz</a>. reIS is an independent student project, not an official MENDELU app.</p>
+    <p class="lead">eduroam Wi-Fi needs a one-year certificate from UIS. reIS fetches it and sets it up for you.</p>
+    <p class="checked">Checked on 15. 11. 2026 against <a href="https://eduroam.mendelu.cz/en/">eduroam.mendelu.cz</a>. reIS is an independent student project, not an official MENDELU app.</p>
     <ul class="toc">
-      <li><a href="#with-reis">With reIS</a></li>
-      <li><a href="#official">Official way</a></li>
-      <li><a href="#iphone">iPhone and iPad</a></li>
-      <li><a href="#android">Android</a></li>
-      <li><a href="#windows">Windows</a></li>
+      <li><a href="#phone">Phone</a></li>
       <li><a href="#mac">Mac</a></li>
+      <li><a href="#windows">Windows</a></li>
+      <li><a href="#official">Without reIS</a></li>
       <li><a href="#not-working">Not working</a></li>
-      <li><a href="#validity">Certificate validity</a></li>
     </ul>
 
-    <div class="reis" id="with-reis">
-      <h2>With reIS: three taps instead of twenty steps</h2>
-      <p>In the reIS app, open <strong>Profile › Eduroam</strong> and tap <strong>Set up eduroam</strong>. reIS fetches your certificate from UIS and hands it straight to your phone's system. Nothing to download, no password to copy, and no need for the faro-free network: any internet connection works, mobile data included.</p>
-      <div class="platforms">
-        <div class="platform"><h3>iPhone and iPad</h3><p>Three taps in the reIS app. eduroam stays set up for as long as reIS is installed.</p></div>
-        <div class="platform"><h3>Android</h3><p>Three taps in the reIS app.</p></div>
-        <div class="platform"><h3>Mac</h3><p>reIS prepares a ready eduroam profile and shows its password. You install it in System Settings › General › Device Management.</p></div>
-        <div class="platform"><h3>Windows</h3><p>The reIS extension prepares a ready profile for the geteduroam app, shows the password and walks you through it.</p></div>
-      </div>
-      <p>reIS also warns you before the certificate expires, and a new one is a single button away. Your certificate goes nowhere else: reIS hands it straight to your device.</p>
+    <div class="reis" id="phone">
+      <h2>iPhone, iPad and Android</h2>
+      <p class="oneline">No faro-free, nothing to download: mobile data is enough.</p>
+      <ol class="shots">
+        <li><img src="/assets/navody/eduroam/phone-en-1-profile.webp" alt="The reIS app, Profile tab with the Eduroam row" width="780" height="940" loading="lazy"><p>In the reIS app, open Profile › Eduroam.</p></li>
+        <li><img src="/assets/navody/eduroam/phone-en-2-sheet.webp" alt="The Set up eduroam button in the reIS app" width="780" height="572" loading="lazy"><p>Tap Set up eduroam and confirm. You'll connect on campus by yourself.</p></li>
+      </ol>
       <div class="badges">
         <a href="https://apps.apple.com/cz/app/id6804832714?ct=reisapp-eduroam-en"><img src="/navod/appstore-badge-en.svg" alt="Download on the App Store" height="44"></a>
         <a href="https://play.google.com/store/apps/details?id=cz.reis.app&amp;referrer=utm_source%3Dreisapp.cz%26utm_medium%3Deduroam-en"><img src="/navod/googleplay-badge-en.png" alt="Get it on Google Play" height="44"></a>
       </div>
-      <p class="textlinks">On a computer: the extension for <a href="https://chromewebstore.google.com/detail/reis/feildjaginpppijbpplcghalabdeibdb">Chrome and Edge</a> or <a href="https://addons.mozilla.org/cs/firefox/addon/reis/">Firefox</a>. On a Mac, also the reIS app from the App Store. <a href="/navod?lang=en">Install guide</a></p>
     </div>
 
+    <section id="mac">
+      <h2>Mac</h2>
+      <p class="oneline">Open eduroam in the reIS extension for <a href="https://chromewebstore.google.com/detail/reis/feildjaginpppijbpplcghalabdeibdb">Chrome</a> or <a href="https://addons.mozilla.org/cs/firefox/addon/reis/">Firefox</a>.</p>
+      <ol class="shots">
+        <li><img src="/assets/navody/eduroam/mac/1.webp" alt="The Download eduroam profile button" width="988" height="468" loading="lazy"><p>Click Download eduroam profile and open the file.</p></li>
+        <li><img src="/assets/navody/eduroam/mac/2.webp" alt="System Settings, Profiles" width="1200" height="1046" loading="lazy"><p>Open System Settings › Profiles.</p></li>
+        <li><img src="/assets/navody/eduroam/mac/3.webp" alt="The install dialog for MENDELU eduroam (reIS)" width="1200" height="1053" loading="lazy"><p>Double-click "MENDELU eduroam (reIS)" › Install.</p></li>
+        <li><img src="/assets/navody/eduroam/mac/4.webp" alt="The certificate password field" width="685" height="581" loading="lazy"><p>Enter the certificate password reIS shows you.</p></li>
+      </ol>
+    </section>
+
+    <section id="windows">
+      <h2>Windows</h2>
+      <p class="oneline">Install the <a href="https://www.geteduroam.app/">geteduroam</a> app once, then click Download eduroam profile in the reIS extension.</p>
+      <ol class="shots three">
+        <li><img src="/assets/navody/eduroam/windows/1.webp" alt="The ··· menu in geteduroam" width="819" height="880" loading="lazy"><p>In geteduroam, click ··· › Load .eap-config file…</p></li>
+        <li><img src="/assets/navody/eduroam/windows/2.webp" alt="The downloaded eduroam-reis.eap-config file" width="1000" height="155" loading="lazy"><p>Open the downloaded eduroam-reis.eap-config.</p></li>
+        <li><img src="/assets/navody/eduroam/windows/3.webp" alt="The MENDELU eduroam (reIS) profile in geteduroam" width="811" height="1190" loading="lazy"><p>On the MENDELU eduroam (reIS) profile, click Next.</p></li>
+        <li><img src="/assets/navody/eduroam/windows/4.webp" alt="Installing the MENDELU certificate" width="788" height="1167" loading="lazy"><p>Click Install next to the MENDELU certificate.</p></li>
+        <li><img src="/assets/navody/eduroam/windows/5.webp" alt="The certificate password field in geteduroam" width="836" height="1190" loading="lazy"><p>Enter the password from reIS and click Connect.</p></li>
+      </ol>
+    </section>
+
     <section id="official">
-      <h2>The official way, without reIS</h2>
-      <p>This is the procedure the university describes at <a href="https://eduroam.mendelu.cz/en/25758-how-to-install">eduroam.mendelu.cz</a>. It starts the same on every device:</p>
+      <h2>Without reIS: the official way</h2>
       <ol>
-        <li>Connect to the <strong>faro-free</strong> Wi-Fi. It only reaches MENDELU websites, which is enough for IS.</li>
-        <li>Log in at <a href="https://is.mendelu.cz/">is.mendelu.cz</a>.</li>
-        <li>Open the eduroam certificate page (in Czech: <strong>Technologie a jejich správa › Certifikát bezdrátové sítě (eduroam)</strong>).</li>
-        <li>Generate a new certificate and copy the password it shows. Every certificate has its own password.</li>
-        <li>Download the user certificate and, depending on your device, the root certificate (see below).</li>
+        <li>Connect to faro-free and log in at <a href="https://is.mendelu.cz/">is.mendelu.cz</a>.</li>
+        <li>Open the eduroam certificate page (Czech: Technologie a jejich správa › Certifikát bezdrátové sítě) and generate a certificate. Copy its password.</li>
+        <li>Download the user and root certificates and install them for your device:</li>
       </ol>
-
-      <h3 id="iphone">iPhone and iPad (iOS 15 and later)</h3>
-      <ol>
-        <li>Download the certificate in <strong>Safari</strong>. It does not work from Chrome or Firefox.</li>
-        <li>Download the user certificate and open <strong>Settings</strong> › the downloaded profile. If it isn't offered, search Settings for "profile".</li>
-        <li>Tap <strong>Install</strong>, enter your device passcode, then the certificate password from UIS.</li>
-        <li>In Settings › Wi-Fi, forget faro-free and tap <strong>eduroam</strong>.</li>
-        <li>Set <strong>Mode</strong> to <code>EAP-TLS</code> and <strong>Identity</strong> to the installed profile named <code>login@mendelu.cz</code>.</li>
-        <li>Tap <strong>Trust</strong>. You'll be connected within a minute.</li>
-      </ol>
-      <p class="source">Source: <a href="https://eduroam.mendelu.cz/en/how-to-install/apple/33718-manual-for-ios15">official iOS 15 manual</a></p>
-
-      <h3 id="android">Android (Android 13)</h3>
-      <ol>
-        <li>In UIS, download the user certificate (type <strong>Wi-Fi certificate</strong>, with the password from UIS) and the root certificate.</li>
-        <li>Open Settings, search for "certificate" and choose <strong>Install certificates</strong>. Your phone needs a screen lock.</li>
-        <li>From Downloads, install the root certificate (<code>.crt</code>) first, then the user certificate (<code>.p12</code>) with the password from UIS. Add the year to its name so next year's doesn't get mixed up.</li>
-        <li>In Wi-Fi settings, remove faro-free and tap <strong>eduroam</strong>.</li>
-        <li>Method <code>TLS</code>, CA certificate your root certificate, domain <code>mendelu.cz</code>, user certificate the new one, identity <code>login@mendelu.cz</code>.</li>
-        <li>Make sure there's no trailing space after the domain or identity. Pasting from the keyboard sometimes adds one.</li>
-      </ol>
-      <p>The steps differ a little between phone makers and Android versions. If downloading or installing fails, give your browser storage permission, or install the certificate by hand in Settings › Security.</p>
-      <p class="source">Source: <a href="https://eduroam.mendelu.cz/en/how-to-install/manual-for-android/35561-manual-for-android-13">official Android 13 manual</a></p>
-
-      <h3 id="windows">Windows 10 and 11</h3>
-      <ol>
-        <li>In UIS, download and open the <strong>root certificate for MS Windows</strong> (<code>root.der</code>). Install it for the current user into <strong>Trusted Root Certification Authorities</strong>. You only do this once; it's valid until 2036.</li>
-        <li>Download the <strong>user certificate for MS Windows</strong>, enter the password from UIS while installing, and choose the <strong>Personal</strong> store.</li>
-        <li>Connect to <strong>eduroam</strong>. Windows usually configures the connection itself; otherwise choose <strong>Connect using a certificate</strong>.</li>
-      </ol>
-      <p class="source">Source: <a href="https://eduroam.mendelu.cz/en/how-to-install/ms-windows/34431-windows-11">official Windows 11 manual</a>, <a href="https://eduroam.mendelu.cz/en/how-to-install/ms-windows/26746-windows-10">Windows 10</a></p>
-
-      <h3 id="mac">Mac (macOS Ventura and later)</h3>
-      <ol>
-        <li>In UIS, download both the root and the user certificate (<code>.p12</code>), then open <strong>Keychain Access</strong>.</li>
-        <li>Use <strong>File › Import Items</strong> to import both into the <strong>login</strong> keychain. For the user certificate, enter the password from UIS.</li>
-        <li>Set both certificates to <strong>Always Trust</strong>.</li>
-        <li>In Wi-Fi settings, choose <strong>eduroam</strong> and select the <code>login@mendelu.cz</code> certificate as the identity.</li>
-        <li>Accept the server certificate <code>aleph.mendelu.cz</code> and enter your keychain password. If it doesn't connect the first time, close the error and try again.</li>
-      </ol>
-      <p class="source">Source: <a href="https://eduroam.mendelu.cz/en/how-to-install/apple/36390-manual-for-macos-ventura">official macOS Ventura manual</a></p>
+      <ul>
+        <li id="iphone"><strong>iPhone and iPad:</strong> Safari only, mode <code>EAP-TLS</code>, identity <code>login@mendelu.cz</code>. <a href="https://eduroam.mendelu.cz/en/how-to-install/apple/33718-manual-for-ios15">Guide</a></li>
+        <li id="android"><strong>Android:</strong> method <code>TLS</code>, domain <code>mendelu.cz</code>, identity <code>login@mendelu.cz</code>. <a href="https://eduroam.mendelu.cz/en/how-to-install/manual-for-android/35561-manual-for-android-13">Guide</a></li>
+        <li><strong>Windows:</strong> root into Trusted Root Certification Authorities, user into Personal. <a href="https://eduroam.mendelu.cz/en/how-to-install/ms-windows/34431-windows-11">Guide</a></li>
+        <li><strong>Mac:</strong> both certificates into Keychain Access, Always Trust. <a href="https://eduroam.mendelu.cz/en/how-to-install/apple/36390-manual-for-macos-ventura">Guide</a></li>
+      </ul>
     </section>
 
     <section id="not-working">
-      <h2>eduroam not working: the usual causes</h2>
+      <h2>eduroam not working</h2>
       <ul>
-        <li><strong>The certificate expired.</strong> It lasts 366 days and IS never renews it by itself. Generate and install a new one; see <a href="#validity">certificate validity</a>.</li>
-        <li><strong>Two certificates are installed.</strong> Keep only the valid one. Repeated attempts with an expired certificate can get your account blocked on the server.</li>
-        <li><strong>Your iPhone won't download the certificate.</strong> Use Safari, not Chrome or Firefox.</li>
-        <li><strong>Android asks for a domain.</strong> Enter <code>mendelu.cz</code>, with no trailing space.</li>
-        <li><strong>Your phone says it can't join eduroam while you're off campus.</strong> That's fine: eduroam simply isn't in range. You'll connect on your own at the faculty.</li>
+        <li><strong>Certificate expired.</strong> It lasts 366 days and IS never renews it. reIS warns you ahead of time.</li>
+        <li><strong>Two certificates installed.</strong> Keep only the valid one.</li>
+        <li><strong>iPhone won't download the certificate.</strong> Use Safari.</li>
+        <li><strong>Android asks for a domain.</strong> <code>mendelu.cz</code>, no trailing space.</li>
+        <li><strong>"Unable to join" off campus.</strong> That's fine: eduroam isn't in range.</li>
       </ul>
-      <p>If nothing helps, contact <a href="https://helpdesk.mendelu.cz/">helpdesk.mendelu.cz</a>. More answers are in the <a href="https://eduroam.mendelu.cz/en/36897-faq">official FAQ</a>.</p>
-    </section>
-
-    <section id="validity">
-      <h2>Certificate validity and renewal</h2>
-      <p>The eduroam certificate is valid for <strong>366 days</strong> from when you generate it. IS never renews it and keeps offering the old one, so one day eduroam simply stops working. The university emails you when it's about to expire.</p>
-      <p>To renew: generate a new certificate in UIS, install it, and remove the old one from your device. Generating a new one does not revoke the old one, so you can renew early. reIS warns you on its own as the date approaches and a new one is a single button away.</p>
-    </section>
-
-    <section id="faq">
-      <h2>Frequently asked questions</h2>
-      <dl>
-        <dt>Is reIS an official MENDELU app?</dt>
-        <dd>No. reIS is built by MENDELU students in their free time. It takes the certificate straight from your UIS, just like the official procedure.</dd>
-        <dt>Where do my certificate and password go?</dt>
-        <dd>Nowhere. reIS fetches the certificate from UIS and hands it to your device's system. It is never sent to any reIS server. More on <a href="/bezpecnost">Data and security</a> (Czech).</dd>
-        <dt>How much does reIS cost?</dt>
-        <dd>Nothing. The app and the extension are free.</dd>
-        <dt>Do I need the faro-free network?</dt>
-        <dd>Not with reIS: mobile data is enough. The official procedure uses faro-free to download the certificate from IS.</dd>
-      </dl>
+      <p class="oneline">Otherwise <a href="https://helpdesk.mendelu.cz/">helpdesk.mendelu.cz</a> or the <a href="https://eduroam.mendelu.cz/en/36897-faq">official FAQ</a>.</p>
     </section>
   </main>
   <footer>
