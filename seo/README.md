@@ -10,7 +10,7 @@ Not part of the website: `.vercelignore` keeps this folder off reisapp.cz.
 | `ranks.csv` | History: every result of every run. |
 | `latest.md`, `compare.md` | The last run, readable. |
 
-Runs every Monday from `.github/workflows/seo-rank.yml` (also by hand: Actions → SEO positions → Run workflow). It needs the repo secret `SERPER_API_KEY`.
+Runs only by hand: Actions → SEO positions → Run workflow (`.github/workflows/seo-rank.yml`). It needs the repo secret `SERPER_API_KEY`.
 
 Locally: `SERPER_API_KEY=… node seo/rank.mjs`, `node seo/compare.mjs [URL…] [--lighthouse]` (no Google Chrome on this Mac: prefix `CHROME_PATH="/Applications/Brave Browser.app/Contents/MacOS/Brave Browser"`), tests: `node --test seo/lib.test.mjs`.
 
