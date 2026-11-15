@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<!-- Czech homepage (/). Its English twin is en.html (/en): same layout, same
+     sections. Any change to text or structure here goes into en.html too. -->
 <html lang="cs">
 <head>
 <meta charset="utf-8">
@@ -6,9 +8,13 @@
 <title>reIS – studium na MENDELU v jedné aplikaci</title>
 <meta name="description" content="Nezávislý studentský projekt. Rozvrh, zkoušky, soubory předmětů, mapa kampusu a eduroam přehledně v telefonu i v prohlížeči. Známky, rozvrh a soubory zůstávají ve vašem zařízení.">
 <link rel="canonical" href="https://reisapp.cz/">
+<link rel="alternate" hreflang="cs" href="https://reisapp.cz/">
+<link rel="alternate" hreflang="en" href="https://reisapp.cz/en">
+<link rel="alternate" hreflang="x-default" href="https://reisapp.cz/">
 <meta name="apple-itunes-app" content="app-id=6804832714">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="cs_CZ">
+<meta property="og:locale:alternate" content="en_GB">
 <meta property="og:site_name" content="reIS">
 <meta property="og:url" content="https://reisapp.cz/">
 <meta property="og:title" content="reIS – studium na MENDELU v jedné aplikaci">
@@ -21,6 +27,18 @@
 <script>window.__resources={"https://unpkg.com/react@18.3.1/umd/react.production.min.js":"/vendor/react.production.min.js","https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js":"/vendor/react-dom.production.min.js"};</script>
 <link rel="stylesheet" href="/install.css">
 <script src="/install.js"></script>
+<style>[data-en-hint]{display:none}html[data-en-hint-on] [data-en-hint]{display:block}</style>
+<script>
+// "Read in English" line: only for browsers with no Czech or Slovak among
+// their languages. Never redirects; hidden without JS.
+(function () {
+  try {
+    var l = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || ''];
+    for (var i = 0; i < l.length; i++) if (/^(cs|sk)(-|$)/i.test(String(l[i]))) return;
+    document.documentElement.setAttribute('data-en-hint-on', '');
+  } catch (e) {}
+})();
+</script>
 <script src="/ph.js"></script>
 <script src="/support.js"></script>
 <script src="/loops.js"></script>
@@ -49,6 +67,8 @@ button:focus-visible,a:focus-visible,[role="button"]:focus-visible{outline:2px s
 </helmet>
 
 <div style="min-height:100vh;background:#ffffff;color:#111827;font-family:Inter,system-ui,-apple-system,'Segoe UI',sans-serif">
+
+<div data-en-hint lang="en" style="background:#f9fafb;border-bottom:1px solid #e5e7eb;padding:8px 16px;text-align:center;font-size:14px;line-height:1.4"><a href="/en" hreflang="en" data-lang-switch="hint" style="color:#374151;font-weight:500;text-decoration:none" style-hover="color:#3f6212">Read in English<span aria-hidden="true"> →</span></a></div>
 
 <dc-import name="SiteHeader" active="" hint-size="100%,64px" style="position:sticky;top:0;z-index:20;display:block"></dc-import>
 
@@ -231,7 +251,7 @@ button:focus-visible,a:focus-visible,[role="button"]:focus-visible{outline:2px s
 <section id="stahnout" data-screen-label="Stáhnout" style="scroll-margin-top:64px;padding:0 24px clamp(56px,8vw,96px)">
   <div style="max-width:1160px;margin:0 auto;background:#eef2e6;border-radius:24px;padding:clamp(40px,6vw,72px) clamp(24px,4vw,56px);display:flex;flex-direction:column;align-items:center;gap:20px;text-align:center">
     <h2 style="margin:0;font-size:clamp(28px,3.4vw,40px);font-weight:700;letter-spacing:-0.025em;line-height:1.15;text-wrap:balance">Mějte celé studium v jedné aplikaci</h2>
-    <a href="/navod" style="display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 28px;border-radius:12px;background:#111827;color:#ffffff;font-size:16.5px;font-weight:600;text-decoration:none" style-hover="background:#1f2937;color:#ffffff">Stáhnout reIS<span aria-hidden="true">→</span></a>
+    <a href="/navod" style="display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 28px;border-radius:12px;background:#3f6212;color:#ffffff;font-size:16.5px;font-weight:600;text-decoration:none" style-hover="background:#365314;color:#ffffff">Stáhnout reIS<span aria-hidden="true">→</span></a>
     <p style="margin:0;font-size:14.5px;line-height:1.5;color:#4b5563">Zdarma · data zůstávají ve vašem zařízení</p>
   </div>
 </section>

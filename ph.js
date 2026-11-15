@@ -78,4 +78,15 @@
       guide_auto: !!g.auto
     });
   }, true);
+
+  // Language switch (header EN/CZ, "Read in English" line on the Czech homepage).
+  document.addEventListener('click', function (ev) {
+    var a = ev.target && ev.target.closest && ev.target.closest('a[data-lang-switch]');
+    if (!a) return;
+    window.reisTrack('lang_switch', {
+      to: a.getAttribute('hreflang') || null,
+      via: a.getAttribute('data-lang-switch'),
+      page: location.pathname
+    });
+  }, true);
 })();

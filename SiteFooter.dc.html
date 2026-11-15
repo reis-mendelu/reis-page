@@ -10,7 +10,7 @@
 <footer style="background:#f9fafb;border-top:1px solid #e5e7eb;padding:0 24px 32px;font-family:Inter,system-ui,-apple-system,'Segoe UI',sans-serif;color:#111827">
   <sc-if value="{{ showPartners }}" hint-placeholder-val="{{ true }}">
   <div style="max-width:1160px;margin:0 auto;padding:28px 0 24px;border-bottom:1px solid #e5e7eb;display:flex;flex-wrap:wrap;align-items:center;gap:16px 40px">
-    <span style="font-size:14px;font-weight:600;color:#4b5563">Spolupracují s námi</span>
+    <span style="font-size:14px;font-weight:600;color:#4b5563">{{ tPartners }}</span>
     <div style="display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center">
       <img src="/assets/logos/ey.png" alt="EY" title="EY" width="48" height="48" style="display:block;width:48px;height:48px;object-fit:contain;border-radius:10px">
       <img src="/assets/logos/su-pef.png" alt="SU PEF" title="SU PEF" width="48" height="48" style="display:block;width:48px;height:48px;object-fit:contain;border-radius:10px">
@@ -24,8 +24,21 @@
   <div style="max-width:1160px;margin:0 auto;padding-top:24px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 32px;font-size:14px">
     <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;min-width:0">
       <img src="/assets/reIS_logo.svg" alt="reIS" width="28" height="28" style="display:block;width:28px;height:28px">
-      <span style="color:#4b5563;line-height:1.5">Nezávislý studentský projekt, není oficiální produkt MENDELU.</span>
+      <span style="color:#4b5563;line-height:1.5">{{ tIndependent }}</span>
     </div>
+    <sc-if value="{{ en }}" hint-placeholder-val="{{ false }}">
+    <nav style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 24px">
+      <span style="display:inline-flex;flex-wrap:wrap;align-items:center;gap:8px 16px"><span style="color:#6b7280">In Czech:</span>
+      <a href="/o-nas" hreflang="cs" style="color:#374151;text-decoration:none" style-hover="color:#3f6212">About us</a>
+      <a href="/spoluprace" hreflang="cs" style="color:#374151;text-decoration:none" style-hover="color:#3f6212">Partners</a>
+      <a href="/bezpecnost" hreflang="cs" style="color:#374151;text-decoration:none" style-hover="color:#3f6212">Security</a>
+      <a href="/soukromi" hreflang="cs" style="color:#374151;text-decoration:none" style-hover="color:#3f6212">Privacy</a></span>
+      <a href="https://github.com/reis-mendelu" style="color:#374151;text-decoration:none" style-hover="color:#3f6212">GitHub</a>
+      <a href="https://www.instagram.com/reis.mendelu/" style="color:#374151;text-decoration:none" style-hover="color:#3f6212">Instagram</a>
+      <a href="mailto:reis.mendelu@gmail.com" style="color:#374151;text-decoration:none" style-hover="color:#3f6212">reis.mendelu@gmail.com</a>
+    </nav>
+    </sc-if>
+    <sc-if value="{{ cs }}" hint-placeholder-val="{{ true }}">
     <nav style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 24px">
       <a href="/o-nas" style="color:#374151;text-decoration:none" style-hover="color:#3f6212">O nás</a>
       <a href="/spoluprace" style="color:#374151;text-decoration:none" style-hover="color:#3f6212">Spolupráce</a>
@@ -35,14 +48,20 @@
       <a href="https://www.instagram.com/reis.mendelu/" style="color:#374151;text-decoration:none" style-hover="color:#3f6212">Instagram</a>
       <a href="mailto:reis.mendelu@gmail.com" style="color:#374151;text-decoration:none" style-hover="color:#3f6212">reis.mendelu@gmail.com</a>
     </nav>
+    </sc-if>
   </div>
 </footer>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;100%&quot;,&quot;height&quot;:&quot;300px&quot;},&quot;showPartners&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;100%&quot;,&quot;height&quot;:&quot;300px&quot;},&quot;showPartners&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;},&quot;lang&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;cs&quot;,&quot;en&quot;],&quot;default&quot;:&quot;cs&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
 class Component extends DCLogic {
   renderVals() {
     const p = this.props.showPartners;
-    return { showPartners: p === true || p === 'true' };
+    const en = this.props.lang === 'en';
+    return {
+      showPartners: p === true || p === 'true', en, cs: !en,
+      tPartners: en ? 'Working with us' : 'Spolupracují s námi',
+      tIndependent: en ? 'Independent student project, not an official MENDELU product.' : 'Nezávislý studentský projekt, není oficiální produkt MENDELU.',
+    };
   }
 }
 </script>
