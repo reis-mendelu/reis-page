@@ -7,41 +7,41 @@
 </head>
 <body>
 <x-dc>
-<header style="background:rgba(255,255,255,0.94);backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid #e5e7eb;font-family:Inter,system-ui,-apple-system,'Segoe UI',sans-serif;position:relative">
+<header style="background:var(--header-bg,rgba(13,17,14,0.88));backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--border,#29302a);font-family:Inter,system-ui,-apple-system,'Segoe UI',sans-serif;position:relative">
   <div style="max-width:1160px;margin:0 auto;height:64px;padding:0 clamp(14px,5vw,24px);display:flex;align-items:center;justify-content:space-between;gap:clamp(10px,4vw,24px)">
-    <a href="{{ home }}" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:#111827">
+    <a href="{{ home }}" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text,#eef2ec)">
       <img src="/assets/reIS_logo.svg" alt="reIS" width="40" height="40" style="display:block;width:40px;height:40px">
       <span style="font-weight:700;font-size:22px;letter-spacing:-0.02em">reIS</span>
     </a>
     <div style="display:flex;align-items:center;gap:clamp(8px,3vw,24px)">
       <sc-if value="{{ wide }}" hint-placeholder-val="{{ true }}">
         <nav style="display:flex;align-items:center;gap:26px;font-size:14.5px;font-weight:500;height:64px">
-          <a href="{{ hFunkce }}" style="text-decoration:none;color:#374151;position:relative;height:64px;display:flex;align-items:center">{{ tFunkce }}</a>
-          <a href="{{ hData }}" style="text-decoration:none;color:#374151;position:relative;height:64px;display:flex;align-items:center"><span>{{ tData }}</span><sc-if value="{{ aData }}" hint-placeholder-val="{{ false }}"><span style="position:absolute;left:0;right:0;bottom:-1px;height:2px;background:#79be15"></span></sc-if></a>
-          <a href="/spoluprace" hreflang="cs" style="text-decoration:none;color:#374151;position:relative;height:64px;display:flex;align-items:center;gap:6px"><span>{{ tSpol }}</span><sc-if value="{{ en }}" hint-placeholder-val="{{ false }}"><span title="in Czech" style="font-size:11px;font-weight:600;color:#6b7280;border:1px solid #d1d5db;border-radius:4px;padding:0 4px;line-height:16px">CZ</span></sc-if><sc-if value="{{ aSpol }}" hint-placeholder-val="{{ false }}"><span style="position:absolute;left:0;right:0;bottom:-1px;height:2px;background:#79be15"></span></sc-if></a>
+          <a href="{{ hFunkce }}" style="text-decoration:none;color:var(--text-2,#c8cfc6);position:relative;height:64px;display:flex;align-items:center">{{ tFunkce }}</a>
+          <a href="{{ hData }}" style="text-decoration:none;color:var(--text-2,#c8cfc6);position:relative;height:64px;display:flex;align-items:center"><span>{{ tData }}</span><sc-if value="{{ aData }}" hint-placeholder-val="{{ false }}"><span style="position:absolute;left:0;right:0;bottom:-1px;height:2px;background:#79be15"></span></sc-if></a>
+          <a href="/spoluprace" hreflang="cs" style="text-decoration:none;color:var(--text-2,#c8cfc6);position:relative;height:64px;display:flex;align-items:center;gap:6px"><span>{{ tSpol }}</span><sc-if value="{{ en }}" hint-placeholder-val="{{ false }}"><span title="in Czech" style="font-size:11px;font-weight:600;color:var(--text-4,#8f988d);border:1px solid var(--border-strong,#3b443c);border-radius:4px;padding:0 4px;line-height:16px">CZ</span></sc-if><sc-if value="{{ aSpol }}" hint-placeholder-val="{{ false }}"><span style="position:absolute;left:0;right:0;bottom:-1px;height:2px;background:#79be15"></span></sc-if></a>
         </nav>
       </sc-if>
-      <div style="display:flex;align-items:center;font-size:13.5px;font-weight:600;letter-spacing:0.02em;color:#9ca3af">
+      <div style="display:flex;align-items:center;font-size:13.5px;font-weight:600;letter-spacing:0.02em;color:var(--text-5,#646d63)">
         <sc-if value="{{ en }}" hint-placeholder-val="{{ false }}">
-          <a href="/" hreflang="cs" lang="cs" data-lang-switch="header" aria-label="Česky" style="display:inline-flex;align-items:center;height:40px;padding:0 4px;color:#6b7280;text-decoration:none" style-hover="color:#3f6212">CZ</a><span aria-hidden="true">/</span><span aria-current="true" style="display:inline-flex;align-items:center;height:40px;padding:0 4px;color:#111827">EN</span>
+          <a href="/" hreflang="cs" lang="cs" data-lang-switch="header" aria-label="Česky" style="display:inline-flex;align-items:center;height:40px;padding:0 4px;color:var(--text-4,#8f988d);text-decoration:none" style-hover="color:var(--accent-text,#a5d85f)">CZ</a><span aria-hidden="true">/</span><span aria-current="true" style="display:inline-flex;align-items:center;height:40px;padding:0 4px;color:var(--text,#eef2ec)">EN</span>
         </sc-if>
         <sc-if value="{{ cs }}" hint-placeholder-val="{{ true }}">
-          <span aria-current="true" style="display:inline-flex;align-items:center;height:40px;padding:0 4px;color:#111827">CZ</span><span aria-hidden="true">/</span><a href="/en" hreflang="en" lang="en" data-lang-switch="header" aria-label="English" style="display:inline-flex;align-items:center;height:40px;padding:0 4px;color:#6b7280;text-decoration:none" style-hover="color:#3f6212">EN</a>
+          <span aria-current="true" style="display:inline-flex;align-items:center;height:40px;padding:0 4px;color:var(--text,#eef2ec)">CZ</span><span aria-hidden="true">/</span><a href="/en" hreflang="en" lang="en" data-lang-switch="header" aria-label="English" style="display:inline-flex;align-items:center;height:40px;padding:0 4px;color:var(--text-4,#8f988d);text-decoration:none" style-hover="color:var(--accent-text,#a5d85f)">EN</a>
         </sc-if>
       </div>
       <a href="{{ navod }}" style="display:inline-flex;align-items:center;height:40px;padding:0 16px;border-radius:8px;background:#3f6212;color:#ffffff;font-size:14.5px;font-weight:600;text-decoration:none;white-space:nowrap" style-hover="background:#365314;color:#ffffff">{{ tGet }}</a>
       <sc-if value="{{ narrow }}" hint-placeholder-val="{{ false }}">
-        <button type="button" onClick="{{ toggleMenu }}" aria-expanded="{{ menuOpen }}" aria-label="Menu" style="all:unset;cursor:pointer;width:40px;height:40px;margin-right:-8px;display:grid;place-items:center;color:#111827">
+        <button type="button" onClick="{{ toggleMenu }}" aria-expanded="{{ menuOpen }}" aria-label="Menu" style="all:unset;cursor:pointer;width:40px;height:40px;margin-right:-8px;display:grid;place-items:center;color:var(--text,#eef2ec)">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"></line><line x1="4" y1="12" x2="20" y2="12"></line><line x1="4" y1="17" x2="20" y2="17"></line></svg>
         </button>
       </sc-if>
     </div>
   </div>
   <sc-if value="{{ menuVisible }}" hint-placeholder-val="{{ false }}">
-    <nav style="border-top:1px solid #e5e7eb;background:#ffffff;padding:8px 24px 16px;display:flex;flex-direction:column;font-size:16px;font-weight:500">
-      <a href="{{ hFunkce }}" onClick="{{ closeMenu }}" style="text-decoration:none;color:#111827;padding:12px 0;border-bottom:1px solid #f3f4f6">{{ tFunkce }}</a>
-      <a href="{{ hData }}" onClick="{{ closeMenu }}" style="text-decoration:none;color:#111827;padding:12px 0;border-bottom:1px solid #f3f4f6">{{ tData }}</a>
-      <a href="/spoluprace" hreflang="cs" onClick="{{ closeMenu }}" style="text-decoration:none;color:#111827;padding:12px 0">{{ tSpolMenu }}</a>
+    <nav style="border-top:1px solid var(--border,#29302a);background:var(--bg,#0d110e);padding:8px 24px 16px;display:flex;flex-direction:column;font-size:16px;font-weight:500">
+      <a href="{{ hFunkce }}" onClick="{{ closeMenu }}" style="text-decoration:none;color:var(--text,#eef2ec);padding:12px 0;border-bottom:1px solid var(--border-subtle,#1d231e)">{{ tFunkce }}</a>
+      <a href="{{ hData }}" onClick="{{ closeMenu }}" style="text-decoration:none;color:var(--text,#eef2ec);padding:12px 0;border-bottom:1px solid var(--border-subtle,#1d231e)">{{ tData }}</a>
+      <a href="/spoluprace" hreflang="cs" onClick="{{ closeMenu }}" style="text-decoration:none;color:var(--text,#eef2ec);padding:12px 0">{{ tSpolMenu }}</a>
     </nav>
   </sc-if>
 </header>

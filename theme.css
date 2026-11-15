@@ -1,0 +1,43 @@
+/* reisapp.cz colour tokens (dark-only site).
+   Every page links this file first: <link rel="stylesheet" href="/theme.css">
+   and uses the tokens in inline styles, e.g. style="color:var(--text)".
+   A new static page only needs this link plus body{background:var(--bg);color:var(--text)}.
+
+   Contrast (WCAG AA, checked against --bg, --surface, --surface-2 and --card-green):
+   --text, --text-2, --text-3, --text-4 and --accent-text are all >= 4.5:1.
+   --text-5 is for decoration only (separators, dashed lines), never for text.
+   White on --btn (#3f6212) is about 7.4:1. */
+:root {
+  color-scheme: dark;
+
+  /* Surfaces, darkest to lightest */
+  --bg: #0d110e;          /* page */
+  --surface: #141915;     /* bands, footer, cards on --bg */
+  --surface-2: #1c221d;   /* tiles inside a surface */
+  --card-green: #182112;  /* green-tinted feature cards and the closing download box */
+
+  /* Lines */
+  --border-subtle: #1d231e;
+  --border: #29302a;
+  --border-strong: #3b443c;
+  --border-green: #2c3a1e;
+  --bezel: #2e352f;       /* phone frame around the hero video */
+
+  /* Text */
+  --text: #eef2ec;        /* headings, body */
+  --text-2: #c8cfc6;      /* secondary paragraphs */
+  --text-3: #a6afa4;      /* muted text */
+  --text-4: #8f988d;      /* small captions */
+  --text-5: #646d63;      /* decoration only */
+
+  /* Brand */
+  --accent: #79be15;      /* lime: dots, underlines, icon tiles, focus ring */
+  --accent-text: #a5d85f; /* green text and link hover on dark */
+  --btn: #3f6212;         /* download buttons, white text */
+  --btn-hover: #365314;
+  --on-btn: #ffffff;
+
+  --header-bg: rgba(13, 17, 14, 0.88);
+}
+
+html { background: var(--bg); }
