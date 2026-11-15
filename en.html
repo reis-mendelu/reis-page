@@ -24,6 +24,8 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/assets/reIS_logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/theme.css">
+<meta name="theme-color" content="#0d110e">
 <script>window.__resources={"https://unpkg.com/react@18.3.1/umd/react.production.min.js":"/vendor/react.production.min.js","https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js":"/vendor/react-dom.production.min.js"};</script>
 <link rel="stylesheet" href="/install.css">
 <script src="/install.js"></script>
@@ -47,15 +49,15 @@
 @font-face{font-family:Inter;font-style:normal;font-display:swap;font-weight:700;src:url(/fonts/inter-latin-700-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:#ffffff;color:#111827;font-family:Inter,system-ui,-apple-system,'Segoe UI',sans-serif;-webkit-font-smoothing:antialiased}
-a{color:#111827}
-a:hover{color:#3f6212}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,'Segoe UI',sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--text)}
+a:hover{color:var(--accent-text)}
 @media (max-width:599px){[data-hero-visual]{aspect-ratio:auto !important;display:flex;justify-content:center}[data-hero-desktop]{display:none !important}[data-hero-phone]{position:static !important;width:65% !important}}
-button:focus-visible,a:focus-visible,[role="button"]:focus-visible{outline:2px solid #3f6212;outline-offset:3px;border-radius:4px}
+button:focus-visible,a:focus-visible,[role="button"]:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
 </style>
 </helmet>
 
-<div style="min-height:100vh;background:#ffffff;color:#111827;font-family:Inter,system-ui,-apple-system,'Segoe UI',sans-serif">
+<div style="min-height:100vh;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,'Segoe UI',sans-serif">
 
 <dc-import name="SiteHeader" active="" lang="en" hint-size="100%,64px" style="position:sticky;top:0;z-index:20;display:block"></dc-import>
 
@@ -65,62 +67,62 @@ button:focus-visible,a:focus-visible,[role="button"]:focus-visible{outline:2px s
   <div style="max-width:1160px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:clamp(40px,6vw,72px);align-items:center">
     <div style="display:flex;flex-direction:column;gap:24px;max-width:540px">
       <h1 style="margin:0;font-size:clamp(36px,5.2vw,58px);line-height:1.06;font-weight:700;letter-spacing:-0.03em;text-wrap:balance">Your MENDELU studies in one app</h1>
-      <p style="margin:0;font-size:clamp(17px,1.6vw,20px);line-height:1.55;color:#374151;text-wrap:pretty">Timetable, exams, course files, campus map and eduroam. Clearly laid out on your phone and in your browser.</p>
+      <p style="margin:0;font-size:clamp(17px,1.6vw,20px);line-height:1.55;color:var(--text-2);text-wrap:pretty">Timetable, exams, course files, campus map and eduroam. Clearly laid out on your phone and in your browser.</p>
       <div style="display:flex;flex-direction:column;gap:16px;padding-top:4px">
         <div style="display:flex;flex-wrap:wrap;align-items:center;gap:20px 32px">
           <div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px">
             <a data-install="ios" href="https://apps.apple.com/cz/app/id6804832714?ct=reisapp-hero-en" target="_blank" rel="noopener" style="display:inline-flex;border-radius:8px" style-hover="opacity:0.85"><img src="/navod/appstore-badge-en.svg" alt="Download on the App Store" width="144" height="48" style="display:block;width:auto;height:48px"></a>
             <a data-install="android" href="https://play.google.com/store/apps/details?id=cz.reis.app&amp;referrer=utm_source%3Dreisapp.cz%26utm_medium%3Dhero_en" target="_blank" rel="noopener" style="display:inline-flex;border-radius:8px" style-hover="opacity:0.85"><img src="/navod/googleplay-badge-en.png" alt="Get it on Google Play" width="161" height="48" style="display:block;width:auto;height:48px"></a>
-            <a data-install="chrome" href="/navod?lang=en&amp;device=desktop&amp;browser=chrome" style="display:inline-flex;align-items:center;gap:10px;height:48px;padding:0 18px 0 14px;border-radius:10px;background:#111827;color:#ffffff;font-size:16px;font-weight:600;letter-spacing:-0.01em;text-decoration:none;white-space:nowrap" style-hover="background:#1f2937;color:#ffffff"><img src="/navod/logos/chrome.svg" alt="" width="24" height="24" style="display:block;flex-shrink:0">Add to Chrome</a>
-            <a data-install="edge" data-install-only="edge" href="/navod?lang=en&amp;device=desktop&amp;browser=edge" style="display:inline-flex;align-items:center;gap:10px;height:48px;padding:0 18px 0 14px;border-radius:10px;background:#111827;color:#ffffff;font-size:16px;font-weight:600;letter-spacing:-0.01em;text-decoration:none;white-space:nowrap" style-hover="background:#1f2937;color:#ffffff"><img src="/navod/logos/edge.svg" alt="" width="24" height="24" style="display:block;flex-shrink:0">Add to Edge</a>
-            <a data-install="firefox" href="/navod?lang=en&amp;device=desktop&amp;browser=firefox" style="display:inline-flex;align-items:center;gap:10px;height:48px;padding:0 18px 0 14px;border-radius:10px;background:#111827;color:#ffffff;font-size:16px;font-weight:600;letter-spacing:-0.01em;text-decoration:none;white-space:nowrap" style-hover="background:#1f2937;color:#ffffff"><img src="/navod/logos/firefox.svg" alt="" width="24" height="24" style="display:block;flex-shrink:0">Add to Firefox</a>
-            <a data-install="mac" data-install-only="mac" href="/navod?lang=en&amp;device=desktop&amp;browser=mac" style="display:inline-flex;align-items:center;gap:10px;height:48px;padding:0 18px 0 14px;border-radius:10px;background:#111827;color:#ffffff;font-size:16px;font-weight:600;letter-spacing:-0.01em;text-decoration:none;white-space:nowrap" style-hover="background:#1f2937;color:#ffffff"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="flex-shrink:0"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"></path></svg>Download for Mac</a>
+            <a data-install="chrome" href="/navod?lang=en&amp;device=desktop&amp;browser=chrome" style="display:inline-flex;align-items:center;gap:10px;height:48px;padding:0 18px 0 14px;border-radius:10px;background:var(--btn);color:#ffffff;font-size:16px;font-weight:600;letter-spacing:-0.01em;text-decoration:none;white-space:nowrap" style-hover="background:var(--btn-hover);color:#ffffff"><img src="/navod/logos/chrome.svg" alt="" width="24" height="24" style="display:block;flex-shrink:0">Add to Chrome</a>
+            <a data-install="edge" data-install-only="edge" href="/navod?lang=en&amp;device=desktop&amp;browser=edge" style="display:inline-flex;align-items:center;gap:10px;height:48px;padding:0 18px 0 14px;border-radius:10px;background:var(--btn);color:#ffffff;font-size:16px;font-weight:600;letter-spacing:-0.01em;text-decoration:none;white-space:nowrap" style-hover="background:var(--btn-hover);color:#ffffff"><img src="/navod/logos/edge.svg" alt="" width="24" height="24" style="display:block;flex-shrink:0">Add to Edge</a>
+            <a data-install="firefox" href="/navod?lang=en&amp;device=desktop&amp;browser=firefox" style="display:inline-flex;align-items:center;gap:10px;height:48px;padding:0 18px 0 14px;border-radius:10px;background:var(--btn);color:#ffffff;font-size:16px;font-weight:600;letter-spacing:-0.01em;text-decoration:none;white-space:nowrap" style-hover="background:var(--btn-hover);color:#ffffff"><img src="/navod/logos/firefox.svg" alt="" width="24" height="24" style="display:block;flex-shrink:0">Add to Firefox</a>
+            <a data-install="mac" data-install-only="mac" href="/navod?lang=en&amp;device=desktop&amp;browser=mac" style="display:inline-flex;align-items:center;gap:10px;height:48px;padding:0 18px 0 14px;border-radius:10px;background:var(--btn);color:#ffffff;font-size:16px;font-weight:600;letter-spacing:-0.01em;text-decoration:none;white-space:nowrap" style-hover="background:var(--btn-hover);color:#ffffff"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="flex-shrink:0"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"></path></svg>Download for Mac</a>
           </div>
           <div data-install-qr style="display:flex;align-items:center;gap:14px">
-            <img src="/assets/qr-navod.svg" alt="QR code: reisapp.cz/navod" width="112" height="112" style="display:block;width:112px;height:112px;border:1px solid #e5e7eb;border-radius:10px;background:#ffffff">
-            <span style="font-size:14.5px;line-height:1.4;color:#4b5563;max-width:180px">On your phone? Scan and download.</span>
+            <img src="/assets/qr-navod.svg" alt="QR code: reisapp.cz/navod" width="112" height="112" style="display:block;width:112px;height:112px;border:1px solid var(--border);border-radius:10px;background:#ffffff">
+            <span style="font-size:14.5px;line-height:1.4;color:var(--text-3);max-width:180px">On your phone? Scan and download.</span>
           </div>
         </div>
-        <button type="button" data-install-more aria-expanded="false" style="all:unset;cursor:pointer;align-self:flex-start;display:inline-flex;align-items:center;gap:6px;font-size:14.5px;font-weight:500;color:#4b5563;border-bottom:1px solid #d1d5db;padding-bottom:1px" style-hover="color:#111827"><span data-when-closed>Other platforms</span><span data-when-open>Fewer platforms</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
-        <p style="margin:0;font-size:14.5px;line-height:1.5;color:#4b5563"><strong style="font-weight:600;color:#111827">1,700+</strong> students every week · <strong style="font-weight:600;color:#111827">1 in 5</strong> at MENDELU</p>
+        <button type="button" data-install-more aria-expanded="false" style="all:unset;cursor:pointer;align-self:flex-start;display:inline-flex;align-items:center;gap:6px;font-size:14.5px;font-weight:500;color:var(--text-3);border-bottom:1px solid var(--border-strong);padding-bottom:1px" style-hover="color:var(--text)"><span data-when-closed>Other platforms</span><span data-when-open>Fewer platforms</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+        <p style="margin:0;font-size:14.5px;line-height:1.5;color:var(--text-3)"><strong style="font-weight:600;color:var(--text)">1,700+</strong> students every week · <strong style="font-weight:600;color:var(--text)">1 in 5</strong> at MENDELU</p>
       </div>
     </div>
     <div data-hero-visual style="position:relative;width:100%;max-width:600px;justify-self:center;aspect-ratio:6/5">
-      <img data-hero-desktop src="/assets/screens/desktop-tyden.png" alt="reIS in the browser – weekly timetable" style="position:absolute;top:0;right:0;width:90%;height:auto;border-radius:14px;border:1px solid #e5e7eb;box-shadow:0 30px 60px -20px rgba(17,24,39,0.35)">
-      <video data-hero-phone src="/assets/loops/is-reis-telefon.mp4" poster="/assets/loops/is-reis-telefon-poster.webp" autoplay muted loop playsinline preload="auto" aria-label="The timetable page from IS MENDELU turns into the reIS daily overview on a phone" style="position:absolute;left:0;bottom:0;width:34%;height:auto;aspect-ratio:1080/2340;object-fit:cover;background:#f4f6f8;border-radius:28px;border:6px solid #111827;box-shadow:0 30px 60px -20px rgba(17,24,39,0.45)"></video>
+      <img data-hero-desktop src="/assets/screens/desktop-tyden.png" alt="reIS in the browser – weekly timetable" style="position:absolute;top:0;right:0;width:90%;height:auto;border-radius:14px;border:1px solid var(--border);box-shadow:0 30px 60px -20px rgba(0,0,0,0.56)">
+      <video data-hero-phone src="/assets/loops/is-reis-telefon.mp4" poster="/assets/loops/is-reis-telefon-poster.webp" autoplay muted loop playsinline preload="auto" aria-label="The timetable page from IS MENDELU turns into the reIS daily overview on a phone" style="position:absolute;left:0;bottom:0;width:34%;height:auto;aspect-ratio:1080/2340;object-fit:cover;background:var(--surface-2);border-radius:28px;border:6px solid var(--bezel);box-shadow:0 30px 60px -20px rgba(0,0,0,0.72)"></video>
     </div>
   </div>
 </section>
 
-<section data-screen-label="Trust" style="padding:clamp(40px,6vw,72px) 24px;border-top:1px solid #f3f4f6">
+<section data-screen-label="Trust" style="padding:clamp(40px,6vw,72px) 24px;border-top:1px solid var(--border-subtle)">
   <div style="max-width:1160px;margin:0 auto;display:flex;flex-direction:column;gap:clamp(32px,5vw,56px)">
     <sc-if value="{{ partners }}" hint-placeholder-val="{{ true }}">
     <div style="display:flex;flex-direction:column;gap:8px">
-      <h2 style="margin:0;display:flex;align-items:center;gap:8px;justify-content:center;text-align:center;font-size:14px;font-weight:600;color:#6b7280"><span aria-hidden="true" style="flex-shrink:0;width:7px;height:7px;border-radius:50%;background:#79be15"></span>Working with us</h2>
+      <h2 style="margin:0;display:flex;align-items:center;gap:8px;justify-content:center;text-align:center;font-size:14px;font-weight:600;color:var(--text-4)"><span aria-hidden="true" style="flex-shrink:0;width:7px;height:7px;border-radius:50%;background:#79be15"></span>Working with us</h2>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,max(180px,calc((100% - 72px)/4))),1fr));gap:4px 24px;align-items:center">
-        <div title="EY" style="display:flex;align-items:center;justify-content:center;gap:10px;height:72px;filter:grayscale(1);opacity:0.7" style-hover="filter:none;opacity:1"><img src="/assets/logos/ey.png" alt="EY" width="40" height="40" style="display:block;width:40px;height:40px;object-fit:contain;border-radius:9px;flex-shrink:0"><span style="font-size:16px;font-weight:600;color:#374151;white-space:nowrap">EY</span></div>
-        <div title="SU PEF" style="display:flex;align-items:center;justify-content:center;gap:10px;height:72px;filter:grayscale(1);opacity:0.7" style-hover="filter:none;opacity:1"><img src="/assets/logos/su-pef.png" alt="SU PEF" width="40" height="40" style="display:block;width:40px;height:40px;object-fit:contain;border-radius:9px;flex-shrink:0"><span style="font-size:16px;font-weight:600;color:#374151;white-space:nowrap">SU PEF</span></div>
-        <div title="ESN MENDELU" style="display:flex;align-items:center;justify-content:center;gap:10px;height:72px;filter:grayscale(1);opacity:0.7" style-hover="filter:none;opacity:1"><img src="/assets/logos/esn-mendelu.png" alt="ESN MENDELU" width="40" height="40" style="display:block;width:40px;height:40px;object-fit:contain;border-radius:9px;flex-shrink:0"><span style="font-size:16px;font-weight:600;color:#374151;white-space:nowrap">ESN MENDELU</span></div>
-        <div title="US.AF" style="display:flex;align-items:center;justify-content:center;gap:10px;height:72px;filter:grayscale(1);opacity:0.7" style-hover="filter:none;opacity:1"><img src="/assets/logos/usaf.png" alt="US.AF" width="40" height="40" style="display:block;width:40px;height:40px;object-fit:contain;border-radius:9px;flex-shrink:0"><span style="font-size:16px;font-weight:600;color:#374151;white-space:nowrap">US.AF</span></div>
-        <div title="S-klub Pixie" style="display:flex;align-items:center;justify-content:center;gap:10px;height:72px;filter:grayscale(1);opacity:0.7" style-hover="filter:none;opacity:1"><img src="/assets/logos/sklub-pixie.png" alt="S-klub Pixie" width="40" height="40" style="display:block;width:40px;height:40px;object-fit:contain;border-radius:9px;flex-shrink:0"><span style="font-size:16px;font-weight:600;color:#374151;white-space:nowrap">S-klub Pixie</span></div>
-        <div title="Vazbič" style="display:flex;align-items:center;justify-content:center;gap:10px;height:72px;filter:grayscale(1);opacity:0.7" style-hover="filter:none;opacity:1"><img src="/assets/logos/vazbic.png" alt="Vazbič" width="40" height="40" style="display:block;width:40px;height:40px;object-fit:contain;border-radius:9px;flex-shrink:0"><span style="font-size:16px;font-weight:600;color:#374151;white-space:nowrap">Vazbič</span></div>
+        <div title="EY" style="display:flex;align-items:center;justify-content:center;gap:10px;height:72px;filter:grayscale(1);opacity:0.7" style-hover="filter:none;opacity:1"><img src="/assets/logos/ey.png" alt="EY" width="40" height="40" style="display:block;width:40px;height:40px;object-fit:contain;border-radius:9px;flex-shrink:0"><span style="font-size:16px;font-weight:600;color:var(--text-2);white-space:nowrap">EY</span></div>
+        <div title="SU PEF" style="display:flex;align-items:center;justify-content:center;gap:10px;height:72px;filter:grayscale(1);opacity:0.7" style-hover="filter:none;opacity:1"><img src="/assets/logos/su-pef.png" alt="SU PEF" width="40" height="40" style="display:block;width:40px;height:40px;object-fit:contain;border-radius:9px;flex-shrink:0"><span style="font-size:16px;font-weight:600;color:var(--text-2);white-space:nowrap">SU PEF</span></div>
+        <div title="ESN MENDELU" style="display:flex;align-items:center;justify-content:center;gap:10px;height:72px;filter:grayscale(1);opacity:0.7" style-hover="filter:none;opacity:1"><img src="/assets/logos/esn-mendelu.png" alt="ESN MENDELU" width="40" height="40" style="display:block;width:40px;height:40px;object-fit:contain;border-radius:9px;flex-shrink:0"><span style="font-size:16px;font-weight:600;color:var(--text-2);white-space:nowrap">ESN MENDELU</span></div>
+        <div title="US.AF" style="display:flex;align-items:center;justify-content:center;gap:10px;height:72px;filter:grayscale(1);opacity:0.7" style-hover="filter:none;opacity:1"><img src="/assets/logos/usaf.png" alt="US.AF" width="40" height="40" style="display:block;width:40px;height:40px;object-fit:contain;border-radius:9px;flex-shrink:0"><span style="font-size:16px;font-weight:600;color:var(--text-2);white-space:nowrap">US.AF</span></div>
+        <div title="S-klub Pixie" style="display:flex;align-items:center;justify-content:center;gap:10px;height:72px;filter:grayscale(1);opacity:0.7" style-hover="filter:none;opacity:1"><img src="/assets/logos/sklub-pixie.png" alt="S-klub Pixie" width="40" height="40" style="display:block;width:40px;height:40px;object-fit:contain;border-radius:9px;flex-shrink:0;background:#ffffff"><span style="font-size:16px;font-weight:600;color:var(--text-2);white-space:nowrap">S-klub Pixie</span></div>
+        <div title="Vazbič" style="display:flex;align-items:center;justify-content:center;gap:10px;height:72px;filter:grayscale(1);opacity:0.7" style-hover="filter:none;opacity:1"><img src="/assets/logos/vazbic.png" alt="Vazbič" width="40" height="40" style="display:block;width:40px;height:40px;object-fit:contain;border-radius:9px;flex-shrink:0"><span style="font-size:16px;font-weight:600;color:var(--text-2);white-space:nowrap">Vazbič</span></div>
       </div>
     </div>
     </sc-if>
   </div>
 </section>
 
-<section id="funkce" data-screen-label="What reIS does" style="scroll-margin-top:64px;padding:clamp(56px,8vw,96px) 24px;border-top:1px solid #f3f4f6">
+<section id="funkce" data-screen-label="What reIS does" style="scroll-margin-top:64px;padding:clamp(56px,8vw,96px) 24px;border-top:1px solid var(--border-subtle)">
   <style>
   .rf-list { display: flex; flex-direction: column; gap: 16px }
   .rf-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px }
-  .rf-card { border-radius: 20px; background: #eef2e6; overflow: hidden; display: flex; flex-direction: column; gap: 18px; padding: 22px 20px 0 }
+  .rf-card { border-radius: 20px; background: var(--card-green); overflow: hidden; display: flex; flex-direction: column; gap: 18px; padding: 22px 20px 0 }
   .rf-text { display: flex; flex-direction: column; gap: 8px }
   .rf-title { margin: 0; display: flex; align-items: center; gap: 12px; font-size: 20px; font-weight: 700; letter-spacing: -0.015em; line-height: 1.2 }
   .rf-icon { flex-shrink: 0; width: 34px; height: 34px; border-radius: 10px; background: #79be15; color: #111827; display: grid; place-items: center }
-  .rf-text p { margin: 0; font-size: 16px; line-height: 1.5; color: #374151; text-wrap: pretty }
+  .rf-text p { margin: 0; font-size: 16px; line-height: 1.5; color: var(--text-2); text-wrap: pretty }
   .rf-shot { margin-top: auto; align-self: center; width: 100%; max-width: 280px }
-  .rf-shot img { display: block; width: 100%; height: auto; border-radius: 18px 18px 0 0; border: 1px solid #e5e7eb; border-bottom: 0; box-shadow: 0 20px 40px -16px rgba(17, 24, 39, 0.25) }
+  .rf-shot img { display: block; width: 100%; height: auto; border-radius: 18px 18px 0 0; border: 1px solid var(--border); border-bottom: 0; box-shadow: 0 20px 40px -16px rgba(0,0,0,0.4) }
   @media (min-width: 600px) {
     .rf-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) }
     .rf-main { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 300px); align-items: center; gap: 24px 32px; padding: 32px 32px 0 }
@@ -142,7 +144,7 @@ button:focus-visible,a:focus-visible,[role="button"]:focus-visible{outline:2px s
   }
   </style>
   <div style="max-width:1160px;margin:0 auto;display:flex;flex-direction:column;gap:clamp(28px,4vw,40px)">
-    <div style="display:flex;flex-direction:column;gap:12px"><h2 style="margin:0;font-size:clamp(28px,3.4vw,40px);font-weight:700;letter-spacing:-0.025em;line-height:1.15">What reIS does</h2><p style="margin:0;font-size:17px;line-height:1.55;color:#4b5563;max-width:560px">Everything you need from the study system every day, in one place.</p></div>
+    <div style="display:flex;flex-direction:column;gap:12px"><h2 style="margin:0;font-size:clamp(28px,3.4vw,40px);font-weight:700;letter-spacing:-0.025em;line-height:1.15">What reIS does</h2><p style="margin:0;font-size:17px;line-height:1.55;color:var(--text-3);max-width:560px">Everything you need from the study system every day, in one place.</p></div>
     <div class="rf-list">
     <div class="rf-card rf-main">
       <div class="rf-text">
@@ -185,39 +187,39 @@ button:focus-visible,a:focus-visible,[role="button"]:focus-visible{outline:2px s
   </div>
 </section>
 
-<section id="data" data-screen-label="Data and security" style="scroll-margin-top:64px;padding:clamp(56px,8vw,96px) 24px;background:#f9fafb;border-top:1px solid #e5e7eb;border-bottom:1px solid #e5e7eb">
+<section id="data" data-screen-label="Data and security" style="scroll-margin-top:64px;padding:clamp(56px,8vw,96px) 24px;background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
   <div style="max-width:1160px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:clamp(40px,5vw,64px);align-items:center">
     <div style="display:flex;flex-direction:column;gap:18px;max-width:520px">
-      <span style="font-size:14px;font-weight:600;color:#4b5563">Data &amp; security</span>
+      <span style="font-size:14px;font-weight:600;color:var(--text-3)">Data &amp; security</span>
       <h2 style="margin:0;font-size:clamp(28px,3.6vw,44px);font-weight:700;letter-spacing:-0.03em;line-height:1.1;text-wrap:balance">Your data stays on your device</h2>
-      <p style="margin:0;font-size:17px;line-height:1.6;color:#374151">reIS reads IS straight from your device. We don’t send your grades, timetable or files anywhere.</p>
+      <p style="margin:0;font-size:17px;line-height:1.6;color:var(--text-2)">reIS reads IS straight from your device. We don’t send your grades, timetable or files anywhere.</p>
       <div style="display:flex;flex-direction:column;gap:18px">
-        <div style="display:flex;gap:14px;align-items:baseline"><span aria-hidden="true" style="flex-shrink:0;width:10px;height:10px;border-radius:50%;background:#79be15;transform:translateY(-1px)"></span><div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:15.5px;font-weight:600">We never see your password.</span><span style="font-size:15px;line-height:1.55;color:#4b5563">You sign in on the IS MENDELU login page itself. The app keeps only your signed-in session in your phone’s secure keychain, never your password.</span></div></div>
-        <div style="display:flex;gap:14px;align-items:baseline"><span aria-hidden="true" style="flex-shrink:0;width:10px;height:10px;border-radius:50%;background:#79be15;transform:translateY(-1px)"></span><div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:15.5px;font-weight:600">Open source.</span><span style="font-size:15px;line-height:1.55;color:#4b5563">All of reIS is public on GitHub, so anyone can check how it works. <a href="https://github.com/reis-mendelu" style="color:#111827;font-weight:500">github.com/reis-mendelu</a></span></div></div>
+        <div style="display:flex;gap:14px;align-items:baseline"><span aria-hidden="true" style="flex-shrink:0;width:10px;height:10px;border-radius:50%;background:#79be15;transform:translateY(-1px)"></span><div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:15.5px;font-weight:600">We never see your password.</span><span style="font-size:15px;line-height:1.55;color:var(--text-3)">You sign in on the IS MENDELU login page itself. The app keeps only your signed-in session in your phone’s secure keychain, never your password.</span></div></div>
+        <div style="display:flex;gap:14px;align-items:baseline"><span aria-hidden="true" style="flex-shrink:0;width:10px;height:10px;border-radius:50%;background:#79be15;transform:translateY(-1px)"></span><div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:15.5px;font-weight:600">Open source.</span><span style="font-size:15px;line-height:1.55;color:var(--text-3)">All of reIS is public on GitHub, so anyone can check how it works. <a href="https://github.com/reis-mendelu" style="color:var(--text);font-weight:500">github.com/reis-mendelu</a></span></div></div>
       </div>
-      <a href="/soukromi" hreflang="cs" style="align-self:flex-start;display:inline-flex;align-items:center;gap:8px;font-size:15.5px;font-weight:600;color:#111827;text-decoration:none;border-bottom:1.5px solid #79be15;padding-bottom:2px" style-hover="color:#3f6212">Privacy policy (in Czech)<span aria-hidden="true">→</span></a>
+      <a href="/soukromi" hreflang="cs" style="align-self:flex-start;display:inline-flex;align-items:center;gap:8px;font-size:15.5px;font-weight:600;color:var(--text);text-decoration:none;border-bottom:1.5px solid #79be15;padding-bottom:2px" style-hover="color:var(--accent-text)">Privacy policy (in Czech)<span aria-hidden="true">→</span></a>
     </div>
-    <figure style="margin:0;background:#ffffff;border:1px solid #e5e7eb;border-radius:16px;padding:clamp(20px,3vw,28px);display:flex;flex-direction:column;gap:8px">
+    <figure style="margin:0;background:var(--bg);border:1px solid var(--border);border-radius:16px;padding:clamp(20px,3vw,28px);display:flex;flex-direction:column;gap:8px">
       <div style="display:grid;grid-template-columns:minmax(0,1.25fr) 64px minmax(0,1fr);align-items:center">
-        <div style="border:1.5px solid #111827;border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:12px;background:#ffffff">
-          <div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:14px;font-weight:600">Your device</span><span style="font-size:12px;color:#6b7280">phone or browser</span></div>
-          <div style="display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:10px;background:#f3f4f6">
+        <div style="border:1.5px solid var(--text-3);border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:12px;background:var(--bg)">
+          <div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:14px;font-weight:600">Your device</span><span style="font-size:12px;color:var(--text-4)">phone or browser</span></div>
+          <div style="display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:10px;background:var(--surface-2)">
             <img src="/assets/reIS_logo_512.png" alt="" width="26" height="26" style="display:block;width:26px;height:26px;flex-shrink:0;border-radius:6px">
-            <div style="display:flex;flex-direction:column;min-width:0"><span style="font-size:13.5px;font-weight:600">reIS</span><span style="font-size:11.5px;color:#4b5563;line-height:1.35">timetable, grades, files</span></div>
+            <div style="display:flex;flex-direction:column;min-width:0"><span style="font-size:13.5px;font-weight:600">reIS</span><span style="font-size:11.5px;color:var(--text-3);line-height:1.35">timetable, grades, files</span></div>
           </div>
         </div>
-        <svg width="64" height="36" viewBox="0 0 64 36" fill="none" stroke="#111827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="6" y1="12" x2="58" y2="12"></line><polyline points="52,7 58,12 52,17"></polyline><line x1="58" y1="24" x2="6" y2="24"></line><polyline points="12,19 6,24 12,29"></polyline></svg>
-        <div style="border:1.5px solid #d1d5db;border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:2px;background:#ffffff"><span style="font-size:14px;font-weight:600">IS MENDELU</span><span style="font-size:12px;color:#6b7280">is.mendelu.cz</span></div>
+        <svg width="64" height="36" viewBox="0 0 64 36" fill="none" stroke="currentColor" style="color:var(--text-2)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="6" y1="12" x2="58" y2="12"></line><polyline points="52,7 58,12 52,17"></polyline><line x1="58" y1="24" x2="6" y2="24"></line><polyline points="12,19 6,24 12,29"></polyline></svg>
+        <div style="border:1.5px solid var(--border-strong);border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:2px;background:var(--bg)"><span style="font-size:14px;font-weight:600">IS MENDELU</span><span style="font-size:12px;color:var(--text-4)">is.mendelu.cz</span></div>
       </div>
       <div style="display:grid;grid-template-columns:minmax(0,1.25fr) 64px minmax(0,1fr)">
         <div style="display:flex;flex-direction:column;align-items:center">
-          <div style="width:0;height:28px;border-left:1.5px dashed #9ca3af"></div>
-          <svg width="12" height="8" viewBox="0 0 12 8" fill="none" stroke="#9ca3af" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="1,1 6,7 11,1"></polyline></svg>
+          <div style="width:0;height:28px;border-left:1.5px dashed var(--text-5)"></div>
+          <svg width="12" height="8" viewBox="0 0 12 8" fill="none" stroke="currentColor" style="color:var(--text-5)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="1,1 6,7 11,1"></polyline></svg>
         </div>
       </div>
-      <div style="border:1.5px dashed #d1d5db;border-radius:12px;padding:12px 14px;display:flex;flex-direction:column;gap:4px;background:#ffffff">
+      <div style="border:1.5px dashed var(--border-strong);border-radius:12px;padding:12px 14px;display:flex;flex-direction:column;gap:4px;background:var(--bg)">
         <span style="font-size:13px;font-weight:600">reIS database</span>
-        <span style="font-size:12px;color:#4b5563;line-height:1.45">Usage stats: a random install ID, faculty, study programme, platform, version and which screens get opened. No name, student number, grades, timetable, files or password.</span>
+        <span style="font-size:12px;color:var(--text-3);line-height:1.45">Usage stats: a random install ID, faculty, study programme, platform, version and which screens get opened. No name, student number, grades, timetable, files or password.</span>
       </div>
     </figure>
   </div>
@@ -227,20 +229,20 @@ button:focus-visible,a:focus-visible,[role="button"]:focus-visible{outline:2px s
   <div style="max-width:1160px;margin:0 auto;display:flex;flex-direction:column;gap:28px">
     <h2 style="margin:0;font-size:clamp(24px,2.6vw,30px);font-weight:700;letter-spacing:-0.02em;line-height:1.2">FAQ</h2>
     <dl style="margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:28px 40px">
-      <div style="display:flex;flex-direction:column;gap:6px;padding-top:16px;border-top:1px solid #e5e7eb"><dt style="font-size:17px;font-weight:600">Is reIS an official MENDELU app?</dt><dd style="margin:0;font-size:15.5px;line-height:1.6;color:#4b5563">No. reIS is an independent student project. IS and all the data in it belong to Mendel University.</dd></div>
-      <div style="display:flex;flex-direction:column;gap:6px;padding-top:16px;border-top:1px solid #e5e7eb"><dt style="font-size:17px;font-weight:600">Is the app in English?</dt><dd style="margin:0;font-size:15.5px;line-height:1.6;color:#4b5563">Yes. It starts in Czech: pick English on the welcome screen, or later in Settings → Language. In the browser extension, it’s under Profile → Language.</dd></div>
-      <div style="display:flex;flex-direction:column;gap:6px;padding-top:16px;border-top:1px solid #e5e7eb"><dt style="font-size:17px;font-weight:600">Is reIS safe?</dt><dd style="margin:0;font-size:15.5px;line-height:1.6;color:#4b5563">Your grades, timetable and files never leave your device, and the code is public. More under <a href="#data" style="color:#111827">Data &amp; security</a>.</dd></div>
-      <div style="display:flex;flex-direction:column;gap:6px;padding-top:16px;border-top:1px solid #e5e7eb"><dt style="font-size:17px;font-weight:600">How much does reIS cost?</dt><dd style="margin:0;font-size:15.5px;line-height:1.6;color:#4b5563">It’s free for students.</dd></div>
-      <div style="display:flex;flex-direction:column;gap:6px;padding-top:16px;border-top:1px solid #e5e7eb"><dt style="font-size:17px;font-weight:600">Where do I get reIS?</dt><dd style="margin:0;font-size:15.5px;line-height:1.6;color:#4b5563">On the App Store, on Google Play and as an extension for Chrome and Firefox. Install guide: <a href="/navod?lang=en" style="color:#111827">reisapp.cz/navod</a>.</dd></div>
+      <div style="display:flex;flex-direction:column;gap:6px;padding-top:16px;border-top:1px solid var(--border)"><dt style="font-size:17px;font-weight:600">Is reIS an official MENDELU app?</dt><dd style="margin:0;font-size:15.5px;line-height:1.6;color:var(--text-3)">No. reIS is an independent student project. IS and all the data in it belong to Mendel University.</dd></div>
+      <div style="display:flex;flex-direction:column;gap:6px;padding-top:16px;border-top:1px solid var(--border)"><dt style="font-size:17px;font-weight:600">Is the app in English?</dt><dd style="margin:0;font-size:15.5px;line-height:1.6;color:var(--text-3)">Yes. It starts in Czech: pick English on the welcome screen, or later in Settings → Language. In the browser extension, it’s under Profile → Language.</dd></div>
+      <div style="display:flex;flex-direction:column;gap:6px;padding-top:16px;border-top:1px solid var(--border)"><dt style="font-size:17px;font-weight:600">Is reIS safe?</dt><dd style="margin:0;font-size:15.5px;line-height:1.6;color:var(--text-3)">Your grades, timetable and files never leave your device, and the code is public. More under <a href="#data" style="color:var(--text)">Data &amp; security</a>.</dd></div>
+      <div style="display:flex;flex-direction:column;gap:6px;padding-top:16px;border-top:1px solid var(--border)"><dt style="font-size:17px;font-weight:600">How much does reIS cost?</dt><dd style="margin:0;font-size:15.5px;line-height:1.6;color:var(--text-3)">It’s free for students.</dd></div>
+      <div style="display:flex;flex-direction:column;gap:6px;padding-top:16px;border-top:1px solid var(--border)"><dt style="font-size:17px;font-weight:600">Where do I get reIS?</dt><dd style="margin:0;font-size:15.5px;line-height:1.6;color:var(--text-3)">On the App Store, on Google Play and as an extension for Chrome and Firefox. Install guide: <a href="/navod?lang=en" style="color:var(--text)">reisapp.cz/navod</a>.</dd></div>
     </dl>
   </div>
 </section>
 
 <section id="stahnout" data-screen-label="Download" style="scroll-margin-top:64px;padding:0 24px clamp(56px,8vw,96px)">
-  <div style="max-width:1160px;margin:0 auto;background:#eef2e6;border-radius:24px;padding:clamp(40px,6vw,72px) clamp(24px,4vw,56px);display:flex;flex-direction:column;align-items:center;gap:20px;text-align:center">
+  <div style="max-width:1160px;margin:0 auto;background:var(--card-green);border-radius:24px;padding:clamp(40px,6vw,72px) clamp(24px,4vw,56px);display:flex;flex-direction:column;align-items:center;gap:20px;text-align:center">
     <h2 style="margin:0;font-size:clamp(28px,3.4vw,40px);font-weight:700;letter-spacing:-0.025em;line-height:1.15;text-wrap:balance">Keep all of your studies in one app</h2>
     <a href="/navod?lang=en" style="display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 28px;border-radius:12px;background:#3f6212;color:#ffffff;font-size:16.5px;font-weight:600;text-decoration:none" style-hover="background:#365314;color:#ffffff">Get reIS<span aria-hidden="true">→</span></a>
-    <p style="margin:0;font-size:14.5px;line-height:1.5;color:#4b5563">Free · your data stays on your device</p>
+    <p style="margin:0;font-size:14.5px;line-height:1.5;color:var(--text-3)">Free · your data stays on your device</p>
   </div>
 </section>
 
