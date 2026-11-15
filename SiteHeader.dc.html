@@ -18,7 +18,7 @@
         <nav style="display:flex;align-items:center;gap:26px;font-size:14.5px;font-weight:500;height:64px">
           <a href="/#funkce" style="text-decoration:none;color:#374151;position:relative;height:64px;display:flex;align-items:center">Co umí</a>
           <a href="/#data" style="text-decoration:none;color:#374151;position:relative;height:64px;display:flex;align-items:center"><span>Data a bezpečnost</span><sc-if value="{{ aData }}" hint-placeholder-val="{{ false }}"><span style="position:absolute;left:0;right:0;bottom:-1px;height:2px;background:#79be15"></span></sc-if></a>
-          <a href="/#univerzita" style="text-decoration:none;color:#374151;position:relative;height:64px;display:flex;align-items:center"><span>Pro univerzitu</span><sc-if value="{{ aUni }}" hint-placeholder-val="{{ false }}"><span style="position:absolute;left:0;right:0;bottom:-1px;height:2px;background:#79be15"></span></sc-if></a>
+          <a href="/spoluprace" style="text-decoration:none;color:#374151;position:relative;height:64px;display:flex;align-items:center"><span>Spolupráce</span><sc-if value="{{ aSpol }}" hint-placeholder-val="{{ false }}"><span style="position:absolute;left:0;right:0;bottom:-1px;height:2px;background:#79be15"></span></sc-if></a>
         </nav>
       </sc-if>
       <a href="/navod" style="display:inline-flex;align-items:center;height:40px;padding:0 16px;border-radius:8px;background:#79be15;color:#111827;font-size:14.5px;font-weight:600;text-decoration:none;white-space:nowrap" style-hover="background:#6aab12;color:#111827">Stáhnout reIS</a>
@@ -33,12 +33,12 @@
     <nav style="border-top:1px solid #e5e7eb;background:#ffffff;padding:8px 24px 16px;display:flex;flex-direction:column;font-size:16px;font-weight:500">
       <a href="/#funkce" onClick="{{ closeMenu }}" style="text-decoration:none;color:#111827;padding:12px 0;border-bottom:1px solid #f3f4f6">Co umí</a>
       <a href="/#data" onClick="{{ closeMenu }}" style="text-decoration:none;color:#111827;padding:12px 0;border-bottom:1px solid #f3f4f6">Data a bezpečnost</a>
-      <a href="/#univerzita" onClick="{{ closeMenu }}" style="text-decoration:none;color:#111827;padding:12px 0">Pro univerzitu</a>
+      <a href="/spoluprace" onClick="{{ closeMenu }}" style="text-decoration:none;color:#111827;padding:12px 0">Spolupráce</a>
     </nav>
   </sc-if>
 </header>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;100%&quot;,&quot;height&quot;:&quot;64px&quot;},&quot;active&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;&quot;,&quot;data&quot;,&quot;tym&quot;,&quot;univerzita&quot;],&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;100%&quot;,&quot;height&quot;:&quot;64px&quot;},&quot;active&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;&quot;,&quot;data&quot;,&quot;tym&quot;,&quot;spoluprace&quot;],&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
 class Component extends DCLogic {
   state = { wide: typeof window === 'undefined' ? true : window.innerWidth >= 900, menuOpen: false };
   componentDidMount() {
@@ -53,7 +53,7 @@ class Component extends DCLogic {
     return {
       wide, narrow: !wide, menuOpen, menuVisible: !wide && menuOpen,
       toggleMenu: () => this.setState(s => ({ menuOpen: !s.menuOpen })),
-      aData: a === 'data', aUni: a === 'univerzita',
+      aData: a === 'data', aSpol: a === 'spoluprace',
       closeMenu: () => this.setState({ menuOpen: false }),
     };
   }
