@@ -1,0 +1,45 @@
+name: SEO positions
+
+# Every Monday: Google positions (gl=cz) for seo/keywords.json via Serper, plus the
+# page comparison. Results are committed to seo/; vercel.json's ignoreCommand skips
+# the deploy for a commit that only touches seo/.
+on:
+  schedule:
+    - cron: '0 6 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: seo-rank
+  cancel-in-progress: false
+
+jobs:
+  rank:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node --test seo/lib.test.mjs
+      - name: Positions
+        env:
+          SERPER_API_KEY: ${{ secrets.SERPER_API_KEY }}
+        run: |
+          if [ -z "$SERPER_API_KEY" ]; then
+            echo "::warning::SERPER_API_KEY secret is not set; skipping."
+            exit 0
+          fi
+          node seo/rank.mjs
+      - name: Page comparison
+        run: node seo/compare.mjs --lighthouse >> "$GITHUB_STEP_SUMMARY"
+      - name: Commit results
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898283+github-actions[bot]@users.noreply.github.com'
+          git add seo/
+          git diff --cached --quiet && exit 0
+          git commit -m "seo: positions $(date -u +%F)"
+          git push
