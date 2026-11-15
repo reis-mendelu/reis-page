@@ -101,20 +101,75 @@ button:focus-visible,a:focus-visible,[role="button"]:focus-visible{outline:2px s
 </section>
 
 <section id="funkce" data-screen-label="Co reIS umí" style="scroll-margin-top:64px;padding:clamp(56px,8vw,96px) 24px;border-top:1px solid #f3f4f6">
-  <div style="max-width:1160px;margin:0 auto;display:flex;flex-direction:column;gap:40px">
+  <style>
+  .rf-list { display: flex; flex-direction: column; gap: 16px }
+  .rf-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px }
+  .rf-card { border-radius: 20px; background: #eef2e6; overflow: hidden; display: flex; flex-direction: column; gap: 18px; padding: 22px 20px 0 }
+  .rf-text { display: flex; flex-direction: column; gap: 8px }
+  .rf-title { margin: 0; display: flex; align-items: center; gap: 12px; font-size: 20px; font-weight: 700; letter-spacing: -0.015em; line-height: 1.2 }
+  .rf-icon { flex-shrink: 0; width: 34px; height: 34px; border-radius: 10px; background: #79be15; color: #111827; display: grid; place-items: center }
+  .rf-text p { margin: 0; font-size: 16px; line-height: 1.5; color: #374151; text-wrap: pretty }
+  .rf-shot { margin-top: auto; align-self: center; width: 100%; max-width: 280px }
+  .rf-shot img { display: block; width: 100%; height: auto; border-radius: 18px 18px 0 0; border: 1px solid #e5e7eb; border-bottom: 0; box-shadow: 0 20px 40px -16px rgba(17, 24, 39, 0.25) }
+  @media (min-width: 600px) {
+    .rf-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) }
+    .rf-main { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 300px); align-items: center; gap: 24px 32px; padding: 32px 32px 0 }
+    .rf-main .rf-text { padding-bottom: 32px }
+    .rf-main .rf-shot { max-width: 300px; align-self: end }
+    .rf-main .rf-title { font-size: clamp(24px, 2.6vw, 30px) }
+    .rf-main .rf-icon { width: 44px; height: 44px; border-radius: 12px }
+    .rf-main .rf-text p { font-size: 17px; max-width: 380px }
+  }
+  @media (min-width: 1024px) {
+    .rf-main { display: flex; align-items: stretch; padding: 40px 40px 0 }
+    .rf-main .rf-text { padding-bottom: 0; flex-direction: row; align-items: center; gap: 32px }
+    .rf-main .rf-text p { max-width: 460px }
+    .rf-main .rf-shot { max-width: none; align-self: stretch }
+    .rf-main .rf-shot img { border-radius: 14px 14px 0 0 }
+    .rf-grid .rf-card { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 260px); align-items: center; gap: 24px; padding: 32px 32px 0 }
+    .rf-grid .rf-text { padding-bottom: 32px }
+    .rf-grid .rf-shot { max-width: 260px; align-self: end }
+  }
+  </style>
+  <div style="max-width:1160px;margin:0 auto;display:flex;flex-direction:column;gap:clamp(28px,4vw,40px)">
     <div style="display:flex;flex-direction:column;gap:12px"><h2 style="margin:0;font-size:clamp(28px,3.4vw,40px);font-weight:700;letter-spacing:-0.025em;line-height:1.15">Co reIS umí</h2><p style="margin:0;font-size:17px;line-height:1.55;color:#4b5563;max-width:560px">Všechno, co ze studijního systému potřebujete každý den, přehledně na jednom místě.</p></div>
-    <div style="display:flex;flex-direction:column;gap:20px">
-    <div style="border-radius:20px;background:#eef2e6;overflow:hidden;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));align-items:center;gap:24px 40px;padding:clamp(28px,4vw,48px) 0 0 clamp(28px,4vw,48px)">
-      <div style="display:flex;flex-direction:column;gap:10px;padding:0 clamp(28px,4vw,48px) clamp(28px,4vw,48px) 0;max-width:380px">
-        <span style="display:flex;align-items:center;gap:14px;font-size:clamp(24px,2.6vw,30px);font-weight:700;letter-spacing:-0.02em;line-height:1.15"><span style="flex-shrink:0;width:44px;height:44px;border-radius:12px;background:#79be15;color:#111827;display:grid;place-items:center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="2"></rect><path d="M3 9h18M8 2v4M16 2v4"></path></svg></span>Rozvrh</span>
-        <span style="font-size:17px;line-height:1.55;color:#374151">Celý týden na jedné obrazovce, s místnostmi a časy. V telefonu i v prohlížeči.</span>
+    <div class="rf-list">
+    <div class="rf-card rf-main">
+      <div class="rf-text">
+        <h3 class="rf-title"><span class="rf-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="2"></rect><path d="M3 9h18M8 2v4M16 2v4"></path></svg></span>Rozvrh</h3>
+        <p>Na první pohled víte, kde a kdy máte další hodinu. V telefonu i v prohlížeči.</p>
       </div>
-      <img src="/assets/screens/desktop-tyden.png" alt="reIS – Rozvrh" loading="lazy" style="display:block;width:100%;height:auto;align-self:end;border-radius:14px 0 0 0;border:1px solid #e5e7eb;border-right:0;border-bottom:0;box-shadow:0 20px 40px -16px rgba(17,24,39,0.25)">
+      <div class="rf-shot"><picture><source media="(min-width: 1024px)" srcset="/assets/screens/funkce/rozvrh-tyden.webp"><img src="/assets/screens/funkce/rozvrh-den.webp" alt="reIS – rozvrh na dnešek s učebnami, časy a volnem mezi hodinami" loading="lazy"></picture></div>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,max(180px,calc((100% - 40px)/3))),1fr));gap:32px 20px">
-      <figure style="margin:0;display:flex;flex-direction:column;gap:16px"><div style="aspect-ratio:4/5;border-radius:20px;background:#eef2e6;overflow:hidden;padding:28px 28px 0;display:flex;justify-content:center;align-items:flex-start"><img src="/assets/screens/zkousky.png" alt="reIS – Zkoušky" loading="lazy" style="display:block;width:100%;max-width:280px;height:auto;border-radius:22px 22px 0 0;border:1px solid #e5e7eb;border-bottom:0;box-shadow:0 20px 40px -16px rgba(17,24,39,0.25)"></div><figcaption style="display:flex;flex-direction:column;gap:6px"><span style="display:flex;align-items:center;gap:12px;font-size:19px;font-weight:600;letter-spacing:-0.01em"><span style="flex-shrink:0;width:34px;height:34px;border-radius:10px;background:#79be15;color:#111827;display:grid;place-items:center"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"></rect><path d="M9 12l2 2 4-4"></path></svg></span>Zkoušky</span><span style="font-size:15.5px;line-height:1.5;color:#4b5563">Termíny a přihlášení na jednom místě</span></figcaption></figure>
-      <figure style="margin:0;display:flex;flex-direction:column;gap:16px"><div style="aspect-ratio:4/5;border-radius:20px;background:#eef2e6;overflow:hidden;padding:28px 28px 0;display:flex;justify-content:center;align-items:flex-start"><img src="/assets/screens/predmety-seznam.png" alt="reIS – Předměty" loading="lazy" style="display:block;width:100%;max-width:280px;height:auto;border-radius:22px 22px 0 0;border:1px solid #e5e7eb;border-bottom:0;box-shadow:0 20px 40px -16px rgba(17,24,39,0.25)"></div><figcaption style="display:flex;flex-direction:column;gap:6px"><span style="display:flex;align-items:center;gap:12px;font-size:19px;font-weight:600;letter-spacing:-0.01em"><span style="flex-shrink:0;width:34px;height:34px;border-radius:10px;background:#79be15;color:#111827;display:grid;place-items:center"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z"></path><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"></path></svg></span>Předměty</span><span style="font-size:15.5px;line-height:1.5;color:#4b5563">Kredity, soubory a sylabus</span></figcaption></figure>
-      <figure style="margin:0;display:flex;flex-direction:column;gap:16px"><div style="aspect-ratio:4/5;border-radius:20px;background:#eef2e6;overflow:hidden;padding:28px;display:flex;justify-content:center;align-items:center"><img src="/assets/screens/eduroam.png" alt="reIS – Eduroam na 3 kliknutí" loading="lazy" style="display:block;width:100%;max-width:280px;aspect-ratio:1179/720;object-fit:cover;object-position:bottom;border-radius:20px;border:1px solid #e5e7eb;box-shadow:0 20px 40px -16px rgba(17,24,39,0.25)"></div><figcaption style="display:flex;flex-direction:column;gap:6px"><span style="display:flex;align-items:center;gap:12px;font-size:19px;font-weight:600;letter-spacing:-0.01em"><span style="flex-shrink:0;width:34px;height:34px;border-radius:10px;background:#79be15;color:#111827;display:grid;place-items:center"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 8.8a15 15 0 0 1 20 0M5 12.6a10 10 0 0 1 14 0M8.5 16.4a5 5 0 0 1 7 0"></path><circle cx="12" cy="20" r="1"></circle></svg></span>Eduroam na 3 kliknutí</span><span style="font-size:15.5px;line-height:1.5;color:#4b5563">Wifi bez návodů a helpdesku</span></figcaption></figure>
+    <div class="rf-grid">
+      <div class="rf-card">
+        <div class="rf-text">
+          <h3 class="rf-title"><span class="rf-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"></rect><path d="M9 12l2 2 4-4"></path></svg></span>Zkoušky</h3>
+          <p>Telefon vám hodinu předem připomene, že se otvírá přihlašování.</p>
+        </div>
+        <div class="rf-shot"><img src="/assets/screens/funkce/zkousky.webp" alt="reIS – přihlášené zkoušky a termíny, které se teprve otevřou" loading="lazy"></div>
+      </div>
+      <div class="rf-card">
+        <div class="rf-text">
+          <h3 class="rf-title"><span class="rf-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z"></path><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"></path></svg></span>Předměty</h3>
+          <p>Víte, kolik kreditů vám chybí a z čeho se nejčastěji padá.</p>
+        </div>
+        <div class="rf-shot"><img src="/assets/screens/funkce/predmety.webp" alt="reIS – získané kredity a průměrná neúspěšnost předmětů" loading="lazy"></div>
+      </div>
+      <div class="rf-card">
+        <div class="rf-text">
+          <h3 class="rf-title"><span class="rf-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></span>Mapa</h3>
+          <p>Klepnete na hodinu a mapa vám ukáže, kde je učebna.</p>
+        </div>
+        <div class="rf-shot"><img src="/assets/screens/funkce/mapa.webp" alt="reIS – mapa kampusu s vyznačenou učebnou Q16" loading="lazy"></div>
+      </div>
+      <div class="rf-card">
+        <div class="rf-text">
+          <h3 class="rf-title"><span class="rf-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 8.8a15 15 0 0 1 20 0M5 12.6a10 10 0 0 1 14 0M8.5 16.4a5 5 0 0 1 7 0"></path><circle cx="12" cy="20" r="1"></circle></svg></span>Eduroam na 3 kliknutí</h3>
+          <p>Ve škole se připojíte k wifi bez návodů a helpdesku.</p>
+        </div>
+        <div class="rf-shot"><img src="/assets/screens/funkce/eduroam.webp" alt="reIS – nastavení eduroamu ve třech krocích" loading="lazy"></div>
+      </div>
     </div>
     </div>
   </div>
