@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://reisapp.cz/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://reisapp.cz/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reisapp.cz/en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reisapp.cz/"/>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://reisapp.cz/en</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://reisapp.cz/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reisapp.cz/en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reisapp.cz/"/>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://reisapp.cz/navod</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://reisapp.cz/o-nas</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://reisapp.cz/spoluprace</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://reisapp.cz/bezpecnost</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://reisapp.cz/soukromi</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+</urlset>
