@@ -37,7 +37,7 @@
 
     <!-- HEADER -->
     <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:40px">
-      <a href="/" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:#111827">
+      <a href="{{ homeHref }}" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:#111827">
         <img src="/assets/reIS_logo.svg" alt="reIS" width="40" height="40" style="display:block;width:40px;height:40px">
         <span style="font-weight:700;font-size:22px;letter-spacing:-0.02em">reIS</span>
       </a>
@@ -351,8 +351,11 @@ class Component extends DCLogic {
     // from the browser (detect) and pre-selected; when unsure, nothing is.
     const mac = this.isMacVisitor();
     const langs = (navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || 'cs']).map(l => String(l).toLowerCase());
-    if (!/^(cs|sk)/.test(langs[0])) this.setState({ lang: 'en' });
     const q = new URLSearchParams(location.search);
+    // ?lang=en|cs (links from the English homepage /en) beats the browser language.
+    const ql = q.get('lang');
+    if (ql === 'en' || ql === 'cs') this.setState({ lang: ql });
+    else if (!/^(cs|sk)/.test(langs[0])) this.setState({ lang: 'en' });
     const d = q.get('device'), b = q.get('browser');
     if (d && Object.prototype.hasOwnProperty.call(this.AVAIL, d) && (!b || this.AVAIL[d].includes(b))) {
       this.setState({ device: d, browser: b || null, mac });
@@ -725,6 +728,7 @@ class Component extends DCLogic {
       t: T,
       toggleLang: () => this.toggleLang(),
       langToggleLabel: lang === 'cs' ? 'EN' : 'CZ',
+      homeHref: lang === 'cs' ? '/' : '/en',
       _lang: (typeof document !== 'undefined' && (document.documentElement.lang = lang === 'cs' ? 'cs' : 'en')),
       langToggleStyle: this.langToggle(),
 
