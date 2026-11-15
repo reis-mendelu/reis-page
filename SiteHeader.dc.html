@@ -17,6 +17,7 @@
       <sc-if value="{{ wide }}" hint-placeholder-val="{{ true }}">
         <nav style="display:flex;align-items:center;gap:26px;font-size:14.5px;font-weight:500;height:64px">
           <a href="{{ hFunkce }}" style="text-decoration:none;color:var(--text-2,#c8cfc6);position:relative;height:64px;display:flex;align-items:center">{{ tFunkce }}</a>
+          <a href="{{ hNavody }}" style="text-decoration:none;color:var(--text-2,#c8cfc6);position:relative;height:64px;display:flex;align-items:center">{{ tNavody }}</a>
           <a href="{{ hData }}" style="text-decoration:none;color:var(--text-2,#c8cfc6);position:relative;height:64px;display:flex;align-items:center"><span>{{ tData }}</span><sc-if value="{{ aData }}" hint-placeholder-val="{{ false }}"><span style="position:absolute;left:0;right:0;bottom:-1px;height:2px;background:#79be15"></span></sc-if></a>
           <a href="/spoluprace" hreflang="cs" style="text-decoration:none;color:var(--text-2,#c8cfc6);position:relative;height:64px;display:flex;align-items:center;gap:6px"><span>{{ tSpol }}</span><sc-if value="{{ en }}" hint-placeholder-val="{{ false }}"><span title="in Czech" style="font-size:11px;font-weight:600;color:var(--text-4,#8f988d);border:1px solid var(--border-strong,#3b443c);border-radius:4px;padding:0 4px;line-height:16px">CZ</span></sc-if><sc-if value="{{ aSpol }}" hint-placeholder-val="{{ false }}"><span style="position:absolute;left:0;right:0;bottom:-1px;height:2px;background:#79be15"></span></sc-if></a>
         </nav>
@@ -40,6 +41,7 @@
   <sc-if value="{{ menuVisible }}" hint-placeholder-val="{{ false }}">
     <nav style="border-top:1px solid var(--border,#29302a);background:var(--bg,#0d110e);padding:8px 24px 16px;display:flex;flex-direction:column;font-size:16px;font-weight:500">
       <a href="{{ hFunkce }}" onClick="{{ closeMenu }}" style="text-decoration:none;color:var(--text,#eef2ec);padding:12px 0;border-bottom:1px solid var(--border-subtle,#1d231e)">{{ tFunkce }}</a>
+      <a href="{{ hNavody }}" onClick="{{ closeMenu }}" style="text-decoration:none;color:var(--text,#eef2ec);padding:12px 0;border-bottom:1px solid var(--border-subtle,#1d231e)">{{ tNavody }}</a>
       <a href="{{ hData }}" onClick="{{ closeMenu }}" style="text-decoration:none;color:var(--text,#eef2ec);padding:12px 0;border-bottom:1px solid var(--border-subtle,#1d231e)">{{ tData }}</a>
       <a href="/spoluprace" hreflang="cs" onClick="{{ closeMenu }}" style="text-decoration:none;color:var(--text,#eef2ec);padding:12px 0">{{ tSpolMenu }}</a>
     </nav>
@@ -50,8 +52,8 @@
 // lang="en" is the English homepage (/en); anything else is Czech. The other
 // pages are Czech only, so the switch there simply leads to /en.
 const TEXT = {
-  cs: { home: '/', hFunkce: '/#funkce', hData: '/#data', navod: '/navod', tFunkce: 'Co umí', tData: 'Data a bezpečnost', tSpol: 'Spolupráce', tSpolMenu: 'Spolupráce', tGet: 'Stáhnout reIS' },
-  en: { home: '/en', hFunkce: '/en#funkce', hData: '/en#data', navod: '/navod?lang=en', tFunkce: 'Features', tData: 'Data & security', tSpol: 'Partners', tSpolMenu: 'Partners (in Czech)', tGet: 'Get reIS' },
+  cs: { home: '/', hFunkce: '/#funkce', hNavody: '/navody', hData: '/#data', navod: '/navod', tFunkce: 'Co umí', tNavody: 'Návody', tData: 'Data a bezpečnost', tSpol: 'Spolupráce', tSpolMenu: 'Spolupráce', tGet: 'Stáhnout reIS' },
+  en: { home: '/en', hFunkce: '/en#funkce', hNavody: '/en/guides', hData: '/en#data', navod: '/navod?lang=en', tFunkce: 'Features', tNavody: 'Guides', tData: 'Data & security', tSpol: 'Partners', tSpolMenu: 'Partners (in Czech)', tGet: 'Get reIS' },
 };
 class Component extends DCLogic {
   state = { wide: typeof window === 'undefined' ? true : window.innerWidth >= 900, menuOpen: false };
