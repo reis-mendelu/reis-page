@@ -6,7 +6,7 @@
    Contrast (WCAG AA, checked against --bg, --surface, --surface-2 and --card-green):
    --text, --text-2, --text-3, --text-4 and --accent-text are all >= 4.5:1.
    --text-5 is for decoration only (separators, dashed lines), never for text.
-   White on --btn (#3f6212) is about 7.4:1. */
+   White on --btn (#3f6212) is about 7.1:1. */
 :root {
   color-scheme: dark;
 
