@@ -32,5 +32,17 @@
   { "topic": "uis", "hl": "cs", "q": "is mendelu" },
   { "topic": "uis", "hl": "cs", "q": "uis mendelu přihlášení" },
   { "topic": "uis", "hl": "cs", "q": "iskam mendelu" },
-  { "topic": "uis", "hl": "cs", "q": "mendelu aplikace pro studenty" }
+  { "topic": "uis", "hl": "cs", "q": "mendelu aplikace pro studenty" },
+  { "topic": "uchazec", "hl": "cs", "q": "vysoké školy brno" },
+  { "topic": "uchazec", "hl": "cs", "q": "vysoká škola brno ekonomie" },
+  { "topic": "uchazec", "hl": "cs", "q": "kde studovat informatiku brno" },
+  { "topic": "uchazec", "hl": "cs", "q": "zemědělská vysoká škola" },
+  { "topic": "uchazec", "hl": "cs", "q": "lesnictví vysoká škola" },
+  { "topic": "uchazec", "hl": "cs", "q": "koleje brno" },
+  { "topic": "uchazec", "hl": "cs", "q": "přijímačky mendelu" },
+  { "topic": "uchazec", "hl": "cs", "q": "mendelu obory" },
+  { "topic": "uchazec", "hl": "cs", "q": "předškolovák mendelu" },
+  { "topic": "uchazec", "hl": "cs", "q": "zápis do prvního ročníku mendelu" },
+  { "topic": "uchazec", "hl": "cs", "q": "první ročník vysoká škola" },
+  { "topic": "uchazec", "hl": "cs", "q": "mendelu recenze" }
 ]
