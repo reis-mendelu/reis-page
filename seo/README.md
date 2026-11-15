@@ -9,6 +9,7 @@ Not part of the website: `.vercelignore` keeps this folder off reisapp.cz.
 | `compare.mjs` | Our guide next to the best-ranked mendelu.cz page per topic: words served without JS, headings, images, structured data, date, canonical and (with `--lighthouse`) the Lighthouse SEO score. Writes `compare.md`. |
 | `ranks.csv` | History: every result of every run. |
 | `latest.md`, `compare.md` | The last run, readable. |
+| `related.md` | Google's "Related searches" and "People also ask" per query, from the last run: wording ideas for the guides. |
 
 Runs only by hand: Actions → SEO positions → Run workflow (`.github/workflows/seo-rank.yml`). It needs the repo secret `SERPER_API_KEY`.
 
