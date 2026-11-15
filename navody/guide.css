@@ -59,3 +59,10 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:0.9em;bac
 footer{margin-top:32px;padding-top:22px;border-top:1px solid var(--border);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px 28px;font-size:14px}
 footer nav{display:flex;flex-wrap:wrap;gap:8px 20px}
 footer nav a{color:var(--text-2);text-decoration:none}
+/* Breadcrumb above the H1 (reIS › Návody › guide) and the guide list on /navody, /en/guides.
+   The list reuses the .device card; only the wrapper and the link underline are new. */
+.crumbs{display:flex;flex-wrap:wrap;gap:4px 6px;margin:0 0 10px;font-size:13px;line-height:1.5;color:var(--text-4)}
+.crumbs a{color:var(--text-3);text-decoration:none}
+.crumbs a:hover{color:var(--accent-text)}
+.guides{display:grid;gap:10px;margin:0 0 26px}
+a.device{text-decoration:none}

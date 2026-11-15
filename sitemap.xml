@@ -35,6 +35,20 @@
     <lastmod>2026-11-15</lastmod>
   </url>
   <url>
+    <loc>https://reisapp.cz/navody</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://reisapp.cz/navody"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reisapp.cz/en/guides"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reisapp.cz/navody"/>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://reisapp.cz/en/guides</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://reisapp.cz/navody"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reisapp.cz/en/guides"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reisapp.cz/navody"/>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
     <loc>https://reisapp.cz/navody/eduroam</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://reisapp.cz/navody/eduroam"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://reisapp.cz/en/guides/eduroam"/>
@@ -60,6 +74,9 @@
     <xhtml:link rel="alternate" hreflang="cs" href="https://reisapp.cz/navody/prihlaseni-na-zkousku"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://reisapp.cz/en/guides/exam-registration"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://reisapp.cz/navody/prihlaseni-na-zkousku"/>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
     <loc>https://reisapp.cz/navody/mapa-kampusu</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://reisapp.cz/navody/mapa-kampusu"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://reisapp.cz/en/guides/campus-map"/>
