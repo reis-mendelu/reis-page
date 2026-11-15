@@ -66,30 +66,41 @@ footer nav a{color:var(--text-2);text-decoration:none}
 .crumbs a:hover{color:var(--accent-text)}
 .guides{display:grid;gap:10px;margin:0 0 26px}
 a.device{text-decoration:none}
-/* Dorm comparison (/navody/koleje, /en/guides/dorms). A plain table from 640px; below that
-   each row becomes a card and every cell shows its column name from data-label, so nothing
-   scrolls sideways on a phone. h2.step-h needs no rule of its own. .shot = one screenshot
-   with its line outside a step list; .note = the small print under the table. */
-.compare{width:100%;border-collapse:collapse;margin:0 0 10px;font-size:14px;line-height:1.45}
-.compare th,.compare td{text-align:left;vertical-align:top;padding:10px 8px 10px 0;border-bottom:1px solid var(--border)}
-.compare thead th{font-size:12px;font-weight:600;color:var(--text-3);border-bottom-color:var(--border-strong)}
-.compare tbody th{font-weight:700;color:var(--text)}
-.compare td{color:var(--text-2)}
-.compare b{color:var(--text);font-weight:600}
-.compare small{display:block;font-size:12px;font-weight:400;color:var(--text-3)}
-.compare .p{display:block;margin:0 0 6px;white-space:nowrap}
-.compare .p small{white-space:normal}
-.compare .p:last-child{margin:0}
-@media (max-width:639px){
-  .compare thead{display:none}
-  .compare,.compare tbody,.compare tr,.compare th,.compare td{display:block}
-  .compare tr{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:12px 14px;margin:0 0 10px}
-  .compare th,.compare td{padding:5px 0;border:0}
-  .compare tbody th{font-size:17px;padding-bottom:8px}
-  .compare td{display:grid;grid-template-columns:6.5em minmax(0,1fr);gap:12px}
-  .compare td::before{content:attr(data-label);font-size:13px;color:var(--text-3)}
-}
+/* Dorm chooser (/navody/koleje, /en/guides/dorms). The four "what matters most" buttons reuse
+   .device (2 × 2 on a phone, one row from 600px); guide.js puts the picked dorms first and shows
+   their .why line. Without JS every card shows, in the HTML order. h2.step-h needs no rule. */
+.devices.four{grid-template-columns:repeat(2,1fr)}
+@media (min-width:600px){.devices.four{grid-template-columns:repeat(4,1fr)}}
+.devices.four .device{padding:10px 12px;gap:10px}
+.devices.four .device b{font-size:15px}
+.dorms{display:flex;flex-direction:column;gap:10px;margin:0 0 10px}
+.dorm{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:12px 14px}
+.dorm.match{border-color:var(--accent);background:var(--card-green)}
+.dorm-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.dorm h3{margin:0;font-size:17px;font-weight:700;line-height:1.25}
+.dorm h3 small{display:block;font-size:12px;font-weight:400;color:var(--text-3);margin-top:2px}
+.dorm .price small{font-size:12px;color:var(--text-3)}
+.dorm .price small.room{display:block;margin-top:1px}
+.dorm .price{margin:0;text-align:right;white-space:nowrap;font-size:13px;color:var(--text-3)}
+.dorm .price b{font-size:20px;font-weight:700;letter-spacing:-0.02em;color:var(--text)}
+.dorm p,.dorm li{font-size:14px;line-height:1.45}
+.dorm .fit{margin:6px 0 4px;color:var(--text-2)}
+.dorm .facts{list-style:none;margin:0 0 6px;padding:0}
+.dorm .facts li{margin:0 0 2px;color:var(--text-2)}
+.dorm .facts b{color:var(--text)}
+.dorm .flag{margin:0 0 6px;color:var(--text)}
+.dorm .flag::before{content:"! ";font-weight:700;color:var(--accent-text)}
+.dorm .tip{margin:6px 0;padding:8px 10px;border-radius:10px;background:var(--surface-2);color:var(--text-2)}
+.dorm .tip b{color:var(--accent-text);font-weight:600}
+.dorm .rooms{margin:6px 0 0;font-size:12px;color:var(--text-3)}
+.dorm a{color:var(--accent-text)}
+.dorm .why{display:none;margin:0 0 8px;font-weight:600;color:var(--accent-text)}
+.dorm .why.on{display:block}
+.dorm .badge{display:inline-block;margin:0 0 6px;padding:1px 8px;border-radius:999px;background:var(--border-green);color:var(--accent-text);font-size:12px;font-weight:700}
+.done small{display:block;margin-top:2px;font-size:12px;color:var(--text-3)}
+.dorm.short p{margin:0;color:var(--text-2)}
+.dorm.short b{color:var(--text)}
 .note{margin:0 0 26px;font-size:13px;line-height:1.5;color:var(--text-4)}
 .note a{color:var(--text-3)}
 .shot p{margin:2px 0 10px;font-size:16px;line-height:1.5}
-.shot img{display:block;max-width:min(100%,300px);height:auto;border-radius:12px;border:1px solid var(--border);background:var(--surface);margin:0 0 18px}
+.shot img{display:block;max-width:min(100%,220px);height:auto;border-radius:12px;border:1px solid var(--border);background:var(--surface);margin:0 0 18px}
