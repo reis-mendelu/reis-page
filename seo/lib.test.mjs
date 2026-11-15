@@ -1,7 +1,7 @@
 // node --test seo/
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { ownerOf, pageFacts, parseCsvLine, parseSerper, summarize, toCsvLines, toMarkdown } from './lib.mjs';
+import { ownerOf, pageFacts, parseCsvLine, parseSerper, parseSuggestions, suggestionsMarkdown, summarize, toCsvLines, toMarkdown } from './lib.mjs';
 
 test('ownerOf tells our site, any mendelu.cz host and everyone else apart', () => {
   assert.equal(ownerOf('https://reisapp.cz/navody/eduroam'), 'reis');
@@ -62,4 +62,17 @@ test('pageFacts reads what a crawler sees and flags an unrendered template', () 
   assert.equal(f.unrenderedTemplate, false);
   assert.ok(!JSON.stringify(f).includes('hidden'));
   assert.equal(pageFacts('<p>{{ t.title }}</p>').unrenderedTemplate, true);
+});
+
+test('parseSuggestions keeps Google’s related searches and questions', () => {
+  const s = parseSuggestions({
+    relatedSearches: [{ query: 'eduroam mendelu android' }, { query: '' }],
+    peopleAlsoAsk: [{ question: 'Jak se připojit k eduroam?' }],
+  });
+  assert.deepEqual(s, { related: ['eduroam mendelu android'], questions: ['Jak se připojit k eduroam?'] });
+  assert.deepEqual(parseSuggestions({}), { related: [], questions: [] });
+  const md = suggestionsMarkdown('2026-11-15', [{ q: 'eduroam mendelu', hl: 'cs', ...s }]);
+  assert.ok(md.includes('## eduroam mendelu'));
+  assert.ok(md.includes('- Jak se připojit k eduroam?'));
+  assert.ok(md.includes('- eduroam mendelu android'));
 });

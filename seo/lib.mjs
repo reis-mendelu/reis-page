@@ -28,6 +28,28 @@ export function parseSerper(json) {
     }));
 }
 
+/** Serper /search response → the questions and searches Google suggests next to the results. */
+export function parseSuggestions(json) {
+  const list = (a, key) => (Array.isArray(a) ? a.map((x) => String(x?.[key] ?? '').trim()).filter(Boolean) : []);
+  return {
+    related: list(json?.relatedSearches, 'query'),
+    questions: list(json?.peopleAlsoAsk, 'question'),
+  };
+}
+
+/** Per-query suggestions → Markdown: the raw material for wording a guide. */
+export function suggestionsMarkdown(date, items) {
+  const lines = [`# What Google suggests, ${date}`, '', '"Related searches" and "People also ask" per tracked query (gl=cz).', ''];
+  for (const { q, hl, related, questions } of items) {
+    lines.push(`## ${q}${hl === 'en' ? ' (en)' : ''}`);
+    if (!related.length && !questions.length) lines.push('', '_nothing suggested_');
+    if (questions.length) lines.push('', '**People also ask**', ...questions.map((x) => `- ${x}`));
+    if (related.length) lines.push('', '**Related searches**', ...related.map((x) => `- ${x}`));
+    lines.push('');
+  }
+  return `${lines.join('\n')}\n`;
+}
+
 /** One query's results → a summary row: where we are, where MENDELU's best page is, who is #1. */
 export function summarize(keyword, results) {
   const ours = results.find((r) => r.owner === 'reis');
