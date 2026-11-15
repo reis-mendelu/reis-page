@@ -1,4 +1,5 @@
 {
+  "ignoreCommand": "git diff --quiet HEAD^ HEAD -- . ':(exclude)seo' ':(exclude).github' ':(exclude).vercelignore'",
   "cleanUrls": true,
   "redirects": [
     {
