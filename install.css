@@ -1,0 +1,32 @@
+/* Home page hero install options; the device comes from /install.js.
+   Every option carries an inline display style, hence !important. */
+
+/* Recognised device, list closed: only that device's option. */
+html[data-reis-device="ios"]:not([data-install-open]) [data-install]:not([data-install~="ios"]),
+html[data-reis-device="android"]:not([data-install-open]) [data-install]:not([data-install~="android"]),
+html[data-reis-device="chrome"]:not([data-install-open]) [data-install]:not([data-install~="chrome"]),
+html[data-reis-device="edge"]:not([data-install-open]) [data-install]:not([data-install~="edge"]),
+html[data-reis-device="firefox"]:not([data-install-open]) [data-install]:not([data-install~="firefox"]),
+html[data-reis-device="mac"]:not([data-install-open]) [data-install]:not([data-install~="mac"]) {
+  display: none !important;
+}
+
+/* The Edge and Mac buttons exist only for those visitors; everyone else
+   finds the same thing behind the Chrome button and the App Store badge. */
+[data-install-only] { display: none !important; }
+html[data-reis-device="edge"] [data-install-only="edge"],
+html[data-reis-device="mac"] [data-install-only="mac"] { display: inline-flex !important; }
+html[data-reis-device="edge"]:not([data-install-open]) [data-install~="chrome"] { display: none !important; }
+
+/* "Další platformy" makes sense only once one option was picked. */
+[data-install-more] { display: none !important; }
+html[data-reis-device] [data-install-more] { display: inline-flex !important; }
+[data-install-more] [data-when-open] { display: none; }
+html[data-install-open] [data-install-more] [data-when-open] { display: inline; }
+html[data-install-open] [data-install-more] [data-when-closed] { display: none; }
+html[data-install-open] [data-install-more] svg { transform: rotate(180deg); }
+
+/* QR code for desktop visitors; never on phones or narrow screens. */
+html[data-reis-device="ios"] [data-install-qr],
+html[data-reis-device="android"] [data-install-qr] { display: none !important; }
+@media (max-width: 599px) { [data-install-qr] { display: none !important; } }
