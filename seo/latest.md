@@ -12,6 +12,12 @@ Google, gl=cz, top 10 organic results (Serper). "–" = not in the top 10.
 | eduroam | eduroam mendelu certifikát | – | 1 https://eduroam.mendelu.cz/25350-navody-k-instalaci | https://eduroam.mendelu.cz/25350-navody-k-instalaci |
 | eduroam | mendel university eduroam (en) | – | 1 https://eduroam.mendelu.cz/en/ | https://eduroam.mendelu.cz/en/ |
 | eduroam | mendelu wifi setup (en) | – | 1 https://eduroam.mendelu.cz/en/ | https://eduroam.mendelu.cz/en/ |
+| eduroam | eduroam mendelu windows | – | 1 https://eduroam.mendelu.cz/navody-k-instalaci/25355-navody-pro-windows | https://eduroam.mendelu.cz/navody-k-instalaci/25355-navody-pro-windows |
+| eduroam | eduroam mendelu macbook | – | 1 https://eduroam.mendelu.cz/navody-k-instalaci/25358-navody-pro-apple | https://eduroam.mendelu.cz/navody-k-instalaci/25358-navody-pro-apple |
+| eduroam | návod na eduroam mendelu | – | 1 https://eduroam.mendelu.cz/25350-navody-k-instalaci | https://eduroam.mendelu.cz/25350-navody-k-instalaci |
+| eduroam | připojení eduroam mendelu | – | 1 https://eduroam.mendelu.cz/ | https://eduroam.mendelu.cz/ |
+| eduroam | pef mendelu wifi | – | 1 https://eduroam.mendelu.cz/ | https://eduroam.mendelu.cz/ |
+| eduroam | mendelu přihlášení na wifi | – | 1 https://eduroam.mendelu.cz/ | https://eduroam.mendelu.cz/ |
 | zkousky | přihlášení na zkoušku mendelu | – | 1 https://zf.mendelu.cz/vyska-na-zkousku/ | https://zf.mendelu.cz/vyska-na-zkousku/ |
 | zkousky | jak se přihlásit na zkoušku mendelu | – | 1 https://zf.mendelu.cz/vyska-na-zkousku/ | https://zf.mendelu.cz/vyska-na-zkousku/ |
 | zkousky | termíny zkoušek mendelu | – | 1 https://mendelu.cz/uchazec/dulezite-terminy/ | https://mendelu.cz/uchazec/dulezite-terminy/ |
@@ -24,5 +30,5 @@ Google, gl=cz, top 10 organic results (Serper). "–" = not in the top 10.
 | menza | menza mendelu dnes | – | 1 https://skm.mendelu.cz/stravovani/28603-jidelni-listek | https://skm.mendelu.cz/stravovani/28603-jidelni-listek |
 | menza | mendelu jídelníček | – | 1 https://skm.mendelu.cz/stravovani/28603-jidelni-listek | https://skm.mendelu.cz/stravovani/28603-jidelni-listek |
 | menza | mendelu canteen menu (en) | – | 1 https://skm.mendelu.cz/en/catering/28604-menu | https://skm.mendelu.cz/en/catering/28604-menu |
-| brand | reis mendelu | – | 2 https://is.mendelu.cz/ | https://www.instagram.com/reis.mendelu/ |
+| brand | reis mendelu | – | 3 https://is.mendelu.cz/ | https://apps.apple.com/us/app/reis-is-mendelu-jednodu%C5%A1e/id6804832714 |
 | brand | mendelu aplikace | – | 1 https://moje.mendelu.cz/ | https://moje.mendelu.cz/ |
