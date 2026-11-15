@@ -20,6 +20,7 @@
 <script>window.__resources={"https://unpkg.com/react@18.3.1/umd/react.production.min.js":"/vendor/react.production.min.js","https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js":"/vendor/react-dom.production.min.js"};</script>
 <script src="/ph.js"></script>
 <script src="/support.js"></script>
+<script src="/loops.js"></script>
 </head>
 <body>
 <x-dc>
@@ -39,6 +40,7 @@ html{scroll-behavior:smooth}
 body{margin:0;background:#ffffff;color:#111827;font-family:Inter,system-ui,-apple-system,'Segoe UI',sans-serif;-webkit-font-smoothing:antialiased}
 a{color:#111827}
 a:hover{color:#3f6212}
+@media (max-width:599px){[data-hero-visual]{aspect-ratio:auto !important;display:flex;justify-content:center}[data-hero-desktop]{display:none !important}[data-hero-phone]{position:static !important;width:65% !important}}
 button:focus-visible,a:focus-visible,[role="button"]:focus-visible{outline:2px solid #3f6212;outline-offset:3px;border-radius:4px}
 </style>
 </helmet>
@@ -67,9 +69,9 @@ button:focus-visible,a:focus-visible,[role="button"]:focus-visible{outline:2px s
         <a href="#univerzita" style="align-self:flex-start;display:inline-flex;gap:8px;font-size:15.5px;font-weight:600;color:#111827;text-decoration:none;border-bottom:1.5px solid #79be15;padding-bottom:2px" style-hover="color:#3f6212">Pro univerzitu a partnery<span aria-hidden="true">→</span></a>
       </div>
     </div>
-    <div style="position:relative;width:100%;max-width:600px;justify-self:center;aspect-ratio:6/5">
-      <img src="/assets/screens/desktop-tyden.png" alt="reIS v prohlížeči – týdenní rozvrh" style="position:absolute;top:0;right:0;width:90%;height:auto;border-radius:14px;border:1px solid #e5e7eb;box-shadow:0 30px 60px -20px rgba(17,24,39,0.35)">
-      <img src="/assets/screens/telefon-den.png" alt="reIS v telefonu – denní rozvrh" style="position:absolute;left:0;bottom:0;width:34%;height:auto;border-radius:28px;border:6px solid #111827;box-shadow:0 30px 60px -20px rgba(17,24,39,0.45)">
+    <div data-hero-visual style="position:relative;width:100%;max-width:600px;justify-self:center;aspect-ratio:6/5">
+      <img data-hero-desktop src="/assets/screens/desktop-tyden.png" alt="reIS v prohlížeči – týdenní rozvrh" style="position:absolute;top:0;right:0;width:90%;height:auto;border-radius:14px;border:1px solid #e5e7eb;box-shadow:0 30px 60px -20px rgba(17,24,39,0.35)">
+      <video data-hero-phone src="/assets/loops/is-reis-telefon.mp4" poster="/assets/loops/is-reis-telefon-poster.webp" autoplay muted loop playsinline preload="auto" aria-label="Rozvrh ze stránky IS Mendelu se v telefonu promění v denní přehled reIS" style="position:absolute;left:0;bottom:0;width:34%;height:auto;aspect-ratio:1080/2340;object-fit:cover;background:#f4f6f8;border-radius:28px;border:6px solid #111827;box-shadow:0 30px 60px -20px rgba(17,24,39,0.45)"></video>
     </div>
   </div>
 </section>
