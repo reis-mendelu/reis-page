@@ -1,0 +1,51 @@
+/* Shared look for the how-to guides under /navody and /en/guides.
+   Plain static pages: every word is in the HTML as served. Tokens come from /theme.css. */
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,'Segoe UI',sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--text)}
+a:hover{color:var(--accent-text)}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.col{max-width:760px;margin:0 auto;padding:20px 16px 56px}
+header{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:28px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text)}
+.brand span{font-weight:700;font-size:22px;letter-spacing:-0.02em}
+.lang{font-size:14px;color:var(--text-3);text-decoration:none}
+.crumbs{font-size:14px;color:var(--text-4);margin:0 0 14px}
+.crumbs a{color:var(--text-3);text-decoration:none}
+h1{margin:0 0 16px;font-weight:700;font-size:clamp(30px,5vw,44px);line-height:1.1;letter-spacing:-0.03em}
+h2{margin:0 0 12px;font-size:24px;font-weight:700;letter-spacing:-0.02em;line-height:1.25}
+h3{margin:22px 0 8px;font-size:18px;font-weight:600;letter-spacing:-0.01em}
+p,li{font-size:16px;line-height:1.65;color:var(--text-2)}
+p{margin:0 0 12px}
+ol,ul{margin:0 0 14px;padding-left:22px}
+li{margin:0 0 6px}
+strong{color:var(--text)}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:0.92em;background:var(--surface-2);border:1px solid var(--border);border-radius:6px;padding:1px 6px;color:var(--text)}
+.lead{font-size:18px;color:var(--text-2);margin-bottom:10px}
+.checked{font-size:14px;color:var(--text-4);margin:0 0 8px}
+.toc{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 8px;padding:0;list-style:none}
+.toc li{margin:0}
+.toc a{display:inline-block;font-size:14px;text-decoration:none;color:var(--text-2);border:1px solid var(--border);border-radius:999px;padding:6px 12px}
+.toc a:hover{border-color:var(--border-strong);color:var(--text)}
+section{padding:28px 0;border-top:1px solid var(--border)}
+.reis{background:var(--card-green);border:1px solid var(--border-green);border-radius:16px;padding:22px 20px;margin:20px 0 8px}
+.reis h2{margin-bottom:8px}
+.platforms{display:grid;grid-template-columns:1fr;gap:12px;margin:16px 0}
+@media (min-width:560px){.platforms{grid-template-columns:1fr 1fr}}
+.platform{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px 16px}
+.platform h3{margin:0 0 6px;font-size:16px}
+.platform p{margin:0;font-size:15px;line-height:1.55}
+.badges{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin:16px 0 6px}
+.badges img{display:block;height:44px;width:auto}
+.textlinks{font-size:15px;color:var(--text-3);margin:6px 0 0}
+.textlinks a{color:var(--accent-text)}
+.note{background:var(--surface);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;padding:12px 16px;margin:14px 0}
+.note p{margin:0;font-size:15px}
+.source{font-size:15px;color:var(--text-3)}
+.source a{color:var(--accent-text)}
+dl{margin:0}
+dt{font-weight:600;color:var(--text);font-size:16px;margin:16px 0 4px}
+dd{margin:0;color:var(--text-2);font-size:16px;line-height:1.65}
+footer{margin-top:24px;padding-top:24px;border-top:1px solid var(--border);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 28px;font-size:14px}
+footer nav{display:flex;flex-wrap:wrap;gap:8px 20px}
+footer nav a{color:var(--text-2);text-decoration:none}
