@@ -17,7 +17,7 @@ h1{margin:0 0 8px;font-weight:700;font-size:clamp(30px,5vw,40px);line-height:1.1
 .step-h{display:flex;align-items:center;gap:10px;margin:0 0 12px;font-size:16px;font-weight:600}
 .num{display:inline-flex;align-items:center;justify-content:center;flex:none;width:24px;height:24px;border-radius:50%;background:var(--border-green);color:var(--accent-text);font-size:13px;font-weight:700}
 .devices{display:grid;grid-template-columns:1fr;gap:10px;margin:0 0 26px}
-@media (min-width:600px){.devices{grid-template-columns:repeat(3,1fr)}}
+@media (min-width:600px){.devices{grid-template-columns:repeat(3,1fr)}.devices.two{grid-template-columns:repeat(2,1fr)}}
 .device{display:flex;align-items:center;gap:12px;width:100%;text-align:left;font:inherit;color:var(--text);background:var(--surface);border:1.5px solid var(--border);border-radius:14px;padding:12px 14px;cursor:pointer}
 .device:hover{border-color:var(--border-strong)}
 .device[aria-pressed="true"]{border-color:var(--accent);background:var(--card-green)}
