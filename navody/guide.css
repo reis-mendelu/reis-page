@@ -66,3 +66,30 @@ footer nav a{color:var(--text-2);text-decoration:none}
 .crumbs a:hover{color:var(--accent-text)}
 .guides{display:grid;gap:10px;margin:0 0 26px}
 a.device{text-decoration:none}
+/* Dorm comparison (/navody/koleje, /en/guides/dorms). A plain table from 640px; below that
+   each row becomes a card and every cell shows its column name from data-label, so nothing
+   scrolls sideways on a phone. h2.step-h needs no rule of its own. .shot = one screenshot
+   with its line outside a step list; .note = the small print under the table. */
+.compare{width:100%;border-collapse:collapse;margin:0 0 10px;font-size:14px;line-height:1.45}
+.compare th,.compare td{text-align:left;vertical-align:top;padding:10px 8px 10px 0;border-bottom:1px solid var(--border)}
+.compare thead th{font-size:12px;font-weight:600;color:var(--text-3);border-bottom-color:var(--border-strong)}
+.compare tbody th{font-weight:700;color:var(--text)}
+.compare td{color:var(--text-2)}
+.compare b{color:var(--text);font-weight:600}
+.compare small{display:block;font-size:12px;font-weight:400;color:var(--text-3)}
+.compare .p{display:block;margin:0 0 6px;white-space:nowrap}
+.compare .p small{white-space:normal}
+.compare .p:last-child{margin:0}
+@media (max-width:639px){
+  .compare thead{display:none}
+  .compare,.compare tbody,.compare tr,.compare th,.compare td{display:block}
+  .compare tr{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:12px 14px;margin:0 0 10px}
+  .compare th,.compare td{padding:5px 0;border:0}
+  .compare tbody th{font-size:17px;padding-bottom:8px}
+  .compare td{display:grid;grid-template-columns:6.5em minmax(0,1fr);gap:12px}
+  .compare td::before{content:attr(data-label);font-size:13px;color:var(--text-3)}
+}
+.note{margin:0 0 26px;font-size:13px;line-height:1.5;color:var(--text-4)}
+.note a{color:var(--text-3)}
+.shot p{margin:2px 0 10px;font-size:16px;line-height:1.5}
+.shot img{display:block;max-width:min(100%,300px);height:auto;border-radius:12px;border:1px solid var(--border);background:var(--surface);margin:0 0 18px}
