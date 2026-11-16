@@ -332,20 +332,34 @@ class Component extends DCLogic {
   // On mount we probe which files actually exist; renderVals only emits an <img>
   // for a step whose file is present. To add a screenshot: drop a correctly
   // named PNG into screenshots/ and reload — no code change needed.
-  componentDidMount() {
+  // Each step has a Czech file and, optionally, an English one (<name>-<n>-en.png).
+  // The Czech files are probed on mount; the English ones only once the guide is
+  // in English (on mount or via the CZ/EN toggle), so Czech visitors fetch nothing extra.
+  probeShots(sfx) {
+    this._probed = this._probed || {};
+    if (this._probed[sfx]) return;
+    this._probed[sfx] = true;
+    this._shots = this._shots || {}; this._dims = this._dims || {};
     const found = {}, dims = {};
     let pending = 0;
+    const publish = () => {
+      Object.assign(this._shots, found); Object.assign(this._dims, dims);
+      this.setState({ shots: { ...this._shots }, dims: { ...this._dims } });
+    };
     Object.entries(this.AVAIL).forEach(([device, browsers]) => {
       browsers.forEach(browser => {
         const entry = this.TUT[`${device}-${browser}`];
         if (!entry || !entry.cs.steps.length) return;
         for (let i = 1; i <= 3; i++) {
-          const path = `screenshots/${entry.shots || device + '-' + browser}-${i}.png`;
+          const path = `screenshots/${entry.shots || device + '-' + browser}-${i}${sfx}.png`;
+          if (path in found) continue; // keys that share shots (edge -> chrome) probe once
+          found[path] = false;
           pending++;
           const probe = new Image();
           const done = (ok) => {
             if (ok) { found[path] = true; dims[path] = { w: probe.naturalWidth, h: probe.naturalHeight }; }
-            if (--pending === 0) this.setState({ shots: found, dims });
+            else delete found[path];
+            if (--pending === 0) publish();
           };
           probe.onload = () => done(true);
           probe.onerror = () => done(false);
@@ -353,7 +367,11 @@ class Component extends DCLogic {
         }
       });
     });
-    if (pending === 0) this.setState({ shots: {} });
+    if (pending === 0) publish();
+  }
+
+  componentDidMount() {
+    this.probeShots('');
 
     // Deep link: ?device=phone&browser=android lands straight on the steps.
     // Both params are validated against AVAIL — never set state from an
@@ -366,6 +384,7 @@ class Component extends DCLogic {
     const ql = q.get('lang');
     if (ql === 'en' || ql === 'cs') this.setState({ lang: ql });
     else if (!/^(cs|sk)/.test(langs[0])) this.setState({ lang: 'en' });
+    if (ql === 'en' || (ql !== 'cs' && !/^(cs|sk)/.test(langs[0]))) this.probeShots('-en');
     const d = q.get('device'), b = q.get('browser');
     if (d && Object.prototype.hasOwnProperty.call(this.AVAIL, d) && (!b || this.AVAIL[d].includes(b))) {
       this.setState({ device: d, browser: b || null, mac });
@@ -547,7 +566,7 @@ class Component extends DCLogic {
     return null;
   }
 
-  setLang(l) { this.setState({ lang: l }); }
+  setLang(l) { this.setState({ lang: l }); if (l === 'en') this.probeShots('-en'); }
   toggleLang() { this.setLang(this.state.lang === 'cs' ? 'en' : 'cs'); }
   pickDevice(id) {
     if (this.state.device === id) {
@@ -802,7 +821,10 @@ class Component extends DCLogic {
       tut,
       tutSteps: tut.steps.map((s, i) => {
         const shotKey = (tutKey && this.TUT[tutKey] && this.TUT[tutKey].shots) || tutKey;
-        const path = shotKey ? `screenshots/${shotKey}-${i + 1}.png` : '';
+        // English guide: the step's -en screenshot when there is one, else the Czech one.
+        const csPath = shotKey ? `screenshots/${shotKey}-${i + 1}.png` : '';
+        const enPath = shotKey ? `screenshots/${shotKey}-${i + 1}-en.png` : '';
+        const path = lang === 'en' && this.state.shots[enPath] ? enPath : csPath;
         const has = !!(path && this.state.shots[path]);
         const dim = this.state.dims[path];
         const portrait = dim && dim.h > dim.w;
