@@ -42,4 +42,34 @@
       if (b) pick(b.getAttribute('data-device'), false);
     });
   });
+  // Dorm chooser (/navody/koleje): a [data-pick] button lists, in data-order, the ids of
+  // the .dorm cards that fit; those go first (flex order), get .match and show their
+  // .why[data-for=pick] line. Pressing it again goes back to the HTML order.
+  document.addEventListener('DOMContentLoaded', function () {
+    var list = document.querySelector('[data-dorms]');
+    if (!list) return;
+    var cards = list.querySelectorAll('.dorm');
+    var buttons = document.querySelectorAll('[data-pick]');
+    function choose(pick, order) {
+      for (var i = 0; i < buttons.length; i++) {
+        buttons[i].setAttribute('aria-pressed', String(buttons[i].getAttribute('data-pick') === pick));
+      }
+      for (var j = 0; j < cards.length; j++) {
+        var rank = pick ? order.indexOf(cards[j].id) : -1;
+        cards[j].style.order = rank === -1 ? String(100 + j) : String(rank);
+        cards[j].classList.toggle('match', rank !== -1);
+        var whys = cards[j].querySelectorAll('.why');
+        for (var k = 0; k < whys.length; k++) {
+          whys[k].classList.toggle('on', rank !== -1 && whys[k].getAttribute('data-for') === pick);
+        }
+      }
+    }
+    document.addEventListener('click', function (ev) {
+      var b = ev.target.closest && ev.target.closest('[data-pick]');
+      if (!b) return;
+      var pick = b.getAttribute('aria-pressed') === 'true' ? null : b.getAttribute('data-pick');
+      choose(pick, pick ? b.getAttribute('data-order').split(' ') : []);
+      if (pick && window.reisTrack) window.reisTrack('guide_dorm_pick', { guide: location.pathname, pick: pick });
+    });
+  });
 })();

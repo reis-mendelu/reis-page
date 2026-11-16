@@ -90,4 +90,18 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://reisapp.cz/navody/mapa-kampusu"/>
     <lastmod>2026-11-15</lastmod>
   </url>
+  <url>
+    <loc>https://reisapp.cz/navody/koleje</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://reisapp.cz/navody/koleje"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reisapp.cz/en/guides/dorms"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reisapp.cz/navody/koleje"/>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://reisapp.cz/en/guides/dorms</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://reisapp.cz/navody/koleje"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reisapp.cz/en/guides/dorms"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reisapp.cz/navody/koleje"/>
+    <lastmod>2026-11-16</lastmod>
+  </url>
 </urlset>
