@@ -44,5 +44,11 @@
   { "topic": "uchazec", "hl": "cs", "q": "předškolovák mendelu" },
   { "topic": "uchazec", "hl": "cs", "q": "zápis do prvního ročníku mendelu" },
   { "topic": "uchazec", "hl": "cs", "q": "první ročník vysoká škola" },
-  { "topic": "uchazec", "hl": "cs", "q": "mendelu recenze" }
+  { "topic": "uchazec", "hl": "cs", "q": "mendelu recenze" },
+  { "topic": "koleje", "hl": "cs", "q": "koleje mendelu" },
+  { "topic": "koleje", "hl": "cs", "q": "kolej akademie" },
+  { "topic": "koleje", "hl": "cs", "q": "koleje jak" },
+  { "topic": "koleje", "hl": "cs", "q": "tauferovy koleje" },
+  { "topic": "koleje", "hl": "cs", "q": "kolik stojí koleje mendelu" },
+  { "topic": "koleje", "hl": "en", "q": "mendelu dorms" }
 ]
