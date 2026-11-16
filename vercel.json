@@ -61,6 +61,11 @@
       "source": "/en/",
       "destination": "/en",
       "permanent": true
+    },
+    {
+      "source": "/obory",
+      "destination": "/navody/obory",
+      "permanent": true
     }
   ],
   "rewrites": [
