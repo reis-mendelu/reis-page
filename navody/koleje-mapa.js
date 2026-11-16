@@ -26,20 +26,22 @@
   };
   var T = EN ? {
     ask: 'Which faculty do you study at?', walk: 'on foot to', pt: 'by public transport to', bldg: 'building',
-    ptLine: 'Public transport', walkLine: 'on foot', garden: 'Through the botanical garden',
+    ptLine: 'Public transport', walkLine: 'on foot', 
     gardenWhen: 'Mon–Fri 6–20', here: 'You live in your faculty’s own building (building Z).',
     zf: 'ZF is in Lednice. You will most likely live in the P. Bezruče dorm there, 3 minutes from the faculty.',
     then: ', then ', tram: 'tram', trolleybus: 'trolleybus', bus: 'bus', close: 'Close', photo: 'Photo',
     map: 'Map of MENDELU dorms', walkLeg: 'walk', rideLeg: 'public transport',
-    walkShort: '%m min walk to %f', ptShort: '%m min by public transport to %f', hereShort: 'FRRMS is in the same building'
+    walkShort: '%m min walk to %f', gardenShort: '%m min walk to %f through the botanical garden', walkGarden: 'on foot through the botanical garden to',
+    gardenOpen: 'The garden is open to students Mon–Fri 6–20 (ISIC at the gate); otherwise about %m min round it.', ptShort: '%m min by public transport to %f', hereShort: 'FRRMS is in the same building'
   } : {
     ask: 'Kam chodíš do školy?', walk: 'pěšky na', pt: 'MHD na', bldg: 'budova',
-    ptLine: 'MHD', walkLine: 'pěšky', garden: 'Přes botanickou zahradu',
+    ptLine: 'MHD', walkLine: 'pěšky', 
     gardenWhen: 'po–pá 6–20', here: 'Bydlíš přímo v budově své fakulty (budova Z).',
     zf: 'ZF je v Lednici. Bydlet budeš nejspíš na kolejích P. Bezruče, 3 minuty od fakulty.',
     then: ', pak ', tram: 'tramvaj', trolleybus: 'trolejbus', bus: 'autobus', close: 'Zavřít', photo: 'Foto',
     map: 'Mapa kolejí MENDELU', walkLeg: 'pěšky', rideLeg: 'MHD',
-    walkShort: '%m min pěšky na %f', ptShort: 'MHD %m min na %f', hereShort: 'FRRMS máš v budově'
+    walkShort: '%m min pěšky na %f', gardenShort: '%m min pěšky přes botanickou zahradu na %f', walkGarden: 'pěšky přes botanickou zahradu na',
+    gardenOpen: 'Zahrada je pro studenty otevřená po–pá 6–20 (ISIC u branky), jinak to obejdeš asi za %m min.', ptShort: 'MHD %m min na %f', hereShort: 'FRRMS máš v budově'
   };
   var fac = null, sel = null;
   var mapBox = root.querySelector('.dmap-map');
@@ -152,14 +154,15 @@
     if (r.zf) return '';
     if (r.here) return '<div class="dmap-trip"><span>' + T.here + '</span></div>';
     var transit = id === 'taufer';
-    var big = transit ? r.pt : r.walk, what = (transit ? T.pt : T.walk) + ' ' + fac + ' (' + T.bldg + ' ' + fb + ')';
+    var big = transit ? r.pt : r.walk, what = (transit ? T.pt : r.viaGarden ? T.walkGarden : T.walk) + ' ' + fac + ' (' + T.bldg + ' ' + fb + ')';
     var html = '<div class="dmap-trip"><b>' + big + ' min</b><span>' + what + '</span></div>';
     if (transit) {
       return html + '<p class="dmap-via">' + via(r) + '</p>';
     }
-    if (r.garden) html += '<p class="dmap-via">' + T.garden + ' ' + r.garden + ' min (' + T.gardenWhen + ')</p>';
-    // Public transport only where it beats walking by 2 minutes or more, waiting included.
-    if (r.pt && r.pt <= r.walk - 2) html += '<p class="dmap-via">' + T.ptLine + ' ' + r.pt + ' min: ' + via(r) + '</p>';
+    if (r.viaGarden) html += '<p class="dmap-via">' + T.gardenOpen.replace('%m', r.around) + '</p>';
+    // Public transport where it beats walking by 2 minutes or more (waiting included), and always
+    // from Akademie: tram 9 from Bieblova is the usual alternative to the garden walk.
+    if (r.pt && (r.viaGarden || r.pt <= r.walk - 2)) html += '<p class="dmap-via">' + T.ptLine + ' ' + r.pt + ' min: ' + via(r) + '</p>';
     return html;
   }
   function renderPane() {
@@ -195,6 +198,7 @@
       if (!r || r.zf) n.textContent = n.getAttribute('data-default');
       else if (r.here) n.textContent = T.hereShort;
       else if (id === 'taufer') n.textContent = T.ptShort.replace('%m', r.pt).replace('%f', fac);
+      else if (r.viaGarden) n.textContent = T.gardenShort.replace('%m', r.walk).replace('%f', fac);
       else n.textContent = T.walkShort.replace('%m', r.walk).replace('%f', fac);
     });
   }
