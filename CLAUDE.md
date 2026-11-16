@@ -33,3 +33,8 @@ a mistake that has already shipped once.
 9. **Persona test, every iteration.** A fresh subagent plays an 18–19-year-old on a phone with 1–2
    minutes, reading 390 px screens in order. Fix what it reports, then send Dominik phone (390) and
    desktop screenshots. A new layout waits for his OK before merge.
+10. **Text in the HTML, not only in JavaScript.** AI assistants' crawlers (ChatGPT, Claude,
+    Perplexity) don't run JavaScript, so a page that builds its content in the browser is empty
+    to them. Interactive views are fine on top, but the facts must also be in the static HTML,
+    folded under a `<details>` if long. /navody/obory does this with `node scripts/obory-static.mjs`;
+    rerun it whenever `obory-data.js` changes. Search stays Google only (Dominik, 2026-11-16).
