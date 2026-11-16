@@ -1,4 +1,4 @@
-# What Google suggests, 2026-11-15
+# What Google suggests, 2026-11-16
 
 "Related searches" and "People also ask" per tracked query (gl=cz).
 
@@ -183,6 +183,30 @@ _nothing suggested_
 _nothing suggested_
 
 ## mendelu recenze
+
+_nothing suggested_
+
+## koleje mendelu
+
+_nothing suggested_
+
+## kolej akademie
+
+_nothing suggested_
+
+## koleje jak
+
+_nothing suggested_
+
+## tauferovy koleje
+
+_nothing suggested_
+
+## kolik stojí koleje mendelu
+
+_nothing suggested_
+
+## mendelu dorms (en)
 
 _nothing suggested_
 
