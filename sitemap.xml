@@ -104,4 +104,18 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://reisapp.cz/navody/koleje"/>
     <lastmod>2026-11-16</lastmod>
   </url>
+  <url>
+    <loc>https://reisapp.cz/navody/predmety</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://reisapp.cz/navody/predmety"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reisapp.cz/en/guides/subjects"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reisapp.cz/navody/predmety"/>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://reisapp.cz/en/guides/subjects</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://reisapp.cz/navody/predmety"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reisapp.cz/en/guides/subjects"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reisapp.cz/navody/predmety"/>
+    <lastmod>2026-11-16</lastmod>
+  </url>
 </urlset>
