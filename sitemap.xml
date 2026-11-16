@@ -122,4 +122,18 @@
     <loc>https://reisapp.cz/obory</loc>
     <lastmod>2026-11-16</lastmod>
   </url>
+  <url>
+    <loc>https://reisapp.cz/navody/dobiti-isic</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://reisapp.cz/navody/dobiti-isic"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reisapp.cz/en/guides/isic-top-up"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reisapp.cz/navody/dobiti-isic"/>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://reisapp.cz/en/guides/isic-top-up</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://reisapp.cz/navody/dobiti-isic"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reisapp.cz/en/guides/isic-top-up"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reisapp.cz/navody/dobiti-isic"/>
+    <lastmod>2026-11-16</lastmod>
+  </url>
 </urlset>
