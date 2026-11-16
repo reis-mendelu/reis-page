@@ -559,9 +559,15 @@ class Component extends DCLogic {
     if (/iPad/.test(ua) || (/Macintosh/.test(ua) && touch > 1)) return { device: 'tablet', browser: 'ios' };
     if (/Android/.test(ua)) return { device: /Mobile/.test(ua) ? 'phone' : 'tablet', browser: 'android' };
     if (/Mobi|Tablet/.test(ua)) return null;
+    // A Mac: ticking a browser would collapse the other cards, "reIS pro Mac"
+    // with them. So only Desktop is ticked and the Mac card shows first —
+    // except in Safari, which has no extension yet and lands on the app.
+    if (this.isMacVisitor()) {
+      const safari = /Safari\//.test(ua) && !/Chrome|Chromium|CriOS|OPR|Firefox|Edg\//.test(ua);
+      return { device: 'desktop', browser: safari ? 'mac' : null };
+    }
     if (/Edg\//.test(ua)) return { device: 'desktop', browser: 'edge' };
     if (/Firefox\//.test(ua)) return { device: 'desktop', browser: 'firefox' };
-    if (this.isMacVisitor() && /Safari\//.test(ua) && !/Chrome|Chromium|CriOS|OPR|Firefox/.test(ua)) return { device: 'desktop', browser: 'mac' };
     if (/Chrome\//.test(ua)) return { device: 'desktop', browser: 'chrome' };
     return null;
   }
