@@ -12,10 +12,12 @@
   var NS = 'http://www.w3.org/2000/svg';
   var FACS = { AF: 'C', LDF: 'B', PEF: 'Q', FRRMS: 'Z', ICV: 'E', ZF: null };
   var DORMS = {
-    akademie: { shapes: ['akademie'], label: 'Akademie' },
-    jak: { shapes: ['jak-a', 'jak-b', 'jak-d'], label: 'JAK A·B·D' },
-    'jak-c': { shapes: ['jak-c'], label: 'JAK C', below: true },
-    taufer: { shapes: ['taufer'], label: EN ? 'Taufer' : 'Taufer' }
+    // pin: where the label chip sits relative to the dorm — JAK A·B·D and JAK C are
+    // 100 m apart, so their chips go opposite ways and can never be mis-tapped.
+    akademie: { shapes: ['akademie'], label: 'Akademie', pin: 'up' },
+    jak: { shapes: ['jak-a', 'jak-b', 'jak-d'], label: 'JAK A·B·D', pin: 'up' },
+    'jak-c': { shapes: ['jak-c'], label: 'JAK C', pin: 'down' },
+    taufer: { shapes: ['taufer'], label: 'Taufer', pin: 'up' }
   };
   var PHOTO = {
     akademie: {
@@ -32,7 +34,7 @@
     then: ', then ', tram: 'tram', trolleybus: 'trolleybus', bus: 'bus', close: 'Close', photo: 'Photo',
     map: 'Map of MENDELU dorms', walkLeg: 'walk', rideLeg: 'public transport',
     walkShort: '%m min walk to %f', gardenShort: '%m min walk to %f through the botanical garden', walkGarden: 'on foot through the botanical garden to',
-    gardenOpen: 'The garden is open to students Mon–Fri 6–20 (ISIC at the gate); otherwise about %m min round it.', ptShort: '%m min by public transport to %f', hereShort: 'FRRMS is in the same building'
+    gardenOpen: 'The garden is open to students Mon–Fri 6–20; your ISIC card opens the gate. Otherwise it is about %m min round it.', ptShort: '%m min by public transport to %f', hereShort: 'FRRMS is in the same building'
   } : {
     ask: 'Kam chodíš do školy?', walk: 'pěšky na', pt: 'MHD na', bldg: 'budova',
     ptLine: 'MHD', walkLine: 'pěšky', 
@@ -41,7 +43,7 @@
     then: ', pak ', tram: 'tramvaj', trolleybus: 'trolejbus', bus: 'autobus', close: 'Zavřít', photo: 'Foto',
     map: 'Mapa kolejí MENDELU', walkLeg: 'pěšky', rideLeg: 'MHD',
     walkShort: '%m min pěšky na %f', gardenShort: '%m min pěšky přes botanickou zahradu na %f', walkGarden: 'pěšky přes botanickou zahradu na',
-    gardenOpen: 'Zahrada je pro studenty otevřená po–pá 6–20 (ISIC u branky), jinak to obejdeš asi za %m min.', ptShort: 'MHD %m min na %f', hereShort: 'FRRMS máš v budově'
+    gardenOpen: 'Zahrada je pro studenty otevřená po–pá 6–20, branku otevřeš kartou ISIC. Jindy to obejdeš asi za %m min.', ptShort: 'MHD %m min na %f', hereShort: 'FRRMS máš v budově'
   };
   var fac = null, sel = null;
   var mapBox = root.querySelector('.dmap-map');
@@ -102,32 +104,24 @@
       el('polyline', { points: pts(l.p), fill: 'none', stroke: l.ride ? '#e8b64c' : '#a5d85f', 'stroke-width': (l.ride ? 4 : 5) * k, 'stroke-linecap': 'round', 'stroke-linejoin': 'round', 'stroke-dasharray': l.ride ? 8 * k + ' ' + 6 * k : 'none' }, svg);
     });
     Object.keys(DORMS).forEach(function (id) {
-      var on = id === sel, g = el('g', { 'class': 'dmap-dorm', tabindex: '0', role: 'button', 'aria-label': DORMS[id].label, 'aria-pressed': String(on) }, svg);
+      var on = id === sel;
       DORMS[id].shapes.forEach(function (s) {
-        el('path', { d: D.dorms[s], fill: 'transparent', stroke: 'transparent', 'stroke-width': 26 * k }, g);
-        el('path', { d: D.dorms[s], fill: on ? '#55703a' : '#2c3a1e', stroke: on ? '#dfe9d3' : '#6f8f4a', 'stroke-width': (on ? 2 : 1.2) * k }, g);
+        el('path', { d: D.dorms[s], fill: on ? '#55703a' : '#2c3a1e', stroke: on ? '#dfe9d3' : '#6f8f4a', 'stroke-width': (on ? 2 : 1.2) * k }, svg);
       });
-      var sb = bounds(shapeBounds(id)), cx = (sb[0] + sb[2]) / 2;
-      var ty = DORMS[id].below ? sb[3] + 18 * k : sb[1] - 9 * k;
-      if (on || (cx > x0 + 40 * k && cx < x0 + w - 40 * k && ty > y0 + 16 * k && ty < y0 + h - 8 * k)) {
-        var t = el('text', { x: cx, y: ty, 'text-anchor': 'middle', 'font-size': 13 * k, 'font-weight': 700, fill: '#eef2ec', stroke: '#0d110e', 'stroke-width': 3.5 * k, 'paint-order': 'stroke' }, g);
-        t.textContent = DORMS[id].label;
-      }
-      g.addEventListener('click', function () { pick(id); });
-      g.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); pick(id); } });
     });
     if (lines) {
       var s0 = lines[0].p[0];
       el('circle', { cx: s0[0], cy: s0[1], r: 6 * k, fill: '#ffffff', stroke: '#0d110e', 'stroke-width': 3 * k }, svg);
       lines.slice(1).forEach(function (l) { el('circle', { cx: l.p[0][0], cy: l.p[0][1], r: 4 * k, fill: '#0d110e', stroke: '#eef2ec', 'stroke-width': 2 * k }, svg); });
     }
+    drawPins(svg, k, x0, y0, w, h);
     if (fb) {
       var end = lines ? lines[lines.length - 1].p : null, c = end ? end[end.length - 1] : D.door[fb];
       var pin = el('g', { transform: 'translate(' + c[0] + ',' + c[1] + ') scale(' + k + ')' }, svg);
       el('path', { d: 'M0,0 C-4,-8 -12,-14 -12,-24 A12,12 0 1 1 12,-24 C12,-14 4,-8 0,0Z', fill: '#ef5b4c', stroke: '#0d110e', 'stroke-width': 2 }, pin);
       el('circle', { cx: 0, cy: -24, r: 4.5, fill: '#0d110e' }, pin);
       var lt = el('text', { x: c[0] + 16 * k, y: c[1] - 20 * k, 'font-size': 13 * k, 'font-weight': 700, fill: '#eef2ec', stroke: '#0d110e', 'stroke-width': 3.5 * k, 'paint-order': 'stroke' }, svg);
-      lt.textContent = fac + ' · ' + T.bldg + ' ' + fb;
+      lt.textContent = fac;
       if (c[0] + 16 * k + lt.getComputedTextLength() > x0 + w - 6 * k) { lt.setAttribute('text-anchor', 'end'); lt.setAttribute('x', c[0] - 16 * k); }
     }
     var lg = document.createElement('div');
@@ -138,6 +132,41 @@
     mapBox.appendChild(lg);
   }
 
+  // A labelled chip per dorm ("Akademie · od 5 370 Kč"), the way map apps mark places: big enough
+  // to tap (44 px target), the picked one filled. The price is read from the dorm's card.
+  function price(id) {
+    var b = document.querySelector('#' + id + ' .price');
+    return b ? b.textContent.replace(/\s*\/.*$/, '').replace(/\s+/g, ' ').trim() : '';
+  }
+  function drawPins(svg, k, x0, y0, w, h) {
+    var placed = [];
+    Object.keys(DORMS).forEach(function (id) {
+      var d = DORMS[id], on = id === sel, sb = bounds(shapeBounds(id));
+      var ax = (sb[0] + sb[2]) / 2, ay = d.pin === 'down' ? sb[3] : sb[1];
+      if (!on && (ax < x0 || ax > x0 + w || ay < y0 || ay > y0 + h)) return;
+      var g = el('g', { 'class': 'dmap-dorm', tabindex: '0', role: 'button', 'aria-label': d.label + ', ' + price(id), 'aria-pressed': String(on) }, svg);
+      // Two lines (name, price) keep the chip narrow enough that neighbours don't collide on a phone.
+      var t = el('text', { 'font-size': 13 * k, 'font-weight': 700, fill: on ? '#0d110e' : '#eef2ec' }, g);
+      var name = el('tspan', {}, t); name.textContent = d.label;
+      var pr = el('tspan', { 'font-size': 12 * k, 'font-weight': 500, fill: on ? '#0d110e' : '#c8cfc6' }, t); pr.textContent = price(id);
+      var cw = Math.max(name.getComputedTextLength(), pr.getComputedTextLength()) + 20 * k, ch = 40 * k, gap = 9 * k;
+      var cx = Math.min(Math.max(ax - cw / 2, x0 + 6 * k), x0 + w - cw - 6 * k);
+      var cy = d.pin === 'down' ? ay + gap : ay - gap - ch;
+      cy = Math.min(Math.max(cy, y0 + 6 * k), y0 + h - ch - 30 * k);
+      placed.forEach(function (p) {
+        if (cx < p[0] + p[2] && p[0] < cx + cw && cy < p[1] + p[3] && p[1] < cy + ch) cy = d.pin === 'down' ? p[1] + p[3] + 4 * k : p[1] - ch - 4 * k;
+      });
+      placed.push([cx, cy, cw, ch]);
+      var stemY = d.pin === 'down' ? cy : cy + ch;
+      g.insertBefore(el('path', { d: 'M' + (ax - 6 * k) + ' ' + stemY + ' L' + ax + ' ' + ay + ' L' + (ax + 6 * k) + ' ' + stemY + 'Z', fill: on ? '#a5d85f' : '#1c221d', stroke: on ? '#0d110e' : '#79be15', 'stroke-width': 1.2 * k }), t);
+      g.insertBefore(el('rect', { x: cx - 4 * k, y: cy - 4 * k, width: cw + 8 * k, height: ch + 8 * k, fill: 'transparent' }), t);
+      g.insertBefore(el('rect', { x: cx, y: cy, width: cw, height: ch, rx: 10 * k, fill: on ? '#a5d85f' : '#1c221d', stroke: on ? '#0d110e' : '#79be15', 'stroke-width': 1.2 * k }), t);
+      name.setAttribute('x', cx + 10 * k); name.setAttribute('y', cy + 17 * k);
+      pr.setAttribute('x', cx + 10 * k); pr.setAttribute('y', cy + 32 * k);
+      g.addEventListener('click', function () { pick(id); });
+      g.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); pick(id); } });
+    });
+  }
   function via(r) {
     if (!r.ptVia) return '';
     return r.ptVia.split(' then ').map(function (s) {
@@ -154,7 +183,7 @@
     if (r.zf) return '';
     if (r.here) return '<div class="dmap-trip"><span>' + T.here + '</span></div>';
     var transit = id === 'taufer';
-    var big = transit ? r.pt : r.walk, what = (transit ? T.pt : r.viaGarden ? T.walkGarden : T.walk) + ' ' + fac + ' (' + T.bldg + ' ' + fb + ')';
+    var big = transit ? r.pt : r.walk, what = (transit ? T.pt : r.viaGarden ? T.walkGarden : T.walk) + ' ' + fac;
     var html = '<div class="dmap-trip"><b>' + big + ' min</b><span>' + what + '</span></div>';
     if (transit) {
       return html + '<p class="dmap-via">' + via(r) + '</p>';
@@ -215,6 +244,8 @@
     var b = ev.target.closest && ev.target.closest('[data-fac]');
     if (b) {
       fac = b.getAttribute('data-fac'); render();
+      var mr = mapBox.getBoundingClientRect();
+      if (!b.closest('.dmap-pane') && (mr.top > window.innerHeight * 0.6 || mr.bottom < 0)) mapBox.scrollIntoView({ block: 'start', behavior: 'smooth' });
       if (window.reisTrack) window.reisTrack('guide_dorm_map', { guide: location.pathname, dorm: sel, faculty: fac });
       return;
     }
