@@ -53,5 +53,8 @@
   { "topic": "koleje", "hl": "en", "q": "mendelu dorms" },
   { "topic": "koleje", "hl": "cs", "q": "koleje brno cena" },
   { "topic": "koleje", "hl": "cs", "q": "koleje muni cena" },
-  { "topic": "koleje", "hl": "cs", "q": "koleje vut cena" }
+  { "topic": "koleje", "hl": "cs", "q": "koleje vut cena" },
+  { "topic": "informatika", "hl": "cs", "q": "informatika brno" },
+  { "topic": "informatika", "hl": "cs", "q": "fit vut vs fi muni" },
+  { "topic": "informatika", "hl": "cs", "q": "otevřená informatika mendelu" }
 ]
