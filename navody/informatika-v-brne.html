@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Informatika v Brně: FI MUNI, FIT VUT a PEF MENDELU vedle sebe – reIS</title>
-<meta name="description" content="Bakalářská informatika v Brně: přijímačky, kolik prváků pokračuje do 2. ročníku, koleje a co píšou studenti na r/Brno. FI MUNI, FIT VUT, Otevřená informatika na PEF MENDELU a IT s ekonomikou.">
+<meta name="description" content="FI MUNI, FIT VUT nebo Otevřená informatika na PEF MENDELU? Jak je to těžké, jestli stihneš vedle práci a jestli se dostaneš, podle studentů na r/Brno a dat škol a MŠMT.">
 <link rel="canonical" href="https://reisapp.cz/navody/informatika-v-brne">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="cs_CZ">
 <meta property="og:site_name" content="reIS">
 <meta property="og:url" content="https://reisapp.cz/navody/informatika-v-brne">
 <meta property="og:title" content="Informatika v Brně: MUNI, VUT a MENDELU vedle sebe">
-<meta property="og:description" content="Přijímačky, kolik prváků pokračuje, koleje a co píšou studenti. Fakta ze škol a MŠMT.">
+<meta property="og:description" content="Jak je to těžké, jestli stihneš práci a jestli se dostaneš. Podle studentů a dat škol.">
 <meta property="og:image" content="https://reisapp.cz/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
@@ -26,35 +26,56 @@
 <script src="/navody/guide.js" defer></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://reisapp.cz/navody/informatika-v-brne#page","headline":"Informatika v Brně: MUNI, VUT a MENDELU vedle sebe","description":"Bakalářské IT obory na Masarykově univerzitě, VUT v Brně a Mendelově univerzitě: přijímací řízení 2026, kolik prváků pokračuje do 2. ročníku, koleje a odkazy na diskuse studentů.","inLanguage":"cs","url":"https://reisapp.cz/navody/informatika-v-brne","isPartOf":{"@id":"https://reisapp.cz/#web"},"publisher":{"@id":"https://reisapp.cz/#org"},"author":{"@type":"Organization","name":"reIS","url":"https://reisapp.cz/"},"datePublished":"2026-11-16","dateModified":"2026-11-16","about":[{"@type":"CollegeOrUniversity","name":"Masarykova univerzita","url":"https://www.muni.cz/"},{"@type":"CollegeOrUniversity","name":"Vysoké učení technické v Brně","url":"https://www.vut.cz/"},{"@type":"CollegeOrUniversity","name":"Mendelova univerzita v Brně","url":"https://mendelu.cz/"}],"citation":["https://www.muni.cz/do/rect/metodika/stud/prijriz/zpravy/Zprava_o_prubehu_prijimaciho_rizeni_2026.pdf","https://www.vut.cz/uredni-deska/statistiky-rizeni?ac=fak&rok=2026&fid=20042","https://is.mendelu.cz/dok_server/slozka.pl?id=33584;download=366959","https://www.muni.cz/media/4183484/vyrocni_zprava_o_cinnosti_mu_2025.pdf","https://doi.mendelu.cz/pdfs/doi/9900/09/3500.pdf"]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"reIS","item":"https://reisapp.cz/"},{"@type":"ListItem","position":2,"name":"Návody","item":"https://reisapp.cz/navody"},{"@type":"ListItem","position":3,"name":"Informatika v Brně","item":"https://reisapp.cz/navody/informatika-v-brne"}]}]}</script>
 <style>
-/* Informatika v Brně: one card per programme, five facts each. Cards reuse the .dorm look
-   (surface, 14px radius); the column widens on a desktop so the three big cards sit in a row. */
-@media (min-width:900px){.col.wide{max-width:1080px}.col.wide .lead,.col.wide h1{max-width:720px}}
-.unis{display:grid;gap:12px;margin:0 0 30px}
-@media (min-width:900px){.unis{grid-template-columns:repeat(3,1fr)}}
-.uni{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:14px 16px}
-.uni .school{margin:0 0 6px;font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--accent-text)}
-.uni h3{margin:0 0 4px;font-size:21px;font-weight:700;line-height:1.2;letter-spacing:-.02em}
-.uni .where{margin:0 0 12px;font-size:14px;line-height:1.45;color:var(--text-3)}
-.uni a{color:var(--accent-text)}
-.uni dl{margin:0;display:grid;gap:12px}
-.uni dt{margin:0 0 2px;font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--text-4)}
-.uni dd{margin:0;font-size:14px;line-height:1.5;color:var(--text-2)}
-.uni dd b{color:var(--text)}
-.uni dd small{display:block;margin-top:2px;font-size:12px;color:var(--text-4)}
-.uni .stay{display:block;font-size:15px;color:var(--text)}
-.uni .stay b{font-size:24px;font-weight:700;letter-spacing:-.02em;color:var(--text)}
-.uni .say{font-style:normal;color:var(--text)}
-.uni .then{margin-top:6px;display:block}
-.small-h{margin:0 0 4px;font-size:20px;font-weight:700;letter-spacing:-.02em}
-.small-lead{margin:0 0 14px;font-size:15px;line-height:1.5;color:var(--text-3)}
-.unis.small .uni{padding:12px 14px}
-.unis.small .uni h3{font-size:18px}
-.unis.small .uni .stay b{font-size:20px}
-.rest{margin:0 0 26px;padding:12px 14px;border-radius:12px;border:1px solid var(--border);font-size:14px;line-height:1.55;color:var(--text-2)}
+/* Informatika v Brně: one card per school, each answering the same three questions applicants ask
+   most on r/Brno (how hard, work alongside, will I get in). The picker only reorders and highlights;
+   all three always stay visible. All text is in the HTML. */
+@media (min-width:900px){.col.wide{max-width:960px}}
+.picks{display:grid;grid-template-columns:1fr;gap:8px;margin:0 0 18px}
+@media (min-width:600px){.picks{grid-template-columns:repeat(3,1fr)}}
+.pick{font:inherit;font-size:16px;font-weight:600;text-align:left;color:var(--text);background:var(--surface);border:1.5px solid var(--border);border-radius:14px;padding:12px 14px;cursor:pointer}
+.pick small{display:block;font-size:13px;font-weight:400;color:var(--text-3);margin-top:1px}
+.pick[aria-pressed="true"]{border-color:var(--accent);background:var(--card-green)}
+.schools{display:grid;gap:10px;margin:0 0 28px}
+@media (min-width:900px){.schools{grid-template-columns:repeat(3,1fr)}}
+.sc{order:1;background:var(--surface);border:1.5px solid var(--border);border-radius:16px}
+.sc.top{border-color:var(--accent);background:var(--card-green)}
+.sc-head{display:flex;align-items:center;gap:12px;padding:14px 16px 4px}
+.sc-head span{flex:1}
+.sc-head b{display:block;font-size:20px;font-weight:800;letter-spacing:-.02em}
+.sc-head small{display:block;font-size:13px;color:var(--text-3);margin-top:1px}
+.sc-head em{display:block;font-style:normal;font-size:15px;color:var(--text);margin-top:6px}
+.sc-body{padding:0 16px 14px}
+.sc .fit{display:none;margin:0 0 4px;font-size:12px;font-weight:700;color:var(--accent-text)}
+.sc.top .fit{display:block}
+@media (min-width:900px){.sc .fit{display:block;visibility:hidden}.sc.top .fit{visibility:visible}}
+.q{display:grid;align-content:start;grid-template-columns:28px 1fr;gap:2px 10px;padding:12px 0;border-top:1px solid var(--border-green)}
+.q svg{grid-row:span 2;width:22px;height:22px;color:var(--accent-text);margin-top:1px}
+.q h4{margin:0;font-size:13px;font-weight:600;color:var(--text-3)}
+.q p{margin:0;font-size:16px;line-height:1.4;color:var(--text)}
+.q p small{display:block;font-size:13px;color:var(--text-3);margin-top:2px}
+.lvl{display:inline-flex;gap:3px;vertical-align:2px;margin-right:8px}
+.lvl i{width:16px;height:8px;border-radius:3px;background:var(--border-strong)}
+.lvl i.on{background:var(--accent-text)}
+.sc-body details{margin-top:4px;padding:10px 0 0;border-top:1px solid var(--border-green);border-bottom:0}
+.sc-body summary{font-size:15px}
+.sc-body li{font-size:14px}
+.sc a,.all a{color:var(--accent-text)}
+.all{margin:0 0 28px;padding:14px 16px;border-radius:14px;border:1px solid var(--border)}
+.all h2{margin:0 0 8px;font-size:17px}
+.all ul{margin:0;padding-left:18px}
+.all li{margin:0 0 6px;font-size:15px;line-height:1.45;color:var(--text-2)}
+.all b{color:var(--text)}
+.sec{margin:0 0 4px;font-size:20px;font-weight:700;letter-spacing:-.02em}
+.sec-lead{margin:0 0 12px;font-size:14px;color:var(--text-3)}
+.mini{display:grid;gap:8px;margin:0 0 26px}
+@media (min-width:900px){.mini{grid-template-columns:repeat(3,1fr)}}
+.mini div{padding:12px 14px;border-radius:14px;background:var(--surface);border:1px solid var(--border);font-size:14px;line-height:1.45;color:var(--text-2)}
+.mini b{display:block;font-size:16px;color:var(--text)}
+.mini small{display:block;font-size:12px;color:var(--text-3);margin-bottom:2px}
+.mini .none{color:var(--text-4)}
+.rest{margin:0 0 18px;font-size:14px;line-height:1.5;color:var(--text-2)}
 .rest a{color:var(--accent-text)}
-.foot{margin:0 0 22px;font-size:13px;line-height:1.55;color:var(--text-3)}
-.foot p{margin:0 0 6px}
-.sources li{font-size:14px}
+.foot{margin:0 0 14px;font-size:13px;line-height:1.5;color:var(--text-3)}
 </style>
 </head>
 <body>
@@ -65,89 +86,64 @@
   <main>
     <nav class="crumbs" aria-label="Drobečková navigace"><a href="/">reIS</a><span aria-hidden="true">›</span><a href="/navody">Návody</a><span aria-hidden="true">›</span><span aria-current="page">Informatika v Brně</span></nav>
     <h1>Informatika v Brně</h1>
-    <p class="lead">9 bakalářských oborů IT na 6 fakultách MUNI, VUT a MENDELU; fakta ze škol a MŠMT, názory studentů v odkazech.</p>
+    <p class="lead">FI, FIT a PEF podle toho, na co se uchazeči ptají nejvíc: jak je to těžké, jestli stihneš práci a jestli se dostaneš.</p>
 
-    <div class="unis">
-      <article class="uni" id="fi-muni">
-        <p class="school">MUNI</p>
-        <h3>Informatika</h3>
-        <p class="where">Fakulta informatiky (FI) · <a href="https://www.openstreetmap.org/?mlat=49.2100&amp;mlon=16.5991#map=17/49.2100/16.5991">Botanická 68a, Královo Pole</a></p>
-        <dl>
-          <div><dt>Přijímačky</dt><dd>Test studijních předpokladů MU (TSP). Bez testu tě vezmou s NSZ OSP v horních 20 %, NSZ z matematiky v horních 40 %, se SAT nebo za olympiádu.<small>2026: 656 přihlášek, přijato 328</small></dd></div>
-          <div><dt>1. ročník</dt><dd><span class="stay"><b>6 z 10</b> pokračuje do 2. ročníku</span><small>celá FI, MŠMT</small><span class="then">Síto podle studentů: matematika (MZI, dřív IB000) a úvod do programování (IB111) v 1. semestru.</span></dd></div>
-          <div><dt>Studenti na r/Brno píšou</dt><dd><span class="say">Víc teorie a matematiky s důkazy než na FIT; nejtěžší jsou první dva semestry.</span> <small>Vlákna: <a href="https://www.reddit.com/r/Brno/comments/16w8i7s/" rel="nofollow">1</a> · <a href="https://www.reddit.com/r/Brno/comments/17dzj51/" rel="nofollow">2</a> · <a href="https://www.reddit.com/r/Brno/comments/1tiijvd/" rel="nofollow">3</a> · <a href="https://www.reddit.com/r/Brno/comments/1shhprt/" rel="nofollow">4</a></small></dd></div>
-          <div><dt>Kolej</dt><dd>Koleje MUNI od <b>111&nbsp;Kč</b> za den (5lůžkový pokoj). Rezervace v ISKaM až po zápisu, kdo dřív přijde (2026: 21.&nbsp;7.–12.&nbsp;8.). Místo není zaručené: v roce 2026 se přes 900 zájemců nedostalo.</dd></div>
-        </dl>
+    <h2 class="step-h">Co chceš od studia?</h2>
+    <div class="picks" role="group" aria-label="Co chceš od studia">
+      <button class="pick" type="button" data-for="fit" aria-pressed="false">Hodně programovat<small>projekty, praxe</small></button>
+      <button class="pick" type="button" data-for="fi" aria-pressed="false">Teorii a matematiku<small>do hloubky</small></button>
+      <button class="pick" type="button" data-for="pef" aria-pressed="false">Čas i na práci<small>nechci se učit pořád</small></button>
+    </div>
+
+    <div class="schools" data-schools>
+      <article class="sc" data-s="fit">
+        <div class="sc-head"><span><span class="fit">Sedí na to, co chceš</span><b>FIT VUT</b><small>Informační technologie</small><em>Hodně programování a projektů</em></span></div>
+        <div class="sc-body">
+          <div class="q"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg><h4>Jak těžké to je? · podle studentů</h4><p><span class="lvl" aria-label="náročnost 3 ze 3"><i class="on"></i><i class="on"></i><i class="on"></i></span>Projekty zaberou skoro všechen čas.<small>Síto je 1. semestr: matematika a programování v C.</small></p></div>
+          <div class="q"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg><h4>Stihneš vedle toho práci?</h4><p>V bakaláři těžko.<small>V magistru pracuje hodně lidí.</small></p></div>
+          <div class="q"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 15l2 2 4-4"/></svg><h4>Dostaneš se?</h4><p>Podle Scio, vlastní test nemá.<small>Z 10 přihlášek přijali 6 (2026: 974 z 1&nbsp;606).</small></p></div>
+          <details><summary>Víc</summary><ul><li>Přijímačky: pořadí podle percentilu v Národních srovnávacích zkouškách Scio (pravidla 2027/28: očekávaná hranice 75, minimum 10).</li><li>Do 2. ročníku pokračuje 6 z 10 prváků (celá FIT, MŠMT).</li><li><a href="https://www.openstreetmap.org/?mlat=49.2267&amp;mlon=16.5963#map=17/49.2267/16.5963">Božetěchova 2, Královo Pole</a> · koleje VUT od 129 Kč/noc; přihláška už před zápisem, místa podle data, v roce 2026 plno 14. 8.</li><li>Na r/Brno: <a href="https://www.reddit.com/r/Brno/comments/1fkmg3f/" rel="nofollow">1</a> · <a href="https://www.reddit.com/r/Brno/comments/17lzhb1/" rel="nofollow">2</a> · <a href="https://www.reddit.com/r/Brno/comments/16w8i7s/" rel="nofollow">3</a> · <a href="https://www.reddit.com/r/Brno/comments/1t7rnzz/" rel="nofollow">4</a></li></ul></details>
+        </div>
       </article>
-
-      <article class="uni" id="fit-vut">
-        <p class="school">VUT</p>
-        <h3>Informační technologie</h3>
-        <p class="where">Fakulta informačních technologií (FIT) · <a href="https://www.openstreetmap.org/?mlat=49.2267&amp;mlon=16.5963#map=17/49.2267/16.5963">Božetěchova 2, Královo Pole</a></p>
-        <dl>
-          <div><dt>Přijímačky</dt><dd>Bez vlastní zkoušky: pořadí podle percentilu v Národních srovnávacích zkouškách Scio (pravidla 2027/28: očekávaná hranice 75, minimum 10).<small>2026: 1&nbsp;606 přihlášek, přijato 974</small></dd></div>
-          <div><dt>1. ročník</dt><dd><span class="stay"><b>6 z 10</b> pokračuje do 2. ročníku</span><small>celá FIT, MŠMT</small><span class="then">Síto podle studentů: matematika a programování v C v 1. semestru.</span></dd></div>
-          <div><dt>Studenti na r/Brno píšou</dt><dd><span class="say">Hodně programování a velkých, i týmových projektů; dobrý základ, ale zabere skoro všechen čas.</span> <small>Vlákna: <a href="https://www.reddit.com/r/Brno/comments/1fkmg3f/" rel="nofollow">1</a> · <a href="https://www.reddit.com/r/Brno/comments/17lzhb1/" rel="nofollow">2</a> · <a href="https://www.reddit.com/r/Brno/comments/16w8i7s/" rel="nofollow">3</a> · <a href="https://www.reddit.com/r/Brno/comments/1h4cfdz/" rel="nofollow">4</a></small></dd></div>
-          <div><dt>Kolej</dt><dd>Koleje VUT od <b>129&nbsp;Kč</b> za noc (3lůžkový pokoj, Purkyňovy). Přihláška v ISKaM už před zápisem, místa jdou podle data přihlášky (2026: 11.&nbsp;6.–15.&nbsp;7.). Nárok na místo není: v roce 2026 bylo plno 14.&nbsp;8.</dd></div>
-        </dl>
+      <article class="sc" data-s="fi">
+        <div class="sc-head"><span><span class="fit">Sedí na to, co chceš</span><b>FI MUNI</b><small>Informatika</small><em>Teorie a matematika do hloubky</em></span></div>
+        <div class="sc-body">
+          <div class="q"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg><h4>Jak těžké to je? · podle studentů</h4><p><span class="lvl" aria-label="náročnost 2 ze 3"><i class="on"></i><i class="on"></i><i></i></span>Těžké hlavně první dva semestry.<small>Síto: matematika (MZI) a úvod do programování.</small></p></div>
+          <div class="q"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg><h4>Stihneš vedle toho práci?</h4><p>V 1. roce spíš ne, od 2. ročníku ano.<small>Rozvrh si skládáš sám.</small></p></div>
+          <div class="q"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 15l2 2 4-4"/></svg><h4>Dostaneš se?</h4><p>Test MU, nebo dobré Scio.<small>Z 10 uchazečů přijali 5 (2026: 328 z 656).</small></p></div>
+          <details><summary>Víc</summary><ul><li>Bez testu MU tě vezmou s NSZ OSP v horních 20 %, NSZ z matematiky v horních 40 %, se SAT nebo za olympiádu.</li><li>Do 2. ročníku pokračuje 6 z 10 prváků (celá FI, MŠMT).</li><li><a href="https://www.openstreetmap.org/?mlat=49.2100&amp;mlon=16.5991#map=17/49.2100/16.5991">Botanická 68a, Královo Pole</a> · koleje MUNI od 111 Kč/den (5lůžkový pokoj); rezervace až po zápisu, bez záruky, v roce 2026 se přes 900 zájemců nedostalo.</li><li>Na r/Brno: <a href="https://www.reddit.com/r/Brno/comments/16w8i7s/" rel="nofollow">1</a> · <a href="https://www.reddit.com/r/Brno/comments/17dzj51/" rel="nofollow">2</a> · <a href="https://www.reddit.com/r/Brno/comments/1tiijvd/" rel="nofollow">3</a> · <a href="https://www.reddit.com/r/Brno/comments/1shhprt/" rel="nofollow">4</a></li></ul></details>
+        </div>
       </article>
-
-      <article class="uni" id="pef-mendelu">
-        <p class="school">MENDELU</p>
-        <h3>Otevřená informatika</h3>
-        <p class="where">Provozně ekonomická fakulta (PEF) · <a href="https://www.openstreetmap.org/?mlat=49.2096&amp;mlon=16.6143#map=17/49.2096/16.6143">Zemědělská 1, budova Q, Černá Pole</a></p>
-        <dl>
-          <div><dt>Přijímačky</dt><dd>Test předpokladů ke studiu na PEF. Bez testu tě vezmou se Scio OSP od 60. percentilu (pro 2027; v roce 2026 od 70.) nebo po kurzu Informatika naostro.<small>2026: 310 přihlášek, přijato 170</small></dd></div>
-          <div><dt>1. ročník</dt><dd><span class="stay"><b>6 z 10</b> pokračuje do 2. ročníku</span><small>celá PEF, MŠMT</small><span class="then">Síto: Algoritmizace (1. semestr) a Matematika (2. semestr). Část prváků, kteří odejdou, ke zkouškám vůbec nepřijde.</span><span class="then"><b>Potom:</b> od 2. ročníku na PEF projdou 3 ze 4 zkoušek napoprvé, v 1. ročníku zhruba polovina. <a href="/navody/obory?f=PEF">Semestr po semestru</a></span></dd></div>
-          <div><dt>Studenti na r/Brno píšou</dt><dd><span class="say">Prakticky zaměřené a vedle studia zbyde čas na práci.</span> <small>Vlákna: <a href="https://www.reddit.com/r/Brno/comments/1ixe4w4/" rel="nofollow">1</a> · <a href="https://www.reddit.com/r/Brno/comments/1ij60xi/" rel="nofollow">2</a> · <a href="https://www.reddit.com/r/Brno/comments/1w801qo/" rel="nofollow">3</a> · <a href="https://www.reddit.com/r/Brno/comments/1gyoobf/" rel="nofollow">4</a></small></dd></div>
-          <div><dt>Kolej</dt><dd>Koleje MENDELU od <b>126&nbsp;Kč</b> za noc (JAK C, 2–3lůžkový pokoj). Po přijetí napiš na kolej e-mail nebo přijď osobně; když o místo požádáš do 1.&nbsp;9., máš ho v kvótě pro prváky jisté. <a href="/navody/koleje">Koleje MENDELU</a></dd></div>
-        </dl>
+      <article class="sc" data-s="pef">
+        <div class="sc-head"><span><span class="fit">Sedí na to, co chceš</span><b>PEF MENDELU</b><small>Otevřená informatika</small><em>Prakticky zaměřená IT</em></span></div>
+        <div class="sc-body">
+          <div class="q"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg><h4>Jak těžké to je? · podle studentů</h4><p><span class="lvl" aria-label="náročnost 1 ze 3"><i class="on"></i><i></i><i></i></span>Lehčí než FI a FIT.<small>Síto v 1. roce: Algoritmizace a Matematika. Od 2. ročníku projdou 3 ze 4 zkoušek napoprvé.</small></p></div>
+          <div class="q"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg><h4>Stihneš vedle toho práci?</h4><p>Ano, zbyde čas.</p></div>
+          <div class="q"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 15l2 2 4-4"/></svg><h4>Dostaneš se?</h4><p>Test PEF, nebo dobré Scio.<small>Z 10 přihlášek přijali 5 (2026: 170 z 310).</small></p></div>
+          <details><summary>Víc</summary><ul><li>Bez testu PEF tě vezmou se Scio OSP od 60. percentilu (pro 2027; v roce 2026 od 70.) nebo po kurzu Informatika naostro.</li><li>Do 2. ročníku pokračuje 6 z 10 prváků (celá PEF, MŠMT). Část těch, kdo odejdou, ke zkouškám vůbec nepřijde. <a href="/navody/obory?f=PEF">Semestr po semestru</a></li><li><a href="https://www.openstreetmap.org/?mlat=49.2096&amp;mlon=16.6143#map=17/49.2096/16.6143">Zemědělská 1, budova Q, Černá Pole</a> · koleje MENDELU od 126 Kč/noc (JAK C); když o místo požádáš do 1. 9., máš ho jisté. <a href="/navody/koleje">Koleje MENDELU</a></li><li>Na r/Brno: <a href="https://www.reddit.com/r/Brno/comments/1ixe4w4/" rel="nofollow">1</a> · <a href="https://www.reddit.com/r/Brno/comments/1ij60xi/" rel="nofollow">2</a> · <a href="https://www.reddit.com/r/Brno/comments/1w801qo/" rel="nofollow">3</a> · <a href="https://www.reddit.com/r/Brno/comments/1gyoobf/" rel="nofollow">4</a></li></ul></details>
+        </div>
       </article>
     </div>
 
-    <h2 class="small-h" id="it-s-ekonomikou">IT s ekonomikou</h2>
-    <p class="small-lead">Míň programování, víc firmy a řízení. Stejná fakta jako nahoře.</p>
-    <div class="unis small">
-      <article class="uni" id="pef-aii">
-        <p class="school">MENDELU</p>
-        <h3>Administrace IS/ICT</h3>
-        <p class="where">PEF · <a href="https://www.openstreetmap.org/?mlat=49.2096&amp;mlon=16.6143#map=17/49.2096/16.6143">Zemědělská 1, budova Q</a></p>
-        <dl>
-          <div><dt>Přijímačky</dt><dd>Vlastní test z informatiky (pravidla 2027/28: projde od 35 bodů).<small>2026: 224 přihlášek, přijato 100</small></dd></div>
-          <div><dt>1. ročník</dt><dd><span class="stay"><b>6 z 10</b> pokračuje</span><small>celá PEF, MŠMT</small><span class="then">Síto: Algoritmizace (1. semestr). Od 2. ročníku na PEF projdou 3 ze 4 zkoušek napoprvé.</span></dd></div>
-          <div><dt>Kolej</dt><dd>MENDELU od <b>126&nbsp;Kč</b>/noc; místo jisté, když požádáš do 1.&nbsp;9.</dd></div>
-        </dl>
-      </article>
-      <article class="uni" id="esf-pi">
-        <p class="school">MUNI</p>
-        <h3>Podniková informatika</h3>
-        <p class="where">Ekonomicko-správní fakulta (ESF) · <a href="https://www.openstreetmap.org/?mlat=49.1935&amp;mlon=16.5773#map=17/49.1935/16.5773">Lipová 41a, Pisárky</a></p>
-        <dl>
-          <div><dt>Přijímačky</dt><dd>Test studijních předpokladů MU (TSP).<small>2026: 177 přihlášek, přijato 41</small></dd></div>
-          <div><dt>1. ročník</dt><dd><span class="stay"><b>8 z 10</b> pokračuje</span><small>celá ESF, MŠMT</small></dd></div>
-          <div><dt>Kolej</dt><dd>MUNI od <b>111&nbsp;Kč</b>/den; rezervace až po zápisu, bez záruky.</dd></div>
-        </dl>
-      </article>
-      <article class="uni" id="fp-mi">
-        <p class="school">VUT</p>
-        <h3>Manažerská informatika</h3>
-        <p class="where">Fakulta podnikatelská (FP) · <a href="https://www.openstreetmap.org/?mlat=49.2305&amp;mlon=16.5734#map=17/49.2305/16.5734">Kolejní 4, Královo Pole</a></p>
-        <dl>
-          <div><dt>Přijímačky</dt><dd>Vlastní test (projde od 30 ze 100 bodů); s výsledkem NSZ od 55 bez testu.<small>2026: 321 přihlášek, přijato 167</small></dd></div>
-          <div><dt>1. ročník</dt><dd><span class="stay"><b>7 z 10</b> pokračuje</span><small>celá FP, MŠMT</small></dd></div>
-          <div><dt>Studenti na r/Brno píšou</dt><dd><span class="say">Dá se studovat vedle práce.</span> <small>Vlákna: <a href="https://www.reddit.com/r/Brno/comments/1bck37k/" rel="nofollow">1</a> · <a href="https://www.reddit.com/r/Brno/comments/1i4a1an/" rel="nofollow">2</a></small></dd></div>
-          <div><dt>Kolej</dt><dd>VUT od <b>129&nbsp;Kč</b>/noc; přihláška už před zápisem, podle data.</dd></div>
-        </dl>
-      </article>
+    <section class="all">
+      <h2>Na čem se studenti shodnou u všech</h2>
+      <ul>
+        <li><b>První rok je síto všude.</b></li>
+        <li><b>Firmám jde hlavně o to, co umíš,</b> míň o jméno školy.</li>
+        <li><b>Nejlepší rady máš na Discordu fakulty</b>, ne na oficiálním webu.</li>
+      </ul>
+    </section>
+
+    <h2 class="sec">IT s ekonomikou</h2>
+    <p class="sec-lead">Míň programování, víc firmy a řízení.</p>
+    <div class="mini">
+      <div><small>PEF MENDELU</small><b>Administrace IS/ICT</b>Vlastní test z informatiky · z 10 přihlášek přijali 4<br><span class="none">Na r/Brno málo názorů.</span></div>
+      <div><small>ESF MUNI</small><b>Podniková informatika</b>Test MU · z 10 přihlášek přijali 2<br><span class="none">Na r/Brno málo názorů.</span></div>
+      <div><small>FP VUT</small><b>Manažerská informatika</b>Vlastní test, nebo Scio · z 10 přihlášek přijali 5<br>Studenti: dá se vedle práce (<a href="https://www.reddit.com/r/Brno/comments/1bck37k/" rel="nofollow">r/Brno</a>).</div>
     </div>
 
-    <p class="rest"><b>Další IT obory:</b> <a href="https://www.muni.cz/bakalarske-a-magisterske-studijni-programy/informatika-programovani-a-vypocetni-technika">Kyberbezpečnost a Programování a vývoj aplikací</a> na FI MUNI (6 z 10 pokračuje, celá FI) a <a href="https://www.vut.cz/studenti/programy">Informační bezpečnost</a> na FEKT VUT (7 z 10, celá FEKT).</p>
-
-    <div class="foot">
-      <p><b>Jak to číst.</b> „Pokračuje do 2. ročníku“ je za celou fakultu, ne za obor (MŠMT, tabulka 3.3 ve výročních zprávách), zaokrouhleno na celé desítky procent („6 z 10“). Body z přijímaček má každá škola v jiné stupnici, proto je vedle sebe neporovnáváme. Přihlášky školy počítají jinak: ESF jednu na fakultu, FI uchazeče na obor, MENDELU přihlášky. MUNI uvádí cenu koleje za den, VUT a MENDELU za noc.</p>
-      <p>Názory studentů jsou z r/Brno, přeformulované; bereme jen to, co opakuje víc lidí. Kde se shoda nenašla, řádek chybí.</p>
-    </div>
-
+    <p class="rest"><b>Další IT obory:</b> <a href="https://www.muni.cz/bakalarske-a-magisterske-studijni-programy/informatika-programovani-a-vypocetni-technika">Kyberbezpečnost a Programování a vývoj aplikací</a> na FI MUNI a <a href="https://www.vut.cz/studenti/programy">Informační bezpečnost</a> na FEKT VUT.</p>
+    <p class="foot">„Jak těžké“ a „práce“ je to, co na r/Brno opakuje víc studentů, ne měření. „Pokračuje do 2. ročníku“ je za celou fakultu (MŠMT). Body z přijímaček má každá škola v jiné stupnici, proto je neporovnáváme, a přihlášky počítají jinak (FI uchazeče na obor, ESF jednu na fakultu, MENDELU přihlášky).</p>
     <details class="sources">
       <summary>Zdroje ke každému číslu</summary>
       <ul>
@@ -160,10 +156,12 @@
         <li><strong>Koleje MUNI:</strong> <a href="https://www.skm.muni.cz/media/4107209/cenik-kolejne-25-26cz.pdf">ceník 2025/26 platný od 1. 2. 2026</a>, <a href="https://www.skm.muni.cz/media/4107204/pokyn-reditele-05_2019-harmonogram-rezervaci-a-ubytovani-akademicky-rok-2026-2027.pdf">harmonogram rezervací 2026/27</a>, <a href="https://www.skm.muni.cz/aktuality/o-koleje-mu-je-velky-zajem-kapacita-je-plne-obsazena">zpráva SKM z 12. 10. 2026</a>.</li>
         <li><strong>Koleje VUT:</strong> <a href="https://www.kam.vutbr.cz/skripty/doc.aspx?id=1029">ceník od 1. 9. 2026</a>, <a href="https://www.kam.vutbr.cz/skripty/doc.aspx?id=1018">rozhodnutí 1/2026</a>, <a href="https://www.kam.vutbr.cz/?p=aktu">aktuality KaM</a>.</li>
         <li><strong>Koleje MENDELU:</strong> <a href="https://is.mendelu.cz/dok_server/slozka.pl?id=12343;download=293647">ceník od 1. 7. 2026</a>, <a href="https://is.mendelu.cz/dok_server/slozka.pl?id=12343;download=317972">harmonogram ubytování 2026/27</a>.</li>
+        <li><strong>„Jak těžké“, „práce“ a „Na čem se shodnou“:</strong> 140 vláken z r/Brno (2023–2026) přečtených celých; bereme jen to, co nezávisle opakuje víc studentů. Odkazy na vlákna jsou u každé školy pod „Víc“.</li>
+        <li><strong>Šance na přijetí:</strong> přijatí děleno přihláškami z řádků výše, zaokrouhleno na celé desítky procent (Administrace IS/ICT 100 z 224, Podniková informatika 41 z 177, Manažerská informatika 167 z 321).</li>
         <li><strong>Mapa:</strong> odkazy vedou na OpenStreetMap.</li>
       </ul>
     </details>
-    <p class="checked">Ověřeno 16. 11. 2026. reIS je nezávislý studentský projekt, ne oficiální aplikace MENDELU, MUNI ani VUT. Oficiální informace najdeš na webech fakult.</p>
+    <p class="checked">Ověřeno 16. 11. 2026. reIS dělají studenti MENDELU, proto u každé věty uvádíme zdroj. Není to oficiální aplikace MENDELU, MUNI ani VUT.</p>
     <p class="checked">Další návody: <a href="/navody/koleje">Koleje</a> · <a href="/navody/obory">První semestry na MENDELU</a> · <a href="/navody/mapa-kampusu">Mapa kampusu</a> · <a href="/navody/eduroam">eduroam</a></p>
   </main>
   <footer>
@@ -171,5 +169,22 @@
     <nav><a href="/">reisapp.cz</a><a href="/navody">Návody</a><a href="/navod">Návod k instalaci</a><a href="/bezpecnost">Data a bezpečnost</a><a href="mailto:reis.mendelu@gmail.com">reis.mendelu@gmail.com</a></nav>
   </footer>
 </div>
+<script>
+(function () {
+  var box = document.querySelector('[data-schools]');
+  var base = ['fit', 'fi', 'pef'];
+  var orders = { fit: ['fit', 'fi', 'pef'], fi: ['fi', 'fit', 'pef'], pef: ['pef', 'fi', 'fit'] };
+  document.addEventListener('click', function (e) {
+    var p = e.target.closest && e.target.closest('.pick'); if (!p) return;
+    var on = p.getAttribute('aria-pressed') !== 'true';
+    document.querySelectorAll('.pick').forEach(function (x) { x.setAttribute('aria-pressed', on && x === p); });
+    var order = on ? orders[p.dataset.for] : base;
+    box.querySelectorAll('.sc').forEach(function (c) {
+      c.style.order = order.indexOf(c.dataset.s);
+      c.classList.toggle('top', on && c.dataset.s === order[0]);
+    });
+  });
+})();
+</script>
 </body>
 </html>
