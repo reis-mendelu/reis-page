@@ -66,21 +66,15 @@
 .all li{margin:0 0 6px;font-size:15px;line-height:1.45;color:var(--text-2)}
 .all b{color:var(--text)}
 .sec{margin:0 0 4px;font-size:20px;font-weight:700;letter-spacing:-.02em}
-.sec-lead{margin:0 0 12px;font-size:14px;color:var(--text-3)}
-.mini{display:grid;gap:8px;margin:0 0 26px}
-@media (min-width:900px){.mini{grid-template-columns:repeat(3,1fr)}}
-.mini div{padding:12px 14px;border-radius:14px;background:var(--surface);border:1px solid var(--border);font-size:14px;line-height:1.45;color:var(--text-2)}
-.mini b{display:block;font-size:16px;color:var(--text)}
-.mini small{display:block;font-size:12px;color:var(--text-3);margin-bottom:2px}
-.mini .none{color:var(--text-4)}
-.rest{margin:0 0 18px;font-size:14px;line-height:1.5;color:var(--text-2)}
-.rest a{color:var(--accent-text)}
 .share-box{margin:-12px 0 30px}
 .share-box p{margin:0 0 8px;font-size:15px;color:var(--text-2)}
 .share.big{display:flex;justify-content:center;width:100%;min-height:48px;margin:0;font-size:16px;background:var(--btn);color:var(--on-btn);border-color:var(--btn)}
 .share.big:hover{background:var(--btn-hover)}
 .share.big svg{color:var(--on-btn)}
-.foot{margin:0 0 14px;font-size:13px;line-height:1.5;color:var(--text-3)}
+.others{list-style:none;margin:0 0 26px;padding:0;border-top:1px solid var(--border)}
+.others li{padding:10px 0;border-bottom:1px solid var(--border);font-size:15px;line-height:1.4;color:var(--text-3)}
+.others a{color:var(--text);font-weight:600}
+.others small{display:block;font-size:13px;color:var(--text-4);margin-top:1px}
 </style>
 </head>
 <body>
@@ -140,21 +134,21 @@
     </section>
     <div class="share-box" data-share-here><p>Vybíráš s kamarádem? Pošli mu to.</p></div>
 
-    <h2 class="sec">IT s ekonomikou</h2>
-    <p class="sec-lead">Míň programování, víc firmy a řízení.</p>
-    <div class="mini">
-      <div><small>PEF MENDELU</small><b>Administrace IS/ICT</b>Vlastní test z informatiky · z 10 přihlášek přijali 4<br><span class="none">Na r/Brno málo názorů.</span></div>
-      <div><small>ESF MUNI</small><b>Podniková informatika</b>Test MU · z 10 přihlášek přijali 2<br><span class="none">Na r/Brno málo názorů.</span></div>
-      <div><small>FP VUT</small><b>Manažerská informatika</b>Vlastní test, nebo Scio · z 10 přihlášek přijali 5<br>Studenti: dá se vedle práce (<a href="https://www.reddit.com/r/Brno/comments/1bck37k/" rel="nofollow">r/Brno</a>).</div>
-    </div>
+    <h2 class="sec">Další IT obory v Brně</h2>
+    <ul class="others">
+      <li><a href="https://pef.mendelu.cz/uchazec/bakalarske-studium/">Administrace IS/ICT</a> · PEF MENDELU<small>IT s ekonomikou, jde studovat i při práci (kombinovaně)</small></li>
+      <li><a href="https://www.muni.cz/bakalarske-a-magisterske-studijni-programy/informatika-programovani-a-vypocetni-technika">Podniková informatika</a> · ESF MUNI<small>IT s ekonomikou</small></li>
+      <li><a href="https://www.vut.cz/studenti/programy">Manažerská informatika</a> · FP VUT<small>IT s řízením firmy, podle studentů jde vedle práce</small></li>
+      <li><a href="https://www.muni.cz/bakalarske-a-magisterske-studijni-programy/informatika-programovani-a-vypocetni-technika">Kyberbezpečnost, Programování a vývoj aplikací</a> · FI MUNI</li>
+      <li><a href="https://www.vut.cz/studenti/programy">Informační bezpečnost</a> · FEKT VUT</li>
+    </ul>
 
-    <p class="rest"><b>Další IT obory:</b> <a href="https://www.muni.cz/bakalarske-a-magisterske-studijni-programy/informatika-programovani-a-vypocetni-technika">Kyberbezpečnost a Programování a vývoj aplikací</a> na FI MUNI a <a href="https://www.vut.cz/studenti/programy">Informační bezpečnost</a> na FEKT VUT.</p>
-    <p class="foot">„Jak těžké“ a „práce“ je to, co na r/Brno opakuje víc studentů, ne měření. „Pokračuje do 2. ročníku“ je za celou fakultu (MŠMT). Body z přijímaček má každá škola v jiné stupnici, proto je neporovnáváme, a přihlášky počítají jinak (FI uchazeče na obor, ESF jednu na fakultu, MENDELU přihlášky).</p>
     <details class="sources">
       <summary>Zdroje ke každému číslu</summary>
       <ul>
-        <li><strong>Přihlášky a přijatí 2026, FI a ESF:</strong> <a href="https://www.muni.cz/do/rect/metodika/stud/prijriz/zpravy/Zprava_o_prubehu_prijimaciho_rizeni_2026.pdf">Zpráva o průběhu přijímacího řízení MU 2026</a> (FI Informatika jednooborově).</li>
-        <li><strong>Přihlášky a přijatí 2026, FIT a FP:</strong> statistiky přijímacího řízení VUT na úřední desce: <a href="https://www.vut.cz/uredni-deska/statistiky-rizeni?ac=fak&amp;rok=2026&amp;fid=20042">FIT</a>, <a href="https://www.vut.cz/uredni-deska/statistiky-rizeni?ac=fak&amp;rok=2026&amp;fid=13">FP</a>.</li>
+        <li><strong>Jak to číst:</strong> „Jak těžké“ a „práce“ je to, co na r/Brno opakuje víc studentů, ne měření. „Pokračuje do 2. ročníku“ je za celou fakultu (MŠMT). Body z přijímaček má každá škola v jiné stupnici, proto je neporovnáváme, a přihlášky počítají jinak (FI uchazeče na obor, MENDELU přihlášky).</li>
+        <li><strong>Přihlášky a přijatí 2026, FI:</strong> <a href="https://www.muni.cz/do/rect/metodika/stud/prijriz/zpravy/Zprava_o_prubehu_prijimaciho_rizeni_2026.pdf">Zpráva o průběhu přijímacího řízení MU 2026</a> (FI Informatika jednooborově).</li>
+        <li><strong>Přihlášky a přijatí 2026, FIT:</strong> <a href="https://www.vut.cz/uredni-deska/statistiky-rizeni?ac=fak&amp;rok=2026&amp;fid=20042">statistiky přijímacího řízení VUT</a>.</li>
         <li><strong>Přihlášky a přijatí 2026, PEF:</strong> <a href="https://is.mendelu.cz/dok_server/slozka.pl?id=33584;download=366959">Zpráva o přijímacím řízení PEF, ZS 2026/27</a>. Pravidla pro 2027: <a href="https://is.mendelu.cz/dok_server/slozka.pl?id=33584;download=360855">Podmínky přijetí ZS 2027/28</a>.</li>
         <li><strong>Kolik prváků pokračuje:</strong> studijní neúspěšnost v 1. ročníku, prezenční Bc (MŠMT tab. 3.3): FI 37,2 %, ESF 23,0 % (<a href="https://www.muni.cz/media/4183484/vyrocni_zprava_o_cinnosti_mu_2025.pdf">VZ MU 2025</a>, tab. 32); FIT 35,4 %, FEKT 34,0 %, FP 31,5 % (<a href="https://www.vut.cz/uredni-deska/vyrocni-zpravy-vut/vyrocni-zpravy-vut-f18830/vyrocni-zprava-vut-o-cinnosti-za-rok-2025-d344534/vyrocni-zprava-vut-o-cinnosti-za-rok-2025-p387538">VZ VUT 2025</a>, tab. 3.3); PEF 43,9 % (<a href="https://doi.mendelu.cz/pdfs/doi/9900/09/3500.pdf">VZ MENDELU 2024</a>, tab. 14, novější zpráva zatím není).</li>
         <li><strong>Zkoušky na PEF:</strong> výsledky zkoušek z IS MENDELU, řádné termíny 2023/24–2025/26, povinné předměty bakalářských plánů PEF: v 1. ročníku neprojde napoprvé 48,5 %, od 3. semestru 25,2 %. Předměty-síto podle studijních plánů Otevřené informatiky a Administrace IS/ICT pro 2026/27.</li>
@@ -163,7 +157,7 @@
         <li><strong>Koleje VUT:</strong> <a href="https://www.kam.vutbr.cz/skripty/doc.aspx?id=1029">ceník od 1. 9. 2026</a>, <a href="https://www.kam.vutbr.cz/skripty/doc.aspx?id=1018">rozhodnutí 1/2026</a>, <a href="https://www.kam.vutbr.cz/?p=aktu">aktuality KaM</a>.</li>
         <li><strong>Koleje MENDELU:</strong> <a href="https://is.mendelu.cz/dok_server/slozka.pl?id=12343;download=293647">ceník od 1. 7. 2026</a>, <a href="https://is.mendelu.cz/dok_server/slozka.pl?id=12343;download=317972">harmonogram ubytování 2026/27</a>.</li>
         <li><strong>„Jak těžké“, „práce“ a „Na čem se shodnou“:</strong> 140 vláken z r/Brno (2023–2026) přečtených celých; bereme jen to, co nezávisle opakuje víc studentů. Odkazy na vlákna jsou u každé školy pod „Víc“.</li>
-        <li><strong>Šance na přijetí:</strong> přijatí děleno přihláškami z řádků výše, zaokrouhleno na celé desítky procent (Administrace IS/ICT 100 z 224, Podniková informatika 41 z 177, Manažerská informatika 167 z 321).</li>
+        <li><strong>Šance na přijetí:</strong> přijatí děleno přihláškami z řádků výše, zaokrouhleno na celé desítky procent.</li>
         <li><strong>Mapa:</strong> odkazy vedou na OpenStreetMap.</li>
       </ul>
     </details>
