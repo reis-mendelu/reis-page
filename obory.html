@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Obory MENDELU: jak vypadají první semestry, kolik lidí projde – reIS</title>
+<meta name="description" content="Kolik studentů MENDELU projde v každém semestru napoprvé a kolik po opravném termínu, obor po oboru, a jaké povinné předměty tě čekají. Podle studijních plánů a výsledků z IS MENDELU.">
+<link rel="canonical" href="https://reisapp.cz/obory">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="cs_CZ">
+<meta property="og:site_name" content="reIS">
+<meta property="og:url" content="https://reisapp.cz/obory">
+<meta property="og:title" content="Jak vypadají první semestry na MENDELU">
+<meta property="og:description" content="Obor po oboru: kolik lidí projde v každém semestru napoprvé a kolik po opravném termínu.">
+<meta property="og:image" content="https://reisapp.cz/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/reIS_logo.svg" type="image/svg+xml">
+<meta name="theme-color" content="#0d110e">
+<link rel="stylesheet" href="/theme.css">
+<link href="/navod/fonts.css" rel="stylesheet">
+<link rel="stylesheet" href="/navody/guide.css">
+<script src="/ph.js"></script>
+<script src="/obory-data.js" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://reisapp.cz/obory#page","name":"Jak vypadají první semestry na MENDELU","description":"Kolik studentů MENDELU projde v každém semestru napoprvé a kolik po opravném termínu, obor po oboru, a jaké povinné předměty tě čekají. Podle studijních plánů a výsledků z IS MENDELU.","inLanguage":"cs","url":"https://reisapp.cz/obory","isPartOf":{"@id":"https://reisapp.cz/#web"},"publisher":{"@id":"https://reisapp.cz/#org"},"datePublished":"2026-11-16","dateModified":"2026-11-16"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"reIS","item":"https://reisapp.cz/"},{"@type":"ListItem","position":2,"name":"Obory","item":"https://reisapp.cz/obory"}]}]}</script>
+<style>
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 22px}
+.chip{font:inherit;font-size:15px;font-weight:600;color:var(--text);background:var(--surface);border:1.5px solid var(--border);border-radius:999px;padding:8px 14px;cursor:pointer}
+.chip small{font-weight:400;color:var(--text-3);margin-left:6px;font-size:12px}
+.chip[aria-pressed="true"]{border-color:var(--accent);background:var(--card-green)}
+.seg{display:inline-flex;border:1px solid var(--border-strong);border-radius:10px;overflow:hidden;margin:0 0 12px}
+.seg button{font:inherit;font-size:14px;font-weight:600;color:var(--text-2);background:none;border:0;padding:7px 14px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--card-green);color:var(--text)}
+.plans{display:grid;gap:6px;margin:0 0 24px}
+@media (min-width:600px){.plans{grid-template-columns:1fr 1fr}}
+.plan{display:flex;justify-content:space-between;align-items:center;gap:10px;font:inherit;text-align:left;color:var(--text);background:var(--surface);border:1.5px solid var(--border);border-radius:12px;padding:10px 12px;cursor:pointer}
+.plan small{color:var(--text-4);font-size:12px;white-space:nowrap}
+.plan[aria-pressed="true"]{border-color:var(--accent);background:var(--card-green)}
+.result{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:16px;margin:0 0 18px}
+.result h2{margin:0;font-size:20px;letter-spacing:-.02em}
+.result .meta{margin:2px 0 12px;font-size:13px;color:var(--text-3)}
+.say{margin:0 0 16px;padding:12px 14px;border-radius:12px;background:var(--card-green);border:1px solid var(--border-green);font-size:16px;line-height:1.45}
+.say b{color:var(--accent-text)}
+.bars{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:8px;align-items:end;height:170px;margin:0 0 6px}
+.bar{all:unset;box-sizing:border-box;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%;cursor:pointer;border-radius:10px;padding:0 0 4px}
+.bar i{display:block;width:100%;border-radius:8px 8px 4px 4px;background:#3f6212;min-height:6px}
+.bar.top i{background:#a5d85f}
+.bar.none i{background:repeating-linear-gradient(135deg,#232a24 0 6px,#1a201b 6px 12px);height:30%!important}
+.bar em{font-style:normal;font-size:11px;font-weight:700;color:var(--accent-text);margin:0 0 4px;min-height:14px}
+.bar[aria-pressed="true"]{outline:2px solid var(--accent);outline-offset:3px}
+.bar:focus-visible{outline:2px solid #fff}
+.axis{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:8px;margin:0 0 4px;text-align:center;font-size:12px;color:var(--text-3)}
+.scale{display:flex;justify-content:space-between;gap:12px;text-align:right;font-size:11px;color:var(--text-4);margin:0 0 14px}
+.sem{border-top:1px solid var(--border);padding-top:12px}
+.sem h3{margin:0 0 6px;font-size:16px}
+.sem ul{margin:0 0 12px;padding-left:18px}
+.sem li{font-size:14px;line-height:1.5;color:var(--text-2)}
+.hook{display:flex;gap:12px;align-items:center;margin:4px 0 0;padding:12px 14px;border-radius:12px;background:var(--surface-2);font-size:14px;line-height:1.45;color:var(--text-2)}
+.hook img{width:36px;height:36px;flex:none}
+.nodata{margin:0 0 16px;font-size:14px;color:var(--text-3)}
+.proto{margin:0 0 18px;padding:8px 12px;border:1px dashed var(--text-5);border-radius:10px;font-size:13px;color:var(--text-3)}
+.note{margin:0 0 20px;padding:10px 12px;border-radius:12px;background:var(--surface);border:1px solid var(--border);font-size:14px;line-height:1.5;color:var(--text-2)}
+.note b{color:var(--text)}
+.within{margin:0 0 8px;font-size:12px;color:var(--text-3)}
+.bar.none i{background:none!important;border:1.5px dashed var(--border-strong);height:100%!important;display:flex;align-items:center;justify-content:center}
+.bar.none i::after{content:attr(data-l);font-style:normal;font-size:10px;color:var(--text-4);writing-mode:vertical-rl;transform:rotate(180deg)}
+.bar[aria-pressed="true"]{outline:none}
+.axis span.on{color:var(--text);font-weight:700;text-decoration:underline;text-underline-offset:4px;text-decoration-color:var(--accent)}
+.pick{margin:0 0 18px;padding:14px;border-radius:12px;border:1px dashed var(--border-strong);color:var(--text-3);font-size:14px;text-align:center}
+.later{margin:14px 0 6px;font-size:14px;color:var(--text-3)}
+.bar i{position:relative;display:flex;flex-direction:column;justify-content:flex-end;background:#2c3a1e!important;overflow:hidden}
+.bar i b{display:block;width:100%;background:#79be15;border-radius:0 0 4px 4px}
+.bar.low i b{background:#a5d85f}
+.bar em{color:var(--text)!important;font-size:12px!important}
+.legend2{display:flex;gap:14px;flex-wrap:wrap;margin:6px 0 12px;font-size:12px;color:var(--text-3)}
+.legend2 i{display:inline-block;width:12px;height:12px;border-radius:3px;vertical-align:-2px;margin-right:5px}
+.semsay{margin:0 0 8px;font-size:15px;color:var(--text)}
+</style>
+</head>
+<body>
+<div class="col">
+  <header>
+    <a class="brand" href="/"><img src="/assets/reIS_logo.svg" alt="" width="40" height="40"><span>reIS</span></a>
+  </header>
+  <main>
+    <nav class="crumbs" aria-label="Drobečková navigace"><a href="/">reIS</a><span aria-hidden="true">›</span><span aria-current="page">Obory</span></nav>
+    <h1>Jak vypadají první semestry na MENDELU</h1>
+    <p class="lead">Vyber obor a uvidíš, kolik lidí v každém semestru projde napoprvé a kolik po opravném termínu, a jaké povinné předměty tě čekají.</p>
+    <p class="note"><b>Jen MENDELU.</b> S MUNI ani VUT se to porovnat nedá, každá škola zkouší jinak. Čísla jsou zaokrouhlená („7 z 10“) a týkají se jen povinných předmětů.</p>
+
+    <h2 class="step-h"><span class="num">1</span>Fakulta</h2>
+    <div class="chips" id="facs"></div>
+    <h2 class="step-h"><span class="num">2</span>Obor</h2>
+    <div class="seg" id="type"><button data-t="bc" aria-pressed="true">Bakalářský</button><button data-t="mgr" aria-pressed="false">Navazující magisterský</button></div>
+    <div class="plans" id="plans"></div>
+    <div id="out"></div>
+
+    <details>
+      <summary>Jak to počítáme</summary>
+      <ul>
+        <li>Pro každý semestr vezmeme <strong>povinné předměty</strong> ze studijního plánu (ty má každý student oboru, na rozdíl od volitelných).</li>
+        <li>Napoprvé = řádný termín zkoušky nebo zápočtu. Nakonec = po všech termínech v daném zkouškovém. Data za roky 2023–2026.</li>
+        <li>Ukazujeme, kolik z 10 lidí projde <strong>napoprvé</strong> a kolik <strong>nakonec</strong> (po opravných termínech), za celý semestr dohromady. Jednotlivé předměty neukazujeme.</li>
+        <li>Čísla ukazují, jak to dopadá, ne proč.</li>
+        <li>Počítáme jen semestry, kde mají výsledky aspoň 2 povinné předměty. <strong>Volitelné:</strong> semestr skoro jen s volitelnými předměty. <strong>Bez dat:</strong> nové předměty (např. nové plány ZF a ICV pro 2026/27) nebo státnice; doplníme po zkouškovém období.</li>
+      </ul>
+    </details>
+    <p class="checked">Ověřeno 16. 11. 2026 podle studijních plánů pro ZS 2026/2027 a výsledků z IS MENDELU. reIS je nezávislý studentský projekt, ne oficiální aplikace MENDELU.</p>
+  </main>
+  <footer>
+    <div style="display:flex;align-items:center;gap:12px"><img src="/assets/reIS_logo.svg" alt="" width="28" height="28"><span style="color:var(--text-3);line-height:1.5">Nezávislý studentský projekt, není oficiální produkt MENDELU.</span></div>
+    <nav><a href="/">reisapp.cz</a><a href="/navody">Návody</a><a href="/navod">Návod k instalaci</a><a href="/bezpecnost">Data a bezpečnost</a><a href="mailto:reis.mendelu@gmail.com">reis.mendelu@gmail.com</a></nav>
+  </footer>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  var D=window.OBORY, fac='PEF', type='bc', plan=null, sem=null;
+  var $=function(id){return document.getElementById(id)};
+  function list(){return D.plans.filter(function(p){return p.f===fac&&p.type===type}).sort(function(a,b){return a.name.localeCompare(b.name,'cs')})}
+  function rated(p){return p.sems.filter(function(s){return s.first!=null}).length}
+  function v(n){return (n>=2&&n<=4?'ve ':'v ')+n+'.'}
+  function and(a){return a.length<2?a[0]:a.slice(0,-1).join(', ')+' a '+a[a.length-1]}
+  // Positive framing: how many of 10 pass. The summary names the lowest semester once and
+  // never claims "calmer" over a semester without data.
+  function info(p){
+    var r=p.sems.filter(function(s){return s.first!=null});
+    if(r.length<2) return null;
+    var lo=Math.min.apply(null,r.map(function(s){return s.first}));
+    var low=r.filter(function(s){return s.first===lo}).map(function(s){return s.n});
+    var w={final:Math.min.apply(null,r.filter(function(s){return s.first===lo}).map(function(s){return s.final}))};
+    var t=(low.length===1?'Nejvíc zabere '+low[0]+'. semestr':'Nejvíc zaberou '+and(low.map(function(n){return n+'.'}))+' semestr')+
+      ': napoprvé projde zhruba <b>'+lo+' z 10</b>, po opravných termínech <b>'+w.final+' z 10</b>.';
+    var last=Math.max.apply(null,low), calm=null;
+    for(var k=last+1;k<p.sems.length;k++){
+      var rest=p.sems.filter(function(s){return s.n>=k&&s.n<p.sems.length});
+      if(rest.length&&rest.every(function(s){return s.first!=null&&s.first>=Math.min(9,lo+3)})){calm=k;break}
+    }
+    if(calm) t+=' Od '+calm+'. semestru projde napoprvé '+Math.min.apply(null,p.sems.filter(function(s){return s.n>=calm&&s.first!=null}).map(function(s){return s.first}))+' z 10 a víc.';
+    return {text:t,low:low};
+  }
+  function render(){
+    $('facs').innerHTML=Object.keys(D.faculties).map(function(f){return '<button class="chip" data-f="'+f+'" aria-pressed="'+(f===fac)+'">'+f+'<small>'+D.faculties[f]+'</small></button>'}).join('');
+    Array.prototype.forEach.call($('type').children,function(b){b.setAttribute('aria-pressed',String(b.dataset.t===type))});
+    var L=list();
+    $('plans').innerHTML=L.map(function(p){return '<button class="plan" data-p="'+p.code+'" aria-pressed="'+(p.code===plan)+'"><span>'+p.name+'</span>'+(rated(p)>=2?'':'<small>zatím bez dat</small>')+'</button>'}).join('')||'<p class="nodata">Pro tuhle fakultu tu denní obor tohoto typu nemáme.</p>';
+    var p=L.filter(function(x){return x.code===plan})[0];
+    if(!p){$('out').innerHTML=L.length?'<p class="pick">Vyber obor nahoře.</p>':'';return}
+    var I=info(p), top=I?I.low:[];
+    if(sem==null) sem=top.length?top[0]:1;
+    var cur=p.sems.filter(function(x){return x.n===sem})[0];
+    $('out').innerHTML='<section class="result"><h2>'+p.name+'</h2><p class="meta">'+(type==='bc'?'Bakalářský':'Navazující magisterský')+' · denní studium · '+p.sems.length+' semestrů · '+D.faculties[p.f]+'</p>'+
+      (I?'<p class="say">'+I.text+'</p>':'<p class="nodata">U tohoto oboru zatím nemáme dost dat (nový studijní plán). Doplníme po zkouškovém období.</p>')+
+      '<div class="legend2"><span><i style="background:#79be15"></i>projde napoprvé</span><span><i style="background:#2c3a1e;border:1px solid #3b443c"></i>projde po opravném</span><span>celý sloupec = 10 z 10</span></div>'+
+      '<div class="bars" role="group" aria-label="Náročnost semestrů">'+p.sems.map(function(x){var none=x.first==null||!I;return '<button class="bar'+(none?' none':'')+'" data-s="'+x.n+'" aria-pressed="'+(x.n===sem)+'" aria-label="'+x.n+'. semestr'+(none?(x.why==='few'?', hlavně volitelné předměty':', bez dat'):', napoprvé projde '+x.first+' z 10, nakonec '+x.final+' z 10')+'"><em>'+(none?'':x.first+'/10')+'</em><i data-l="'+(x.why==='few'?'volitelné':'bez dat')+'" style="height:'+(none?100:x.final*10)+'%">'+(none?'':'<b style="height:'+Math.round(100*x.first/x.final)+'%"></b>')+'</i></button>'}).join('')+'</div>'+
+      '<div class="axis">'+p.sems.map(function(x){return '<span'+(x.n===sem?' class="on"':'')+'>'+x.n+'.</span>'}).join('')+'</div><div class="scale"><span>semestr (klepni na sloupec)</span></div>'+
+      '<div class="sem"><h3>'+sem+'. semestr: povinné předměty</h3>'+(cur&&(cur.first==null||!I)?'<p class="nodata">'+(cur.why==='few'?'V tomhle semestru jsou hlavně volitelné předměty, tak ho nepočítáme.':'K tomuhle semestru zatím nemáme dost výsledků (nové předměty nebo státnice).')+'</p>':'<p class="semsay">Napoprvé projde zhruba <b>'+cur.first+' z 10</b>, po opravných termínech <b>'+cur.final+' z 10</b>.</p>')+(cur&&cur.subjects.length?'<ul>'+cur.subjects.map(function(n){return '<li>'+n+'</li>'}).join('')+'</ul>':'<p class="nodata">Žádné povinné předměty, jen volitelné a praxe.</p>')+'</div></section>'+
+      '<p class="later">Až nastoupíš, reIS ti ukáže rozvrh, termíny zkoušek a materiály ke každému předmětu.</p>'+
+      '<div class="badges"><a href="https://apps.apple.com/cz/app/id6804832714?ct=reisapp-obory"><img src="/navod/appstore-badge-cs.svg" alt="Stáhnout v App Store" height="44"></a><a href="https://play.google.com/store/apps/details?id=cz.reis.app&amp;referrer=utm_source%3Dreisapp.cz%26utm_medium%3Dobory"><img src="/navod/googleplay-badge-cs.png" alt="Nyní na Google Play" height="44"></a></div>';
+  }
+  document.addEventListener('click',function(e){
+    var b=e.target.closest&&e.target.closest('[data-f],[data-t],[data-p],[data-s]'); if(!b) return;
+    if(b.dataset.f){fac=b.dataset.f;plan=null;sem=null}
+    if(b.dataset.t){type=b.dataset.t;plan=null;sem=null}
+    if(b.dataset.p){plan=b.dataset.p;sem=null;if(window.reisTrack)window.reisTrack('obory_plan_opened',{faculty:fac,plan:plan})}
+    if(b.dataset.s){sem=+b.dataset.s}
+    render();
+  });
+  var q=new URLSearchParams(location.search); if(q.get('f'))fac=q.get('f'); if(q.get('t'))type=q.get('t'); if(q.get('p'))plan=q.get('p'); if(q.get('s'))sem=+q.get('s');
+  render();
+});
+</script>
+</body>
+</html>
