@@ -74,3 +74,4 @@
 .dorm details.more summary::after,.dmap-card details.more summary::after{font-size:16px;color:var(--accent-text)}
 .dorm details.more[open] summary,.dmap-card details.more[open] summary{margin-bottom:6px}
 .dmap-card .flag{margin:4px 0 0}
+.dorm .key+.tip,.dorm .flag+.tip,.dmap-card .key+.tip,.dmap-card .flag+.tip{margin-top:8px}
