@@ -65,3 +65,12 @@
   .dmap-map{height:560px}
   .dmap-pane{height:560px;overflow:auto}
 }
+/* Cards and panel: first view is the comparison (price, bathroom, time); the rest folds into "Podrobnosti". */
+.dorm .key,.dmap-card .key{margin:8px 0 2px;font-size:14px;line-height:1.45;color:var(--text-2)}
+.dorm .key b,.dmap-card .key b{color:var(--text)}
+.dorm .key [data-time]{color:var(--text)}
+.dorm details.more,.dmap-card details.more{border:0;padding:6px 0 0;margin:0}
+.dorm details.more summary,.dmap-card details.more summary{display:inline-flex;gap:6px;font-size:14px;font-weight:600;color:var(--accent-text)}
+.dorm details.more summary::after,.dmap-card details.more summary::after{font-size:16px;color:var(--accent-text)}
+.dorm details.more[open] summary,.dmap-card details.more[open] summary{margin-bottom:6px}
+.dmap-card .flag{margin:4px 0 0}

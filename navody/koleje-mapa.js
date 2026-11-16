@@ -26,18 +26,20 @@
   };
   var T = EN ? {
     ask: 'Which faculty do you study at?', walk: 'on foot to', pt: 'by public transport to', bldg: 'building',
-    ptLine: 'Public transport', bike: 'by bike', walkLine: 'on foot', garden: 'Through the botanical garden',
+    ptLine: 'Public transport', walkLine: 'on foot', garden: 'Through the botanical garden',
     gardenWhen: 'Mon–Fri 6–20', here: 'You live in your faculty’s own building (building Z).',
     zf: 'ZF is in Lednice. You will most likely live in the P. Bezruče dorm there, 3 minutes from the faculty.',
     then: ', then ', tram: 'tram', trolleybus: 'trolleybus', bus: 'bus', close: 'Close', photo: 'Photo',
-    map: 'Map of MENDELU dorms', walkLeg: 'walk', rideLeg: 'public transport'
+    map: 'Map of MENDELU dorms', walkLeg: 'walk', rideLeg: 'public transport',
+    walkShort: '%m min walk to %f', ptShort: '%m min by public transport to %f', hereShort: 'FRRMS is in the same building'
   } : {
     ask: 'Kam chodíš do školy?', walk: 'pěšky na', pt: 'MHD na', bldg: 'budova',
-    ptLine: 'MHD', bike: 'na kole', walkLine: 'pěšky', garden: 'Přes botanickou zahradu',
+    ptLine: 'MHD', walkLine: 'pěšky', garden: 'Přes botanickou zahradu',
     gardenWhen: 'po–pá 6–20', here: 'Bydlíš přímo v budově své fakulty (budova Z).',
     zf: 'ZF je v Lednici. Bydlet budeš nejspíš na kolejích P. Bezruče, 3 minuty od fakulty.',
     then: ', pak ', tram: 'tramvaj', trolleybus: 'trolejbus', bus: 'autobus', close: 'Zavřít', photo: 'Foto',
-    map: 'Mapa kolejí MENDELU', walkLeg: 'pěšky', rideLeg: 'MHD'
+    map: 'Mapa kolejí MENDELU', walkLeg: 'pěšky', rideLeg: 'MHD',
+    walkShort: '%m min pěšky na %f', ptShort: 'MHD %m min na %f', hereShort: 'FRRMS máš v budově'
   };
   var fac = null, sel = null;
   var mapBox = root.querySelector('.dmap-map');
@@ -147,45 +149,59 @@
   function tripHTML(id) {
     var r = trip(id), fb = FACS[fac];
     if (!r) return '<div class="dmap-trip ask"><p>' + T.ask + '</p><div class="dmap-facs">' + facChips() + '</div></div>';
-    if (r.zf) return '<div class="dmap-trip ask"><p>' + T.zf + '</p></div>';
+    if (r.zf) return '';
     if (r.here) return '<div class="dmap-trip"><span>' + T.here + '</span></div>';
     var transit = id === 'taufer';
     var big = transit ? r.pt : r.walk, what = (transit ? T.pt : T.walk) + ' ' + fac + ' (' + T.bldg + ' ' + fb + ')';
     var html = '<div class="dmap-trip"><b>' + big + ' min</b><span>' + what + '</span></div>';
     if (transit) {
-      html += '<p class="dmap-via">' + via(r) + '</p>';
-      html += '<p class="dmap-more">' + T.walkLine + ' ' + r.walk + ' min · ' + T.bike + ' ' + r.bike + ' min</p>';
-      return html;
+      return html + '<p class="dmap-via">' + via(r) + '</p>';
     }
     if (r.garden) html += '<p class="dmap-via">' + T.garden + ' ' + r.garden + ' min (' + T.gardenWhen + ')</p>';
     // Public transport only where it beats walking by 2 minutes or more, waiting included.
     if (r.pt && r.pt <= r.walk - 2) html += '<p class="dmap-via">' + T.ptLine + ' ' + r.pt + ' min: ' + via(r) + '</p>';
-    return html + '<p class="dmap-more">' + T.bike + ' ' + r.bike + ' min</p>';
+    return html;
   }
   function renderPane() {
-    if (!sel) { pane.classList.remove('open'); pane.innerHTML = pane.getAttribute('data-empty'); pane.classList.add('empty'); return; }
-    var card = document.getElementById(sel), body = card ? card.cloneNode(true) : null;
+    // ZF is in Lednice, not on this map: show that whatever dorm is picked.
+    var id = fac === 'ZF' ? 'lednice' : sel;
+    if (!id) { pane.classList.remove('open'); pane.innerHTML = pane.getAttribute('data-empty'); pane.classList.add('empty'); return; }
+    var card = document.getElementById(id), body = card ? card.cloneNode(true) : null;
     if (body) {
       body.removeAttribute('id'); body.removeAttribute('style'); body.className = 'dmap-card';
       Array.prototype.forEach.call(body.querySelectorAll('.why,.badge,.times'), function (n) { n.remove(); });
+      // The trip box says the time, so the card's key line keeps only the bathroom.
+      var key = body.querySelector('.key');
+      if (key) key.innerHTML = key.innerHTML.split(' · <span')[0];
     }
-    var p = PHOTO[sel];
     pane.classList.remove('empty');
-    var fig = p ? '<figure class="dmap-photo"><img src="' + p.src + '" alt="' + p.alt + '" width="960" height="642"><figcaption>' + T.photo + ': ' + p.credit + '</figcaption></figure>' : '';
-    var phone = window.innerWidth < 900;
-    pane.innerHTML = '<button type="button" class="dmap-x" aria-label="' + T.close + '">×</button>' + (phone ? '' : fig);
+    pane.innerHTML = '<button type="button" class="dmap-x" aria-label="' + T.close + '">×</button>';
+    if (id === 'lednice') pane.insertAdjacentHTML('beforeend', '<div class="dmap-trip ask"><p>' + T.zf + '</p></div>');
     if (body) {
       var head = body.querySelector('.dorm-head');
-      // On a phone the sheet opens low, so the trip comes first and the photo after it.
-      if (head) head.insertAdjacentHTML('afterend', tripHTML(sel) + (phone ? fig : ''));
+      if (head) head.insertAdjacentHTML('afterend', tripHTML(id));
+      var p = PHOTO[id], more = body.querySelector('details.more');
+      if (p && more) more.querySelector('summary').insertAdjacentHTML('afterend', '<figure class="dmap-photo"><img src="' + p.src + '" alt="' + p.alt + '" width="960" height="642" loading="lazy"><figcaption>' + T.photo + ': ' + p.credit + '</figcaption></figure>');
       pane.appendChild(body);
     }
     pane.classList.add('open');
   }
+  // The cards' key line ("· 17 min pěšky na Zemědělskou") follows the picked faculty.
+  function syncTimes() {
+    Array.prototype.forEach.call(document.querySelectorAll('[data-time]'), function (n) {
+      var id = n.getAttribute('data-time');
+      if (!n.hasAttribute('data-default')) n.setAttribute('data-default', n.textContent);
+      var r = trip(id);
+      if (!r || r.zf) n.textContent = n.getAttribute('data-default');
+      else if (r.here) n.textContent = T.hereShort;
+      else if (id === 'taufer') n.textContent = T.ptShort.replace('%m', r.pt).replace('%f', fac);
+      else n.textContent = T.walkShort.replace('%m', r.walk).replace('%f', fac);
+    });
+  }
   function syncChips() {
     Array.prototype.forEach.call(document.querySelectorAll('[data-fac]'), function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-fac') === fac)); });
   }
-  function render() { syncChips(); draw(); renderPane(); }
+  function render() { syncChips(); syncTimes(); draw(); renderPane(); }
   function pick(id) {
     sel = id; render();
     if (window.innerWidth < 900) mapBox.scrollIntoView({ block: 'start', behavior: 'smooth' });
