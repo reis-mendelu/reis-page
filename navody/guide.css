@@ -104,3 +104,9 @@ a.device{text-decoration:none}
 .note a{color:var(--text-3)}
 .shot p{margin:2px 0 10px;font-size:16px;line-height:1.5}
 .shot img{display:block;max-width:min(100%,220px);height:auto;border-radius:12px;border:1px solid var(--border);background:var(--surface);margin:0 0 18px}
+/* Opened from the reIS app (?z=app): no install buttons, the student already has reIS. */
+.from-app .badges,.from-app .cta,.from-app .cta+.hint,.from-app .tophone{display:none!important}
+/* "Pošli spolužákovi" (added by guide.js above the Ověřeno line). */
+.share{display:inline-flex;align-items:center;gap:8px;margin:22px 0 4px;font:inherit;font-size:15px;font-weight:600;color:var(--text);background:var(--surface);border:1px solid var(--border-strong);border-radius:999px;padding:9px 16px;cursor:pointer}
+.share:hover{border-color:var(--accent)}
+.share svg{color:var(--accent-text)}
