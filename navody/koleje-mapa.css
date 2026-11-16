@@ -11,7 +11,7 @@
 .dmap-map{position:relative;height:440px;border:1px solid var(--border);border-radius:16px;overflow:hidden;background:#111612}
 .dmap-map svg{display:block;width:100%;height:100%}
 .dmap-dorm{cursor:pointer;outline:none}
-.dmap-dorm:focus-visible path:last-of-type{stroke:var(--accent);stroke-width:3px}
+.dmap-dorm:focus-visible rect:last-of-type{stroke:#fff;stroke-width:3px}
 .dmap-legend{position:absolute;left:10px;bottom:10px;display:flex;gap:10px;flex-wrap:wrap;font-size:11px;color:var(--text-3);background:rgba(13,17,14,.85);padding:5px 9px;border-radius:8px}
 .dmap-legend a{color:var(--text-3)}
 .dmap-legend i{display:inline-block;width:14px;height:0;border-top:3px solid #a5d85f;vertical-align:middle;margin-right:4px}
@@ -19,13 +19,11 @@
 .dmap-hint{margin:8px 0 0;font-size:13px;color:var(--text-4)}
 .dmap-pane{position:relative;background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:16px}
 .dmap-pane.empty{display:flex;align-items:center;justify-content:center;text-align:center;color:var(--text-3);font-size:14px;line-height:1.5}
-.dmap-x{position:absolute;top:10px;right:10px;z-index:1;width:34px;height:34px;border-radius:50%;border:1px solid var(--border-strong);background:var(--surface-2);color:var(--text);font-size:19px;line-height:1;cursor:pointer}
+.dmap-x{position:sticky;top:0;float:right;margin:-4px -4px 6px 8px;z-index:1;width:34px;height:34px;border-radius:50%;border:1px solid var(--border-strong);background:var(--surface-2);color:var(--text);font-size:19px;line-height:1;cursor:pointer}
 .dmap-photo{margin:0 0 12px}
 .dmap-photo img{display:block;width:100%;height:auto;border-radius:12px;border:1px solid var(--border)}
 .dmap-photo figcaption{margin-top:4px;font-size:11px;color:var(--text-4)}
 .dmap-photo figcaption a{color:var(--text-3)}
-.dmap-card .dorm-head{padding-right:40px}
-.dmap-photo+.dmap-card .dorm-head{padding-right:0}
 .dmap-card h3{margin:0;font-size:19px;font-weight:700;line-height:1.25}
 .dmap-card h3 small{display:block;font-size:13px;font-weight:400;color:var(--text-3);margin-top:2px}
 .dmap-card .price{margin:0;text-align:right;white-space:nowrap;font-size:13px;color:var(--text-3)}
