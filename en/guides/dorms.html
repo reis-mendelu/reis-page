@@ -22,8 +22,11 @@
 <meta name="theme-color" content="#0d110e">
 <link href="/navod/fonts.css" rel="stylesheet">
 <link rel="stylesheet" href="/navody/guide.css">
+<link rel="stylesheet" href="/navody/koleje-mapa.css">
 <script src="/ph.js"></script>
 <script src="/navody/guide.js" defer></script>
+<script src="/navody/koleje-mapa-data.js" defer></script>
+<script src="/navody/koleje-mapa.js" defer></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","headline":"MENDELU dorms: which one to choose, prices and how to get a place","inLanguage":"en","url":"https://reisapp.cz/en/guides/dorms","datePublished":"2026-11-16","dateModified":"2026-11-16","author":{"@type":"Organization","name":"reIS","url":"https://reisapp.cz/"},"publisher":{"@id":"https://reisapp.cz/#org"},"about":"Student dormitories of Mendel University in Brno: JAK, Akademie, Taufer and Lednice","citation":["https://skm.mendelu.cz/ubytovani/ubytovaci-zarizeni/27982-koleje-jak","https://skm.mendelu.cz/ubytovani/ubytovaci-zarizeni/27987-kolej-akademie","https://skm.mendelu.cz/ubytovani/ubytovaci-zarizeni/27988-tauferovy-koleje","https://skm.mendelu.cz/ubytovani/ubytovaci-zarizeni/27991-koleje-v-lednici-na-morave","https://skm.mendelu.cz/ubytovani/27990-pro-studenty","https://is.mendelu.cz/dok_server/slozka.pl?id=12343;download=293647","https://is.mendelu.cz/dok_server/slozka.pl?id=12343;download=317972"]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"reIS","item":"https://reisapp.cz/en"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://reisapp.cz/en/guides"},{"@type":"ListItem","position":3,"name":"Dorms","item":"https://reisapp.cz/en/guides/dorms"}]}]}</script>
 </head>
 <body>
@@ -35,10 +38,20 @@
   <main>
     <nav class="crumbs" aria-label="Breadcrumb"><a href="/en">reIS</a><span aria-hidden="true">›</span><a href="/en/guides">Guides</a><span aria-hidden="true">›</span><span aria-current="page">Dorms</span></nav>
     <h1>MENDELU dorms: which one to choose</h1>
-    <p class="lead">Pick what matters most to you and see right away which dorm fits.</p>
+    <p class="lead">Pick your faculty and tap a dorm: you will see the way to school, how long it takes and what the dorm has.</p>
     <div class="done"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg><span><strong>Ask for a place right after you are admitted, by 1 September at the latest.</strong> After that, only free beds are left. <small>Date from SKM's rules for 2026/27.</small></span></div>
 
-    <h2 class="step-h" id="choose"><span class="num">1</span>What matters most to you?</h2>
+    <section data-dorm-map hidden>
+      <h2 class="step-h" id="faculty"><span class="num">1</span>Which faculty do you study at?</h2>
+      <div class="dmap-facs" role="group" aria-label="Faculty"><button type="button" class="dmap-fac" data-fac="AF" aria-pressed="false">AF<small>AgriSciences</small></button><button type="button" class="dmap-fac" data-fac="LDF" aria-pressed="false">LDF<small>Forestry and Wood</small></button><button type="button" class="dmap-fac" data-fac="PEF" aria-pressed="false">PEF<small>Business and Economics</small></button><button type="button" class="dmap-fac" data-fac="FRRMS" aria-pressed="false">FRRMS<small>Regional Development</small></button><button type="button" class="dmap-fac" data-fac="ICV" aria-pressed="false">ICV<small>Lifelong Learning</small></button><button type="button" class="dmap-fac" data-fac="ZF" aria-pressed="false">ZF<small>Horticulture</small></button></div>
+      <h2 class="step-h" id="map"><span class="num">2</span>Tap a dorm on the map</h2>
+      <div class="dmap">
+        <div><div class="dmap-map"></div><p class="dmap-hint">Dorms are green. The route leads to the door of your faculty’s building.</p></div>
+        <aside class="dmap-pane empty" aria-live="polite" data-empty="Tap a dorm on the map to see the way to your faculty, the price and what the dorm has.">Tap a dorm on the map to see the way to your faculty, the price and what the dorm has.</aside>
+      </div>
+    </section>
+
+    <h2 class="step-h" id="choose">Or by what matters most to you</h2>
     <div class="devices four" role="group" aria-label="What matters most to you">
       <button type="button" class="device" data-pick="near" data-order="akademie jak" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span><b>Close to campus</b></span></button>
       <button type="button" class="device" data-pick="bath" data-order="akademie jak" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4l2.5 2.5M13.5 6.5a4.95 4.95 0 0 0-7 7M15 5 5 15M14 17v.01M10 16v.01M13 13v.01M16 10v.01M11 20v.01M17 14v.01M20 11v.01"/></svg><span><b>Own bathroom</b></span></button>
@@ -53,17 +66,17 @@
         <p class="badge">Our pick</p>
         <div class="dorm-head"><h3>Akademie<small>tř. Generála Píky 7, building Z</small></h3><p class="price">from <b>5,040&nbsp;CZK</b><small> / month</small><small class="room">triple room</small></p></div>
         <p class="fit">Good if you want life around you: the S-klub in the building and a walk to class through the botanical garden.</p>
-        <ul class="facts"><li><b>Own bathroom</b> · <b>17 min walk</b> to Zemědělská</li></ul>
+        <ul class="facts"><li><b>Own bathroom</b> · <b>17 min walk</b> to Zemědělská</li><li class="times">To school on foot: AF 15, LDF 15, PEF 19, ICV 15 min. FRRMS is in the same building.</li></ul>
         <p class="tip"><b>From our experience:</b> our favourite dorm. It is not strict, the S-klub is a renovated club and café with lots of events (its menu is in reIS) and reception sells the MENDELU student wine.</p>
         <p class="rooms">Single 5,670, double 5,370, triple 5,040&nbsp;CZK · kitchen on the floor · <a href="https://skm.mendelu.cz/ubytovani/ubytovaci-zarizeni/27987-kolej-akademie">SKM page</a></p>
       </article>
       <article class="dorm" id="jak">
-        <p class="why" data-for="near">Why: 18 minutes on foot to Zemědělská, 8 by bike.</p>
+        <p class="why" data-for="near">Why: 18 minutes on foot to Zemědělská, 7 by bike.</p>
         <p class="why" data-for="bath">Why: block D has its own bathroom and kitchenette.</p>
         <p class="why" data-for="sport">Why: an outdoor sports pitch and a workout area right in the grounds.</p>
         <div class="dorm-head"><h3>JAK, blocks A, B and D<small>Kohoutova 3–11, Brno</small></h3><p class="price">from <b>4,260&nbsp;CZK</b><small> / month</small><small class="room">triple in block D</small></p></div>
         <p class="fit">Good if you want good value for money.</p>
-        <ul class="facts"><li><b>Block D:</b> <b>own bathroom</b> · from 4,260&nbsp;CZK</li><li><b>Blocks A and B:</b> bathroom shared by 2 rooms, renovated · from 4,890&nbsp;CZK</li><li><b>18 min walk</b> to Zemědělská</li></ul>
+        <ul class="facts"><li><b>Block D:</b> <b>own bathroom</b> · from 4,260&nbsp;CZK</li><li><b>Blocks A and B:</b> bathroom shared by 2 rooms, renovated · from 4,890&nbsp;CZK</li><li><b>18 min walk</b> to Zemědělská</li><li class="times">To school on foot from block D: AF 17, LDF 16, PEF 20, FRRMS 21, ICV 16 min.</li></ul>
         <p class="tip"><b>From our experience:</b> we recommend block D or A most, B is fine too.</p>
         <p class="rooms">Also: D double 5,370, A and B standalone room 5,670&nbsp;CZK · A and B renovated 2016 and 2020 · <a href="https://skm.mendelu.cz/ubytovani/ubytovaci-zarizeni/27982-koleje-jak">SKM page</a></p>
       </article>
@@ -72,7 +85,7 @@
         <p class="why" data-for="sport">Why: MENDELU's sports centre (gym, fitness room) is right in the grounds.</p>
         <div class="dorm-head"><h3>Taufer dorms<small>Jana Babáka 3, Královo Pole</small></h3><p class="price">from <b>4,110&nbsp;CZK</b><small> / month</small><small class="room">room for 3 or more</small></p></div>
         <p class="fit">Good for athletes.</p>
-        <ul class="facts"><li><b>Bathroom shared by 2–3 rooms</b> · <b>37 min walk</b>, or tram with a change</li></ul>
+        <ul class="facts"><li><b>Bathroom shared by 2–3 rooms</b> · <b>38 min walk</b>, or tram with a change</li><li class="times">To school by public transport: AF 26, LDF 25, PEF 28, FRRMS 30, ICV 25 min (tram 12 and a change).</li></ul>
         <p class="tip"><b>From our experience:</b> renovated, but far from campus. MENDELU's sports centre is next door.</p>
         <p class="rooms">Single 4,410, double 4,260, room for 3 or more 4,110&nbsp;CZK · <a href="https://skm.mendelu.cz/ubytovani/ubytovaci-zarizeni/27988-tauferovy-koleje">SKM page</a></p>
       </article>
@@ -80,7 +93,7 @@
         <p class="why" data-for="cheap">Why: the cheapest dorm in Brno.</p>
         <div class="dorm-head"><h3>JAK, block C<small>Kohoutova 3–11, Brno</small></h3><p class="price">from <b>3,780&nbsp;CZK</b><small> / month</small><small class="room">double or triple</small></p></div>
         <p class="fit">Good if price is what counts.</p>
-        <ul class="facts"><li><b>Toilets, showers and kitchen on the floor</b> · <b>18 min walk</b></li></ul>
+        <ul class="facts"><li><b>Toilets, showers and kitchen on the floor</b> · <b>20 min walk</b></li><li class="times">To school on foot: AF 19, LDF 18, PEF 22, FRRMS 21, ICV 18 min.</li></ul>
         <p class="flag">Cable only in the room, wifi only in the lobby.</p>
         <p class="tip"><b>From our experience:</b> most students who can afford it pick block A, B or D.</p>
         <p class="rooms">Double or triple room with a washbasin · <a href="https://skm.mendelu.cz/ubytovani/ubytovaci-zarizeni/27982-koleje-jak">SKM page</a></p>
@@ -89,9 +102,9 @@
         <p><b>P. Bezruč dorms, Lednice</b>: only if you study at the Faculty of Horticulture in Lednice, from 3,480&nbsp;CZK a month. <a href="https://skm.mendelu.cz/ubytovani/ubytovaci-zarizeni/27991-koleje-v-lednici-na-morave">SKM page</a></p>
       </article>
     </div>
-    <p class="note">Price a month = cheapest room × 30 nights, full-time students, <a href="https://is.mendelu.cz/dok_server/slozka.pl?id=12343;download=293647">SKM's price list</a> (in Czech) from 1 July 2026. The direct debit changes with the days in the month. Walking times from OpenStreetMap routes. “From our experience” is written by the reIS team and is not official SKM information.</p>
+    <p class="note">Price a month = cheapest room × 30 nights, full-time students, <a href="https://is.mendelu.cz/dok_server/slozka.pl?id=12343;download=293647">SKM's price list</a> (in Czech) from 1 July 2026. The direct debit changes with the days in the month. Walking times from OpenStreetMap routes to the door of the faculty building (about 4.5 km/h; at a brisk pace you will be faster). Public transport is the weekday 7–9 am median from the IDS JMK timetables, waiting included. “From our experience” is written by the reIS team and is not official SKM information.</p>
 
-    <h2 class="step-h" id="get-a-place"><span class="num">2</span>How to get a place</h2>
+    <h2 class="step-h" id="get-a-place"><span class="num">3</span>How to get a place</h2>
     <ol class="steps">
       <li><p>Right after you are admitted, email the dorm's accommodation office. Until 1 September you get a place from the first-year capacity.</p></li>
       <li><p>Pay the refundable 5,000&nbsp;CZK deposit.</p></li>
@@ -109,7 +122,7 @@
         <p>Dates from the rules for 2026/27 (for that year it was 1. 9. 2026), checked on 16. 11. 2026 against <a href="https://skm.mendelu.cz/ubytovani/27990-pro-studenty">SKM's page for students</a> and the <a href="https://is.mendelu.cz/dok_server/slozka.pl?id=12343;download=317972">accommodation schedule</a> (both in Czech).</p>
     </details>
 
-    <h2 class="step-h" id="where"><span class="num">3</span>Where the dorms are</h2>
+    <h2 class="step-h" id="where"><span class="num">4</span>Dorms in the reIS Map</h2>
     <div class="shot">
       <p>Type “kolej” in the reIS Map to find the JAK blocks, Akademie and the Taufer dorms.</p>
       <img src="/assets/navody/koleje/phone-en-map-jak.webp" alt="Map in the reIS app: blocks A, B, C and D of the JAK dorms on Kohoutova street" width="780" height="1220" loading="lazy">
