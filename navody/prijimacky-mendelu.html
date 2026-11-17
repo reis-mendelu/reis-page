@@ -79,10 +79,25 @@
 .box .cta{margin-top:4px;color:var(--on-btn)}
 .tl{list-style:none;margin:0;padding:0}.tl li{display:grid;grid-template-columns:118px 1fr;gap:10px;align-items:start;padding:7px 0;border-top:1px solid var(--border);font-size:15px;line-height:1.4}.tl li:first-child{border-top:0}.tl .pill{text-align:center}.js[data-f="ekonomie"] .tl li.i,.js[data-f="informatika"] .tl li.e{display:none}.box details{border-bottom:0;margin-top:10px;padding-bottom:0}.hero{border-color:var(--accent);background:var(--card-green)}
 .hero .fact{background:var(--surface)}
-.dec{display:grid;grid-template-columns:repeat(10,1fr);gap:3px;margin:4px 0 8px}
-.dec i{display:flex;align-items:flex-end;justify-content:center;height:46px;border-radius:6px;background:var(--surface-2);border:1px solid var(--border);font-style:normal}
-.dec i.mid,.dec i.top{border-color:var(--accent)}
-.dec b{font-size:12px;font-weight:700;padding-bottom:4px}
+.ruler{position:relative;height:84px;margin:6px 10px 6px}
+.ruler .track{position:absolute;left:0;right:0;top:34px;height:10px;border-radius:999px;background:linear-gradient(90deg,var(--surface-2),var(--border-green) 41%,var(--border-green) 79%,var(--surface-2))}
+.mk{position:absolute;top:0;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center}
+.mk b{font-size:16px;font-weight:800;line-height:1}
+.mk::after{content:"";width:2px;height:24px;margin-top:4px;background:var(--text-3)}
+.m35 b{color:var(--text-2)}.m61 b,.m79 b{color:var(--accent-text)}
+.you{position:absolute;top:48px;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center}
+.you::before{content:"";width:0;height:0;border:6px solid transparent;border-bottom:8px solid var(--text)}
+.you b{font-size:12px;font-weight:800;padding:1px 7px;border-radius:999px;background:var(--text);color:var(--bg)}
+.tk{position:absolute;top:50px;transform:translateX(-50%);font-size:11px;color:var(--text-4)}
+.tk[style="left:0"]{transform:none;left:-10px!important}.tk[style="left:100%"]{transform:translateX(-100%);left:calc(100% + 10px)!important}
+.legend{list-style:none;padding:0!important;margin:0 0 10px!important}
+.legend li{display:grid;grid-template-columns:34px 1fr;gap:8px;padding:6px 0;border-top:1px solid var(--border);font-size:15px;line-height:1.4}
+.legend b{font-size:17px;font-weight:800;color:var(--accent-text)}
+.legend li:first-child b{color:var(--text-2)}
+.try{margin:4px 0 10px;padding:12px 14px;border-radius:12px;background:var(--surface)}
+.try label{display:block;font-size:15px;font-weight:700;margin:0 0 6px}
+.try input{width:100%;accent-color:var(--accent)}
+.try output{display:block;margin-top:6px;font-size:15px;line-height:1.4}
 .dec-k{margin:0 0 8px;font-size:13px;line-height:1.45;color:var(--text-3)}
 .dec-k a{color:var(--accent-text)}
 .lines{list-style:none;padding:0!important;margin:0 0 8px!important}
@@ -125,17 +140,26 @@
     </section>
 
     <section class="box">
-      <h2 class="sec">Kolik bodů měli ostatní (2026)</h2>
-      <div class="dec" role="img" aria-label="Body v testu PEF 2026 po desetinách: 41, 48, 53, 57, 61, 65, 69, 73, 79">
-        <i><b>&lt;41</b></i><i><b>41</b></i><i><b>48</b></i><i><b>53</b></i><i><b>57</b></i><i class="mid"><b>61</b></i><i><b>65</b></i><i><b>69</b></i><i><b>73</b></i><i class="top"><b>79+</b></i>
+      <h2 class="sec">Výsledky testu PEF 2026</h2>
+      <div class="ruler" aria-hidden="true">
+        <span class="mk m35" style="left:35%"><b>35</b></span>
+        <span class="mk m61" style="left:61%"><b>61</b></span>
+        <span class="mk m79" style="left:79%"><b>79</b></span>
+        <div class="track"></div>
+        <span class="you" style="left:55%"><b>Ty</b></span>
+        <span class="tk" style="left:0">0</span><span class="tk" style="left:100%">100</span>
       </div>
-      <p class="dec-k">Každý dílek = 1 z 10 lidí, kteří psali test PEF (2 855 lidí, všechny bakalářské obory).</p>
-      <ul class="lines">
-        <li><b>61 bodů</b> = přesně uprostřed. Polovina měla víc.</li>
-        <li><b>79 a víc</b> = nejlepší 1 z 10.</li>
-        <li><b>Pod 41</b> měl jen 1 z 10. Minimum pro 2027 je 35.</li>
+      <ul class="legend">
+        <li><b>35</b> minimum, platí i pro přijímačky 2027. Méně a nevezmou tě.</li>
+        <li><b>61</b> prostřední výsledek. Polovina lidí měla víc, polovina míň.</li>
+        <li><b>79</b> lepší než 9 z 10 lidí.</li>
       </ul>
-      <p class="dec-k">Kolik bodů stačilo na přijetí, PEF nezveřejňuje, takže „55 stačí“ ti nikdo neřekne. Víme jen, že pod 35 tě nevezmou a že rozhoduje pořadí v tvém oboru.</p>
+      <div class="try">
+        <label for="pts">Kolik máš z cvičného testu?</label>
+        <input id="pts" type="range" min="0" max="100" value="55">
+        <output for="pts" aria-live="polite"><b>55 bodů</b> = lepší než 3 z 10 lidí, kteří test psali. Nad minimem, ale pod polovinou: jestli to stačí, rozhoduje pořadí v tvém oboru.</output>
+      </div>
+      <p class="dec-k">Test psalo 2 855 lidí na všechny bakalářské obory PEF. Kolik bodů stačilo na přijetí, PEF nezveřejňuje.</p>
     </section>
 
     <section class="box">
@@ -307,6 +331,18 @@
     if (c) { scio = scio === +c.dataset.p ? null : +c.dataset.p; render(); }
   });
   render();
+  // "Kolik bodů čekáš?": PEF test deciles 2026 (all Bc takers) -> "lepší než N z 10"; moves the "Ty" marker.
+  var pts = document.getElementById('pts');
+  if (pts) {
+    var dec = [41, 48, 53, 57, 61, 65, 69, 73, 79], you = document.querySelector('.you'), out = pts.parentNode.querySelector('output');
+    var show = function () {
+      var v = +pts.value, n = dec.filter(function (d) { return v >= d; }).length;
+      you.style.left = v + '%';
+      var rank = n === 0 ? 'mezi nejslabší 1 z 10 lidí, kteří test psali' : 'lepší než ' + n + ' z 10 lidí, kteří test psali';
+      out.innerHTML = '<b>' + v + ' bodů</b> = ' + (v < 35 ? 'pod minimem 35, s tím tě nevezmou.' : rank + '. ' + (v < 61 ? 'Nad minimem, ale pod polovinou: jestli to stačí, rozhoduje pořadí v tvém oboru.' : 'Lepší polovina. O přijetí rozhoduje pořadí v tvém oboru.'));
+    };
+    pts.addEventListener('input', show); show();
+  }
 })();
 </script>
 </body>
