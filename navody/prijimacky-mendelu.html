@@ -140,7 +140,7 @@
     </section>
 
     <section class="box">
-      <h2 class="sec">Kolik bodů z testu PEF měli ostatní (2026)</h2>
+      <h2 class="sec">Výsledky testu PEF 2026</h2>
       <div class="ruler" aria-hidden="true">
         <span class="mk m35" style="left:35%"><b>35</b></span>
         <span class="mk m61" style="left:61%"><b>61</b></span>
@@ -150,16 +150,16 @@
         <span class="tk" style="left:0">0</span><span class="tk" style="left:100%">100</span>
       </div>
       <ul class="legend">
-        <li><b>35</b> minimum pro 2027. Méně a nevezmou tě.</li>
+        <li><b>35</b> minimum, platí i pro přijímačky 2027. Méně a nevezmou tě.</li>
         <li><b>61</b> prostřední výsledek. Polovina lidí měla víc, polovina míň.</li>
         <li><b>79</b> lepší než 9 z 10 lidí.</li>
       </ul>
       <div class="try">
-        <label for="pts">Kolik bodů čekáš?</label>
+        <label for="pts">Kolik máš z cvičného testu?</label>
         <input id="pts" type="range" min="0" max="100" value="55">
-        <output for="pts" aria-live="polite"><b>55 bodů</b> = lepší než 3 z 10 lidí, kteří test psali.</output>
+        <output for="pts" aria-live="polite"><b>55 bodů</b> = lepší než 3 z 10 lidí, kteří test psali. Nad minimem, ale pod polovinou: jestli to stačí, rozhoduje pořadí v tvém oboru.</output>
       </div>
-      <p class="dec-k">Test psalo 2 855 lidí na všechny bakalářské obory PEF. Kolik bodů stačilo na přijetí, PEF nezveřejňuje. Víme jen, že pod 35 tě nevezmou a že rozhoduje pořadí v tvém oboru.</p>
+      <p class="dec-k">Test psalo 2 855 lidí na všechny bakalářské obory PEF. Kolik bodů stačilo na přijetí, PEF nezveřejňuje.</p>
     </section>
 
     <section class="box">
@@ -338,7 +338,8 @@
     var show = function () {
       var v = +pts.value, n = dec.filter(function (d) { return v >= d; }).length;
       you.style.left = v + '%';
-      out.innerHTML = '<b>' + v + ' bodů</b> = ' + (v < 35 ? 'pod minimem 35, s tím tě nevezmou.' : n === 0 ? 'mezi nejslabší 1 z 10 lidí, kteří test psali.' : n === 9 ? 'lepší než 9 z 10 lidí, kteří test psali.' : 'lepší než ' + n + ' z 10 lidí, kteří test psali.');
+      var rank = n === 0 ? 'mezi nejslabší 1 z 10 lidí, kteří test psali' : 'lepší než ' + n + ' z 10 lidí, kteří test psali';
+      out.innerHTML = '<b>' + v + ' bodů</b> = ' + (v < 35 ? 'pod minimem 35, s tím tě nevezmou.' : rank + '. ' + (v < 61 ? 'Nad minimem, ale pod polovinou: jestli to stačí, rozhoduje pořadí v tvém oboru.' : 'Lepší polovina. O přijetí rozhoduje pořadí v tvém oboru.'));
     };
     pts.addEventListener('input', show); show();
   }
