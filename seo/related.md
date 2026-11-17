@@ -234,3 +234,35 @@ _nothing suggested_
 
 _nothing suggested_
 
+## přijímačky mendelu
+
+_nothing suggested_
+
+## mendelu přijímačky vzor
+
+_nothing suggested_
+
+## test předpokladů ke studiu mendelu
+
+_nothing suggested_
+
+## muni tsp percentil body
+
+_nothing suggested_
+
+## kolik percentil na muni
+
+_nothing suggested_
+
+## přijímačky vut fit
+
+_nothing suggested_
+
+## přijímačky vut fp
+
+_nothing suggested_
+
+## esf muni přijímačky
+
+_nothing suggested_
+
