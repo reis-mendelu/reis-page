@@ -1,4 +1,4 @@
-# What Google suggests, 2026-11-16
+# What Google suggests, 2026-11-17
 
 "Related searches" and "People also ask" per tracked query (gl=cz).
 
@@ -219,6 +219,18 @@ _nothing suggested_
 _nothing suggested_
 
 ## koleje vut cena
+
+_nothing suggested_
+
+## informatika brno
+
+_nothing suggested_
+
+## fit vut vs fi muni
+
+_nothing suggested_
+
+## otevřená informatika mendelu
 
 _nothing suggested_
 
