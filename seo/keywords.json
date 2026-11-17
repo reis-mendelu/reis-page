@@ -56,5 +56,13 @@
   { "topic": "koleje", "hl": "cs", "q": "koleje vut cena" },
   { "topic": "informatika", "hl": "cs", "q": "informatika brno" },
   { "topic": "informatika", "hl": "cs", "q": "fit vut vs fi muni" },
-  { "topic": "informatika", "hl": "cs", "q": "otevřená informatika mendelu" }
+  { "topic": "informatika", "hl": "cs", "q": "otevřená informatika mendelu" },
+  { "topic": "prijimacky", "hl": "cs", "q": "přijímačky mendelu" },
+  { "topic": "prijimacky", "hl": "cs", "q": "mendelu přijímačky vzor" },
+  { "topic": "prijimacky", "hl": "cs", "q": "test předpokladů ke studiu mendelu" },
+  { "topic": "prijimacky", "hl": "cs", "q": "muni tsp percentil body" },
+  { "topic": "prijimacky", "hl": "cs", "q": "kolik percentil na muni" },
+  { "topic": "prijimacky", "hl": "cs", "q": "přijímačky vut fit" },
+  { "topic": "prijimacky", "hl": "cs", "q": "přijímačky vut fp" },
+  { "topic": "prijimacky", "hl": "cs", "q": "esf muni přijímačky" }
 ]
