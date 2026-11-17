@@ -2751,3 +2751,598 @@ date,topic,hl,query,position,owner,url
 2026-11-17,informatika,cs,otevřená informatika mendelu,7,other,https://www.vysokeskoly.com/obor/46030
 2026-11-17,informatika,cs,otevřená informatika mendelu,8,other,https://www.youtube.com/shorts/uKmIPJyUTbI
 2026-11-17,informatika,cs,otevřená informatika mendelu,9,mendelu,https://pef.mendelu.cz/studijni-programy/otevrena-informatika-nmgr/
+2026-11-17,eduroam,cs,eduroam mendelu,1,mendelu,https://eduroam.mendelu.cz/
+2026-11-17,eduroam,cs,eduroam mendelu,2,mendelu,https://frrms.mendelu.cz/bezdratova-sit-eduroam/
+2026-11-17,eduroam,cs,eduroam mendelu,3,mendelu,https://tech.mendelu.cz/studentska-kolejni-sit
+2026-11-17,eduroam,cs,eduroam mendelu,4,mendelu,https://tech.mendelu.cz/33546n-studenti-a-mendelu-host
+2026-11-17,eduroam,cs,eduroam mendelu,5,other,https://www.facebook.com/oit.mendelu/posts/pot%C5%99ebuje%C5%A1-wi-fi-p%C5%99ipojen%C3%AD-v-s%C3%ADti-eduroambez-certifik%C3%A1t%C5%AF-z-uis-to-nep%C5%AFjdekomplet/758840896902229/
+2026-11-17,eduroam,cs,eduroam mendelu,6,mendelu,https://mendelu.cz/informacni-systemy/
+2026-11-17,eduroam,cs,eduroam mendelu,7,mendelu,https://tech.mendelu.cz/26226-site
+2026-11-17,eduroam,cs,mendelu wifi,1,mendelu,https://eduroam.mendelu.cz/
+2026-11-17,eduroam,cs,mendelu wifi,2,mendelu,https://tech.mendelu.cz/studentska-kolejni-sit
+2026-11-17,eduroam,cs,mendelu wifi,3,mendelu,https://tech.mendelu.cz/33546n-studenti-a-mendelu-host
+2026-11-17,eduroam,cs,mendelu wifi,4,mendelu,https://tech.mendelu.cz/26226-site
+2026-11-17,eduroam,cs,mendelu wifi,5,mendelu,https://frrms.mendelu.cz/bezdratova-sit-eduroam/
+2026-11-17,eduroam,cs,mendelu wifi,6,mendelu,https://tech.mendelu.cz/caste-dotazy
+2026-11-17,eduroam,cs,mendelu wifi,7,mendelu,https://it.ldf.mendelu.cz/?p=217
+2026-11-17,eduroam,cs,eduroam mendelu iphone,1,mendelu,https://eduroam.mendelu.cz/navody-k-instalaci/25358-navody-pro-apple
+2026-11-17,eduroam,cs,eduroam mendelu iphone,2,mendelu,https://eduroam.mendelu.cz/navody-k-instalaci/navody-pro-apple/33652-navod-pro-ios-15
+2026-11-17,eduroam,cs,eduroam mendelu iphone,3,mendelu,https://eduroam.mendelu.cz/wcd/w-rek-eduroam/navody/apple/ios15_cz/eduroam_ios-15.pdf
+2026-11-17,eduroam,cs,eduroam mendelu iphone,4,mendelu,https://eduroam.mendelu.cz/
+2026-11-17,eduroam,cs,eduroam mendelu iphone,5,mendelu,https://eduroam.mendelu.cz/navody-k-instalaci/navody-pro-apple/25361-
+2026-11-17,eduroam,cs,eduroam mendelu iphone,6,mendelu,https://eduroam.mendelu.cz/25388-reseni-problemu-a-faq
+2026-11-17,eduroam,cs,eduroam mendelu iphone,7,mendelu,https://eduroam.mendelu.cz/25350-navody-k-instalaci
+2026-11-17,eduroam,cs,eduroam mendelu iphone,8,mendelu,https://eduroam.mendelu.cz/en/
+2026-11-17,eduroam,cs,eduroam mendelu iphone,9,other,https://it.muni.cz/sluzby/wifi/navody/mobilni-operacni-systemy/eduroam-na-ios-iphone-ipad-ipod
+2026-11-17,eduroam,cs,eduroam mendelu iphone,10,mendelu,https://eduroam.mendelu.cz/en/how-to-install/apple/29422-mac-os
+2026-11-17,eduroam,cs,eduroam mendelu android,1,mendelu,https://eduroam.mendelu.cz/navody-k-instalaci/25359-navody-pro-android
+2026-11-17,eduroam,cs,eduroam mendelu android,2,mendelu,https://eduroam.mendelu.cz/
+2026-11-17,eduroam,cs,eduroam mendelu android,3,mendelu,https://eduroam.mendelu.cz/25350-navody-k-instalaci
+2026-11-17,eduroam,cs,eduroam mendelu android,4,mendelu,https://eduroam.mendelu.cz/navody-k-instalaci/navody-pro-android/35560-navod-pro-android-13
+2026-11-17,eduroam,cs,eduroam mendelu android,5,mendelu,https://eduroam.mendelu.cz/25388-reseni-problemu-a-faq
+2026-11-17,eduroam,cs,eduroam mendelu android,6,mendelu,https://eduroam.mendelu.cz/en/25765
+2026-11-17,eduroam,cs,eduroam mendelu android,7,other,https://it.muni.cz/sluzby/wifi/navody/mobilni-operacni-systemy/eduroam-na-android
+2026-11-17,eduroam,cs,eduroam mendelu android,8,mendelu,https://eduroam.mendelu.cz/wcd/w-rek-eduroam/navody/eduroam_peap.pdf
+2026-11-17,eduroam,cs,eduroam mendelu android,9,other,https://androidforum.cz/viewtopic.php?t=4717
+2026-11-17,eduroam,cs,eduroam mendelu android,10,mendelu,https://eduroam.mendelu.cz/en/
+2026-11-17,eduroam,cs,eduroam mendelu nefunguje,1,mendelu,https://eduroam.mendelu.cz/25388-reseni-problemu-a-faq
+2026-11-17,eduroam,cs,eduroam mendelu nefunguje,2,mendelu,https://eduroam.mendelu.cz/
+2026-11-17,eduroam,cs,eduroam mendelu nefunguje,3,mendelu,https://tech.mendelu.cz/caste-dotazy
+2026-11-17,eduroam,cs,eduroam mendelu nefunguje,4,mendelu,https://eduroam.mendelu.cz/navody-k-instalaci/25355-navody-pro-windows
+2026-11-17,eduroam,cs,eduroam mendelu nefunguje,5,mendelu,https://eduroam.mendelu.cz/navody-k-instalaci/26047-navod-pro-chromebook
+2026-11-17,eduroam,cs,eduroam mendelu nefunguje,6,mendelu,https://eduroam.mendelu.cz/wcd/w-rek-eduroam/navody/apple/ios15_cz/eduroam_ios-15.pdf
+2026-11-17,eduroam,cs,eduroam mendelu nefunguje,7,other,https://androidforum.cz/viewtopic.php?t=4717
+2026-11-17,eduroam,cs,eduroam mendelu nefunguje,8,other,https://www.facebook.com/oit.mendelu/posts/pot%C5%99ebuje%C5%A1-wi-fi-p%C5%99ipojen%C3%AD-v-s%C3%ADti-eduroambez-certifik%C3%A1t%C5%AF-z-uis-to-nep%C5%AFjdekomplet/758840896902229/
+2026-11-17,eduroam,cs,eduroam mendelu nefunguje,9,mendelu,https://eduroam.mendelu.cz/25350-navody-k-instalaci
+2026-11-17,eduroam,cs,eduroam mendelu nefunguje,10,mendelu,https://it.ldf.mendelu.cz/?p=217
+2026-11-17,eduroam,cs,eduroam mendelu certifikát,1,mendelu,https://eduroam.mendelu.cz/25350-navody-k-instalaci
+2026-11-17,eduroam,cs,eduroam mendelu certifikát,2,mendelu,https://eduroam.mendelu.cz/
+2026-11-17,eduroam,cs,eduroam mendelu certifikát,3,mendelu,https://eduroam.mendelu.cz/navody-k-instalaci/25355-navody-pro-windows
+2026-11-17,eduroam,cs,eduroam mendelu certifikát,4,mendelu,https://frrms.mendelu.cz/bezdratova-sit-eduroam/
+2026-11-17,eduroam,cs,eduroam mendelu certifikát,5,mendelu,https://eduroam.mendelu.cz/navody-k-instalaci/navody-pro-apple/25361-
+2026-11-17,eduroam,cs,eduroam mendelu certifikát,6,mendelu,https://eduroam.mendelu.cz/navody-k-instalaci/26047-navod-pro-chromebook
+2026-11-17,eduroam,cs,eduroam mendelu certifikát,7,mendelu,https://eduroam.mendelu.cz/wcd/w-rek-eduroam/navody/apple/ios15_cz/eduroam_ios-15.pdf
+2026-11-17,eduroam,cs,eduroam mendelu certifikát,8,mendelu,https://eduroam.mendelu.cz/wcd/w-rek-eduroam/navody/blackberry-10_cz/eduroam_blackberry10_cz.pdf
+2026-11-17,eduroam,cs,eduroam mendelu certifikát,9,mendelu,https://eduroam.mendelu.cz/25388-reseni-problemu-a-faq
+2026-11-17,eduroam,cs,eduroam mendelu certifikát,10,other,https://www.facebook.com/oit.mendelu/posts/pot%C5%99ebuje%C5%A1-wi-fi-p%C5%99ipojen%C3%AD-v-s%C3%ADti-eduroambez-certifik%C3%A1t%C5%AF-z-uis-to-nep%C5%AFjdekomplet/758840896902229/
+2026-11-17,eduroam,en,mendel university eduroam,1,mendelu,https://eduroam.mendelu.cz/en/
+2026-11-17,eduroam,en,mendel university eduroam,2,mendelu,https://frrms.mendelu.cz/en/eduroam-wireless-network/
+2026-11-17,eduroam,en,mendel university eduroam,3,mendelu,https://eduroam.mendelu.cz/25350-navody-k-instalaci
+2026-11-17,eduroam,en,mendel university eduroam,4,mendelu,https://eduroam.mendelu.cz/
+2026-11-17,eduroam,en,mendel university eduroam,5,mendelu,https://eduroam.mendelu.cz/navody-k-instalaci/26047-navod-pro-chromebook
+2026-11-17,eduroam,en,mendel university eduroam,6,mendelu,https://eduroam.mendelu.cz/navody-k-instalaci/25355-navody-pro-windows
+2026-11-17,eduroam,en,mendel university eduroam,7,mendelu,https://it.ldf.mendelu.cz/?p=217
+2026-11-17,eduroam,en,mendelu wifi setup,1,mendelu,https://eduroam.mendelu.cz/en/
+2026-11-17,eduroam,en,mendelu wifi setup,2,mendelu,https://frrms.mendelu.cz/en/eduroam-wireless-network/
+2026-11-17,eduroam,en,mendelu wifi setup,3,mendelu,https://eduroam.mendelu.cz/en/25758-how-to-install
+2026-11-17,eduroam,en,mendelu wifi setup,4,mendelu,https://tech.mendelu.cz/en/32762-networks
+2026-11-17,eduroam,en,mendelu wifi setup,5,mendelu,https://tech.mendelu.cz/en/faq
+2026-11-17,eduroam,en,mendelu wifi setup,6,mendelu,https://eduroam.mendelu.cz/
+2026-11-17,eduroam,en,mendelu wifi setup,7,mendelu,https://eduroam.mendelu.cz/wcd/w-rek-eduroam/navody/apple/macos-ventura/en/macos-eduroam-ventura-en.pdf
+2026-11-17,eduroam,en,mendelu wifi setup,8,mendelu,https://eduroam.mendelu.cz/en/36897-faq
+2026-11-17,eduroam,en,mendelu wifi setup,9,mendelu,https://eduroam.mendelu.cz/navody-k-instalaci/26047-navod-pro-chromebook
+2026-11-17,eduroam,en,mendelu wifi setup,10,mendelu,https://eduroam.mendelu.cz/25350-navody-k-instalaci
+2026-11-17,eduroam,cs,eduroam mendelu windows,1,mendelu,https://eduroam.mendelu.cz/navody-k-instalaci/25355-navody-pro-windows
+2026-11-17,eduroam,cs,eduroam mendelu windows,2,mendelu,https://eduroam.mendelu.cz/
+2026-11-17,eduroam,cs,eduroam mendelu windows,3,mendelu,https://eduroam.mendelu.cz/wcd/w-rek-eduroam/navody/windows/w10_cz/eduroam_win10.pdf
+2026-11-17,eduroam,cs,eduroam mendelu windows,4,mendelu,https://eduroam.mendelu.cz/25350-navody-k-instalaci
+2026-11-17,eduroam,cs,eduroam mendelu windows,5,mendelu,https://eduroam.mendelu.cz/navody-k-instalaci/26047-navod-pro-chromebook
+2026-11-17,eduroam,cs,eduroam mendelu windows,6,mendelu,https://eduroam.mendelu.cz/en/how-to-install/26681-ms-windows
+2026-11-17,eduroam,cs,eduroam mendelu windows,7,mendelu,https://tech.mendelu.cz/studentska-kolejni-sit
+2026-11-17,eduroam,cs,eduroam mendelu windows,8,mendelu,https://eduroam.mendelu.cz/en/
+2026-11-17,eduroam,cs,eduroam mendelu windows,9,mendelu,https://eduroam.mendelu.cz/navody-k-instalaci/navody-pro-apple/25361-
+2026-11-17,eduroam,cs,eduroam mendelu windows,10,mendelu,https://eduroam.mendelu.cz/wcd/w-rek-eduroam/navody/apple/ios-90_cz/eduroam_ios9_cz.pdf
+2026-11-17,eduroam,cs,eduroam mendelu macbook,1,mendelu,https://eduroam.mendelu.cz/navody-k-instalaci/25358-navody-pro-apple
+2026-11-17,eduroam,cs,eduroam mendelu macbook,2,mendelu,https://eduroam.mendelu.cz/en/how-to-install/apple/29422-mac-os
+2026-11-17,eduroam,cs,eduroam mendelu macbook,3,mendelu,https://eduroam.mendelu.cz/
+2026-11-17,eduroam,cs,eduroam mendelu macbook,4,mendelu,https://eduroam.mendelu.cz/wcd/w-rek-eduroam/navody/apple/ios15_cz/eduroam_ios-15.pdf
+2026-11-17,eduroam,cs,eduroam mendelu macbook,5,mendelu,https://eduroam.mendelu.cz/25350-navody-k-instalaci
+2026-11-17,eduroam,cs,eduroam mendelu macbook,6,mendelu,https://eduroam.mendelu.cz/navody-k-instalaci/navody-pro-apple/33652-navod-pro-ios-15
+2026-11-17,eduroam,cs,eduroam mendelu macbook,7,mendelu,https://eduroam.mendelu.cz/navody-k-instalaci/navody-pro-apple/25361-
+2026-11-17,eduroam,cs,eduroam mendelu macbook,8,mendelu,https://eduroam.mendelu.cz/wcd/w-rek-eduroam/navody/apple/ios-90_cz/eduroam_ios9_cz.pdf
+2026-11-17,eduroam,cs,eduroam mendelu macbook,9,mendelu,https://eduroam.mendelu.cz/en/how-to-install/26682-apple
+2026-11-17,eduroam,cs,eduroam mendelu macbook,10,mendelu,https://eduroam.mendelu.cz/en/
+2026-11-17,eduroam,cs,návod na eduroam mendelu,1,mendelu,https://eduroam.mendelu.cz/25350-navody-k-instalaci
+2026-11-17,eduroam,cs,návod na eduroam mendelu,2,mendelu,https://eduroam.mendelu.cz/
+2026-11-17,eduroam,cs,návod na eduroam mendelu,3,mendelu,https://eduroam.mendelu.cz/navody-k-instalaci/25359-navody-pro-android
+2026-11-17,eduroam,cs,návod na eduroam mendelu,4,mendelu,https://eduroam.mendelu.cz/navody-k-instalaci/navody-pro-apple/33652-navod-pro-ios-15
+2026-11-17,eduroam,cs,návod na eduroam mendelu,5,mendelu,https://eduroam.mendelu.cz/wcd/w-rek-eduroam/navody/apple/ios15_cz/eduroam_ios-15.pdf
+2026-11-17,eduroam,cs,návod na eduroam mendelu,6,mendelu,https://eduroam.mendelu.cz/navody-k-instalaci/26047-navod-pro-chromebook
+2026-11-17,eduroam,cs,návod na eduroam mendelu,7,mendelu,https://eduroam.mendelu.cz/wcd/w-rek-eduroam/navody/apple/ios-90_cz/eduroam_ios9_cz.pdf
+2026-11-17,eduroam,cs,návod na eduroam mendelu,8,mendelu,https://frrms.mendelu.cz/bezdratova-sit-eduroam/
+2026-11-17,eduroam,cs,návod na eduroam mendelu,9,other,https://www.facebook.com/oit.mendelu/posts/pot%C5%99ebuje%C5%A1-wi-fi-p%C5%99ipojen%C3%AD-v-s%C3%ADti-eduroambez-certifik%C3%A1t%C5%AF-z-uis-to-nep%C5%AFjdekomplet/758840896902229/
+2026-11-17,eduroam,cs,připojení eduroam mendelu,1,mendelu,https://eduroam.mendelu.cz/
+2026-11-17,eduroam,cs,připojení eduroam mendelu,2,mendelu,https://eduroam.mendelu.cz/25350-navody-k-instalaci
+2026-11-17,eduroam,cs,připojení eduroam mendelu,3,mendelu,https://eduroam.mendelu.cz/wcd/w-rek-eduroam/navody/apple/ios15_cz/eduroam_ios-15.pdf
+2026-11-17,eduroam,cs,připojení eduroam mendelu,4,mendelu,https://eduroam.mendelu.cz/navody-k-instalaci/25359-navody-pro-android
+2026-11-17,eduroam,cs,připojení eduroam mendelu,5,mendelu,https://frrms.mendelu.cz/bezdratova-sit-eduroam/
+2026-11-17,eduroam,cs,připojení eduroam mendelu,6,mendelu,https://eduroam.mendelu.cz/navody-k-instalaci/navody-pro-apple/33652-navod-pro-ios-15
+2026-11-17,eduroam,cs,připojení eduroam mendelu,7,mendelu,https://eduroam.mendelu.cz/navody-k-instalaci/26047-navod-pro-chromebook
+2026-11-17,eduroam,cs,připojení eduroam mendelu,8,mendelu,https://eduroam.mendelu.cz/navody-k-instalaci/navody-pro-apple/25361-
+2026-11-17,eduroam,cs,připojení eduroam mendelu,9,mendelu,https://eduroam.mendelu.cz/wcd/w-rek-eduroam/navody/linux/debian-12.9-gnome/debian_12-9_gnome.pdf
+2026-11-17,eduroam,cs,připojení eduroam mendelu,10,other,https://www.facebook.com/oit.mendelu/posts/pot%C5%99ebuje%C5%A1-wi-fi-p%C5%99ipojen%C3%AD-v-s%C3%ADti-eduroambez-certifik%C3%A1t%C5%AF-z-uis-to-nep%C5%AFjdekomplet/758840896902229/
+2026-11-17,eduroam,cs,pef mendelu wifi,1,mendelu,https://eduroam.mendelu.cz/
+2026-11-17,eduroam,cs,pef mendelu wifi,2,mendelu,https://pef.mendelu.cz/
+2026-11-17,eduroam,cs,pef mendelu wifi,3,mendelu,https://mendelu.cz/informacni-systemy/
+2026-11-17,eduroam,cs,pef mendelu wifi,4,mendelu,https://pef.mendelu.cz/spoluprace/kurzy-pro-verejnost-na-pef-mendelu/
+2026-11-17,eduroam,cs,pef mendelu wifi,5,mendelu,https://pef.mendelu.cz/ui/
+2026-11-17,eduroam,cs,pef mendelu wifi,6,mendelu,https://pef.mendelu.cz/uchazec/proc-na-pef-mendelu/
+2026-11-17,eduroam,cs,pef mendelu wifi,7,mendelu,https://pef.mendelu.cz/uchazec/casto-kladene-otazky/
+2026-11-17,eduroam,cs,mendelu přihlášení na wifi,1,mendelu,https://eduroam.mendelu.cz/
+2026-11-17,eduroam,cs,mendelu přihlášení na wifi,2,mendelu,https://frrms.mendelu.cz/bezdratova-sit-eduroam/
+2026-11-17,eduroam,cs,mendelu přihlášení na wifi,3,mendelu,https://tech.mendelu.cz/26226-site
+2026-11-17,eduroam,cs,mendelu přihlášení na wifi,4,mendelu,https://tech.mendelu.cz/studentska-kolejni-sit
+2026-11-17,eduroam,cs,mendelu přihlášení na wifi,5,mendelu,https://tech.mendelu.cz/33546n-studenti-a-mendelu-host
+2026-11-17,eduroam,cs,mendelu přihlášení na wifi,6,mendelu,https://tech.mendelu.cz/caste-dotazy
+2026-11-17,eduroam,cs,mendelu přihlášení na wifi,7,mendelu,https://it.ldf.mendelu.cz/?p=217
+2026-11-17,zkousky,cs,přihlášení na zkoušku mendelu,1,mendelu,https://zf.mendelu.cz/vyska-na-zkousku/
+2026-11-17,zkousky,cs,přihlášení na zkoušku mendelu,2,mendelu,https://zf.mendelu.cz/registrace-a-zapisy/
+2026-11-17,zkousky,cs,přihlášení na zkoušku mendelu,3,mendelu,https://mendelu.cz/uchazec/
+2026-11-17,zkousky,cs,přihlášení na zkoušku mendelu,4,reis,https://reisapp.cz/navody/prihlaseni-na-zkousku
+2026-11-17,zkousky,cs,přihlášení na zkoušku mendelu,5,mendelu,https://mendelu.cz/akce/https-zf-mendelu-cz-vyska-na-zkousku/
+2026-11-17,zkousky,cs,přihlášení na zkoušku mendelu,6,mendelu,https://prvaci.mendelu.cz/31116-moje-studium
+2026-11-17,zkousky,cs,přihlášení na zkoušku mendelu,7,mendelu,https://zf.mendelu.cz/navod-pro-spolecnost/
+2026-11-17,zkousky,cs,přihlášení na zkoušku mendelu,8,mendelu,https://zf.mendelu.cz/vyska-na-zkousku-2022/
+2026-11-17,zkousky,cs,přihlášení na zkoušku mendelu,9,other,https://www.facebook.com/mendelova.univerzita/photos/-p%C5%99ihl%C3%A1%C5%A1ky-na-mendelu-jsou-je%C5%A1t%C4%9B-otev%C5%99en%C3%A9-konkr%C3%A9tn%C3%AD-term%C3%ADny-a-informace-podle-je/1140370881458013/
+2026-11-17,zkousky,cs,přihlášení na zkoušku mendelu,10,mendelu,https://zf.mendelu.cz/kontaktni-centrum/
+2026-11-17,zkousky,cs,jak se přihlásit na zkoušku mendelu,1,mendelu,https://zf.mendelu.cz/vyska-na-zkousku/
+2026-11-17,zkousky,cs,jak se přihlásit na zkoušku mendelu,2,mendelu,https://zf.mendelu.cz/vyska-na-zkousku-2022/
+2026-11-17,zkousky,cs,jak se přihlásit na zkoušku mendelu,3,mendelu,https://zf.mendelu.cz/navod-pro-spolecnost/
+2026-11-17,zkousky,cs,jak se přihlásit na zkoušku mendelu,4,reis,https://reisapp.cz/navody/prihlaseni-na-zkousku
+2026-11-17,zkousky,cs,jak se přihlásit na zkoušku mendelu,5,mendelu,https://mendelu.cz/akce/https-zf-mendelu-cz-vyska-na-zkousku/
+2026-11-17,zkousky,cs,jak se přihlásit na zkoušku mendelu,6,mendelu,https://prvaci.mendelu.cz/31116-moje-studium
+2026-11-17,zkousky,cs,jak se přihlásit na zkoušku mendelu,7,mendelu,https://zf.mendelu.cz/registrace-a-zapisy/
+2026-11-17,zkousky,cs,jak se přihlásit na zkoušku mendelu,8,other,https://uroda.cz/udalost/vyska-na-zkousku-zahradnicke-fakulty-mendelu/
+2026-11-17,zkousky,cs,jak se přihlásit na zkoušku mendelu,9,mendelu,https://pef.mendelu.cz/uchazec/casto-kladene-otazky/
+2026-11-17,zkousky,cs,jak se přihlásit na zkoušku mendelu,10,mendelu,https://mendelu.cz/uchazec/
+2026-11-17,zkousky,cs,termíny zkoušek mendelu,1,mendelu,https://mendelu.cz/uchazec/dulezite-terminy/
+2026-11-17,zkousky,cs,termíny zkoušek mendelu,2,mendelu,https://pef.mendelu.cz/uchazec/dulezite-terminy/
+2026-11-17,zkousky,cs,termíny zkoušek mendelu,3,mendelu,https://zf.mendelu.cz/uchazec/dulezite-terminy/
+2026-11-17,zkousky,cs,termíny zkoušek mendelu,4,mendelu,https://zf.mendelu.cz/student/statni-zaverecne-zkousky/
+2026-11-17,zkousky,cs,termíny zkoušek mendelu,5,mendelu,https://mendelu.cz/uchazec/
+2026-11-17,zkousky,cs,termíny zkoušek mendelu,6,mendelu,https://ldf.mendelu.cz/student/harmonogram/
+2026-11-17,zkousky,cs,termíny zkoušek mendelu,7,mendelu,https://ldf.mendelu.cz/bakalarske-studium/podavani-prihlasek-a-dulezite-terminy/
+2026-11-17,zkousky,cs,termíny zkoušek mendelu,8,other,https://www.scio.cz/detail-fakulty?facultyId=121
+2026-11-17,zkousky,cs,termíny zkoušek mendelu,9,mendelu,https://frrms.mendelu.cz/uchazec/dulezite-terminy/
+2026-11-17,zkousky,cs,termíny zkoušek mendelu,10,other,https://www.facebook.com/mendelova.univerzita/photos/-p%C5%99ihl%C3%A1%C5%A1ky-na-mendelu-jsou-je%C5%A1t%C4%9B-otev%C5%99en%C3%A9-konkr%C3%A9tn%C3%AD-term%C3%ADny-a-informace-podle-je/1140370881458013/
+2026-11-17,zkousky,en,mendelu exam registration,1,mendelu,https://frrms.mendelu.cz/en/course-registration-and-enrolment/
+2026-11-17,zkousky,en,mendelu exam registration,2,mendelu,https://pef.mendelu.cz/en/faculty-of-business-and-economics/admissions/admission-process/
+2026-11-17,zkousky,en,mendelu exam registration,3,mendelu,https://frrms.mendelu.cz/en/akce/registration-for-partial-state-exam/
+2026-11-17,zkousky,en,mendelu exam registration,4,mendelu,https://frrms.mendelu.cz/en/student-frdis/practical-information/
+2026-11-17,zkousky,en,mendelu exam registration,5,mendelu,https://mendelu.cz/en/akce/end-of-the-examination-period-for-students-registered-for-state-exams-fbe/
+2026-11-17,zkousky,en,mendelu exam registration,6,reis,https://reisapp.cz/en/guides/exam-registration
+2026-11-17,zkousky,en,mendelu exam registration,7,other,https://www.czechuniversities.com/catalogue-of-universities/mendel-university-in-brno
+2026-11-17,zkousky,en,mendelu exam registration,8,mendelu,https://frrms.mendelu.cz/en/akce/registration-for-state-exam-in-june/
+2026-11-17,zkousky,en,mendelu exam registration,9,mendelu,https://frrms.mendelu.cz/en/admissions/admissions-2/
+2026-11-17,zkousky,en,mendelu exam registration,10,mendelu,https://frrms.mendelu.cz/en/verification-of-higher-education-outside-the-czech-republic/
+2026-11-17,mapa,cs,mendelu mapa kampusu,1,mendelu,https://frrms.mendelu.cz/mapa-kampusu-mendelu/
+2026-11-17,mapa,cs,mendelu mapa kampusu,2,mendelu,https://mendelu.cz/wp-content/uploads/2024/01/Mapa-kampusu-26.1.2024.pdf
+2026-11-17,mapa,cs,mendelu mapa kampusu,3,mendelu,https://mendelu.cz/rekonstrukce/
+2026-11-17,mapa,cs,mendelu mapa kampusu,4,mendelu,https://zf.mendelu.cz/o-fakulte/mapa-kampusu-mendelu/
+2026-11-17,mapa,cs,mendelu mapa kampusu,5,mendelu,https://zf.mendelu.cz/mapa-arealu/
+2026-11-17,mapa,cs,mendelu mapa kampusu,6,other,https://mapy.com/cs/?source=firm&id=191599
+2026-11-17,mapa,cs,mendelu mapa kampusu,7,mendelu,https://mendelu.cz/akce/plan-kampusu/
+2026-11-17,mapa,cs,mendelu mapa kampusu,8,mendelu,https://frrms.mendelu.cz/uvodni-stranka/zakladni-informace/
+2026-11-17,mapa,cs,mendelu mapa kampusu,9,reis,https://reisapp.cz/navody/mapa-kampusu
+2026-11-17,mapa,cs,mendelu mapa,1,mendelu,https://frrms.mendelu.cz/mapa-kampusu-mendelu/
+2026-11-17,mapa,cs,mendelu mapa,2,mendelu,https://frrms.mendelu.cz/uvodni-stranka/zakladni-informace/
+2026-11-17,mapa,cs,mendelu mapa,3,other,https://mapy.com/cs/?source=firm&id=191599
+2026-11-17,mapa,cs,mendelu mapa,4,mendelu,https://moje.mendelu.cz/857
+2026-11-17,mapa,cs,mendelu mapa,5,mendelu,https://mendelu.cz/rekonstrukce/
+2026-11-17,mapa,cs,mendelu mapa,6,mendelu,https://mm.mendelu.cz/mapwidget
+2026-11-17,mapa,cs,mendelu mapa,7,mendelu,https://mendelu.cz/wp-content/uploads/2024/01/Mapa-kampusu-26.1.2024.pdf
+2026-11-17,mapa,cs,mendelu mapa,8,other,https://panopro.cz/reference/ldf-mendelu-hlavni-budova-b/
+2026-11-17,mapa,cs,mendelu mapa,9,mendelu,https://porek.mendelu.cz/857
+2026-11-17,mapa,cs,mendelu učebny,1,mendelu,https://is.mendelu.cz/
+2026-11-17,mapa,cs,mendelu učebny,2,mendelu,https://mendelu.cz/
+2026-11-17,mapa,cs,mendelu učebny,3,mendelu,https://mendelu.cz/informacni-systemy/
+2026-11-17,mapa,cs,mendelu učebny,4,mendelu,https://zf.mendelu.cz/o-fakulte/mapa-kampusu-mendelu/
+2026-11-17,mapa,cs,mendelu učebny,5,mendelu,https://mendelu.cz/plan-kampusu/
+2026-11-17,mapa,cs,mendelu učebny,6,mendelu,https://af.mendelu.cz/celouniverzitni-dny-otevrenych-dveri-mendelu/
+2026-11-17,mapa,cs,mendelu učebny,7,mendelu,https://af.mendelu.cz/
+2026-11-17,mapa,cs,mendelu učebny,8,mendelu,https://mendelu.cz/kontakty/
+2026-11-17,mapa,cs,mendelu učebny,9,other,https://cs.wikipedia.org/wiki/Mendelova_univerzita_v_Brn%C4%9B
+2026-11-17,mapa,en,mendel university campus map,1,mendelu,https://frrms.mendelu.cz/en/mendelu-campus-map/
+2026-11-17,mapa,en,mendel university campus map,2,other,https://www.muni.cz/en/map/department-712000
+2026-11-17,mapa,en,mendel university campus map,3,mendelu,https://mendelu.cz/en/about-the-uni/reconstruction/
+2026-11-17,mapa,en,mendel university campus map,4,other,https://link.mazemap.com/etaEYSea
+2026-11-17,mapa,en,mendel university campus map,5,mendelu,https://my.mendelu.cz/857
+2026-11-17,mapa,en,mendel university campus map,6,other,https://www.czechuniversities.com/article/mendel-university-in-brno
+2026-11-17,mapa,en,mendel university campus map,7,reis,https://reisapp.cz/en/guides/campus-map
+2026-11-17,mapa,en,mendel university campus map,8,other,https://maps.apple.com/place?place-id=I28FE441615E28A0C
+2026-11-17,mapa,en,mendel university campus map,9,other,https://www.manchester.ac.uk/about/maps/interactive-map/
+2026-11-17,menza,cs,mendelu menza jídelníček,1,mendelu,https://skm.mendelu.cz/stravovani/28603-jidelni-listek
+2026-11-17,menza,cs,mendelu menza jídelníček,2,mendelu,https://skm.mendelu.cz/stravovani/stravovaci-zarizeni/28003-vydejna-jidel-v-arealu-univerzity-objekt-x
+2026-11-17,menza,cs,mendelu menza jídelníček,3,mendelu,https://skm.mendelu.cz/stravovani/28560-stravovaci-zarizeni
+2026-11-17,menza,cs,mendelu menza jídelníček,4,mendelu,https://skm.mendelu.cz/27391-stravovani
+2026-11-17,menza,cs,mendelu menza jídelníček,5,mendelu,https://skm.mendelu.cz/stravovani/stravovaci-zarizeni/27997-menza-jak
+2026-11-17,menza,cs,mendelu menza jídelníček,6,mendelu,https://skm.mendelu.cz/stravovani/stravovaci-zarizeni/28004-zamestnanecka-jidelna-v-arealu-univerzity-objekt-quot-o-quot
+2026-11-17,menza,cs,mendelu menza jídelníček,7,mendelu,https://skm.mendelu.cz/stravovani/28563-pro-soucasti-univerzity
+2026-11-17,menza,cs,mendelu menza jídelníček,8,other,https://www.instagram.com/reel/C_Py2fIqIZk/
+2026-11-17,menza,cs,mendelu menza jídelníček,9,mendelu,https://skm.mendelu.cz/stravovani/stravovaci-zarizeni/28008-menza-v-lednici-na-morave
+2026-11-17,menza,cs,mendelu menza jídelníček,10,other,https://csda.cz/app.php?cislo=1443774157
+2026-11-17,menza,cs,menza mendelu dnes,1,mendelu,https://skm.mendelu.cz/stravovani/28603-jidelni-listek
+2026-11-17,menza,cs,menza mendelu dnes,2,mendelu,https://skm.mendelu.cz/27391-stravovani
+2026-11-17,menza,cs,menza mendelu dnes,3,mendelu,https://skm.mendelu.cz/stravovani/28560-stravovaci-zarizeni
+2026-11-17,menza,cs,menza mendelu dnes,4,mendelu,https://skm.mendelu.cz/stravovani/stravovaci-zarizeni/28004-zamestnanecka-jidelna-v-arealu-univerzity-objekt-quot-o-quot
+2026-11-17,menza,cs,menza mendelu dnes,5,mendelu,https://skm.mendelu.cz/stravovani/stravovaci-zarizeni/27997-menza-jak
+2026-11-17,menza,cs,menza mendelu dnes,6,mendelu,https://skm.mendelu.cz/stravovani/28561-pro-studenty
+2026-11-17,menza,cs,menza mendelu dnes,7,mendelu,https://skm.mendelu.cz/stravovani/stravovaci-zarizeni/28003-vydejna-jidel-v-arealu-univerzity-objekt-x
+2026-11-17,menza,cs,menza mendelu dnes,8,mendelu,https://skm.mendelu.cz/stravovani/stravovaci-zarizeni/28008-menza-v-lednici-na-morave
+2026-11-17,menza,cs,menza mendelu dnes,9,mendelu,https://skm.mendelu.cz/
+2026-11-17,menza,cs,menza mendelu dnes,10,other,https://www.firmy.cz/detail/13837097-menza-mendelova-univerzita-v-brne-lednice.html
+2026-11-17,menza,cs,mendelu jídelníček,1,mendelu,https://skm.mendelu.cz/stravovani/28603-jidelni-listek
+2026-11-17,menza,cs,mendelu jídelníček,2,mendelu,https://skm.mendelu.cz/stravovani/28560-stravovaci-zarizeni
+2026-11-17,menza,cs,mendelu jídelníček,3,mendelu,https://skm.mendelu.cz/stravovani/stravovaci-zarizeni/28003-vydejna-jidel-v-arealu-univerzity-objekt-x
+2026-11-17,menza,cs,mendelu jídelníček,4,mendelu,https://mendelu.cz/informacni-systemy/
+2026-11-17,menza,cs,mendelu jídelníček,5,mendelu,https://skm.mendelu.cz/27391-stravovani
+2026-11-17,menza,cs,mendelu jídelníček,6,mendelu,https://skm.mendelu.cz/stravovani/stravovaci-zarizeni/27997-menza-jak
+2026-11-17,menza,en,mendelu canteen menu,1,mendelu,https://skm.mendelu.cz/en/catering/28604-menu
+2026-11-17,menza,en,mendelu canteen menu,2,mendelu,https://skm.mendelu.cz/en/catering/28565-for-students
+2026-11-17,menza,en,mendelu canteen menu,3,mendelu,https://skm.mendelu.cz/en/catering/catering-facilities/28459-canteen-in-building-x
+2026-11-17,menza,en,mendelu canteen menu,4,mendelu,https://skm.mendelu.cz/en/catering/catering-facilities/28458-th-canteen
+2026-11-17,menza,en,mendelu canteen menu,5,mendelu,https://skm.mendelu.cz/stravovani/28603-jidelni-listek
+2026-11-17,menza,en,mendelu canteen menu,6,mendelu,https://skm.mendelu.cz/en/catering/catering-facilities/28457-canteen-z
+2026-11-17,menza,en,mendelu canteen menu,7,mendelu,https://frrms.mendelu.cz/en/the-canteen-in-our-building-is-open-again/
+2026-11-17,menza,en,mendelu canteen menu,8,mendelu,https://skm.mendelu.cz/en/catering/28568-for-public
+2026-11-17,menza,en,mendelu canteen menu,9,other,https://www.facebook.com/mendelova.univerzita/posts/menza-x-v%C3%ADce-j%C3%ADdla-m%C3%A9n%C4%9B-odpadu-a-spokojen%C4%9Bj%C5%A1%C3%AD-str%C3%A1vn%C3%ADci-%EF%B8%8F%EF%B8%8Fpo-prvn%C3%ADm-semestru-sam/1030766035751832/
+2026-11-17,brand,cs,reis mendelu,1,other,https://www.instagram.com/reis.mendelu/
+2026-11-17,brand,cs,reis mendelu,2,mendelu,https://is.mendelu.cz/
+2026-11-17,brand,cs,reis mendelu,3,other,https://www.facebook.com/mendeluIT/posts/odkaz-na-reismendelu-httpschromewebstoregooglecomdetailreisfeildjaginpppijbpplcg/1545109810956221/
+2026-11-17,brand,cs,reis mendelu,4,other,https://addons.mozilla.org/en-US/firefox/addon/reis/
+2026-11-17,brand,cs,reis mendelu,5,other,https://apps.apple.com/us/app/reis-is-mendelu-jednodu%C5%A1e/id6804832714
+2026-11-17,brand,cs,reis mendelu,6,other,https://www.instagram.com/reel/DdyU3x7sI0V/
+2026-11-17,brand,cs,reis mendelu,7,reis,https://reisapp.cz/
+2026-11-17,brand,cs,reis mendelu,8,other,https://www.instagram.com/p/DUfUxNBDOwJ/
+2026-11-17,brand,cs,reis mendelu,9,mendelu,https://mendelu.cz/informacni-systemy/
+2026-11-17,brand,cs,reis mendelu,10,other,https://www.instagram.com/reel/DdzJf-xKcox/
+2026-11-17,brand,cs,mendelu aplikace,1,mendelu,https://moje.mendelu.cz/
+2026-11-17,brand,cs,mendelu aplikace,2,mendelu,https://mendelu.cz/informacni-systemy/
+2026-11-17,brand,cs,mendelu aplikace,3,mendelu,https://mendelu.cz/mendelu-rozviji-aplikaci-pro-studenty-i-zamestnance-2/
+2026-11-17,brand,cs,mendelu aplikace,4,mendelu,https://q13.mm.mendelu.cz/cs/moje-mendelu
+2026-11-17,brand,cs,mendelu aplikace,5,other,https://apps.apple.com/cz/app/moje-mendelu/id1467807496?l=cs
+2026-11-17,brand,cs,mendelu aplikace,6,mendelu,https://mendelu.cz/aplikace-moje-mendelu-poradi-studentum-cestu-na-prednasky/
+2026-11-17,brand,cs,mendelu aplikace,7,other,https://www.mendelu.app/cs/aplikace/
+2026-11-17,brand,cs,mendelu aplikace,8,other,https://theses.cz/id/trcruv/
+2026-11-17,brand,cs,mendelu aplikace,9,mendelu,https://tech.mendelu.cz/navody-postupy
+2026-11-17,uis,cs,uis mendelu,1,mendelu,https://is.mendelu.cz/
+2026-11-17,uis,cs,uis mendelu,2,mendelu,https://mendelu.cz/informacni-systemy/
+2026-11-17,uis,cs,uis mendelu,3,mendelu,https://mendelu.cz/
+2026-11-17,uis,cs,uis mendelu,4,mendelu,https://frrms.mendelu.cz/univerzitni-informacni-system/
+2026-11-17,uis,cs,uis mendelu,5,mendelu,https://af.mendelu.cz/o-fakulte/organizacni-struktura/oddeleni-it-a-technicke-podpory/navody-pro-studenty/
+2026-11-17,uis,cs,uis mendelu,6,mendelu,https://prvaci.mendelu.cz/31117-informacni-systemy
+2026-11-17,uis,cs,uis mendelu,7,mendelu,https://af.mendelu.cz/univerzitni-informacni-system-uis-a-it-podpora/
+2026-11-17,uis,cs,mendelu uis,1,mendelu,https://is.mendelu.cz/
+2026-11-17,uis,cs,mendelu uis,2,mendelu,https://mendelu.cz/informacni-systemy/
+2026-11-17,uis,cs,mendelu uis,3,mendelu,https://mendelu.cz/
+2026-11-17,uis,cs,mendelu uis,4,mendelu,https://frrms.mendelu.cz/univerzitni-informacni-system/
+2026-11-17,uis,cs,mendelu uis,5,mendelu,https://af.mendelu.cz/o-fakulte/organizacni-struktura/oddeleni-it-a-technicke-podpory/navody-pro-studenty/
+2026-11-17,uis,cs,mendelu uis,6,mendelu,https://prvaci.mendelu.cz/31117-informacni-systemy
+2026-11-17,uis,cs,mendelu uis,7,mendelu,https://af.mendelu.cz/univerzitni-informacni-system-uis-a-it-podpora/
+2026-11-17,uis,cs,mendelu uis,8,mendelu,https://af.mendelu.cz/student/pro-prvaky/jak-ziskam-pristupove-udaje-do-uis/
+2026-11-17,uis,cs,mendelu uis,9,mendelu,https://mendelu.cz/kontakty/
+2026-11-17,uis,cs,mendelu uis,10,other,https://cs.wikipedia.org/wiki/Univerzitn%C3%AD_informa%C4%8Dn%C3%AD_syst%C3%A9m_Mendelovy_univerzity_v_Brn%C4%9B
+2026-11-17,uis,cs,is mendelu,1,mendelu,https://is.mendelu.cz/
+2026-11-17,uis,cs,is mendelu,2,mendelu,https://mendelu.cz/informacni-systemy/
+2026-11-17,uis,cs,is mendelu,3,mendelu,https://mendelu.cz/
+2026-11-17,uis,cs,is mendelu,4,mendelu,https://frrms.mendelu.cz/univerzitni-informacni-system/
+2026-11-17,uis,cs,uis mendelu přihlášení,1,mendelu,https://is.mendelu.cz/
+2026-11-17,uis,cs,uis mendelu přihlášení,2,mendelu,https://mendelu.cz/informacni-systemy/
+2026-11-17,uis,cs,uis mendelu přihlášení,3,mendelu,https://frrms.mendelu.cz/univerzitni-informacni-system/
+2026-11-17,uis,cs,uis mendelu přihlášení,4,mendelu,https://af.mendelu.cz/student/pro-prvaky/jak-ziskam-pristupove-udaje-do-uis/
+2026-11-17,uis,cs,uis mendelu přihlášení,5,mendelu,https://prvaci.mendelu.cz/31117-informacni-systemy
+2026-11-17,uis,cs,uis mendelu přihlášení,6,mendelu,https://mendelu.cz/
+2026-11-17,uis,cs,uis mendelu přihlášení,7,mendelu,https://af.mendelu.cz/o-fakulte/organizacni-struktura/oddeleni-it-a-technicke-podpory/navody-pro-studenty/
+2026-11-17,uis,cs,uis mendelu přihlášení,8,mendelu,https://mendelu.cz/student/
+2026-11-17,uis,cs,uis mendelu přihlášení,9,mendelu,https://tech.mendelu.cz/caste-dotazy
+2026-11-17,uis,cs,uis mendelu přihlášení,10,mendelu,https://moje.mendelu.cz/
+2026-11-17,uis,cs,iskam mendelu,1,mendelu,https://webiskam.mendelu.cz/
+2026-11-17,uis,cs,iskam mendelu,2,mendelu,https://skm.mendelu.cz/stravovani/28561-pro-studenty
+2026-11-17,uis,cs,iskam mendelu,3,mendelu,https://skm.mendelu.cz/ubytovani/27990-pro-studenty
+2026-11-17,uis,cs,iskam mendelu,4,mendelu,https://skm.mendelu.cz/
+2026-11-17,uis,cs,iskam mendelu,5,mendelu,https://mendelu.cz/informacni-systemy/
+2026-11-17,uis,cs,iskam mendelu,6,mendelu,https://skm.mendelu.cz/en/catering/28565-for-students
+2026-11-17,uis,cs,iskam mendelu,7,mendelu,https://skm.mendelu.cz/27390-ubytovani
+2026-11-17,uis,cs,iskam mendelu,8,other,https://iskam.skm.muni.cz/
+2026-11-17,uis,cs,iskam mendelu,9,mendelu,https://skm.mendelu.cz/en/
+2026-11-17,uis,cs,iskam mendelu,10,other,https://iskam-web.zcu.cz/
+2026-11-17,uis,cs,mendelu aplikace pro studenty,1,mendelu,https://mendelu.cz/mendelu-rozviji-aplikaci-pro-studenty-i-zamestnance-2/
+2026-11-17,uis,cs,mendelu aplikace pro studenty,2,mendelu,https://moje.mendelu.cz/
+2026-11-17,uis,cs,mendelu aplikace pro studenty,3,mendelu,https://mendelu.cz/informacni-systemy/
+2026-11-17,uis,cs,mendelu aplikace pro studenty,4,mendelu,https://q13.mm.mendelu.cz/cs/moje-mendelu
+2026-11-17,uis,cs,mendelu aplikace pro studenty,5,mendelu,https://mendelu.cz/aplikace-moje-mendelu-poradi-studentum-cestu-na-prednasky/
+2026-11-17,uis,cs,mendelu aplikace pro studenty,6,other,https://www.mendelu.app/cs/aplikace/
+2026-11-17,uis,cs,mendelu aplikace pro studenty,7,other,https://apps.apple.com/cz/app/moje-mendelu/id1467807496?l=cs
+2026-11-17,uis,cs,mendelu aplikace pro studenty,8,mendelu,https://moje.mendelu.cz/tvurci
+2026-11-17,uis,cs,mendelu aplikace pro studenty,9,mendelu,https://q13.mm.mendelu.cz/cs/smart-mendelu
+2026-11-17,uis,cs,mendelu aplikace pro studenty,10,mendelu,https://moje.mendelu.cz/podminky-pouzivani
+2026-11-17,uchazec,cs,vysoké školy brno,1,other,https://www.atlasskolstvi.cz/vysoke-skoly?city=brno
+2026-11-17,uchazec,cs,vysoké školy brno,2,other,https://www.vysokeskoly.cz/v/region-brno/
+2026-11-17,uchazec,cs,vysoké školy brno,3,other,https://www.firmy.cz/Instituce-a-urady/Vzdelavaci-instituce/Vysoke-skoly/Univerzity-a-statni-vysoke-skoly/kraj-jihomoravsky/brno-mesto
+2026-11-17,uchazec,cs,vysoké školy brno,4,other,https://cs.wikipedia.org/wiki/Seznam_vysok%C3%BDch_%C5%A1kol_v_Brn%C4%9B
+2026-11-17,uchazec,cs,vysoké školy brno,5,other,https://www.brno.cz/w/vysoke-skoly
+2026-11-17,uchazec,cs,vysoké školy brno,6,other,https://www.muni.cz/
+2026-11-17,uchazec,cs,vysoké školy brno,7,other,https://www.vysokeskoly.cz/v/region-brno/pf-verejne-a-statni-skoly/
+2026-11-17,uchazec,cs,vysoké školy brno,8,other,https://www.infoabsolvent.cz/Skoly/Seznam/VS
+2026-11-17,uchazec,cs,vysoké školy brno,9,other,https://storymaps.arcgis.com/stories/a101ea6ebbd949e2833f3b244a0130d1
+2026-11-17,uchazec,cs,vysoké školy brno,10,other,https://www.azet.sk/katalog/vysoke-skoly/brno-mesto/
+2026-11-17,uchazec,cs,vysoká škola brno ekonomie,1,other,https://www.vysokeskoly.cz/v/ekonomie-a-management/region-brno/
+2026-11-17,uchazec,cs,vysoká škola brno ekonomie,2,other,https://www.muni.cz/o-univerzite/fakulty-a-pracoviste/ekonomicko-spravni-fakulta
+2026-11-17,uchazec,cs,vysoká škola brno ekonomie,3,other,https://www.vysokeskoly.com/PS/Vysoke-skoly/ekonomicke/brno
+2026-11-17,uchazec,cs,vysoká škola brno ekonomie,4,other,https://www.vsem.cz/
+2026-11-17,uchazec,cs,vysoká škola brno ekonomie,5,other,https://www.vut.cz/studenti/programy/program/4700
+2026-11-17,uchazec,cs,vysoká škola brno ekonomie,6,other,https://www.atlasskolstvi.cz/vs3072-mendelova-univerzita-v-brne-provozne-ekonomicka-fakulta
+2026-11-17,uchazec,cs,vysoká škola brno ekonomie,7,other,https://www.econ.muni.cz/
+2026-11-17,uchazec,cs,vysoká škola brno ekonomie,8,other,https://www.vysokeskoly.cz/v/ekonomie-a-management/
+2026-11-17,uchazec,cs,vysoká škola brno ekonomie,9,other,https://www.facebook.com/econmuni/
+2026-11-17,uchazec,cs,vysoká škola brno ekonomie,10,other,https://www.firmy.cz/detail/362563-provozne-ekonomicka-fakulta-mendelova-univerzita-v-brne-brno-cerna-pole.html
+2026-11-17,uchazec,cs,kde studovat informatiku brno,1,other,https://www.vysokeskoly.cz/tema/informatika
+2026-11-17,uchazec,cs,kde studovat informatiku brno,2,other,https://www.atlasskolstvi.cz/stredni-skoly?district=brno-mesto&spec=4356
+2026-11-17,uchazec,cs,kde studovat informatiku brno,3,other,https://www.em.muni.cz/student/17111-proc-studovat-informatiku-v-brne
+2026-11-17,uchazec,cs,kde studovat informatiku brno,4,other,https://www.cichnovabrno.cz/aktuality/cichnoviny-kam-po-maturite/
+2026-11-17,uchazec,cs,kde studovat informatiku brno,5,other,https://www.sstebrno.cz/pro-uchazece/vyber-si-smer/informatika/
+2026-11-17,uchazec,cs,kde studovat informatiku brno,6,other,https://www.seznamzpravy.cz/kampus/sekce/stredni-skoly-zamereni-it-matematika-technika-inzenyrstvi-a-strojirenstvi-informatika-8
+2026-11-17,uchazec,cs,kde studovat informatiku brno,7,other,https://www.zive.cz/clanky/pozor-uzaverky-se-blizi-kde-studovat-it-povidali-jsme-si-se-zastupci-vysokych-skol/sc-3-a-233097/default.aspx
+2026-11-17,uchazec,cs,kde studovat informatiku brno,8,other,https://www.vysokeskoly.cz/v/informacni-technologie/region-brno/
+2026-11-17,uchazec,cs,kde studovat informatiku brno,9,other,https://www.purkynka.cz/pro-uchazece/vyber-si-obor/technicke-obory/informacni-technologie/
+2026-11-17,uchazec,cs,kde studovat informatiku brno,10,other,"https://cs.wikipedia.org/wiki/St%C5%99edn%C3%AD_%C5%A1kola_informatiky,_po%C5%A1tovnictv%C3%AD_a_finan%C4%8Dnictv%C3%AD_Brno"
+2026-11-17,uchazec,cs,zemědělská vysoká škola,1,other,https://www.czu.cz/cs/r-7213-studium/r-7255-studijni-programy
+2026-11-17,uchazec,cs,zemědělská vysoká škola,2,other,https://www.vysokeskoly.cz/v/zemedelstvi-a-veterina/zemedelstvi/
+2026-11-17,uchazec,cs,zemědělská vysoká škola,3,other,https://www.czu.cz/cs
+2026-11-17,uchazec,cs,zemědělská vysoká škola,4,other,https://www.facebook.com/CZUvPraze/?locale=cs_CZ
+2026-11-17,uchazec,cs,lesnictví vysoká škola,1,other,https://www.vysokeskoly.cz/v/zemedelstvi-a-veterina/lesnictvi-a-drevarstvi/
+2026-11-17,uchazec,cs,lesnictví vysoká škola,2,other,https://www.fld.czu.cz/cs
+2026-11-17,uchazec,cs,lesnictví vysoká škola,3,mendelu,https://ldf.mendelu.cz/
+2026-11-17,uchazec,cs,lesnictví vysoká škola,4,other,https://www.atlasskolstvi.cz/vs3019-ceska-zemedelska-univerzita-v-praze--fakulta-lesnicka-a-drevarska
+2026-11-17,uchazec,cs,lesnictví vysoká škola,5,other,https://www.vysokeskoly.cz/katalog-vs/obory/Lesnictv%C3%AD
+2026-11-17,uchazec,cs,lesnictví vysoká škola,6,other,https://www.facebook.com/fld.czu.cz/?locale=cs_CZ
+2026-11-17,uchazec,cs,lesnictví vysoká škola,7,other,https://cs.wikipedia.org/wiki/Fakulta_lesnick%C3%A1_a_d%C5%99eva%C5%99sk%C3%A1_%C4%8Cesk%C3%A9_zem%C4%9Bd%C4%9Blsk%C3%A9_univerzity_v_Praze
+2026-11-17,uchazec,cs,lesnictví vysoká škola,8,other,https://studujnavs.gov.cz/jak-na-studium/prehled-vysokych-skol/ceska-zemedelska-univerzita-v-praze/lesnictvi
+2026-11-17,uchazec,cs,lesnictví vysoká škola,9,other,https://mapy.com/cs/?source=firm&id=641376
+2026-11-17,uchazec,cs,lesnictví vysoká škola,10,other,https://www.atlasskolstvi.cz/vs3071-mendelova-univerzita-v-brne--lesnicka-a-drevarska-fakulta
+2026-11-17,uchazec,cs,koleje brno,1,other,https://www.skm.muni.cz/ubytovani/koleje-muni
+2026-11-17,uchazec,cs,koleje brno,2,mendelu,https://skm.mendelu.cz/ubytovani/27993-pro-verejnost
+2026-11-17,uchazec,cs,koleje brno,3,other,https://www.kam.vutbr.cz/
+2026-11-17,uchazec,cs,koleje brno,4,other,https://www.firmy.cz/Cestovni-sluzby/Ubytovaci-sluzby/Levne-ubytovani/Koleje/kraj-jihomoravsky/brno-mesto
+2026-11-17,uchazec,cs,koleje brno,5,other,https://www.skm.muni.cz/ubytovani/koleje-muni/koleje-kounicova
+2026-11-17,uchazec,cs,koleje brno,6,other,https://www.skm.muni.cz/ubytovani/koleje-muni/koleje-veveri
+2026-11-17,uchazec,cs,koleje brno,7,mendelu,https://skm.mendelu.cz/ubytovani/ubytovaci-zarizeni/27988-tauferovy-koleje
+2026-11-17,uchazec,cs,koleje brno,8,other,https://www.skm.muni.cz/ubytovani/dlouhodobe-ubytovani/rezervace-ubytovani
+2026-11-17,uchazec,cs,koleje brno,9,other,https://www.vut.cz/zivot/koleje
+2026-11-17,uchazec,cs,koleje brno,10,mendelu,https://skm.mendelu.cz/ubytovani/ubytovaci-zarizeni/27982-koleje-jak
+2026-11-17,uchazec,cs,přijímačky mendelu,1,mendelu,https://mendelu.cz/uchazec/
+2026-11-17,uchazec,cs,přijímačky mendelu,2,mendelu,https://mendelu.cz/akce/prijimaci-rizeni-na-icv/
+2026-11-17,uchazec,cs,přijímačky mendelu,3,mendelu,https://af.mendelu.cz/chcistudovat/dulezite-terminy/
+2026-11-17,uchazec,cs,přijímačky mendelu,4,mendelu,https://af.mendelu.cz/chcistudovat/dalsi-informace/podminky-pro-prijeti-do-bc-a-nmgr-studia/
+2026-11-17,uchazec,cs,přijímačky mendelu,5,other,https://www.vysokeskoly.com/vysoke-skoly-1/provozne-ekonomicka-fakulta-1
+2026-11-17,uchazec,cs,přijímačky mendelu,6,mendelu,https://af.mendelu.cz/chcistudovat/druhe-kolo-prijimaci-rizeni/
+2026-11-17,uchazec,cs,přijímačky mendelu,7,other,https://www.novinky.cz/clanek/veda-skoly-vzdelavani-mendelova-univerzita-vypisuje-prijimacky-i-do-letniho-semestru-40239006
+2026-11-17,uchazec,cs,mendelu obory,1,mendelu,https://mendelu.cz/uchazec/studijni-programy/
+2026-11-17,uchazec,cs,mendelu obory,2,mendelu,https://mendelu.cz/
+2026-11-17,uchazec,cs,mendelu obory,3,mendelu,https://af.mendelu.cz/chcistudovat/studijni-programy/
+2026-11-17,uchazec,cs,mendelu obory,4,mendelu,https://mendelu.cz/studijni-programy/ekonomika-a-management/
+2026-11-17,uchazec,cs,mendelu obory,5,other,https://www.vysokeskoly.com/vysoke-skoly-1/mendelova-univerzita-v-brne
+2026-11-17,uchazec,cs,mendelu obory,6,mendelu,https://af.mendelu.cz/
+2026-11-17,uchazec,cs,mendelu obory,7,mendelu,https://mendelu.cz/studijni-programy/profesni-zemedelstvi/
+2026-11-17,uchazec,cs,mendelu obory,8,other,https://cs.wikipedia.org/wiki/Mendelova_univerzita_v_Brn%C4%9B
+2026-11-17,uchazec,cs,předškolovák mendelu,1,other,https://mendelu.predskolovak.cz/
+2026-11-17,uchazec,cs,předškolovák mendelu,2,mendelu,https://mendelu.cz/akce/predskolovak-mendelu-2026/
+2026-11-17,uchazec,cs,předškolovák mendelu,3,other,https://www.instagram.com/predskolovakmendelu/
+2026-11-17,uchazec,cs,předškolovák mendelu,4,other,https://seznamovak.org/
+2026-11-17,uchazec,cs,předškolovák mendelu,5,mendelu,https://mendelu.cz/akce/predskolovak/
+2026-11-17,uchazec,cs,předškolovák mendelu,6,other,https://www.predskolovak.cz/
+2026-11-17,uchazec,cs,předškolovák mendelu,7,other,https://www.facebook.com/predskolovakmendelu/
+2026-11-17,uchazec,cs,zápis do prvního ročníku mendelu,1,mendelu,https://af.mendelu.cz/chcistudovat/dulezite-terminy/zapisy-do-1-rocniku-nmgr-studia/
+2026-11-17,uchazec,cs,zápis do prvního ročníku mendelu,2,mendelu,https://mendelu.cz/uchazec/dulezite-terminy/
+2026-11-17,uchazec,cs,zápis do prvního ročníku mendelu,3,mendelu,https://af.mendelu.cz/chcistudovat/dulezite-terminy/zapisy-do-1-rocniku-ph-d-studia/
+2026-11-17,uchazec,cs,zápis do prvního ročníku mendelu,4,mendelu,https://af.mendelu.cz/student/studuji/registrace-a-zapisy-do-dalsiho-semestru/e-zapis/
+2026-11-17,uchazec,cs,zápis do prvního ročníku mendelu,5,mendelu,https://frrms.mendelu.cz/zapis-do-prvniho-rocniku/
+2026-11-17,uchazec,cs,zápis do prvního ročníku mendelu,6,mendelu,https://af.mendelu.cz/zapisy/
+2026-11-17,uchazec,cs,zápis do prvního ročníku mendelu,7,mendelu,https://af.mendelu.cz/student/studuji/registrace-a-zapisy-do-dalsiho-semestru/letni-semestr/
+2026-11-17,uchazec,cs,zápis do prvního ročníku mendelu,8,other,https://www.instagram.com/p/DZhBx3RiF6y/
+2026-11-17,uchazec,cs,zápis do prvního ročníku mendelu,9,mendelu,https://af.mendelu.cz/akce/18678-2/
+2026-11-17,uchazec,cs,zápis do prvního ročníku mendelu,10,mendelu,https://zf.mendelu.cz/registrace-a-zapisy/
+2026-11-17,uchazec,cs,první ročník vysoká škola,1,other,https://www.vysokeskoly.com/kde-jeste-berou-na-vs/jak-prezit-1-rok-studia-na-vs-mame-rady-a-tipy
+2026-11-17,uchazec,cs,první ročník vysoká škola,2,other,https://cs.wikipedia.org/wiki/Vysok%C3%A1_%C5%A1kola
+2026-11-17,uchazec,cs,první ročník vysoká škola,3,other,https://www.kampomaturite.cz/kampomaturite/jak-prezit-1-rok-studia-na-vs-mame-rady-a-tipy?srsltid=AYCX9vINv47ml6D3_lLL5g6idpTP4579BLUCRCVFBFlcjt3Md6c58oJl
+2026-11-17,uchazec,cs,první ročník vysoká škola,4,other,https://www.seminarkyza1.cz/blog-item/jak-zvladnout-prvni-rocnik-na-vysoke-skole/
+2026-11-17,uchazec,cs,první ročník vysoká škola,5,other,https://www.skolapopulo.cz/blog/jak-uspesne-vstoupit-na-vs-11-nejcastejsich-otazek-novych-prvaku
+2026-11-17,uchazec,cs,první ročník vysoká škola,6,other,https://vsprace.cz/8-tipu-pro-prvni-rok-na-vysoke-skole
+2026-11-17,uchazec,cs,první ročník vysoká škola,7,other,https://tarantula.ruk.cuni.cz/UDALOSTI-6840.html
+2026-11-17,uchazec,cs,první ročník vysoká škola,8,other,https://www.tutor.cz/blog/nulty-rocnik-jako-klic-k-uspesnym-prijimackam-na-vysnenou-skolu/
+2026-11-17,uchazec,cs,první ročník vysoká škola,9,other,https://portal.gov.cz/informace/vzdelavaci-system-v-ceske-republice--vysoke-skolstvi-INF-203
+2026-11-17,uchazec,cs,první ročník vysoká škola,10,other,https://www.researchgate.net/publication/313373397_Vyzkum_studentu_prvnich_rocniku_vysokych_skol_v_Ceske_republice
+2026-11-17,uchazec,cs,mendelu recenze,1,other,https://www.primat.cz/skola/mendelova-univerzita-v-brne/1541/hodnoceni
+2026-11-17,uchazec,cs,mendelu recenze,2,mendelu,https://kvalita.mendelu.cz/vnitrni-hodnoceni-kvality
+2026-11-17,uchazec,cs,mendelu recenze,3,other,https://www.reddit.com/r/Brno/comments/1ixe4w4/otev%C5%99en%C3%A1_informatika_mendelu/
+2026-11-17,uchazec,cs,mendelu recenze,4,other,https://www.prumysldnes.cz/exkluzivni-rozhovory/mendelova-univerzita-v-brne-210406
+2026-11-17,uchazec,cs,mendelu recenze,5,other,https://vejska.cz/diskuze/MENDELU
+2026-11-17,uchazec,cs,mendelu recenze,6,other,https://www.facebook.com/mendelova.univerzita/?locale=cs_CZ
+2026-11-17,uchazec,cs,mendelu recenze,7,other,https://www.primat.cz/fakulta/mendelova-univerzita-v-brne:agronomicka-fakulta/1646/hodnoceni
+2026-11-17,uchazec,cs,mendelu recenze,8,other,https://forum.root.cz/index.php?topic=9272.0
+2026-11-17,uchazec,cs,mendelu recenze,9,other,https://tatulda.cz/ohlednuti-za-mym-pusobenim-na-mendelove-univerzite/
+2026-11-17,uchazec,cs,mendelu recenze,10,other,https://www.emimino.cz/diskuse/mendelu-univerzita-571146/
+2026-11-17,koleje,cs,koleje mendelu,1,mendelu,https://skm.mendelu.cz/ubytovani/27989-ubytovaci-zarizeni
+2026-11-17,koleje,cs,koleje mendelu,2,mendelu,https://skm.mendelu.cz/27390-ubytovani
+2026-11-17,koleje,cs,koleje mendelu,3,mendelu,https://skm.mendelu.cz/ubytovani/ubytovaci-zarizeni/27982-koleje-jak
+2026-11-17,koleje,cs,koleje mendelu,4,mendelu,https://skm.mendelu.cz/ubytovani/27990-pro-studenty
+2026-11-17,koleje,cs,koleje mendelu,5,mendelu,https://prvaci.mendelu.cz/31119-ubytovani
+2026-11-17,koleje,cs,koleje mendelu,6,mendelu,https://skm.mendelu.cz/
+2026-11-17,koleje,cs,koleje mendelu,7,other,https://mapy.com/cs/?source=firm&id=723392
+2026-11-17,koleje,cs,koleje mendelu,8,mendelu,https://skm.mendelu.cz/ubytovani/27993-pro-verejnost
+2026-11-17,koleje,cs,koleje mendelu,9,mendelu,https://skm.mendelu.cz/ubytovani/ubytovaci-zarizeni/27988-tauferovy-koleje
+2026-11-17,koleje,cs,koleje mendelu,10,mendelu,https://skm.mendelu.cz/o-skm/27996-kontakt
+2026-11-17,koleje,cs,kolej akademie,1,mendelu,https://skm.mendelu.cz/ubytovani/ubytovaci-zarizeni/27987-kolej-akademie
+2026-11-17,koleje,cs,kolej akademie,2,other,https://www.booking.com/hotel/cz/kolej-akademie.cs.html
+2026-11-17,koleje,cs,kolej akademie,3,other,https://www.firmy.cz/detail/13127749-kolej-akademie-brno-cerna-pole.html
+2026-11-17,koleje,cs,kolej akademie,4,mendelu,https://skm.mendelu.cz/ubytovani/27989-ubytovaci-zarizeni
+2026-11-17,koleje,cs,kolej akademie,5,other,https://mapy.com/cs/?source=firm&id=13127749
+2026-11-17,koleje,cs,kolej akademie,6,other,https://kolej.tripcombined.com/
+2026-11-17,koleje,cs,kolej akademie,7,other,https://www.agoda.com/cs-cz/kolej-akademie/hotel/brno-cz.html
+2026-11-17,koleje,cs,kolej akademie,8,other,https://www.skyscanner.cz/hotels/cesko/brno-hotely/kolej-akademie/ht-129845974
+2026-11-17,koleje,cs,kolej akademie,9,other,https://www.zivefirmy.cz/mendelova-univerzita-v-brne---koleje-akademie_f1293159
+2026-11-17,koleje,cs,kolej akademie,10,other,https://www.tripadvisor.com/Hotel_Review-g274714-d6870799-Reviews-Kolej_Akademie-Brno_South_Moravian_Region_Moravia.html
+2026-11-17,koleje,cs,koleje jak,1,mendelu,https://skm.mendelu.cz/ubytovani/ubytovaci-zarizeni/27982-koleje-jak
+2026-11-17,koleje,cs,koleje jak,2,mendelu,https://skm.mendelu.cz/ubytovani/27989-ubytovaci-zarizeni
+2026-11-17,koleje,cs,koleje jak,3,other,https://mapy.com/cs/?source=firm&id=723392
+2026-11-17,koleje,cs,koleje jak,4,other,https://koleje-j-a-komenska-c-ho.worhot.com/
+2026-11-17,koleje,cs,koleje jak,5,other,https://www.firmy.cz/detail/723392-mendelova-univerzita-v-brne-koleje-jana-amose-komenskeho-brno-husovice.html
+2026-11-17,koleje,cs,tauferovy koleje,1,mendelu,https://skm.mendelu.cz/ubytovani/ubytovaci-zarizeni/27988-tauferovy-koleje
+2026-11-17,koleje,cs,tauferovy koleje,2,mendelu,https://skm.mendelu.cz/ubytovani/27989-ubytovaci-zarizeni
+2026-11-17,koleje,cs,tauferovy koleje,3,other,https://mapy.com/cs/?source=firm&id=683015
+2026-11-17,koleje,cs,tauferovy koleje,4,other,https://www.bam.brno.cz/objekt/d065-vysokoskolske-tauferovy-koleje
+2026-11-17,koleje,cs,tauferovy koleje,5,mendelu,https://skm.mendelu.cz/ubytovani/27993-pro-verejnost
+2026-11-17,koleje,cs,tauferovy koleje,6,other,https://www.firmy.cz/detail/683015-mendelova-univerzita-v-brne-koleje-josefa-taufera-brno-kralovo-pole.html
+2026-11-17,koleje,cs,kolik stojí koleje mendelu,1,mendelu,https://skm.mendelu.cz/27393-dokumenty
+2026-11-17,koleje,cs,kolik stojí koleje mendelu,2,mendelu,https://skm.mendelu.cz/ubytovani/27990-pro-studenty
+2026-11-17,koleje,cs,kolik stojí koleje mendelu,3,mendelu,https://skm.mendelu.cz/ubytovani/ubytovaci-zarizeni/27988-tauferovy-koleje
+2026-11-17,koleje,cs,kolik stojí koleje mendelu,4,mendelu,https://skm.mendelu.cz/ubytovani/27993-pro-verejnost
+2026-11-17,koleje,cs,kolik stojí koleje mendelu,5,mendelu,https://skm.mendelu.cz/ubytovani/27989-ubytovaci-zarizeni
+2026-11-17,koleje,cs,kolik stojí koleje mendelu,6,mendelu,https://skm.mendelu.cz/ubytovani/ubytovaci-zarizeni/27982-koleje-jak
+2026-11-17,koleje,cs,kolik stojí koleje mendelu,7,mendelu,https://skm.mendelu.cz/
+2026-11-17,koleje,cs,kolik stojí koleje mendelu,8,mendelu,https://prvaci.mendelu.cz/31119-ubytovani
+2026-11-17,koleje,cs,kolik stojí koleje mendelu,9,other,https://mapy.com/cs/?source=firm&id=723392
+2026-11-17,koleje,cs,kolik stojí koleje mendelu,10,mendelu,https://skm.mendelu.cz/27390-ubytovani
+2026-11-17,koleje,en,mendelu dorms,1,mendelu,https://skm.mendelu.cz/en/accommodation/28366-accommodation-facilities
+2026-11-17,koleje,en,mendelu dorms,2,mendelu,https://international.mendelu.cz/en/exchange-student/accommodation/
+2026-11-17,koleje,en,mendelu dorms,3,mendelu,https://skm.mendelu.cz/en/accommodation/28372-accomodation-for-students
+2026-11-17,koleje,en,mendelu dorms,4,other,https://www.study-in-brno.cz/accommodation-in-brno
+2026-11-17,koleje,en,mendelu dorms,5,mendelu,https://skm.mendelu.cz/en/28365-accommodation
+2026-11-17,koleje,en,mendelu dorms,6,mendelu,https://skm.mendelu.cz/en/accommodation/accommodation-facilities/28369-the-academy-hall
+2026-11-17,koleje,en,mendelu dorms,7,other,https://en.firmy.cz/company/723392-mendelova-univerzita-v-brne-koleje-jana-amose-komenskeho-brno-husovice.html
+2026-11-17,koleje,en,mendelu dorms,8,mendelu,https://skm.mendelu.cz/en/accommodation/accommodation-facilities/28367-johna-amos-comenius-hall-quot-jac-quot
+2026-11-17,koleje,en,mendelu dorms,9,mendelu,https://tech.mendelu.cz/en/25269-student-s-residence-network
+2026-11-17,koleje,cs,koleje brno cena,1,other,https://www.skm.muni.cz/aktuality/cenik-ubytovani-platny-od-122026
+2026-11-17,koleje,cs,koleje brno cena,2,other,https://www.skm.muni.cz/media/3847432/cenik-kolejneho-2025-2026.pdf
+2026-11-17,koleje,cs,koleje brno cena,3,other,https://www.kam.vutbr.cz/?p=doku
+2026-11-17,koleje,cs,koleje brno cena,4,mendelu,https://skm.mendelu.cz/27393-dokumenty
+2026-11-17,koleje,cs,koleje brno cena,5,other,https://brnensky.denik.cz/zpravy-region/brno-ubytovani-bydleni-studenti-koleje-cena-pronajem-byt-privat-srovnani/
+2026-11-17,koleje,cs,koleje brno cena,6,other,https://www.vetuni.cz/poplatek-za-ubytovani-na-kolejich-kolejne
+2026-11-17,koleje,cs,koleje brno cena,7,mendelu,https://skm.mendelu.cz/ubytovani/27993-pro-verejnost
+2026-11-17,koleje,cs,koleje brno cena,8,other,https://www.booking.com/hotel/cz/kolej-akademie.cs.html
+2026-11-17,koleje,cs,koleje brno cena,9,other,https://www.firmy.cz/Cestovni-sluzby/Ubytovaci-sluzby/Levne-ubytovani/Koleje/kraj-jihomoravsky/brno-mesto
+2026-11-17,koleje,cs,koleje brno cena,10,other,https://www.skm.muni.cz/aktuality/cenik-ubytovani-platny-od-122025
+2026-11-17,koleje,cs,koleje muni cena,1,other,https://www.skm.muni.cz/aktuality/cenik-ubytovani-platny-od-122026
+2026-11-17,koleje,cs,koleje muni cena,2,other,https://www.skm.muni.cz/media/3847432/cenik-kolejneho-2025-2026.pdf
+2026-11-17,koleje,cs,koleje muni cena,3,other,https://www.skm.muni.cz/aktuality/cenik-ubytovani-platny-od-122025
+2026-11-17,koleje,cs,koleje muni cena,4,other,https://www.skm.muni.cz/ubytovani/koleje-muni
+2026-11-17,koleje,cs,koleje muni cena,5,other,https://www.skm.muni.cz/ubytovani/dlouhodobe-ubytovani/rezervace-ubytovani
+2026-11-17,koleje,cs,koleje muni cena,6,other,https://www.skm.muni.cz/ubytovani/dlouhodobe-ubytovani
+2026-11-17,koleje,cs,koleje muni cena,7,other,https://www.skm.muni.cz/aktuality/cenik-ubytovani-pro-akademicky-rok-202526
+2026-11-17,koleje,cs,koleje muni cena,8,other,https://www.skm.muni.cz/ubytovani/koleje-muni/koleje-nam-miru
+2026-11-17,koleje,cs,koleje muni cena,9,other,https://www.skm.muni.cz/ubytovani/koleje-muni/koleje-vinarska
+2026-11-17,koleje,cs,koleje muni cena,10,other,https://www.skm.muni.cz/media/3646673/cenik-kolejneho-2024-2025-od-192024.pdf
+2026-11-17,koleje,cs,koleje vut cena,1,other,https://www.kam.vutbr.cz/?p=doku
+2026-11-17,koleje,cs,koleje vut cena,2,other,https://www.kam.vutbr.cz/
+2026-11-17,koleje,cs,koleje vut cena,3,other,https://www.vut.cz/zivot/koleje
+2026-11-17,koleje,cs,koleje vut cena,4,other,https://www.kam.vutbr.cz/?p=arpu
+2026-11-17,koleje,cs,koleje vut cena,5,other,https://www.kam.vutbr.cz/skripty/doc.aspx?id=28
+2026-11-17,koleje,cs,koleje vut cena,6,other,https://www.kam.vutbr.cz/?p=arli
+2026-11-17,koleje,cs,koleje vut cena,7,other,https://www.kam.vutbr.cz/?p=budu
+2026-11-17,koleje,cs,koleje vut cena,8,other,https://www.kam.vutbr.cz/?p=faqw
+2026-11-17,koleje,cs,koleje vut cena,9,other,https://www.kam.vutbr.cz/skripty/doc.aspx?id=786
+2026-11-17,informatika,cs,informatika brno,1,other,https://www.cichnovabrno.cz/
+2026-11-17,informatika,cs,informatika brno,2,other,https://www.muni.cz/bakalarske-a-magisterske-studijni-programy/22955-informatika
+2026-11-17,informatika,cs,informatika brno,3,other,https://www.fit.vut.cz/.cs
+2026-11-17,informatika,cs,informatika brno,4,other,https://www.vysokeskoly.cz/v/informacni-technologie/region-brno/
+2026-11-17,informatika,cs,informatika brno,5,other,https://www.facebook.com/FI.MUNI.cz/?locale=cs_CZ
+2026-11-17,informatika,cs,informatika brno,6,other,https://cs.wikipedia.org/wiki/Fakulta_informatiky_Masarykovy_univerzity
+2026-11-17,informatika,cs,informatika brno,7,mendelu,https://informatika.mendelu.cz/
+2026-11-17,informatika,cs,informatika brno,8,other,https://www.prace.cz/nabidky/brno/informatika/
+2026-11-17,informatika,cs,informatika brno,9,other,https://www.muni.cz/o-univerzite/fakulty-a-pracoviste/fakulta-informatiky
+2026-11-17,informatika,cs,informatika brno,10,other,https://www.sstebrno.cz/pro-uchazece/vyber-si-smer/informatika/
+2026-11-17,informatika,cs,fit vut vs fi muni,1,other,https://www.reddit.com/r/czech/comments/1tiijht/fit_vut_vs_fi_muni_re%C3%A1ln%C3%A9_rozd%C3%ADly_pohled/
+2026-11-17,informatika,cs,fit vut vs fi muni,2,other,https://www.jdipracovat.cz/je-lepsi-informatika-na-masarycce-nebo-vut/
+2026-11-17,informatika,cs,fit vut vs fi muni,3,other,https://forum.root.cz/index.php?topic=24094.0
+2026-11-17,informatika,cs,fit vut vs fi muni,4,other,https://www.reddit.com/r/czech/comments/raha00/mgr_informatika_na_fit_vut_vs_fi_muni/?tl=cs
+2026-11-17,informatika,cs,fit vut vs fi muni,5,other,https://www.itnetwork.cz/prace-a-podnikani-v-it/diskuzni-forum-stredni-a-vysoke-skoly/fi-muni-x-vut-fit-5c30fb2be48f6
+2026-11-17,informatika,cs,fit vut vs fi muni,6,other,http://programujte.com/forum/vlakno/19100-fit-x-fi-muni/
+2026-11-17,informatika,cs,fit vut vs fi muni,7,other,https://www.jdipracovat.cz/byt-ci-nebyt-informatika-na-vut-nebo-mu/
+2026-11-17,informatika,cs,fit vut vs fi muni,8,other,https://forum.zive.cz/viewtopic.php?f=912&t=1003326
+2026-11-17,informatika,cs,fit vut vs fi muni,9,other,https://www.vysokeskoly.cz/clanek/komunita-moznosti-odhodlani-to-je-fi-muni
+2026-11-17,informatika,cs,fit vut vs fi muni,10,other,https://vejska.cz/diskuze/vyber-skoly/65732-fi-muni-vs-fit-vut-uplatneni
+2026-11-17,informatika,cs,otevřená informatika mendelu,1,mendelu,https://mendelu.cz/studijni-programy/otevrena-informatika/
+2026-11-17,informatika,cs,otevřená informatika mendelu,2,mendelu,https://mendelu.cz/studijni-programy/otevrena-informatika-nmgr/
+2026-11-17,informatika,cs,otevřená informatika mendelu,3,other,https://www.reddit.com/r/Brno/comments/1ixe4w4/otev%C5%99en%C3%A1_informatika_mendelu/
+2026-11-17,informatika,cs,otevřená informatika mendelu,4,mendelu,https://informatika.mendelu.cz/
+2026-11-17,informatika,cs,otevřená informatika mendelu,5,mendelu,https://mendelu.cz/studijni-programy/otevrena-informatika-phd/
+2026-11-17,informatika,cs,otevřená informatika mendelu,6,other,https://www.vysokeskoly.com/obor/46030
+2026-11-17,informatika,cs,otevřená informatika mendelu,7,mendelu,https://informatika.mendelu.cz/bakalarske-studium-otevrena-informatika/
+2026-11-17,informatika,cs,otevřená informatika mendelu,8,other,https://www.youtube.com/shorts/56HqRgZfdQ0
+2026-11-17,informatika,cs,otevřená informatika mendelu,9,other,https://vejska.cz/studijni-programy/1020909
+2026-11-17,prijimacky,cs,přijímačky mendelu,1,mendelu,https://mendelu.cz/uchazec/
+2026-11-17,prijimacky,cs,přijímačky mendelu,2,mendelu,https://mendelu.cz/akce/prijimaci-rizeni-na-icv/
+2026-11-17,prijimacky,cs,přijímačky mendelu,3,mendelu,https://af.mendelu.cz/chcistudovat/dulezite-terminy/
+2026-11-17,prijimacky,cs,přijímačky mendelu,4,mendelu,https://af.mendelu.cz/chcistudovat/dalsi-informace/podminky-pro-prijeti-do-bc-a-nmgr-studia/
+2026-11-17,prijimacky,cs,přijímačky mendelu,5,other,https://www.vysokeskoly.com/vysoke-skoly-1/provozne-ekonomicka-fakulta-1
+2026-11-17,prijimacky,cs,přijímačky mendelu,6,mendelu,https://af.mendelu.cz/chcistudovat/druhe-kolo-prijimaci-rizeni/
+2026-11-17,prijimacky,cs,přijímačky mendelu,7,other,https://www.novinky.cz/clanek/veda-skoly-vzdelavani-mendelova-univerzita-vypisuje-prijimacky-i-do-letniho-semestru-40239006
+2026-11-17,prijimacky,cs,mendelu přijímačky vzor,1,mendelu,https://frrms.mendelu.cz/wp-content/uploads/2022/03/2022_03_TSP_Vzor.pdf
+2026-11-17,prijimacky,cs,mendelu přijímačky vzor,2,mendelu,https://pef.mendelu.cz/uchazec/bakalarske-studium/
+2026-11-17,prijimacky,cs,mendelu přijímačky vzor,3,mendelu,https://pef.mendelu.cz/wp-content/uploads/2023/10/Vzorove-testy_N_EAM.pdf
+2026-11-17,prijimacky,cs,mendelu přijímačky vzor,4,mendelu,https://pef.mendelu.cz/uchazec/casto-kladene-otazky/
+2026-11-17,prijimacky,cs,mendelu přijímačky vzor,5,mendelu,https://af.mendelu.cz/chcistudovat/dalsi-informace/podminky-pro-prijeti-do-bc-a-nmgr-studia/vzory-testu-prijimacich-zkousek-do-nmgr-studia/
+2026-11-17,prijimacky,cs,mendelu přijímačky vzor,6,other,https://gaudeamus.cz/fakulty/detail-fakulty/facultyHash:5182513abd7b7f08105051ee63045623
+2026-11-17,prijimacky,cs,mendelu přijímačky vzor,7,mendelu,https://pef.mendelu.cz/wp-content/uploads/2026/04/Vzorovy_TPS.pdf
+2026-11-17,prijimacky,cs,mendelu přijímačky vzor,8,mendelu,https://mendelu.cz/uchazec/
+2026-11-17,prijimacky,cs,mendelu přijímačky vzor,9,other,https://www.scribd.com/document/638284940/Untitled
+2026-11-17,prijimacky,cs,mendelu přijímačky vzor,10,mendelu,https://mendelu.cz/akce/prijimaci-zkousky-tsp/
+2026-11-17,prijimacky,cs,test předpokladů ke studiu mendelu,1,mendelu,https://frrms.mendelu.cz/wp-content/uploads/2022/03/2022_03_TSP_Vzor.pdf
+2026-11-17,prijimacky,cs,test předpokladů ke studiu mendelu,2,mendelu,https://pef.mendelu.cz/uchazec/casto-kladene-otazky/
+2026-11-17,prijimacky,cs,test předpokladů ke studiu mendelu,3,mendelu,https://pef.mendelu.cz/uchazec/bakalarske-studium/
+2026-11-17,prijimacky,cs,test předpokladů ke studiu mendelu,4,mendelu,https://pef.mendelu.cz/wp-content/uploads/2026/04/Vzorovy_TPS.pdf
+2026-11-17,prijimacky,cs,test předpokladů ke studiu mendelu,5,other,https://www.reddit.com/r/Brno/comments/1qaua2g/test_p%C5%99edpokladu_ke_studiu_tsp_na_mendelu/
+2026-11-17,prijimacky,cs,test předpokladů ke studiu mendelu,6,other,https://gaudeamus.cz/fakulty/detail-fakulty/facultyHash:5182513abd7b7f08105051ee63045623
+2026-11-17,prijimacky,cs,test předpokladů ke studiu mendelu,7,mendelu,https://mendelu.cz/akce/prijimaci-zkousky-tsp/
+2026-11-17,prijimacky,cs,test předpokladů ke studiu mendelu,8,other,https://www.scribd.com/document/638284940/Untitled
+2026-11-17,prijimacky,cs,test předpokladů ke studiu mendelu,9,mendelu,https://pef.mendelu.cz/wp-content/uploads/2023/10/Vzorove-testy_N_EAM.pdf
+2026-11-17,prijimacky,cs,test předpokladů ke studiu mendelu,10,mendelu,https://frrms.mendelu.cz/uchazec/prijimaci-rizeni-do-bakalarskeho-studia/
+2026-11-17,prijimacky,cs,muni tsp percentil body,1,other,https://www.muni.cz/media/3988617/statistiky-tsp-2025.pdf
+2026-11-17,prijimacky,cs,muni tsp percentil body,2,other,https://www.reddit.com/r/czech/comments/19c3bm4/tsp_muni/
+2026-11-17,prijimacky,cs,muni tsp percentil body,3,other,https://www.muni.cz/media/3760253/statistiky-tsp-2024.pdf
+2026-11-17,prijimacky,cs,muni tsp percentil body,4,other,https://www.muni.cz/media/3590023/statistiky-tsp-2023.pdf
+2026-11-17,prijimacky,cs,muni tsp percentil body,5,other,https://www.instagram.com/p/DJEelw1yKgr/?hl=cs
+2026-11-17,prijimacky,cs,muni tsp percentil body,6,other,https://tsp-kurzy.cz/historicky-vyvoj-tsp-mu/
+2026-11-17,prijimacky,cs,muni tsp percentil body,7,other,https://oscio.cz/tsp/
+2026-11-17,prijimacky,cs,muni tsp percentil body,8,other,https://is.muni.cz/do/rect/metodika/stud/prijriz/el_tsp/percentily-numericke.pdf
+2026-11-17,prijimacky,cs,muni tsp percentil body,9,other,https://www.youtube.com/watch?v=rixh9zw3vu0
+2026-11-17,prijimacky,cs,kolik percentil na muni,1,other,https://www.muni.cz/o-univerzite/uredni-deska/zprava-o-vysledku-prijimaciho-rizeni-do-bakalarskeho-a-magisterskeho-pomaturitniho-studia
+2026-11-17,prijimacky,cs,kolik percentil na muni,2,other,https://www.muni.cz/uchazeci/bakalarske-a-magisterske-studium/prijimacky
+2026-11-17,prijimacky,cs,kolik percentil na muni,3,other,https://www.ped.muni.cz/pro-uchazece/bakalarske-studium-a-magisterske-studium/podminky-a-kriteria-prijeti-ke-studiu
+2026-11-17,prijimacky,cs,kolik percentil na muni,4,other,https://www.muni.cz/media/3590023/statistiky-tsp-2023.pdf
+2026-11-17,prijimacky,cs,kolik percentil na muni,5,other,https://www.muni.cz/media/3988617/statistiky-tsp-2025.pdf
+2026-11-17,prijimacky,cs,kolik percentil na muni,6,other,https://www.law.muni.cz/dokumenty/31726
+2026-11-17,prijimacky,cs,kolik percentil na muni,7,other,https://is.muni.cz/prihlaska/faq/
+2026-11-17,prijimacky,cs,kolik percentil na muni,8,other,https://www.muni.cz/media/3760253/statistiky-tsp-2024.pdf
+2026-11-17,prijimacky,cs,kolik percentil na muni,9,other,https://www.law.muni.cz/dokumenty/65008
+2026-11-17,prijimacky,cs,kolik percentil na muni,10,other,https://www.instagram.com/p/C6OXCnmrrcP/
+2026-11-17,prijimacky,cs,přijímačky vut fit,1,other,https://www.fit.vut.cz/applicants/application/.cs
+2026-11-17,prijimacky,cs,přijímačky vut fit,2,other,https://www.vut.cz/pomocne2018/statistiky-prijimaciho-rizeni-2024-2025-f151468/fit-zadani-a-vysledky-prijimaci-zkousky-d267515
+2026-11-17,prijimacky,cs,přijímačky vut fit,3,other,https://www.vut.cz/studuj/proc-na-vut/prijimaci-rizeni
+2026-11-17,prijimacky,cs,přijímačky vut fit,4,other,https://www.fit.vut.cz/applicants/.cs
+2026-11-17,prijimacky,cs,přijímačky vut fit,5,other,https://www.vut.cz/uredni-deska/vnitrni-legislativa-fit/-d307253/pravidla-prijimaciho-rizeni-a-podminky-pro-prijeti-ke-studiu-v-bakalarskem-studijnim-programu-na-fakulte-informacnich-technologii-vysokeho-uceni-technickeho-v-brne-pro-akademicky-rok-2026-2027-p317342
+2026-11-17,prijimacky,cs,přijímačky vut fit,6,other,https://www.vut.cz/uredni-deska/vnitrni-legislativa-fit/smernice-c-2-2021-pravidla-pro-prijimaci-rizeni-a-podminky-pro-prijeti-ke-studiu-v-bakalarskem-studijnim-programu-na-fit-vut-pro-akademicky-rok-2022-2023-d213509
+2026-11-17,prijimacky,cs,přijímačky vut fit,7,other,https://www.fme.vutbr.cz/studuj/prijimacky
+2026-11-17,prijimacky,cs,přijímačky vut fit,8,other,https://gaudeamus.cz/fakulty/detail-fakulty/facultyHash:494d1362447fe0259e55d4e719c206c5
+2026-11-17,prijimacky,cs,přijímačky vut fit,9,other,https://www.fekt.vut.cz/pro_uchazece/prijimacky
+2026-11-17,prijimacky,cs,přijímačky vut fit,10,other,https://www.vut.cz/uredni-deska/statistiky-rizeni
+2026-11-17,prijimacky,cs,přijímačky vut fp,1,other,https://www.fp.vut.cz/cs/pro-uchazece/prijimacky
+2026-11-17,prijimacky,cs,přijímačky vut fp,2,other,https://www.vut.cz/pomocne2018/statistiky-prijimaciho-rizeni-2024-2025-f151468/fp-zadani-a-vysledky-prijimaci-zkousky-d267503
+2026-11-17,prijimacky,cs,přijímačky vut fp,3,other,https://www.fp.vut.cz/cs/pro-uchazece/vysledky-prijimacek
+2026-11-17,prijimacky,cs,přijímačky vut fp,4,other,https://www.fp.vut.cz/cs/zahranicni/studenti/online-prihlaska
+2026-11-17,prijimacky,cs,přijímačky vut fp,5,other,https://www.vut.cz/studuj/proc-na-vut/prijimaci-rizeni
+2026-11-17,prijimacky,cs,přijímačky vut fp,6,other,https://www.vysokeskoly.com/vysoke-skoly-1/fakulta-podnikatelska-1
+2026-11-17,prijimacky,cs,přijímačky vut fp,7,other,https://www.vut.cz/uredni-deska/vnitrni-legislativa-fp/-d305666/pravidla-prijimaciho-rizeni-a-podminky-pro-prijeti-ke-studiu-v-bakalarskem-a-magisterskem-studijnim-programu-vyucovanem-v-anglickem-jazyce-pro-ak-rok-2026-2027-p315714
+2026-11-17,prijimacky,cs,přijímačky vut fp,8,other,https://www.fme.vutbr.cz/studuj/prijimacky
+2026-11-17,prijimacky,cs,přijímačky vut fp,9,other,https://www.fp.vut.cz/cs/pro-uchazece/pojdte-na-podnikatelku
+2026-11-17,prijimacky,cs,přijímačky vut fp,10,other,https://www.vut.cz/uredni-deska/statistiky-rizeni
+2026-11-17,prijimacky,cs,esf muni přijímačky,1,other,https://www.econ.muni.cz/pro-uchazece/navazujici-magisterske-studium/prakticke-informace
+2026-11-17,prijimacky,cs,esf muni přijímačky,2,other,https://www.econ.muni.cz/pro-uchazece/bakalarske-studium/prakticke-informace
+2026-11-17,prijimacky,cs,esf muni přijímačky,3,other,https://www.econ.muni.cz/pro-uchazece/bakalarske-studium/prihlaska-krok-za-krokem
+2026-11-17,prijimacky,cs,esf muni přijímačky,4,other,https://www.econ.muni.cz/o-nas/organizacni-struktura/569917-oddeleni-vnejsich-vztahu/newsletter-pro-uchazece/archiv/tsp-2024
+2026-11-17,prijimacky,cs,esf muni přijímačky,5,other,https://www.econ.muni.cz/pro-uchazece/doktorske-studium/prijimaci-rizeni/prijimaci-zkousky
+2026-11-17,prijimacky,cs,esf muni přijímačky,6,other,https://is.muni.cz/do/econ/soubory/studium/prijimacky/testy/
+2026-11-17,prijimacky,cs,esf muni přijímačky,7,other,https://www.econ.muni.cz/o-nas/organizacni-struktura/561800-katedra-regionalni-ekonomie/regionalni-ekonomie/jak-se-prihlasit/prijimaci-rizeni
+2026-11-17,prijimacky,cs,esf muni přijímačky,8,other,https://www.econ.muni.cz/pro-uchazece/bakalarske-studium
+2026-11-17,prijimacky,cs,esf muni přijímačky,9,other,https://www.youtube.com/watch?v=AGj9drGlniY
+2026-11-17,prijimacky,cs,esf muni přijímačky,10,other,https://www.muni.cz/go/e8e007
