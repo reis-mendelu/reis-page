@@ -1,4 +1,4 @@
-# Page comparison, 2026-11-17
+# Page comparison, 2026-11-18
 
 Words = text served without JS. H = h1/h2 count. SEO = Lighthouse SEO score (only with --lighthouse).
 

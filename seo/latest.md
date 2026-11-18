@@ -1,10 +1,10 @@
-# Search positions, 2026-11-17
+# Search positions, 2026-11-18
 
 Google, gl=cz, top 10 organic results (Serper). "–" = not in the top 10.
 
 | Topic | Query | reisapp.cz | Best mendelu.cz page | #1 result |
 | --- | --- | --- | --- | --- |
-| eduroam | eduroam mendelu | – | 1 https://eduroam.mendelu.cz/ | https://eduroam.mendelu.cz/ |
+| eduroam | eduroam mendelu | 7 | 1 https://eduroam.mendelu.cz/ | https://eduroam.mendelu.cz/ |
 | eduroam | mendelu wifi | – | 1 https://eduroam.mendelu.cz/ | https://eduroam.mendelu.cz/ |
 | eduroam | eduroam mendelu iphone | – | 1 https://eduroam.mendelu.cz/navody-k-instalaci/25358-navody-pro-apple | https://eduroam.mendelu.cz/navody-k-instalaci/25358-navody-pro-apple |
 | eduroam | eduroam mendelu android | – | 1 https://eduroam.mendelu.cz/navody-k-instalaci/25359-navody-pro-android | https://eduroam.mendelu.cz/navody-k-instalaci/25359-navody-pro-android |
@@ -20,24 +20,24 @@ Google, gl=cz, top 10 organic results (Serper). "–" = not in the top 10.
 | eduroam | mendelu přihlášení na wifi | – | 1 https://eduroam.mendelu.cz/ | https://eduroam.mendelu.cz/ |
 | zkousky | přihlášení na zkoušku mendelu | 4 | 1 https://zf.mendelu.cz/vyska-na-zkousku/ | https://zf.mendelu.cz/vyska-na-zkousku/ |
 | zkousky | jak se přihlásit na zkoušku mendelu | 4 | 1 https://zf.mendelu.cz/vyska-na-zkousku/ | https://zf.mendelu.cz/vyska-na-zkousku/ |
-| zkousky | termíny zkoušek mendelu | – | 1 https://mendelu.cz/uchazec/dulezite-terminy/ | https://mendelu.cz/uchazec/dulezite-terminy/ |
+| zkousky | termíny zkoušek mendelu | 10 | 1 https://mendelu.cz/uchazec/dulezite-terminy/ | https://mendelu.cz/uchazec/dulezite-terminy/ |
 | zkousky | mendelu exam registration (en) | 6 | 1 https://frrms.mendelu.cz/en/course-registration-and-enrolment/ | https://frrms.mendelu.cz/en/course-registration-and-enrolment/ |
 | mapa | mendelu mapa kampusu | 9 | 1 https://frrms.mendelu.cz/mapa-kampusu-mendelu/ | https://frrms.mendelu.cz/mapa-kampusu-mendelu/ |
 | mapa | mendelu mapa | – | 1 https://frrms.mendelu.cz/mapa-kampusu-mendelu/ | https://frrms.mendelu.cz/mapa-kampusu-mendelu/ |
 | mapa | mendelu učebny | – | 1 https://is.mendelu.cz/ | https://is.mendelu.cz/ |
-| mapa | mendel university campus map (en) | 7 | 1 https://frrms.mendelu.cz/en/mendelu-campus-map/ | https://frrms.mendelu.cz/en/mendelu-campus-map/ |
+| mapa | mendel university campus map (en) | 3 | 1 https://frrms.mendelu.cz/en/mendelu-campus-map/ | https://frrms.mendelu.cz/en/mendelu-campus-map/ |
 | menza | mendelu menza jídelníček | – | 1 https://skm.mendelu.cz/stravovani/28603-jidelni-listek | https://skm.mendelu.cz/stravovani/28603-jidelni-listek |
 | menza | menza mendelu dnes | – | 1 https://skm.mendelu.cz/stravovani/28603-jidelni-listek | https://skm.mendelu.cz/stravovani/28603-jidelni-listek |
 | menza | mendelu jídelníček | – | 1 https://skm.mendelu.cz/stravovani/28603-jidelni-listek | https://skm.mendelu.cz/stravovani/28603-jidelni-listek |
 | menza | mendelu canteen menu (en) | – | 1 https://skm.mendelu.cz/en/catering/28604-menu | https://skm.mendelu.cz/en/catering/28604-menu |
-| brand | reis mendelu | 7 | 2 https://is.mendelu.cz/ | https://www.instagram.com/reis.mendelu/ |
+| brand | reis mendelu | 6 | 2 https://is.mendelu.cz/ | https://www.instagram.com/reis.mendelu/ |
 | brand | mendelu aplikace | – | 1 https://moje.mendelu.cz/ | https://moje.mendelu.cz/ |
 | uis | uis mendelu | – | 1 https://is.mendelu.cz/ | https://is.mendelu.cz/ |
 | uis | mendelu uis | – | 1 https://is.mendelu.cz/ | https://is.mendelu.cz/ |
 | uis | is mendelu | – | 1 https://is.mendelu.cz/ | https://is.mendelu.cz/ |
 | uis | uis mendelu přihlášení | – | 1 https://is.mendelu.cz/ | https://is.mendelu.cz/ |
 | uis | iskam mendelu | – | 1 https://webiskam.mendelu.cz/ | https://webiskam.mendelu.cz/ |
-| uis | mendelu aplikace pro studenty | – | 1 https://mendelu.cz/mendelu-rozviji-aplikaci-pro-studenty-i-zamestnance-2/ | https://mendelu.cz/mendelu-rozviji-aplikaci-pro-studenty-i-zamestnance-2/ |
+| uis | mendelu aplikace pro studenty | 10 | 1 https://mendelu.cz/mendelu-rozviji-aplikaci-pro-studenty-i-zamestnance-2/ | https://mendelu.cz/mendelu-rozviji-aplikaci-pro-studenty-i-zamestnance-2/ |
 | uchazec | vysoké školy brno | – | – | https://www.atlasskolstvi.cz/vysoke-skoly?city=brno |
 | uchazec | vysoká škola brno ekonomie | – | – | https://www.vysokeskoly.cz/v/ekonomie-a-management/region-brno/ |
 | uchazec | kde studovat informatiku brno | – | – | https://www.vysokeskoly.cz/tema/informatika |
@@ -62,7 +62,7 @@ Google, gl=cz, top 10 organic results (Serper). "–" = not in the top 10.
 | informatika | informatika brno | – | 7 https://informatika.mendelu.cz/ | https://www.cichnovabrno.cz/ |
 | informatika | fit vut vs fi muni | – | – | https://www.reddit.com/r/czech/comments/1tiijht/fit_vut_vs_fi_muni_re%C3%A1ln%C3%A9_rozd%C3%ADly_pohled/ |
 | informatika | otevřená informatika mendelu | – | 1 https://mendelu.cz/studijni-programy/otevrena-informatika/ | https://mendelu.cz/studijni-programy/otevrena-informatika/ |
-| prijimacky | přijímačky mendelu | – | 1 https://mendelu.cz/uchazec/ | https://mendelu.cz/uchazec/ |
+| prijimacky | přijímačky mendelu | – | 1 https://is.mendelu.cz/prihlaska/ | https://is.mendelu.cz/prihlaska/ |
 | prijimacky | mendelu přijímačky vzor | – | 1 https://frrms.mendelu.cz/wp-content/uploads/2022/03/2022_03_TSP_Vzor.pdf | https://frrms.mendelu.cz/wp-content/uploads/2022/03/2022_03_TSP_Vzor.pdf |
 | prijimacky | test předpokladů ke studiu mendelu | – | 1 https://frrms.mendelu.cz/wp-content/uploads/2022/03/2022_03_TSP_Vzor.pdf | https://frrms.mendelu.cz/wp-content/uploads/2022/03/2022_03_TSP_Vzor.pdf |
 | prijimacky | muni tsp percentil body | – | – | https://www.muni.cz/media/3988617/statistiky-tsp-2025.pdf |
