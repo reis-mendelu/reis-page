@@ -13,3 +13,5 @@ jobs:
           node-version: 22
       - name: en/navod.html matches navod/index.html
         run: node scripts/navod-en.mjs --check
+      - name: Every guide has the same Další návody / More guides list
+        run: node scripts/guide-lists.mjs --check

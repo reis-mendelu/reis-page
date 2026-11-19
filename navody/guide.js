@@ -91,18 +91,24 @@
 // "Pošli spolužákovi": share the guide (system share sheet on a phone, copy the link elsewhere).
 // Shared links are what other people post in class groups, which is also how Google finds them.
 document.addEventListener('DOMContentLoaded', function () {
-  // A page can place a big version with <div data-share-here></div>; default: small, above the Ověřeno line.
+  // One look on every guide (Dominik, 2026-11-19): the full-width button. A page can place it with
+  // <div class="share-box" data-share-here><p>…</p></div>; otherwise it goes above the Ověřeno line.
   var here = document.querySelector('[data-share-here]');
-  var anchor = here || document.querySelector('main .checked');
-  if (!anchor) return;
+  if (!here) {
+    var anchor = document.querySelector('main .checked');
+    if (!anchor) return;
+    here = document.createElement('div');
+    here.className = 'share-box';
+    anchor.parentNode.insertBefore(here, anchor);
+  }
   var en = document.documentElement.lang === 'en';
   var canonical = document.querySelector('link[rel="canonical"]');
   var url = (canonical ? canonical.href : location.origin + location.pathname) + '?utm_source=share';
   var b = document.createElement('button');
   b.type = 'button';
-  b.className = here ? 'share big' : 'share';
+  b.className = 'share big';
   b.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><path d="M16 6l-4-4-4 4"/><path d="M12 2v13"/></svg><span>' + (en ? 'Send to a classmate' : 'Pošli spolužákovi') + '</span>';
-  if (here) here.appendChild(b); else anchor.parentNode.insertBefore(b, anchor);
+  here.appendChild(b);
   b.addEventListener('click', function () {
     var done = function (how) {
       if (window.reisTrack) window.reisTrack('guide_shared', { guide: location.pathname, how: how });

@@ -106,13 +106,13 @@ a.device{text-decoration:none}
 .shot img{display:block;max-width:min(100%,220px);height:auto;border-radius:12px;border:1px solid var(--border);background:var(--surface);margin:0 0 18px}
 /* Opened from the reIS app (?z=app): no install buttons, the student already has reIS. */
 .from-app .badges,.from-app .cta,.from-app .cta+.hint,.from-app .tophone{display:none!important}
-/* "Pošli spolužákovi" (added by guide.js above the Ověřeno line). */
+/* "Pošli spolužákovi": guide.js adds it, always full width (.share.big). */
 .share{display:inline-flex;align-items:center;gap:8px;margin:22px 0 4px;font:inherit;font-size:15px;font-weight:600;color:var(--text);background:var(--surface);border:1px solid var(--border-strong);border-radius:999px;padding:9px 16px;cursor:pointer}
 .share:hover{border-color:var(--accent)}
 .share svg{color:var(--accent-text)}
 /* Big "Pošli spolužákovi": a page puts <div class="share-box" data-share-here><p>…</p></div> where its
    useful part ends and guide.js renders the button there (reis-page CLAUDE.md, rule 4). */
-.share-box{margin:6px 0 26px}
+.share-box{margin:16px 0 26px}
 .share-box p{margin:0 0 8px;font-size:15px;color:var(--text-2)}
 .share.big{display:flex;justify-content:center;width:100%;min-height:48px;margin:0;font-size:16px;background:var(--btn);color:var(--on-btn);border-color:var(--btn)}
 .share.big:hover{background:var(--btn-hover)}
