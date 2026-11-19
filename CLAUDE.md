@@ -4,6 +4,18 @@ Static HTML. Vercel deploys `main`. Tokens in `theme.css` (dark only), shared gu
 `navody/guide.css` + `navody/guide.js`. Push and merge recipe, SEO rules, keyword tracker: the
 `reis:reis-seo` skill.
 
+## Generated files and scripts
+
+- **`en/navod.html` is generated** from `navod/index.html` by `node scripts/navod-en.mjs`
+  (English `<head>` and no-JS fallback; the page picks its language from the path, never the
+  browser). Edit only the Czech file, rerun, commit both. CI (`generated-pages.yml`) fails a PR
+  where they disagree.
+- **`node scripts/sitemap-lastmod.mjs`** before committing a content change: every `<lastmod>`
+  becomes the date that page's file last changed. A new page also needs its `<url>` entry.
+- Header and footer are JS components (`dc-import`); pages built on them carry a
+  `<noscript data-static="site-nav">` link list so crawlers without JavaScript still find the
+  site. A new page goes into that list on `index.html`, `en.html` and the other dc pages.
+
 ## Page rules: check every new or reworked page against this list before showing it
 
 Dominik's reviews of /navody/informatika-v-brne and /navody/prvni-rocnik (2026-11-16). Each rule is
