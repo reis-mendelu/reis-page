@@ -10,6 +10,9 @@ Static HTML. Vercel deploys `main`. Tokens in `theme.css` (dark only), shared gu
   (English `<head>` and no-JS fallback; the page picks its language from the path, never the
   browser). Edit only the Czech file, rerun, commit both. CI (`generated-pages.yml`) fails a PR
   where they disagree.
+- **"Další návody" / "More guides"** is the same list on every guide: every guide on the index page,
+  in its order, named by its breadcrumb, minus itself. `node scripts/guide-lists.mjs` writes it;
+  CI fails when it is stale. A new guide: add it to the index page, then run the script.
 - **`node scripts/sitemap-lastmod.mjs`** before committing a content change: every `<lastmod>`
   becomes the date that page's file last changed. A new page also needs its `<url>` entry.
 - Header and footer are JS components (`dc-import`); pages built on them carry a
@@ -31,8 +34,8 @@ a mistake that has already shipped once.
    notes in `~/Documents/reis/research/reddit-brno-unis/`), not from what data we happen to have.
    Identical numbers (6 / 6 / 6) are never the hero.
 4. **Big "Pošli spolužákovi".** Put `<div class="share-box" data-share-here>` where the useful part
-   of the page ends; `guide.js` puts a full-width button there. Pages are passed between students,
-   so the small default at the very bottom is only for the classic how-to guides.
+   of the page ends; `guide.js` puts a full-width button there. Without one it puts the same
+   full-width button above the Ověřeno line: one look on every guide (Dominik, 2026-11-19).
 5. **Nothing cluttered at the bottom.** Reading notes and caveats go inside "Zdroje", not into a
    paragraph. Leftover groups become one short list (one line each).
 6. **reIS only where it helps.** Small "V reIS: …" chips at the step where the app is useful. No
