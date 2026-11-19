@@ -130,7 +130,7 @@
   </url>
   <url>
     <loc>https://reisapp.cz/navody/obory</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-19</lastmod>
   </url>
   <url>
     <loc>https://reisapp.cz/navody/dobiti-isic</loc>
@@ -152,10 +152,24 @@
   </url>
   <url>
     <loc>https://reisapp.cz/navody/informatika-v-brne</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-19</lastmod>
   </url>
   <url>
     <loc>https://reisapp.cz/navody/prvni-rocnik</loc>
+    <lastmod>2026-11-19</lastmod>
+  </url>
+  <url>
+    <loc>https://reisapp.cz/navody/potvrzeni-o-studiu</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://reisapp.cz/navody/potvrzeni-o-studiu"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reisapp.cz/en/guides/confirmation-of-study"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reisapp.cz/navody/potvrzeni-o-studiu"/>
+    <lastmod>2026-11-19</lastmod>
+  </url>
+  <url>
+    <loc>https://reisapp.cz/en/guides/confirmation-of-study</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://reisapp.cz/navody/potvrzeni-o-studiu"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reisapp.cz/en/guides/confirmation-of-study"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reisapp.cz/navody/potvrzeni-o-studiu"/>
     <lastmod>2026-11-19</lastmod>
   </url>
 </urlset>
