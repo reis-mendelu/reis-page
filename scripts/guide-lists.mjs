@@ -1,5 +1,6 @@
 // Writes the same "Další návody" / "More guides" line on every guide: every guide linked from the
-// index page, in the index's order, named by its own breadcrumb, minus the page itself.
+// index page, in the index's order, named by its own breadcrumb, minus the page itself. Also keeps
+// each guide's JSON-LD headline equal to its <title> (without " – reIS").
 // Run after adding, renaming or reordering a guide:  node scripts/guide-lists.mjs
 // CI runs it with --check and fails when a guide's line is out of date.
 import { readFileSync, writeFileSync } from 'node:fs';
@@ -22,7 +23,11 @@ for (const [index, head] of [['navody/index.html', 'Další návody'], ['en/guid
     const html = read(file);
     if (!re.test(html)) throw new Error(`guide-lists: ${file} has no "${head}:" line`);
     const items = order.filter((o) => o !== h).map((o) => `<a href="${o}">${names[o]}</a>`).join(' · ');
-    const next = html.replace(re, `<p class="checked">${head}: ${items}</p>`);
+    // The JSON-LD headline of an (Tech)Article is the page's <title> without " – reIS".
+    const title = html.match(/<title>(.*?)<\/title>/)[1].replace(/ – reIS$/, '');
+    const next = html
+      .replace(re, `<p class="checked">${head}: ${items}</p>`)
+      .replace(/("@type":"(?:Tech)?Article"[^{}]*?"headline":")[^"]*(")/, (_, a, b) => a + title.replace(/"/g, '\\"') + b);
     if (next === html) continue;
     if (check) stale.push(file);
     else writeFileSync(new URL(file, root), next);

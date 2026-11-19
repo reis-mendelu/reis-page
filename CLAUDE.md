@@ -11,10 +11,18 @@ Static HTML. Vercel deploys `main`. Tokens in `theme.css` (dark only), shared gu
   browser). Edit only the Czech file, rerun, commit both. CI (`generated-pages.yml`) fails a PR
   where they disagree.
 - **"Další návody" / "More guides"** is the same list on every guide: every guide on the index page,
-  in its order, named by its breadcrumb, minus itself. `node scripts/guide-lists.mjs` writes it;
-  CI fails when it is stale. A new guide: add it to the index page, then run the script.
+  in its order, named by its breadcrumb, minus itself. `node scripts/guide-lists.mjs` writes it,
+  and sets each (Tech)Article's JSON-LD headline to the page's `<title>` without " – reIS"; CI fails
+  when either is stale. A new guide: add it to the index page, then run the script.
 - **`node scripts/sitemap-lastmod.mjs`** before committing a content change: every `<lastmod>`
-  becomes the date that page's file last changed. A new page also needs its `<url>` entry.
+  becomes the date that page's file last changed, and each guide's JSON-LD `dateModified` gets the
+  same date. A new page also needs its `<url>` entry.
+- **One shape for every guide, Czech and English twin alike** (Dominik, 2026-11-19): section ids are
+  Czech in both languages (`#telefon`, `#pocitac`, `#oficialne`, `#nefunguje`, page-specific ones
+  like `#ucebna`), so a link survives the CZ/EN switch; English dates read "16 November 2026";
+  the desktop picker uses the laptop icon; the Ověřeno line ends "reIS dělají studenti MENDELU, není
+  to oficiální aplikace MENDELU." and the footer says "reIS dělají studenti MENDELU." (English:
+  "reIS is made by MENDELU students…"); "Wi-Fi", "Kč/noc", "budova X".
 - Header and footer are JS components (`dc-import`); pages built on them carry a
   `<noscript data-static="site-nav">` link list so crawlers without JavaScript still find the
   site. A new page goes into that list on `index.html`, `en.html` and the other dc pages.
