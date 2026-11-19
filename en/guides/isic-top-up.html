@@ -27,7 +27,7 @@
 <link rel="stylesheet" href="/navody/guide.css">
 <script src="/ph.js"></script>
 <script src="/navody/guide.js" defer></script>
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","headline":"MENDELU ISIC top-up: how to add meal credit for the canteen (WebISKAM)","inLanguage":"en","url":"https://reisapp.cz/en/guides/isic-top-up","datePublished":"2026-11-16","dateModified":"2026-11-16","author":{"@type":"Organization","name":"reIS","url":"https://reisapp.cz/"},"publisher":{"@id":"https://reisapp.cz/#org"},"about":"Topping up the ISIC meal account at Mendel University in Brno","citation":["https://skm.mendelu.cz/stravovani/28561-pro-studenty","https://skm.mendelu.cz/en/catering/28565-for-students","https://skm.mendelu.cz/wcd/w-rek-skm/dokumenty/nvodnabitiskamplatebnbranou.pdf","https://webiskam.mendelu.cz/"]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"reIS","item":"https://reisapp.cz/en"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://reisapp.cz/en/guides"},{"@type":"ListItem","position":3,"name":"ISIC top-up","item":"https://reisapp.cz/en/guides/isic-top-up"}]}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","headline":"MENDELU ISIC top-up: canteen credit via WebISKAM","inLanguage":"en","url":"https://reisapp.cz/en/guides/isic-top-up","datePublished":"2026-11-16","dateModified":"2026-11-19","author":{"@type":"Organization","name":"reIS","url":"https://reisapp.cz/"},"publisher":{"@id":"https://reisapp.cz/#org"},"about":"Topping up the ISIC meal account at Mendel University in Brno","citation":["https://skm.mendelu.cz/stravovani/28561-pro-studenty","https://skm.mendelu.cz/en/catering/28565-for-students","https://skm.mendelu.cz/wcd/w-rek-skm/dokumenty/nvodnabitiskamplatebnbranou.pdf","https://webiskam.mendelu.cz/"]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"reIS","item":"https://reisapp.cz/en"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://reisapp.cz/en/guides"},{"@type":"ListItem","position":3,"name":"ISIC top-up","item":"https://reisapp.cz/en/guides/isic-top-up"}]}]}</script>
 <style>.tophone{display:flex;gap:16px;align-items:center;margin:0 0 22px;padding:14px 16px;border-radius:14px;border:1px solid var(--border-green);background:var(--card-green)}.tophone img.qr{flex:none;width:104px;height:104px;border-radius:10px;background:#fff;padding:6px}.tophone p{margin:0 0 10px;font-size:15px;line-height:1.5}.tophone .badges{margin:0}.tophone .badges img{height:40px}.web-h{margin:0 0 12px;font-size:15px;font-weight:600}@media (max-width:520px){.tophone img.qr{display:none}}</style>
 </head>
 <body>
@@ -43,10 +43,10 @@
     <h2 class="step-h"><span class="num">1</span>Where do you want to top up?</h2>
     <div class="devices two">
       <button type="button" class="device" data-device="phone" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></svg><span><b>Phone</b><small>iPhone · iPad · Android</small></span></button>
-      <button type="button" class="device" data-device="desktop" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="13" rx="2"/><path d="M8 21h8M12 16v5"/></svg><span><b>Computer</b><small>WebISKAM in the browser</small></span></button>
+      <button type="button" class="device" data-device="desktop" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="11" rx="2"/><path d="M2 20h20"/></svg><span><b>Computer</b><small>WebISKAM in the browser</small></span></button>
     </div>
     <h2 class="step-h"><span class="num">2</span>Top up your ISIC</h2>
-    <div class="panel" data-panel="phone" id="phone">
+    <div class="panel" data-panel="phone" id="telefon">
       <div class="badges">
           <a href="https://apps.apple.com/cz/app/id6804832714?ct=reisapp-isic-en"><img src="/navod/appstore-badge-en.svg" alt="Download on the App Store" height="44"></a>
           <a href="https://play.google.com/store/apps/details?id=cz.reis.app&amp;referrer=utm_source%3Dreisapp.cz%26utm_medium%3Disic-en"><img src="/navod/googleplay-badge-en.png" alt="Get it on Google Play" height="44"></a>
@@ -59,33 +59,33 @@
           <li><p>Pay on the GoPay page and close it. reIS shows the new balance.</p><img src="/assets/navody/isic/phone-en-4-added.webp" alt="Main account CZK 498.50 and the message Topped up +CZK 250.00" width="780" height="366" loading="lazy"></li>
       </ol>
     </div>
-    <div class="panel" data-panel="desktop" id="computer">
+    <div class="panel" data-panel="desktop" id="pocitac">
       <div class="tophone"><img class="qr" src="/assets/qr-navod.svg" alt="QR code to install reIS on your phone" width="104" height="104"><div><p><b>Quickest on your phone.</b> The reIS browser extension can't top up yet; in the reIS app it takes a few taps. Scan the QR code, or:</p><div class="badges"><a href="https://apps.apple.com/cz/app/id6804832714?ct=reisapp-isic-en"><img src="/navod/appstore-badge-en.svg" alt="Download on the App Store" height="40"></a><a href="https://play.google.com/store/apps/details?id=cz.reis.app&amp;referrer=utm_source%3Dreisapp.cz%26utm_medium%3Disic-en"><img src="/navod/googleplay-badge-en.png" alt="Get it on Google Play" height="40"></a></div><p class="hint" style="margin:8px 0 0"><a href="?device=phone#phone" data-device="phone">Show the phone steps</a></p></div></div>
       <p class="web-h">Or on the web in WebISKAM (its labels are in Czech):</p>
       <ol class="steps">
-          <li><p>Open <a href="https://webiskam.mendelu.cz/">webiskam.mendelu.cz</a>, click Login and sign in as you do in UIS.</p><img src="/assets/navody/isic/desk-en-1-webiskam.webp" alt="The WebISKAM start page with the Login button" width="780" height="390" loading="lazy"></li>
+          <li><p>Open <a href="https://webiskam.mendelu.cz/">webiskam.mendelu.cz</a>, click Přihlásit (Log in) and sign in as you do in UIS.</p><img src="/assets/navody/isic/desk-en-1-webiskam.webp" alt="The WebISKAM start page with the Přihlásit (Log in) button" width="780" height="390" loading="lazy"></li>
           <li><p>Open Účet › Konta and click Nabít next to Hlavní konto (the main account).</p></li>
           <li><p>Enter the amount, click Nabít again and pay by card on the payment page.</p></li>
       </ol>
     </div>
     <div class="done"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>That's it! In the canteen, pay with your ISIC from the topped-up account.</span></div>
-    <details id="official">
+    <details id="oficialne">
       <summary>Without reIS: the official way</summary>
         <ol>
-          <li>Sign in at <a href="https://webiskam.mendelu.cz/">webiskam.mendelu.cz</a> with Login and your UIS login and password. It works in a phone browser too.</li>
+          <li>Sign in at <a href="https://webiskam.mendelu.cz/">webiskam.mendelu.cz</a> with Přihlásit (Log in) and your UIS login and password. It works in a phone browser too.</li>
           <li>Účet › Konta, then Nabít next to Hlavní konto.</li>
           <li>Enter the amount, click Nabít and pay by card on the payment page. <a href="https://skm.mendelu.cz/wcd/w-rek-skm/dokumenty/nvodnabitiskamplatebnbranou.pdf">SKM guide (PDF, Czech)</a></li>
         </ol>
         <p>Other ways, according to SKM:</p>
         <ul>
           <li><strong>Direct debit (inkaso):</strong> in WebISKAM, Stravování › Inkaso za stravu › Aktivovat inkaso za stravu. <a href="https://skm.mendelu.cz/wcd/w-rek-skm/dokumenty/nvodnapovoleninkasazastravu.pdf">Guide (PDF, Czech)</a></li>
-          <li><strong>Payment terminal:</strong> with your bank card on the ground floor (1. NP) of pavilion X and in the Lednice canteen.</li>
+          <li><strong>Payment terminal:</strong> with your bank card on the ground floor (1. NP) of building X and in the Lednice canteen.</li>
           <li><strong>At a reception or cash desk:</strong> cash or card at the dorm receptions, accommodation offices and canteen cash desks.</li>
           <li><strong>Bank transfer:</strong> one-off or standing order. SKM doesn't publish the account number on its site; ask via the <a href="https://skm.mendelu.cz/en/37053-contakts">SKM contacts</a>.</li>
           <li><strong>How much:</strong> SKM recommends 500 CZK; the minimum deposit is 200 CZK.</li>
         </ul>
     </details>
-    <details id="not-working">
+    <details id="nefunguje">
       <summary>Top-up not working?</summary>
         <ul>
           <li><strong>“Balance unavailable right now”.</strong> WebISKAM isn't answering or you're offline. Tap the text and reIS tries again.</li>
@@ -98,12 +98,12 @@
         </ul>
         <p>Otherwise the <a href="https://skm.mendelu.cz/en/37053-contakts">SKM contacts</a> or <a href="https://skm.mendelu.cz/en/catering/28565-for-students">catering for students</a>.</p>
     </details>
-    <p class="checked">Checked on 16. 11. 2026 against <a href="https://skm.mendelu.cz/stravovani/28561-pro-studenty">skm.mendelu.cz</a> and <a href="https://webiskam.mendelu.cz/">webiskam.mendelu.cz</a>. reIS is an independent student project, not an official MENDELU app.</p>
+    <p class="checked">Checked on 16 November 2026 against <a href="https://skm.mendelu.cz/stravovani/28561-pro-studenty">skm.mendelu.cz</a> and <a href="https://webiskam.mendelu.cz/">webiskam.mendelu.cz</a>. reIS is made by MENDELU students; it is not an official MENDELU app.</p>
     <p class="checked">More guides: <a href="/en/guides/exam-registration">Exam registration</a> · <a href="/en/guides/campus-map">Campus map</a> · <a href="/en/guides/eduroam">eduroam</a> · <a href="/en/guides/dorms">Dorms</a> · <a href="/en/guides/subjects">Course files and syllabus</a> · <a href="/en/guides/confirmation-of-study">Confirmation of study</a></p>
   </main>
   <footer>
-    <div style="display:flex;align-items:center;gap:12px"><img src="/assets/reIS_logo.svg" alt="" width="28" height="28"><span style="color:var(--text-3);line-height:1.5">Independent student project, not an official MENDELU product.</span></div>
-    <nav><a href="/en">reisapp.cz</a><a href="/en/guides">Guides</a><a href="/en/navod">Install guide</a><a href="mailto:reis.mendelu@gmail.com">reis.mendelu@gmail.com</a></nav>
+    <div style="display:flex;align-items:center;gap:12px"><img src="/assets/reIS_logo.svg" alt="" width="28" height="28"><span style="color:var(--text-3);line-height:1.5">reIS is made by MENDELU students.</span></div>
+    <nav><a href="/en">reisapp.cz</a><a href="/en/guides">Guides</a><a href="/en/navod">Install guide</a><a href="/bezpecnost">Data &amp; security</a><a href="mailto:reis.mendelu@gmail.com">reis.mendelu@gmail.com</a></nav>
   </footer>
 </div>
 </body>

@@ -38,3 +38,15 @@ const xml = readFileSync(xmlPath, 'utf8').replace(
 );
 writeFileSync(xmlPath, xml);
 console.log(`sitemap.xml: ${changed} lastmod value(s) updated`);
+
+// The same date goes into each guide's JSON-LD dateModified, so the page and the sitemap agree.
+let pages = 0;
+for (const [, path] of xml.matchAll(/<loc>https:\/\/reisapp\.cz([^<]*)<\/loc>/g)) {
+  const file = fileFor(path || '/');
+  if (!/^(navody|en\/guides)\//.test(file)) continue;
+  const url = new URL(file, root);
+  const html = readFileSync(url, 'utf8');
+  const next = html.replace(/"dateModified":"[^"]*"/, `"dateModified":"${lastChanged(file)}"`);
+  if (next !== html) { writeFileSync(url, next); pages++; }
+}
+console.log(`guides: ${pages} dateModified value(s) updated`);
