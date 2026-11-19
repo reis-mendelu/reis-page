@@ -53,7 +53,7 @@
 // pages are Czech only, so the switch there simply leads to /en.
 const TEXT = {
   cs: { home: '/', hFunkce: '/#funkce', hNavody: '/navody', hData: '/#data', navod: '/navod', tFunkce: 'Co umí', tNavody: 'Návody', tData: 'Data a bezpečnost', tSpol: 'Spolupráce', tSpolMenu: 'Spolupráce', tGet: 'Stáhnout reIS' },
-  en: { home: '/en', hFunkce: '/en#funkce', hNavody: '/en/guides', hData: '/en#data', navod: '/navod?lang=en', tFunkce: 'Features', tNavody: 'Guides', tData: 'Data & security', tSpol: 'Partners', tSpolMenu: 'Partners (in Czech)', tGet: 'Get reIS' },
+  en: { home: '/en', hFunkce: '/en#funkce', hNavody: '/en/guides', hData: '/en#data', navod: '/en/navod', tFunkce: 'Features', tNavody: 'Guides', tData: 'Data & security', tSpol: 'Partners', tSpolMenu: 'Partners (in Czech)', tGet: 'Get reIS' },
 };
 class Component extends DCLogic {
   state = { wide: typeof window === 'undefined' ? true : window.innerWidth >= 900, menuOpen: false };

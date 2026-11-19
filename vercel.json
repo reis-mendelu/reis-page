@@ -66,6 +66,18 @@
       "source": "/obory",
       "destination": "/navody/obory",
       "permanent": true
+    },
+    {
+      "source": "/navod",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/en/navod",
+      "permanent": true
     }
   ],
   "rewrites": [
