@@ -29,8 +29,8 @@
 <script src="/navody/guide.js" defer></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","headline":"reIS for Claude: ask Claude about your MENDELU timetable, exams and points","inLanguage":"en","url":"https://reisapp.cz/en/guides/reis-for-claude","datePublished":"2026-11-20","dateModified":"2026-11-20","author":{"@type":"Organization","name":"reIS","url":"https://reisapp.cz/"},"publisher":{"@id":"https://reisapp.cz/#org"},"about":"The reIS extension for Claude Desktop for Mendel University students"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"reIS","item":"https://reisapp.cz/en"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://reisapp.cz/en/guides"},{"@type":"ListItem","position":3,"name":"reIS for Claude","item":"https://reisapp.cz/en/guides/reis-for-claude"}]}]}</script>
 <style>
-.cta.big{min-height:56px;font-size:18px;font-weight:700}
-.req{display:flex;gap:10px;align-items:flex-start;margin:10px 0 26px;padding:12px 14px;border-radius:12px;background:var(--surface);border:1px solid var(--border);font-size:15px;line-height:1.5}
+.cta.big{margin:0 0 26px;min-height:56px;font-size:18px;font-weight:700}
+.req{display:flex;gap:10px;align-items:flex-start;margin:0 0 12px;padding:12px 14px;border-radius:12px;background:var(--surface);border:1px solid var(--border);font-size:15px;line-height:1.5}
 .req svg{flex:none;width:20px;height:20px;margin-top:1px;color:var(--accent-text)}
 .req a{color:var(--accent-text)}
 .req small{display:block;color:var(--text-3);font-size:13px}
@@ -54,15 +54,15 @@
   <main>
     <nav class="crumbs" aria-label="Breadcrumb"><a href="/en">reIS</a><span aria-hidden="true">›</span><a href="/en/guides">Guides</a><span aria-hidden="true">›</span><span aria-current="page">reIS for Claude</span></nav>
     <h1>reIS for Claude</h1>
-    <p class="lead">Ask Claude about your timetable, exams, points or assignment deadlines. Claude reads them in MENDELU IS and answers.</p>
+    <p class="lead">Ask Claude about your timetable, exams, points or assignment deadlines. Claude reads them in MENDELU IS and answers. It works in Claude (the AI chat by Anthropic, similar to ChatGPT), not in ChatGPT.</p>
+    <div class="req"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="11" rx="2"/><path d="M2 20h20"/></svg><span>First you need <a href="https://claude.ai/download">Claude Desktop</a> on a Mac or Windows. <small>A free Claude account is enough (it has a message limit). It does not work on a phone or in the browser. You get a <code>.mcpb</code> file, an extension that Claude Desktop opens. <a href="https://github.com/reis-mendelu/reis-for-claude">The source code is public.</a></small></span></div>
     <a class="cta big" id="stahnout" href="https://github.com/reis-mendelu/reis-for-claude/releases/latest/download/reis-for-claude.mcpb">Download reIS for Claude</a>
-    <div class="req"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="11" rx="2"/><path d="M2 20h20"/></svg><span>You need <a href="https://claude.ai/download">Claude Desktop</a> on a Mac or Windows. <small>A free Claude account is enough. It does not work on a phone or in the browser.</small></span></div>
 
     <h2 class="sec-h" id="postup">3 steps</h2>
     <ol class="steps">
-      <li><p><b>Download</b> the file with the button above.</p></li>
-      <li><p><b>Double-click it.</b> Claude Desktop offers Install. Then enter your IS username and password.</p><p class="hint">The password is stored in your system keychain (Keychain / Credential Manager) and is sent only to MENDELU IS.</p></li>
-      <li><p><b>Ask</b> in a new chat, in English or Czech.</p><img src="/assets/navody/claude/chat-1-question.webp" alt="A chat in Claude Desktop: the student asks what they still need for 60 points, and Claude calls reIS for Claude" width="1490" height="625" loading="lazy"><img src="/assets/navody/claude/chat-2-rules.webp" alt="Claude's answer: credit at 30 of 60 seminar points, the course at 60 of 100" width="1490" height="355" loading="lazy" style="margin-top:8px"></li>
+      <li><p><b>Install <a href="https://claude.ai/download">Claude Desktop</a></b> and sign in (free). Already have it? Skip.</p></li>
+      <li><p><b>Download reIS for Claude and double-click it.</b> If your browser hesitates over the file, choose Keep. Claude Desktop offers Install. Then enter your IS login (e.g. xnovak) and password.</p><p class="hint">The password is stored in your system keychain (Keychain / Credential Manager) and is sent only to is.mendelu.cz. You can read the <a href="https://github.com/reis-mendelu/reis-for-claude">source code</a>.</p></li>
+      <li><p><b>Ask</b> in a new chat, in English or Czech. When Claude asks whether it may use reIS, allow it.</p><img src="/assets/navody/claude/chat-1-question.webp" alt="A chat in Claude Desktop: the student asks what they still need for 60 points, and Claude calls reIS for Claude" width="1490" height="625" loading="lazy"><img src="/assets/navody/claude/chat-2-rules.webp" alt="Claude's answer: credit at 30 of 60 seminar points, the course at 60 of 100" width="1490" height="355" loading="lazy" style="margin-top:8px"></li>
     </ol>
 
     <h2 class="sec-h" id="otazky">What to ask</h2>
@@ -75,10 +75,10 @@
 
     <h2 class="sec-h" id="bezpecnost">Security</h2>
     <ul class="safe">
-      <li>Read-only. It changes nothing in IS and registers you for nothing.</li>
+      <li>Read-only. It changes nothing in IS and never registers you for an exam.</li>
       <li>Runs on your computer. The password goes only to MENDELU IS.</li>
-      <li>IS data go into your own Claude chat only when you ask. They never pass through reIS.</li>
-      <li><span>It checks GitHub for a new version. <a href="https://github.com/reis-mendelu/reis-for-claude/blob/main/PRIVACY.md">Privacy policy</a></span></li>
+      <li>IS data go into your own Claude chat (to Anthropic, like any message) only when you ask. They never pass through reIS.</li>
+      <li><span>It checks GitHub for a new version. It does not update itself. <a href="https://github.com/reis-mendelu/reis-for-claude/blob/main/PRIVACY.md">Privacy policy</a></span></li>
     </ul>
 
     <div class="share-box" data-share-here></div>
@@ -86,7 +86,7 @@
     <details id="nefunguje">
       <summary>Not working?</summary>
         <ul>
-          <li><strong>Nothing happens on double-click:</strong> install <a href="https://claude.ai/download">Claude Desktop</a> and open the file again.</li>
+          <li><strong>Nothing happens on double-click:</strong> install <a href="https://claude.ai/download">Claude Desktop</a>, or drag the file into Claude Desktop › Settings › Extensions.</li>
           <li><strong>Two-factor login (TOTP) on in IS:</strong> not supported yet.</li>
           <li><strong>New version:</strong> Claude tells you when it is out. Download the file again and open it.</li>
         </ul>
