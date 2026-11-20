@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>reIS pro Claude: zeptej se Clauda na rozvrh, zkoušky a body z IS – reIS</title>
+<meta name="description" content="reIS pro Claude je rozšíření pro Claude Desktop (Mac a Windows). Claude si přečte tvůj rozvrh, zkoušky, body ze Záznamníku a termíny odevzdání v IS MENDELU a odpoví ti. Jen čte, běží na tvém počítači.">
+<link rel="canonical" href="https://reisapp.cz/navody/reis-v-claude">
+<link rel="alternate" hreflang="cs" href="https://reisapp.cz/navody/reis-v-claude">
+<link rel="alternate" hreflang="en" href="https://reisapp.cz/en/guides/reis-for-claude">
+<link rel="alternate" hreflang="x-default" href="https://reisapp.cz/navody/reis-v-claude">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="cs_CZ">
+<meta property="og:site_name" content="reIS">
+<meta property="og:url" content="https://reisapp.cz/navody/reis-v-claude">
+<meta property="og:title" content="reIS pro Claude: zeptej se na svůj IS MENDELU">
+<meta property="og:description" content="Kolik bodů ti chybí k zápočtu? Claude si to přečte v IS a spočítá. Rozšíření pro Claude Desktop, jen čte.">
+<meta property="og:image" content="https://reisapp.cz/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/reIS_logo.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/theme.css">
+<meta name="theme-color" content="#0d110e">
+<link href="/navod/fonts.css" rel="stylesheet">
+<link rel="stylesheet" href="/navody/guide.css">
+<script src="/ph.js"></script>
+<script src="/navody/guide.js" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","headline":"reIS pro Claude: zeptej se Clauda na rozvrh, zkoušky a body z IS","inLanguage":"cs","url":"https://reisapp.cz/navody/reis-v-claude","datePublished":"2026-11-20","dateModified":"2026-11-20","author":{"@type":"Organization","name":"reIS","url":"https://reisapp.cz/"},"publisher":{"@id":"https://reisapp.cz/#org"},"about":"Rozšíření reIS pro Claude Desktop pro studenty Mendelovy univerzity v Brně"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"reIS","item":"https://reisapp.cz/"},{"@type":"ListItem","position":2,"name":"Návody","item":"https://reisapp.cz/navody"},{"@type":"ListItem","position":3,"name":"reIS pro Claude","item":"https://reisapp.cz/navody/reis-v-claude"}]}]}</script>
+<style>
+.cta.big{margin:0 0 26px;min-height:56px;font-size:18px;font-weight:700}
+.req{display:flex;gap:10px;align-items:flex-start;margin:0 0 12px;padding:12px 14px;border-radius:12px;background:var(--surface);border:1px solid var(--border);font-size:15px;line-height:1.5}
+.req svg{flex:none;width:20px;height:20px;margin-top:1px;color:var(--accent-text)}
+.req a{color:var(--accent-text)}
+.req small{display:block;color:var(--text-3);font-size:13px}
+.asks{list-style:none;margin:0 0 26px;padding:0;display:grid;gap:8px}
+.asks li{padding:12px 14px;border-radius:14px;background:var(--surface);border:1.5px solid var(--border);font-size:16px;font-weight:600;line-height:1.4}
+.asks li:first-child{border-color:var(--accent);background:var(--card-green)}
+.asks small{display:block;margin-top:3px;font-size:13px;font-weight:400;color:var(--text-3)}
+.safe{list-style:none;margin:0 0 26px;padding:14px 16px;border-radius:14px;border:1px solid var(--border-green);background:var(--card-green);display:grid;gap:8px}
+.safe li{display:flex;gap:10px;font-size:15px;line-height:1.45}
+.safe li::before{content:"✓";flex:none;font-weight:800;color:var(--accent-text)}
+.safe a{color:var(--accent-text)}
+.sec-h{margin:0 0 12px;font-size:20px;font-weight:700;letter-spacing:-.01em;scroll-margin-top:16px}
+</style>
+</head>
+<body>
+<div class="col">
+  <header>
+    <a class="brand" href="/"><img src="/assets/reIS_logo.svg" alt="" width="40" height="40"><span>reIS</span></a>
+    <a class="lang" href="/en/guides/reis-for-claude" hreflang="en" data-lang-switch="guide">EN</a>
+  </header>
+  <main>
+    <nav class="crumbs" aria-label="Drobečková navigace"><a href="/">reIS</a><span aria-hidden="true">›</span><a href="/navody">Návody</a><span aria-hidden="true">›</span><span aria-current="page">reIS pro Claude</span></nav>
+    <h1>reIS pro Claude</h1>
+    <p class="lead">Zeptej se Clauda na svůj rozvrh, zkoušky, body nebo termíny odevzdání. Claude si to přečte v IS MENDELU a odpoví. Funguje v Claudovi (AI chat od firmy Anthropic, podobný ChatGPT), ne v ChatGPT.</p>
+    <div class="req"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="11" rx="2"/><path d="M2 20h20"/></svg><span>Nejdřív potřebuješ <a href="https://claude.ai/download">Claude Desktop</a> na Macu nebo Windows. <small>Stačí bezplatný účet Claude (má omezený počet zpráv). Na mobilu ani v prohlížeči to nejde. Stáhne se soubor <code>.mcpb</code>, rozšíření, které otevře Claude Desktop. <a href="https://github.com/reis-mendelu/reis-for-claude">Zdrojový kód je veřejný.</a></small></span></div>
+    <a class="cta big" id="stahnout" href="https://github.com/reis-mendelu/reis-for-claude/releases/latest/download/reis-for-claude.mcpb">Stáhnout reIS pro Claude</a>
+
+    <h2 class="sec-h" id="postup">3 kroky</h2>
+    <ol class="steps">
+      <li><p><b>Nainstaluj <a href="https://claude.ai/download">Claude Desktop</a></b> a přihlas se (zdarma). Máš ho? Přeskoč.</p></li>
+      <li><p><b>Stáhni reIS pro Claude a otevři ho dvojklikem.</b> Když prohlížeč u souboru zaváhá, dej Ponechat. Claude Desktop nabídne Install. Pak zadej login do IS (např. xnovak) a heslo.</p><p class="hint">Heslo si uloží systémová klíčenka (Keychain / Správce pověření) a posílá se jen na is.mendelu.cz. <a href="https://github.com/reis-mendelu/reis-for-claude">Zdrojový kód</a> si můžeš přečíst.</p></li>
+      <li><p><b>Zeptej se</b> v novém chatu, klidně česky. Když se Claude zeptá, jestli smí reIS použít, povol to.</p><img src="/assets/navody/claude/chat-1-question.webp" alt="Chat v Claude Desktop: otázka, co student ještě potřebuje ke 60 bodům, a Claude volá reIS for Claude" width="1490" height="625" loading="lazy"><img src="/assets/navody/claude/chat-2-rules.webp" alt="Odpověď Clauda: zápočet za 30 bodů ze 60 ze cvičení, předmět za 60 bodů ze 100" width="1490" height="355" loading="lazy" style="margin-top:8px"></li>
+    </ol>
+
+    <h2 class="sec-h" id="otazky">Na co se zeptat</h2>
+    <ul class="asks">
+      <li>„Kolik bodů mi chybí k zápočtu z Počítačových sítí?“<small>Přečte Záznamník a pravidla předmětu a dopočítá to.</small></li>
+      <li>„Co mám zítra za rozvrh?“<small>Časy, místnosti, kdo učí.</small></li>
+      <li>„Na které zkoušky jsem přihlášený a kde jsou volné termíny?“<small>Data, místa, volná místa.</small></li>
+      <li>„Co musím tento týden odevzdat?“<small>Odevzdávárny s termíny.</small></li>
+    </ul>
+
+    <h2 class="sec-h" id="bezpecnost">Bezpečnost</h2>
+    <ul class="safe">
+      <li>Jen čte. Nic v IS nezmění, nepřihlásí tě na zkoušku.</li>
+      <li>Běží na tvém počítači. Heslo jde jen do IS MENDELU.</li>
+      <li>Data z IS jdou do tvého chatu s Claudem (k Anthropicu, jako každá zpráva), jen když se zeptáš. Přes reIS nejdou.</li>
+      <li><span>Na GitHubu kontroluje, jestli je nová verze. Sám se neaktualizuje. <a href="https://github.com/reis-mendelu/reis-for-claude/blob/main/PRIVACY.md">Zásady soukromí</a></span></li>
+    </ul>
+
+    <div class="share-box" data-share-here></div>
+
+    <details id="nefunguje">
+      <summary>Nejde to?</summary>
+        <ul>
+          <li><strong>Po dvojkliku se nic nestane:</strong> nainstaluj <a href="https://claude.ai/download">Claude Desktop</a>, nebo soubor přetáhni do Claude Desktop › Settings › Extensions.</li>
+          <li><strong>Máš v IS dvoufázové ověření (TOTP):</strong> zatím ho nepodporujeme.</li>
+          <li><strong>Nová verze:</strong> Claude ti řekne, že je venku. Stáhni soubor znovu a otevři ho.</li>
+        </ul>
+    </details>
+    <details id="napis">
+      <summary>Napiš nám, co chybí</summary>
+        <p>Na co se Claude neumí zeptat, co nefunguje, co by se hodilo: <a href="mailto:reis.mendelu@gmail.com?subject=reIS%20pro%20Claude">reis.mendelu@gmail.com</a>. Čteme všechno.</p>
+    </details>
+    <p class="checked">Ověřeno 20. 11. 2026 v Claude Desktop na Macu (Claude je od firmy Anthropic). reIS dělají studenti MENDELU, není to oficiální aplikace MENDELU.</p>
+    <p class="checked">Další návody: <a href="/navody/obory">Obory</a> · <a href="/navody/informatika-v-brne">Informatika v Brně</a> · <a href="/navody/prijimacky-mendelu">Přijímačky na MENDELU</a> · <a href="/navody/prvni-rocnik">První ročník</a> · <a href="/navody/koleje">Koleje</a> · <a href="/navody/prihlaseni-na-zkousku">Přihlášení na zkoušku</a> · <a href="/navody/mapa-kampusu">Mapa kampusu</a> · <a href="/navody/eduroam">eduroam</a> · <a href="/navody/predmety">Soubory a sylabus předmětu</a> · <a href="/navody/dobiti-isic">Dobití ISIC</a> · <a href="/navody/potvrzeni-o-studiu">Potvrzení o studiu</a></p>
+  </main>
+  <footer>
+    <div style="display:flex;align-items:center;gap:12px"><img src="/assets/reIS_logo.svg" alt="" width="28" height="28"><span style="color:var(--text-3);line-height:1.5">reIS dělají studenti MENDELU.</span></div>
+    <nav><a href="/">reisapp.cz</a><a href="/navody">Návody</a><a href="/navod">Návod k instalaci</a><a href="/bezpecnost">Data a bezpečnost</a><a href="mailto:reis.mendelu@gmail.com">reis.mendelu@gmail.com</a></nav>
+  </footer>
+</div>
+</body>
+</html>
