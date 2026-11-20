@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>reIS for Claude: ask Claude about your MENDELU timetable, exams and points – reIS</title>
+<meta name="description" content="reIS for Claude is an extension for Claude Desktop (Mac and Windows). Claude reads your timetable, exams, Záznamník points and assignment deadlines in MENDELU IS and answers you. Read-only, runs on your computer.">
+<link rel="canonical" href="https://reisapp.cz/en/guides/reis-for-claude">
+<link rel="alternate" hreflang="cs" href="https://reisapp.cz/navody/reis-v-claude">
+<link rel="alternate" hreflang="en" href="https://reisapp.cz/en/guides/reis-for-claude">
+<link rel="alternate" hreflang="x-default" href="https://reisapp.cz/navody/reis-v-claude">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="reIS">
+<meta property="og:url" content="https://reisapp.cz/en/guides/reis-for-claude">
+<meta property="og:title" content="reIS for Claude: ask about your MENDELU IS">
+<meta property="og:description" content="How many points are you missing for the credit? Claude reads it in IS and works it out. A read-only Claude Desktop extension.">
+<meta property="og:image" content="https://reisapp.cz/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/reIS_logo.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/theme.css">
+<meta name="theme-color" content="#0d110e">
+<link href="/navod/fonts.css" rel="stylesheet">
+<link rel="stylesheet" href="/navody/guide.css">
+<script src="/ph.js"></script>
+<script src="/navody/guide.js" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","headline":"reIS for Claude: ask Claude about your MENDELU timetable, exams and points","inLanguage":"en","url":"https://reisapp.cz/en/guides/reis-for-claude","datePublished":"2026-11-20","dateModified":"2026-11-20","author":{"@type":"Organization","name":"reIS","url":"https://reisapp.cz/"},"publisher":{"@id":"https://reisapp.cz/#org"},"about":"The reIS extension for Claude Desktop for Mendel University students"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"reIS","item":"https://reisapp.cz/en"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://reisapp.cz/en/guides"},{"@type":"ListItem","position":3,"name":"reIS for Claude","item":"https://reisapp.cz/en/guides/reis-for-claude"}]}]}</script>
+<style>
+.cta.big{min-height:56px;font-size:18px;font-weight:700}
+.req{display:flex;gap:10px;align-items:flex-start;margin:10px 0 26px;padding:12px 14px;border-radius:12px;background:var(--surface);border:1px solid var(--border);font-size:15px;line-height:1.5}
+.req svg{flex:none;width:20px;height:20px;margin-top:1px;color:var(--accent-text)}
+.req a{color:var(--accent-text)}
+.req small{display:block;color:var(--text-3);font-size:13px}
+.asks{list-style:none;margin:0 0 26px;padding:0;display:grid;gap:8px}
+.asks li{padding:12px 14px;border-radius:14px;background:var(--surface);border:1.5px solid var(--border);font-size:16px;font-weight:600;line-height:1.4}
+.asks li:first-child{border-color:var(--accent);background:var(--card-green)}
+.asks small{display:block;margin-top:3px;font-size:13px;font-weight:400;color:var(--text-3)}
+.safe{list-style:none;margin:0 0 26px;padding:14px 16px;border-radius:14px;border:1px solid var(--border-green);background:var(--card-green);display:grid;gap:8px}
+.safe li{display:flex;gap:10px;font-size:15px;line-height:1.45}
+.safe li::before{content:"✓";flex:none;font-weight:800;color:var(--accent-text)}
+.safe a{color:var(--accent-text)}
+.sec-h{margin:0 0 12px;font-size:20px;font-weight:700;letter-spacing:-.01em;scroll-margin-top:16px}
+</style>
+</head>
+<body>
+<div class="col">
+  <header>
+    <a class="brand" href="/"><img src="/assets/reIS_logo.svg" alt="" width="40" height="40"><span>reIS</span></a>
+    <a class="lang" href="/navody/reis-v-claude" hreflang="cs" data-lang-switch="guide">CZ</a>
+  </header>
+  <main>
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="/en">reIS</a><span aria-hidden="true">›</span><a href="/en/guides">Guides</a><span aria-hidden="true">›</span><span aria-current="page">reIS for Claude</span></nav>
+    <h1>reIS for Claude</h1>
+    <p class="lead">Ask Claude about your timetable, exams, points or assignment deadlines. Claude reads them in MENDELU IS and answers.</p>
+    <a class="cta big" id="stahnout" href="https://github.com/reis-mendelu/reis-for-claude/releases/latest/download/reis-for-claude.mcpb">Download reIS for Claude</a>
+    <div class="req"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="11" rx="2"/><path d="M2 20h20"/></svg><span>You need <a href="https://claude.ai/download">Claude Desktop</a> on a Mac or Windows. <small>A free Claude account is enough. It does not work on a phone or in the browser.</small></span></div>
+
+    <h2 class="sec-h" id="postup">3 steps</h2>
+    <ol class="steps">
+      <li><p><b>Download</b> the file with the button above.</p></li>
+      <li><p><b>Double-click it.</b> Claude Desktop offers Install. Then enter your IS username and password.</p><p class="hint">The password is stored in your system keychain (Keychain / Credential Manager) and is sent only to MENDELU IS.</p></li>
+      <li><p><b>Ask</b> in a new chat, in English or Czech.</p><img src="/assets/navody/claude/chat-1-question.webp" alt="A chat in Claude Desktop: the student asks what they still need for 60 points, and Claude calls reIS for Claude" width="1490" height="625" loading="lazy"><img src="/assets/navody/claude/chat-2-rules.webp" alt="Claude's answer: credit at 30 of 60 seminar points, the course at 60 of 100" width="1490" height="355" loading="lazy" style="margin-top:8px"></li>
+    </ol>
+
+    <h2 class="sec-h" id="otazky">What to ask</h2>
+    <ul class="asks">
+      <li>“How many points am I missing for the credit in Computer Networks?”<small>Reads the Záznamník and the course rules and works it out.</small></li>
+      <li>“What’s my timetable tomorrow?”<small>Times, rooms, who teaches.</small></li>
+      <li>“Which exams am I registered for, and which dates still have seats?”<small>Dates, rooms, free seats.</small></li>
+      <li>“What do I have to hand in this week?”<small>Assignments with deadlines.</small></li>
+    </ul>
+
+    <h2 class="sec-h" id="bezpecnost">Security</h2>
+    <ul class="safe">
+      <li>Read-only. It changes nothing in IS and registers you for nothing.</li>
+      <li>Runs on your computer. The password goes only to MENDELU IS.</li>
+      <li>IS data go into your own Claude chat only when you ask. They never pass through reIS.</li>
+      <li><span>It checks GitHub for a new version. <a href="https://github.com/reis-mendelu/reis-for-claude/blob/main/PRIVACY.md">Privacy policy</a></span></li>
+    </ul>
+
+    <div class="share-box" data-share-here></div>
+
+    <details id="nefunguje">
+      <summary>Not working?</summary>
+        <ul>
+          <li><strong>Nothing happens on double-click:</strong> install <a href="https://claude.ai/download">Claude Desktop</a> and open the file again.</li>
+          <li><strong>Two-factor login (TOTP) on in IS:</strong> not supported yet.</li>
+          <li><strong>New version:</strong> Claude tells you when it is out. Download the file again and open it.</li>
+        </ul>
+    </details>
+    <details id="napis">
+      <summary>Tell us what is missing</summary>
+        <p>What Claude can’t answer, what breaks, what would help: <a href="mailto:reis.mendelu@gmail.com?subject=reIS%20for%20Claude">reis.mendelu@gmail.com</a>. We read everything.</p>
+    </details>
+    <p class="checked">Checked on 20 November 2026 in Claude Desktop on a Mac (Claude is made by Anthropic). reIS is made by MENDELU students; it is not an official MENDELU app.</p>
+    <p class="checked">More guides: <a href="/en/guides/exam-registration">Exam registration</a> · <a href="/en/guides/campus-map">Campus map</a> · <a href="/en/guides/eduroam">eduroam</a> · <a href="/en/guides/dorms">Dorms</a> · <a href="/en/guides/subjects">Course files and syllabus</a> · <a href="/en/guides/isic-top-up">ISIC top-up</a> · <a href="/en/guides/confirmation-of-study">Confirmation of study</a></p>
+  </main>
+  <footer>
+    <div style="display:flex;align-items:center;gap:12px"><img src="/assets/reIS_logo.svg" alt="" width="28" height="28"><span style="color:var(--text-3);line-height:1.5">reIS is made by MENDELU students.</span></div>
+    <nav><a href="/en">reisapp.cz</a><a href="/en/guides">Guides</a><a href="/en/navod">Install guide</a><a href="/bezpecnost">Data &amp; security</a><a href="mailto:reis.mendelu@gmail.com">reis.mendelu@gmail.com</a></nav>
+  </footer>
+</div>
+</body>
+</html>
