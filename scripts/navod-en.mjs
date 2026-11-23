@@ -30,7 +30,7 @@ const swaps = [
   ],
   ['<meta property="og:image" content="https://reisapp.cz/og.png">', '<meta property="og:image" content="https://reisapp.cz/og-en.png">'],
   ['<meta property="og:locale" content="cs_CZ">', '<meta property="og:locale" content="en_GB">'],
-  ['>Nainstaluj reIS za dvě minuty</p>', '>Install reIS in two minutes</p>'],
+  ['>Nainstaluj reIS za dvě minuty</h1>', '>Install reIS in two minutes</h1>'],
   ['<p>reIS je přehlednější UIS MENDELU v telefonu i v prohlížeči.</p>', '<p>reIS makes the MENDELU information system (UIS) easy to use, on your phone and in your browser.</p>'],
   ['<p><a href="/navody">Návody</a> · <a href="/">reisapp.cz</a></p>', '<p><a href="/en/guides">Guides</a> · <a href="/en">reisapp.cz</a></p>'],
 ];
