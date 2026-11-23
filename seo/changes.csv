@@ -1,0 +1,30 @@
+date,pr,kind,urls,what,target
+2026-11-15,#18,markup,/ ; /navod,robots.txt + sitemap.xml + structured data + /navod canonical,
+2026-11-15,#20,new-page,/navody/eduroam ; /en/guides/eduroam,eduroam guide,topic:eduroam
+2026-11-15,,indexing,/navody/eduroam ; /navody/prihlaseni-na-zkousku ; /navody/mapa-kampusu,Search Console request indexing,
+2026-11-15,#24,rewrite,/navody/eduroam ; /en/guides/eduroam,wording from search data (návod / připojení / MacBook / faculties / no Wi-Fi password),topic:eduroam
+2026-11-15,#27,new-page,/navody/prihlaseni-na-zkousku ; /en/guides/exam-registration,exam registration guide,topic:zkousky
+2026-11-15,#26,new-page,/navody/mapa-kampusu ; /en/guides/campus-map,campus map guide,topic:mapa
+2026-11-15,#28,rewrite,/ ; /en,"homepage title + description + structured data lead with ""UIS MENDELU""",topic:uis | uis mendelu | reis mendelu
+2026-11-15,#31,rewrite,/ ; /en,"homepage FAQ with visible ""UIS MENDELU""",topic:uis
+2026-11-15,#32,internal-links,/navody ; /en/guides,guide index pages linked from every guide and the footer,
+2026-11-15,#35,markup,/ ; /en,WebSite alternateName + store links in Organization sameAs,reis mendelu
+2026-11-16,#38,new-page,/navody/koleje ; /en/guides/dorms,dorm chooser guide,topic:koleje
+2026-11-16,#46,rewrite,/navody/koleje ; /en/guides/dorms,title + description + dorm addresses,topic:koleje | tauferovy koleje
+2026-11-16,#48,new-page,/navody/dobiti-isic ; /en/guides/isic-top-up,ISIC top-up guide,
+2026-11-16,#49,new-page,/navody/predmety ; /en/guides/subjects,course files + syllabus guide,
+2026-11-16,#51,technical,/,favicon Google can use (ICO + PNG + apple-touch-icon),
+2026-11-16,#52,move,/navody/obory,/obory moved under /navody,
+2026-11-16,#54,markup,/ ; /en,LinkedIn in sameAs,reis mendelu
+2026-11-16,#56,new-page,/navody/informatika-v-brne,Informatika v Brně comparison page,topic:informatika
+2026-11-16,#58,new-page,/navody/prvni-rocnik ; /navody,"bridge page ""Přijali tě na MENDELU. Co teď?"" + two doors on /navody",topic:uchazec
+2026-11-16,#59,rewrite,/navody/obory,programme summaries in the static HTML for crawlers,
+2026-11-18,#60,new-page,/navody/prijimacky-mendelu,Přijímačky na MENDELU page,topic:prijimacky
+2026-11-19,#64,rewrite,/navody/eduroam ; /en/guides/eduroam,"words students search (přihlášení, jak se připojit, UIS, Mendelu-host); indexing requested",topic:eduroam | eduroam mendelu
+2026-11-19,#65,technical,/navod ; /en/navod ; all guides,"/navod Czech by URL + /en/navod, WebP screenshots, h2 steps, no-JS nav links, shorter titles, sitemap lastmod",reis mendelu
+2026-11-19,,technical,www.reisapp.cz,www 308-redirects to reisapp.cz (Vercel domains),
+2026-11-19,,indexing,/navod ; /en/navod ; /,Search Console request indexing,reis mendelu
+2026-11-19,#66,new-page,/navody/potvrzeni-o-studiu ; /en/guides/confirmation-of-study,confirmation of study guide; indexing requested,
+2026-11-19,#67 #68,template,all guides,one share button + one Další návody list + one shape for every guide; three wrong facts fixed,
+2026-11-20,#69,rewrite,/navody/eduroam ; /navody/koleje ; /navody/prihlaseni-na-zkousku ; /en/guides/*,"titles and snippets from real searches (eduroam, koleje, zkoušky)",topic:eduroam | topic:koleje | topic:zkousky
+2026-11-20,#70 #71,new-page,/navody/reis-v-claude ; /en/guides/reis-for-claude,reIS for Claude guide,
