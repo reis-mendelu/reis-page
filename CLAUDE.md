@@ -2,7 +2,8 @@
 
 Static HTML. Vercel deploys `main`. Tokens in `theme.css` (dark only), shared guide look in
 `navody/guide.css` + `navody/guide.js`. Push and merge recipe, SEO rules, keyword tracker: the
-`reis:reis-seo` skill.
+`reis:reis-seo` skill. **A change that can move search results adds a row to `seo/changes.csv` in
+the same PR** (rules in `seo/README.md`).
 
 ## Generated files and scripts
 
