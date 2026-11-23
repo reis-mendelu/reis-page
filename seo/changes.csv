@@ -28,3 +28,4 @@ date,pr,kind,urls,what,target
 2026-11-19,#67 #68,template,all guides,one share button + one Další návody list + one shape for every guide; three wrong facts fixed,
 2026-11-20,#69,rewrite,/navody/eduroam ; /navody/koleje ; /navody/prihlaseni-na-zkousku ; /en/guides/*,"titles and snippets from real searches (eduroam, koleje, zkoušky)",topic:eduroam | topic:koleje | topic:zkousky
 2026-11-20,#70 #71,new-page,/navody/reis-v-claude ; /en/guides/reis-for-claude,reIS for Claude guide,
+2026-11-23,,markup,/navod ; /en/navod,no-JS headline is a real <h1> instead of a <p> (rendered H1 was already correct),reis mendelu
