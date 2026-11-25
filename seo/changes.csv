@@ -29,3 +29,5 @@ date,pr,kind,urls,what,target
 2026-11-20,#69,rewrite,/navody/eduroam ; /navody/koleje ; /navody/prihlaseni-na-zkousku ; /en/guides/*,"titles and snippets from real searches (eduroam, koleje, zkoušky)",topic:eduroam | topic:koleje | topic:zkousky
 2026-11-20,#70 #71,new-page,/navody/reis-v-claude ; /en/guides/reis-for-claude,reIS for Claude guide,
 2026-11-23,,markup,/navod ; /en/navod,no-JS headline is a real <h1> instead of a <p> (rendered H1 was already correct),reis mendelu
+2026-11-25,,new-page,/navody/webiskam ; /en/guides/webiskam,"WebISKAM guide: login, ISIC credit and dorm rent (open payments in reIS)",webiskam | webiskam mendelu | mendelu uis | iskam mendelu
+2026-11-25,,internal-links,all guides,"new WebISKAM guide added to every Další návody / More guides list and the guides index",
