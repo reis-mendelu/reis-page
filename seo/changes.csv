@@ -33,3 +33,5 @@ date,pr,kind,urls,what,target
 2026-11-25,,internal-links,all guides,"new WebISKAM guide added to every Další návody / More guides list and the guides index",
 2026-11-25,,indexing,/navody/webiskam ; /en/guides/webiskam,"Request indexing in Search Console for both new WebISKAM guide URLs (both were not on Google)",
 2026-11-25,,rewrite,/navody/webiskam ; /en/guides/webiskam,"persona test fixes: say what reIS is, where the password goes, ISIC credit = Hlavní konto, December sample rent, real WebISKAM menu path (Účet › Základní údaje)",webiskam | webiskam mendelu
+2026-11-26,,indexing,/navody/reis-v-claude ; /en/guides/reis-for-claude ; /soukromi ; /spoluprace,"Request indexing in Search Console (all four were 'Discovered - currently not indexed'); /en/guides/webiskam was already on Google",
+2026-11-26,,redirect,/navod?lang=en,"redirect to /en/navod now drops lang=en and keeps device/browser (was /en/navod?lang=en, which Search Console listed as 'alternative page with proper canonical tag')",

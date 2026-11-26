@@ -74,6 +74,62 @@
           "type": "query",
           "key": "lang",
           "value": "en"
+        },
+        {
+          "type": "query",
+          "key": "device",
+          "value": "(?<device>.+)"
+        },
+        {
+          "type": "query",
+          "key": "browser",
+          "value": "(?<browser>.+)"
+        }
+      ],
+      "destination": "/en/navod?device=:device&browser=:browser",
+      "permanent": true
+    },
+    {
+      "source": "/navod",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        },
+        {
+          "type": "query",
+          "key": "device",
+          "value": "(?<device>.+)"
+        }
+      ],
+      "destination": "/en/navod?device=:device",
+      "permanent": true
+    },
+    {
+      "source": "/navod",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        },
+        {
+          "type": "query",
+          "key": "browser",
+          "value": "(?<browser>.+)"
+        }
+      ],
+      "destination": "/en/navod?browser=:browser",
+      "permanent": true
+    },
+    {
+      "source": "/navod",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
         }
       ],
       "destination": "/en/navod",
