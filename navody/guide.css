@@ -53,6 +53,18 @@ details ol,details ul{margin:12px 0 4px;padding-left:20px}
 details li{margin:0 0 6px;font-size:15px;line-height:1.55;color:var(--text-2)}
 details p{margin:8px 0 0;font-size:14px;color:var(--text-3)}
 details a{color:var(--accent-text)}
+/* "What eduroam is" line right under the H1, above the how-to lead. */
+.lead.what{margin-bottom:10px;color:var(--text-2)}
+/* FAQ: the most searched questions open, the rest under one "Další otázky" toggle. */
+.faq{margin:26px 0 0}
+.faq h3{margin:18px 0 4px;font-size:16px;font-weight:600;line-height:1.35}
+.faq p{margin:0;font-size:15px;line-height:1.55;color:var(--text-2)}
+.faq p a,.faq li a{color:var(--accent-text)}
+.faq ul,.faq ol{margin:6px 0 0;padding-left:20px}
+.faq li{margin:0 0 6px;font-size:15px;line-height:1.55;color:var(--text-2)}
+.faq ul + p{margin-top:6px}
+.faq details.more{margin-top:20px}
+.faq details.more h3:first-of-type{margin-top:12px}
 code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:0.9em;background:var(--surface-2);border:1px solid var(--border);border-radius:6px;padding:1px 5px;color:var(--text)}
 .checked{margin:18px 0 0;font-size:13px;line-height:1.5;color:var(--text-4)}
 .checked a{color:var(--text-3)}

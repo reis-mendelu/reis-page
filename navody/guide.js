@@ -75,15 +75,20 @@
 })();
 // Opened from the reIS app (?z=app, sent by the app's Nápověda and "Proč to nejde?" links):
 // the student already has reIS, so the install buttons go away. A #hash naming a <details>
-// (e.g. #nefunguje, #oficialne) opens that section and scrolls to it, from the app or any link.
+// (e.g. #nefunguje, #oficialne), or an element inside one, opens it and scrolls there, from the app or any link.
 (function () {
   var root = document.documentElement;
   if (new URLSearchParams(location.search).get('z') === 'app') root.classList.add('from-app');
   function openHash() {
     var id = decodeURIComponent(location.hash.slice(1));
     if (!id) return;
-    var d = document.getElementById(id);
-    if (d && d.tagName === 'DETAILS') { d.open = true; d.scrollIntoView({ block: 'start' }); }
+    var el = document.getElementById(id);
+    if (!el) return;
+    // The section itself, or a question inside a closed toggle (eduroam's "Další otázky").
+    var d = el.tagName === 'DETAILS' ? el : el.closest('details');
+    if (!d) return;
+    d.open = true;
+    el.scrollIntoView({ block: 'start' });
   }
   document.addEventListener('DOMContentLoaded', openHash);
   window.addEventListener('hashchange', openHash);
