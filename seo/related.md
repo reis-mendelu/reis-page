@@ -1,4 +1,4 @@
-# What Google suggests, 2026-11-26
+# What Google suggests, 2026-11-27
 
 "Related searches" and "People also ask" per tracked query (gl=cz).
 

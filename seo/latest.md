@@ -1,67 +1,67 @@
-# Search positions, 2026-11-26
+# Search positions, 2026-11-27
 
 Google, gl=cz, top 10 organic results (Serper). "–" = not in the top 10.
 
 | Topic | Query | reisapp.cz | Best mendelu.cz page | #1 result |
 | --- | --- | --- | --- | --- |
-| eduroam | eduroam mendelu | – | 1 https://eduroam.mendelu.cz/ | https://eduroam.mendelu.cz/ |
+| eduroam | eduroam mendelu | 4 | 1 https://eduroam.mendelu.cz/ | https://eduroam.mendelu.cz/ |
 | eduroam | mendelu wifi | – | 1 https://eduroam.mendelu.cz/ | https://eduroam.mendelu.cz/ |
-| eduroam | eduroam mendelu iphone | – | 1 https://eduroam.mendelu.cz/navody-k-instalaci/25358-navody-pro-apple | https://eduroam.mendelu.cz/navody-k-instalaci/25358-navody-pro-apple |
-| eduroam | eduroam mendelu android | 7 | 1 https://eduroam.mendelu.cz/navody-k-instalaci/25359-navody-pro-android | https://eduroam.mendelu.cz/navody-k-instalaci/25359-navody-pro-android |
-| eduroam | eduroam mendelu nefunguje | 8 | 1 https://eduroam.mendelu.cz/25388-reseni-problemu-a-faq | https://eduroam.mendelu.cz/25388-reseni-problemu-a-faq |
-| eduroam | eduroam mendelu certifikát | – | 1 https://eduroam.mendelu.cz/ | https://eduroam.mendelu.cz/ |
+| eduroam | eduroam mendelu iphone | 9 | 1 https://eduroam.mendelu.cz/navody-k-instalaci/25358-navody-pro-apple | https://eduroam.mendelu.cz/navody-k-instalaci/25358-navody-pro-apple |
+| eduroam | eduroam mendelu android | – | 1 https://eduroam.mendelu.cz/navody-k-instalaci/25359-navody-pro-android | https://eduroam.mendelu.cz/navody-k-instalaci/25359-navody-pro-android |
+| eduroam | eduroam mendelu nefunguje | – | 1 https://eduroam.mendelu.cz/25388-reseni-problemu-a-faq | https://eduroam.mendelu.cz/25388-reseni-problemu-a-faq |
+| eduroam | eduroam mendelu certifikát | – | 1 https://eduroam.mendelu.cz/25350-navody-k-instalaci | https://eduroam.mendelu.cz/25350-navody-k-instalaci |
 | eduroam | mendel university eduroam (en) | – | 1 https://eduroam.mendelu.cz/en/ | https://eduroam.mendelu.cz/en/ |
 | eduroam | mendelu wifi setup (en) | – | 1 https://eduroam.mendelu.cz/en/ | https://eduroam.mendelu.cz/en/ |
 | eduroam | eduroam mendelu windows | – | 1 https://eduroam.mendelu.cz/navody-k-instalaci/25355-navody-pro-windows | https://eduroam.mendelu.cz/navody-k-instalaci/25355-navody-pro-windows |
 | eduroam | eduroam mendelu macbook | – | 1 https://eduroam.mendelu.cz/navody-k-instalaci/25358-navody-pro-apple | https://eduroam.mendelu.cz/navody-k-instalaci/25358-navody-pro-apple |
 | eduroam | návod na eduroam mendelu | – | 1 https://eduroam.mendelu.cz/25350-navody-k-instalaci | https://eduroam.mendelu.cz/25350-navody-k-instalaci |
 | eduroam | připojení eduroam mendelu | – | 1 https://eduroam.mendelu.cz/25350-navody-k-instalaci | https://eduroam.mendelu.cz/25350-navody-k-instalaci |
-| eduroam | pef mendelu wifi | – | 1 https://eduroam.mendelu.cz/ | https://eduroam.mendelu.cz/ |
-| eduroam | mendelu přihlášení na wifi | – | 1 https://eduroam.mendelu.cz/ | https://eduroam.mendelu.cz/ |
-| zkousky | přihlášení na zkoušku mendelu | 3 | 1 https://zf.mendelu.cz/vyska-na-zkousku/ | https://zf.mendelu.cz/vyska-na-zkousku/ |
-| zkousky | jak se přihlásit na zkoušku mendelu | 3 | 1 https://zf.mendelu.cz/vyska-na-zkousku/ | https://zf.mendelu.cz/vyska-na-zkousku/ |
-| zkousky | termíny zkoušek mendelu | 9 | 1 https://mendelu.cz/uchazec/dulezite-terminy/ | https://mendelu.cz/uchazec/dulezite-terminy/ |
-| zkousky | mendelu exam registration (en) | – | 1 https://frrms.mendelu.cz/en/course-registration-and-enrolment/ | https://frrms.mendelu.cz/en/course-registration-and-enrolment/ |
+| eduroam | pef mendelu wifi | 6 | 1 https://eduroam.mendelu.cz/ | https://eduroam.mendelu.cz/ |
+| eduroam | mendelu přihlášení na wifi | – | 1 https://eduroam.mendelu.cz/en/35557-support | https://eduroam.mendelu.cz/en/35557-support |
+| zkousky | přihlášení na zkoušku mendelu | 3 | 1 https://is.mendelu.cz/prihlaska/ | https://is.mendelu.cz/prihlaska/ |
+| zkousky | jak se přihlásit na zkoušku mendelu | 1 | 2 https://af.mendelu.cz/wp-content/uploads/2026/09/Prezentace_Uvod-do-studia_Bc.-studium_AR-2026-2027.pdf | https://reisapp.cz/navody/prihlaseni-na-zkousku |
+| zkousky | termíny zkoušek mendelu | – | 1 https://mendelu.cz/uchazec/dulezite-terminy/ | https://mendelu.cz/uchazec/dulezite-terminy/ |
+| zkousky | mendelu exam registration (en) | 3 | 1 https://is.mendelu.cz/prihlaska/?lang=en | https://is.mendelu.cz/prihlaska/?lang=en |
 | mapa | mendelu mapa kampusu | 8 | 1 https://frrms.mendelu.cz/mapa-kampusu-mendelu/ | https://frrms.mendelu.cz/mapa-kampusu-mendelu/ |
-| mapa | mendelu mapa | – | 1 https://frrms.mendelu.cz/mapa-kampusu-mendelu/ | https://frrms.mendelu.cz/mapa-kampusu-mendelu/ |
-| mapa | mendelu učebny | – | 1 https://mendelu.cz/akce/akademicka-obec-pef-mendelu/ | https://mendelu.cz/akce/akademicka-obec-pef-mendelu/ |
+| mapa | mendelu mapa | 9 | 1 https://frrms.mendelu.cz/mapa-kampusu-mendelu/ | https://frrms.mendelu.cz/mapa-kampusu-mendelu/ |
+| mapa | mendelu učebny | – | 1 https://is.mendelu.cz/ | https://is.mendelu.cz/ |
 | mapa | mendel university campus map (en) | – | 1 https://frrms.mendelu.cz/en/mendelu-campus-map/ | https://frrms.mendelu.cz/en/mendelu-campus-map/ |
-| menza | mendelu menza jídelníček | – | 1 https://skm.mendelu.cz/26370-Lide-na-MENDELU?osoba=70928 | https://skm.mendelu.cz/26370-Lide-na-MENDELU?osoba=70928 |
+| menza | mendelu menza jídelníček | – | 1 https://skm.mendelu.cz/stravovani/28603-jidelni-listek | https://skm.mendelu.cz/stravovani/28603-jidelni-listek |
 | menza | menza mendelu dnes | – | 1 https://skm.mendelu.cz/stravovani/28603-jidelni-listek | https://skm.mendelu.cz/stravovani/28603-jidelni-listek |
 | menza | mendelu jídelníček | – | 1 https://skm.mendelu.cz/stravovani/28603-jidelni-listek | https://skm.mendelu.cz/stravovani/28603-jidelni-listek |
 | menza | mendelu canteen menu (en) | – | 1 https://skm.mendelu.cz/en/catering/28604-menu | https://skm.mendelu.cz/en/catering/28604-menu |
-| brand | reis mendelu | – | 1 https://is.mendelu.cz/auth/ca/ucty_info.pl?lang=cz | https://is.mendelu.cz/auth/ca/ucty_info.pl?lang=cz |
+| brand | reis mendelu | 4 | 1 http://is.mendelu.cz/lide/clovek.pl?zalozka=13;id=1;studium=25196;download_prace=1 | http://is.mendelu.cz/lide/clovek.pl?zalozka=13;id=1;studium=25196;download_prace=1 |
 | brand | mendelu aplikace | – | 1 https://moje.mendelu.cz/ | https://moje.mendelu.cz/ |
 | uis | uis mendelu | – | 1 https://is.mendelu.cz/ | https://is.mendelu.cz/ |
-| uis | mendelu uis | – | 1 https://is.mendelu.cz/ | https://is.mendelu.cz/ |
+| uis | mendelu uis | – | 1 https://is.mendelu.cz/prihlaska/auth/evidence_eprihlasek.pl?lang=cz | https://is.mendelu.cz/prihlaska/auth/evidence_eprihlasek.pl?lang=cz |
 | uis | is mendelu | – | 1 https://is.mendelu.cz/ | https://is.mendelu.cz/ |
 | uis | uis mendelu přihlášení | – | 1 https://is.mendelu.cz/ | https://is.mendelu.cz/ |
-| uis | iskam mendelu | – | 1 https://is.mendelu.cz/prihlaska/auth/evidence_eprihlasek.pl?lang=cz | https://is.mendelu.cz/prihlaska/auth/evidence_eprihlasek.pl?lang=cz |
-| uis | mendelu aplikace pro studenty | – | 3 https://q13.mm.mendelu.cz/cs/moje-mendelu | https://www.mendelu.app/cs/opory/ |
-| uchazec | vysoké školy brno | – | – | https://www.vysokeskoly.cz/v/region-brno/ |
-| uchazec | vysoká škola brno ekonomie | – | – | https://www.vysokeskoly.com/PS/Vysoke-skoly/verejne/ekonomicke/magisterske/prezencni/brno |
-| uchazec | kde studovat informatiku brno | – | – | https://www.vysokeskoly.cz/tema/informatika |
-| uchazec | zemědělská vysoká škola | – | 3 https://mendelu.cz/ | https://www.czu.cz/cs |
-| uchazec | lesnictví vysoká škola | – | 4 https://ldf.mendelu.cz/ | https://www.vysokeskoly.cz/v/zemedelstvi-a-veterina/lesnictvi-a-drevarstvi/ |
-| uchazec | koleje brno | – | 2 https://skm.mendelu.cz/ubytovani/27993-pro-verejnost | https://www.skm.muni.cz/ubytovani/koleje-muni |
+| uis | iskam mendelu | – | 1 https://webiskam.mendelu.cz/ | https://webiskam.mendelu.cz/ |
+| uis | mendelu aplikace pro studenty | – | 1 https://mendelu.cz/mendelu-rozviji-aplikaci-pro-studenty-i-zamestnance-2/ | https://mendelu.cz/mendelu-rozviji-aplikaci-pro-studenty-i-zamestnance-2/ |
+| uchazec | vysoké školy brno | – | 7 https://mendelu.cz/ | https://www.vysokeskoly.cz/v/region-brno/ |
+| uchazec | vysoká škola brno ekonomie | – | – | https://www.vysokeskoly.com/PS/Vysoke-skoly/verejne/ekonomicke/magisterske/brno |
+| uchazec | kde studovat informatiku brno | – | – | https://www.stredniskoly.com/PS/Stredni-skoly/technicke-a-it-obory/vyucni-list/brno |
+| uchazec | zemědělská vysoká škola | – | – | https://vejska.cz/vysoke-skoly/zemedelstvi-a-veterinarstvi |
+| uchazec | lesnictví vysoká škola | – | – | https://www.vysokeskoly.cz/v/zemedelstvi-a-veterina/lesnictvi-a-drevarstvi/forma-prezencni/ |
+| uchazec | koleje brno | – | 3 https://skm.mendelu.cz/ubytovani/ubytovaci-zarizeni/27988-tauferovy-koleje | https://www.skm.muni.cz/ubytovani/koleje-muni |
 | uchazec | přijímačky mendelu | – | 1 https://mendelu.cz/uchazec/ | https://mendelu.cz/uchazec/ |
 | uchazec | mendelu obory | – | 1 https://mendelu.cz/uchazec/studijni-programy/ | https://mendelu.cz/uchazec/studijni-programy/ |
-| uchazec | předškolovák mendelu | – | 2 https://mendelu.cz/akce/predskolovak-mendelu-2026/ | https://mendelu.predskolovak.cz/ |
+| uchazec | předškolovák mendelu | – | – | https://mendelu.predskolovak.cz/foto-video/2019 |
 | uchazec | zápis do prvního ročníku mendelu | – | 1 https://af.mendelu.cz/chcistudovat/dulezite-terminy/zapisy-do-1-rocniku-bc-studia/ | https://af.mendelu.cz/chcistudovat/dulezite-terminy/zapisy-do-1-rocniku-bc-studia/ |
 | uchazec | první ročník vysoká škola | – | – | https://www.vysokeskoly.com/kde-jeste-berou-na-vs/jak-prezit-1-rok-studia-na-vs-mame-rady-a-tipy |
-| uchazec | mendelu recenze | – | 2 https://kvalita.mendelu.cz/vnitrni-hodnoceni-kvality-2019 | https://www.primat.cz/skola/mendelova-univerzita-v-brne/1541/hodnoceni |
+| uchazec | mendelu recenze | – | 7 https://kvalita.mendelu.cz/vnitrni-hodnoceni-kvality | https://www.primat.cz/skola/mendelova-univerzita-v-brne/1541/hodnoceni |
 | koleje | koleje mendelu | – | 1 https://skm.mendelu.cz/ubytovani/27989-ubytovaci-zarizeni | https://skm.mendelu.cz/ubytovani/27989-ubytovaci-zarizeni |
 | koleje | kolej akademie | – | 1 https://skm.mendelu.cz/ubytovani/ubytovaci-zarizeni/27987-kolej-akademie | https://skm.mendelu.cz/ubytovani/ubytovaci-zarizeni/27987-kolej-akademie |
-| koleje | koleje jak | – | – | https://mapy.com/sk/?source=firm&id=683015 |
-| koleje | tauferovy koleje | – | 1 https://skm.mendelu.cz/ubytovani/ubytovaci-zarizeni/27988-tauferovy-koleje | https://skm.mendelu.cz/ubytovani/ubytovaci-zarizeni/27988-tauferovy-koleje |
-| koleje | kolik stojí koleje mendelu | – | 1 https://skm.mendelu.cz/27393-dokumenty | https://skm.mendelu.cz/27393-dokumenty |
-| koleje | mendelu dorms (en) | – | 1 https://international.mendelu.cz/en/exchange-student/ | https://international.mendelu.cz/en/exchange-student/ |
-| koleje | koleje brno cena | – | 5 https://skm.mendelu.cz/27393-dokumenty | https://www.skm.muni.cz/media/3847432/cenik-kolejneho-2025-2026.pdf |
+| koleje | koleje jak | – | 7 https://skm.mendelu.cz/26370-Lide-na-MENDELU?osoba=118356 | https://www.info-morava.cz/koleje-petra-bezruce/index.html |
+| koleje | tauferovy koleje | – | – | https://mapy.com/sl/?source=firm&id=13092768 |
+| koleje | kolik stojí koleje mendelu | – | 4 https://zakazky.mendelu.cz/agreement_display_63.html | https://mapy.com/sk/?source=firm&id=723392 |
+| koleje | mendelu dorms (en) | 8 | 1 https://skm.mendelu.cz/en/accommodation/28366-accommodation-facilities | https://skm.mendelu.cz/en/accommodation/28366-accommodation-facilities |
+| koleje | koleje brno cena | – | – | https://www.muni.cz/mapa/budova-20 |
 | koleje | koleje muni cena | – | – | https://www.skm.muni.cz/aktuality/cenik-ubytovani-platny-od-122026 |
 | koleje | koleje vut cena | – | – | https://www.kam.vutbr.cz/?p=doku |
-| informatika | informatika brno | – | 8 https://informatika.mendelu.cz/ | https://www.cichnovabrno.cz/ |
+| informatika | informatika brno | – | 5 https://informatika.mendelu.cz/ | https://www.muni.cz/bakalarske-a-magisterske-studijni-programy/22955-informatika |
 | informatika | fit vut vs fi muni | – | – | https://www.reddit.com/r/czech/comments/1tiijht/fit_vut_vs_fi_muni_re%C3%A1ln%C3%A9_rozd%C3%ADly_pohled/ |
-| informatika | otevřená informatika mendelu | – | 1 https://mendelu.cz/studijni-programy/otevrena-informatika/ | https://mendelu.cz/studijni-programy/otevrena-informatika/ |
+| informatika | otevřená informatika mendelu | – | 1 https://pef.mendelu.cz/wp-content/uploads/2025/07/karticka_prvaka-ZAPIS_N-OI.pdf | https://pef.mendelu.cz/wp-content/uploads/2025/07/karticka_prvaka-ZAPIS_N-OI.pdf |
 | prijimacky | přijímačky mendelu | – | 1 https://mendelu.cz/uchazec/ | https://mendelu.cz/uchazec/ |
 | prijimacky | mendelu přijímačky vzor | – | 1 https://frrms.mendelu.cz/wp-content/uploads/2022/03/2022_03_TSP_Vzor.pdf | https://frrms.mendelu.cz/wp-content/uploads/2022/03/2022_03_TSP_Vzor.pdf |
 | prijimacky | test předpokladů ke studiu mendelu | – | 1 https://frrms.mendelu.cz/wp-content/uploads/2022/03/2022_03_TSP_Vzor.pdf | https://frrms.mendelu.cz/wp-content/uploads/2022/03/2022_03_TSP_Vzor.pdf |
@@ -69,4 +69,4 @@ Google, gl=cz, top 10 organic results (Serper). "–" = not in the top 10.
 | prijimacky | kolik percentil na muni | – | – | https://www.muni.cz/o-univerzite/uredni-deska/zprava-o-vysledku-prijimaciho-rizeni-do-bakalarskeho-a-magisterskeho-pomaturitniho-studia |
 | prijimacky | přijímačky vut fit | – | – | https://www.fit.vut.cz/applicants/application/.cs |
 | prijimacky | přijímačky vut fp | – | – | https://www.fp.vut.cz/cs/pro-uchazece/prijimacky |
-| prijimacky | esf muni přijímačky | – | – | https://www.econ.muni.cz/pro-uchazece/bakalarske-studium/prakticke-informace |
+| prijimacky | esf muni přijímačky | – | – | https://www.econ.muni.cz/pro-uchazece/navazujici-magisterske-studium/prakticke-informace |
