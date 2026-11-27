@@ -133,8 +133,7 @@ a.device{text-decoration:none}
 .vs{list-style:none;margin:0 0 10px;padding:0}
 .vs li{display:flex;flex-direction:column;gap:3px;padding:12px 0;border-top:1px solid var(--border)}
 .vs li:last-child{border-bottom:1px solid var(--border)}
-.vs-task{font-size:16px;font-weight:600;color:var(--text);text-decoration:none}
-.vs-task::after{content:" ›";color:var(--text-3)}
+.vs-task{font-size:16px;font-weight:600;color:var(--text);text-decoration:underline;text-decoration-color:var(--border-strong);text-underline-offset:3px}
 .vs-uis{font-size:14px;line-height:1.5;color:var(--text-3)}
 .vs-reis{font-size:15px;line-height:1.5;color:var(--accent-text)}
 .vs b{font-weight:600}
