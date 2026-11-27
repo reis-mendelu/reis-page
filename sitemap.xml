@@ -73,6 +73,34 @@
     <lastmod>2026-11-27</lastmod>
   </url>
   <url>
+    <loc>https://reisapp.cz/navody/knihovna</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://reisapp.cz/navody/knihovna"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reisapp.cz/en/guides/library"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reisapp.cz/navody/knihovna"/>
+    <lastmod>2026-11-27</lastmod>
+  </url>
+  <url>
+    <loc>https://reisapp.cz/en/guides/library</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://reisapp.cz/navody/knihovna"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reisapp.cz/en/guides/library"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reisapp.cz/navody/knihovna"/>
+    <lastmod>2026-11-27</lastmod>
+  </url>
+  <url>
+    <loc>https://reisapp.cz/navody/menza</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://reisapp.cz/navody/menza"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reisapp.cz/en/guides/canteen"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reisapp.cz/navody/menza"/>
+    <lastmod>2026-11-27</lastmod>
+  </url>
+  <url>
+    <loc>https://reisapp.cz/en/guides/canteen</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://reisapp.cz/navody/menza"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reisapp.cz/en/guides/canteen"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reisapp.cz/navody/menza"/>
+    <lastmod>2026-11-27</lastmod>
+  </url>
+  <url>
     <loc>https://reisapp.cz/navody/uis</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://reisapp.cz/navody/uis"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://reisapp.cz/en/guides/uis"/>

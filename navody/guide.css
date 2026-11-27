@@ -149,3 +149,5 @@ video.loop{display:block;width:min(100%,280px);height:auto;aspect-ratio:1080/234
 .story > p{margin:0 0 12px;font-size:16px;line-height:1.6;color:var(--text-2)}
 .story h3{margin:20px 0 8px;font-size:16px;font-weight:600}
 .verdict{margin:6px 0 0;padding:14px 16px;border-radius:12px;border:1px solid var(--border-green);background:var(--card-green);font-size:15px;line-height:1.55;color:var(--text)}
+/* A section heading right after the store badges (/navody/knihovna). */
+.badges + .step-h{margin-top:22px}
