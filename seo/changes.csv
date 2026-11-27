@@ -38,3 +38,6 @@ date,pr,kind,urls,what,target
 2026-11-27,,indexing,/navody/eduroam ; /en/guides/eduroam,Request indexing after #79 (eduroam FAQ),topic:eduroam
 2026-11-27,,new-page,/navody/uis ; /en/guides/uis,UIS MENDELU guide: what UIS is, login (first-years, forgotten password), UIS vs reIS paths, FAQ 4 open + 8 under a toggle with FAQPage JSON-LD; linked from both guide indexes and the no-JS site nav,uis mendelu | mendelu uis | uis mendelu přihlášení
 2026-11-27,,rewrite,/ ; /en,homepage title/og/description no longer lead with "UIS MENDELU" (Dominik: wrong there); the UIS searches now target /navody/uis,uis mendelu | reis mendelu
+2026-11-27,,new-page,/navody/knihovna ; /en/guides/library,Library guide: study room booking in reIS + official way, opening hours, borrowing, printing; FAQ 4 open + 8 toggle,mendelu knihovna | knihovna mendelu
+2026-11-27,,new-page,/navody/menza ; /en/guides/canteen,Canteen guide: reIS Jídelníček (X/JAK/KA/S-klub/pizza), opening hours, paying with ISIC; FAQ 4 open + 8 toggle,menza mendelu | jídelníček mendelu | jidelnicek mendelu | skm mendelu
+2026-11-27,,rewrite,/navody/uis ; /en/guides/uis,FAQ: Lidé na MENDELU + link to the library guide,lidé na mendelu | lide mendelu
