@@ -5,14 +5,14 @@
     <xhtml:link rel="alternate" hreflang="cs" href="https://reisapp.cz/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://reisapp.cz/en"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://reisapp.cz/"/>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-27</lastmod>
   </url>
   <url>
     <loc>https://reisapp.cz/en</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://reisapp.cz/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://reisapp.cz/en"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://reisapp.cz/"/>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-27</lastmod>
   </url>
   <url>
     <loc>https://reisapp.cz/navod</loc>
@@ -30,11 +30,11 @@
   </url>
   <url>
     <loc>https://reisapp.cz/o-nas</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-27</lastmod>
   </url>
   <url>
     <loc>https://reisapp.cz/spoluprace</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-27</lastmod>
   </url>
   <url>
     <loc>https://reisapp.cz/bezpecnost</loc>
@@ -49,14 +49,14 @@
     <xhtml:link rel="alternate" hreflang="cs" href="https://reisapp.cz/navody"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://reisapp.cz/en/guides"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://reisapp.cz/navody"/>
-    <lastmod>2026-11-25</lastmod>
+    <lastmod>2026-11-27</lastmod>
   </url>
   <url>
     <loc>https://reisapp.cz/en/guides</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://reisapp.cz/navody"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://reisapp.cz/en/guides"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://reisapp.cz/navody"/>
-    <lastmod>2026-11-25</lastmod>
+    <lastmod>2026-11-27</lastmod>
   </url>
   <url>
     <loc>https://reisapp.cz/navody/eduroam</loc>
@@ -73,131 +73,145 @@
     <lastmod>2026-11-27</lastmod>
   </url>
   <url>
+    <loc>https://reisapp.cz/navody/uis</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://reisapp.cz/navody/uis"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reisapp.cz/en/guides/uis"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reisapp.cz/navody/uis"/>
+    <lastmod>2026-11-27</lastmod>
+  </url>
+  <url>
+    <loc>https://reisapp.cz/en/guides/uis</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://reisapp.cz/navody/uis"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reisapp.cz/en/guides/uis"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reisapp.cz/navody/uis"/>
+    <lastmod>2026-11-27</lastmod>
+  </url>
+  <url>
     <loc>https://reisapp.cz/navody/prihlaseni-na-zkousku</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://reisapp.cz/navody/prihlaseni-na-zkousku"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://reisapp.cz/en/guides/exam-registration"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://reisapp.cz/navody/prihlaseni-na-zkousku"/>
-    <lastmod>2026-11-25</lastmod>
+    <lastmod>2026-11-27</lastmod>
   </url>
   <url>
     <loc>https://reisapp.cz/en/guides/exam-registration</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://reisapp.cz/navody/prihlaseni-na-zkousku"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://reisapp.cz/en/guides/exam-registration"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://reisapp.cz/navody/prihlaseni-na-zkousku"/>
-    <lastmod>2026-11-25</lastmod>
+    <lastmod>2026-11-27</lastmod>
   </url>
   <url>
     <loc>https://reisapp.cz/navody/mapa-kampusu</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://reisapp.cz/navody/mapa-kampusu"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://reisapp.cz/en/guides/campus-map"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://reisapp.cz/navody/mapa-kampusu"/>
-    <lastmod>2026-11-25</lastmod>
+    <lastmod>2026-11-27</lastmod>
   </url>
   <url>
     <loc>https://reisapp.cz/en/guides/campus-map</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://reisapp.cz/navody/mapa-kampusu"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://reisapp.cz/en/guides/campus-map"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://reisapp.cz/navody/mapa-kampusu"/>
-    <lastmod>2026-11-25</lastmod>
+    <lastmod>2026-11-27</lastmod>
   </url>
   <url>
     <loc>https://reisapp.cz/navody/koleje</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://reisapp.cz/navody/koleje"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://reisapp.cz/en/guides/dorms"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://reisapp.cz/navody/koleje"/>
-    <lastmod>2026-11-25</lastmod>
+    <lastmod>2026-11-27</lastmod>
   </url>
   <url>
     <loc>https://reisapp.cz/en/guides/dorms</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://reisapp.cz/navody/koleje"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://reisapp.cz/en/guides/dorms"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://reisapp.cz/navody/koleje"/>
-    <lastmod>2026-11-25</lastmod>
+    <lastmod>2026-11-27</lastmod>
   </url>
   <url>
     <loc>https://reisapp.cz/navody/predmety</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://reisapp.cz/navody/predmety"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://reisapp.cz/en/guides/subjects"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://reisapp.cz/navody/predmety"/>
-    <lastmod>2026-11-25</lastmod>
+    <lastmod>2026-11-27</lastmod>
   </url>
   <url>
     <loc>https://reisapp.cz/en/guides/subjects</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://reisapp.cz/navody/predmety"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://reisapp.cz/en/guides/subjects"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://reisapp.cz/navody/predmety"/>
-    <lastmod>2026-11-25</lastmod>
+    <lastmod>2026-11-27</lastmod>
   </url>
   <url>
     <loc>https://reisapp.cz/navody/obory</loc>
-    <lastmod>2026-11-25</lastmod>
+    <lastmod>2026-11-27</lastmod>
   </url>
   <url>
     <loc>https://reisapp.cz/navody/dobiti-isic</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://reisapp.cz/navody/dobiti-isic"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://reisapp.cz/en/guides/isic-top-up"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://reisapp.cz/navody/dobiti-isic"/>
-    <lastmod>2026-11-25</lastmod>
+    <lastmod>2026-11-27</lastmod>
   </url>
   <url>
     <loc>https://reisapp.cz/en/guides/isic-top-up</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://reisapp.cz/navody/dobiti-isic"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://reisapp.cz/en/guides/isic-top-up"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://reisapp.cz/navody/dobiti-isic"/>
-    <lastmod>2026-11-25</lastmod>
+    <lastmod>2026-11-27</lastmod>
   </url>
   <url>
     <loc>https://reisapp.cz/navody/webiskam</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://reisapp.cz/navody/webiskam"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://reisapp.cz/en/guides/webiskam"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://reisapp.cz/navody/webiskam"/>
-    <lastmod>2026-11-25</lastmod>
+    <lastmod>2026-11-27</lastmod>
   </url>
   <url>
     <loc>https://reisapp.cz/en/guides/webiskam</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://reisapp.cz/navody/webiskam"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://reisapp.cz/en/guides/webiskam"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://reisapp.cz/navody/webiskam"/>
-    <lastmod>2026-11-25</lastmod>
+    <lastmod>2026-11-27</lastmod>
   </url>
   <url>
     <loc>https://reisapp.cz/navody/prijimacky-mendelu</loc>
-    <lastmod>2026-11-25</lastmod>
+    <lastmod>2026-11-27</lastmod>
   </url>
   <url>
     <loc>https://reisapp.cz/navody/informatika-v-brne</loc>
-    <lastmod>2026-11-25</lastmod>
+    <lastmod>2026-11-27</lastmod>
   </url>
   <url>
     <loc>https://reisapp.cz/navody/prvni-rocnik</loc>
-    <lastmod>2026-11-25</lastmod>
+    <lastmod>2026-11-27</lastmod>
   </url>
   <url>
     <loc>https://reisapp.cz/navody/potvrzeni-o-studiu</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://reisapp.cz/navody/potvrzeni-o-studiu"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://reisapp.cz/en/guides/confirmation-of-study"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://reisapp.cz/navody/potvrzeni-o-studiu"/>
-    <lastmod>2026-11-25</lastmod>
+    <lastmod>2026-11-27</lastmod>
   </url>
   <url>
     <loc>https://reisapp.cz/en/guides/confirmation-of-study</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://reisapp.cz/navody/potvrzeni-o-studiu"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://reisapp.cz/en/guides/confirmation-of-study"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://reisapp.cz/navody/potvrzeni-o-studiu"/>
-    <lastmod>2026-11-25</lastmod>
+    <lastmod>2026-11-27</lastmod>
   </url>
   <url>
     <loc>https://reisapp.cz/navody/reis-v-claude</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://reisapp.cz/navody/reis-v-claude"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://reisapp.cz/en/guides/reis-for-claude"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://reisapp.cz/navody/reis-v-claude"/>
-    <lastmod>2026-11-25</lastmod>
+    <lastmod>2026-11-27</lastmod>
   </url>
   <url>
     <loc>https://reisapp.cz/en/guides/reis-for-claude</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://reisapp.cz/navody/reis-v-claude"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://reisapp.cz/en/guides/reis-for-claude"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://reisapp.cz/navody/reis-v-claude"/>
-    <lastmod>2026-11-25</lastmod>
+    <lastmod>2026-11-27</lastmod>
   </url>
 </urlset>
