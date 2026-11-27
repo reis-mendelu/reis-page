@@ -53,6 +53,11 @@ details ol,details ul{margin:12px 0 4px;padding-left:20px}
 details li{margin:0 0 6px;font-size:15px;line-height:1.55;color:var(--text-2)}
 details p{margin:8px 0 0;font-size:14px;color:var(--text-3)}
 details a{color:var(--accent-text)}
+details p.a{font-size:15px;line-height:1.55;color:var(--text-2)}
+/* A short list of facts under a plain h2.step-h, one line each (eduroam "Co je eduroam"). */
+.points{margin:0 0 26px;padding-left:20px}
+.points li{margin:0 0 8px;font-size:15px;line-height:1.55;color:var(--text-2)}
+.points strong{color:var(--text)}
 code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:0.9em;background:var(--surface-2);border:1px solid var(--border);border-radius:6px;padding:1px 5px;color:var(--text)}
 .checked{margin:18px 0 0;font-size:13px;line-height:1.5;color:var(--text-4)}
 .checked a{color:var(--text-3)}
