@@ -129,3 +129,13 @@ a.device{text-decoration:none}
 .share.big{display:flex;justify-content:center;width:100%;min-height:48px;margin:0;font-size:16px;background:var(--btn);color:var(--on-btn);border-color:var(--btn)}
 .share.big:hover{background:var(--btn-hover)}
 .share.big svg{color:var(--on-btn)}
+/* UIS vs reIS: one task per row, the UIS path muted, the reIS path highlighted (/navody/uis). */
+.vs{list-style:none;margin:0 0 10px;padding:0}
+.vs li{display:flex;flex-direction:column;gap:3px;padding:12px 0;border-top:1px solid var(--border)}
+.vs li:last-child{border-bottom:1px solid var(--border)}
+.vs-task{font-size:16px;font-weight:600;color:var(--text);text-decoration:none}
+.vs-task::after{content:" ›";color:var(--text-3)}
+.vs-uis{font-size:14px;line-height:1.5;color:var(--text-3)}
+.vs-reis{font-size:15px;line-height:1.5;color:var(--accent-text)}
+.vs b{font-weight:600}
+img.shot{display:block;max-width:min(100%,300px);height:auto;margin:8px 0 18px;border-radius:12px;border:1px solid var(--border)}

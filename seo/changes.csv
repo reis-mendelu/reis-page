@@ -36,3 +36,5 @@ date,pr,kind,urls,what,target
 2026-11-26,,indexing,/navody/reis-v-claude ; /en/guides/reis-for-claude ; /soukromi ; /spoluprace,"Request indexing in Search Console (all four were 'Discovered - currently not indexed'); /en/guides/webiskam was already on Google",
 2026-11-27,,rewrite,/navody/eduroam ; /en/guides/eduroam,eduroam guide: "Co je eduroam a jak funguje na MENDELU" section + 12-question FAQ with FAQPage JSON-LD; title/description/lead with návod/připojení/certifikát (Ahrefs + autocomplete phrases),topic:eduroam
 2026-11-27,,indexing,/navody/eduroam ; /en/guides/eduroam,Request indexing after #79 (eduroam FAQ),topic:eduroam
+2026-11-27,,new-page,/navody/uis ; /en/guides/uis,UIS MENDELU guide: what UIS is, login (first-years, forgotten password), UIS vs reIS paths, FAQ 4 open + 8 under a toggle with FAQPage JSON-LD; linked from both guide indexes and the no-JS site nav,uis mendelu | mendelu uis | uis mendelu přihlášení
+2026-11-27,,rewrite,/ ; /en,homepage title/og/description no longer lead with "UIS MENDELU" (Dominik: wrong there); the UIS searches now target /navody/uis,uis mendelu | reis mendelu
