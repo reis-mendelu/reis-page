@@ -137,4 +137,5 @@ a.device{text-decoration:none}
 .vs-uis{font-size:14px;line-height:1.5;color:var(--text-3)}
 .vs-reis{font-size:15px;line-height:1.5;color:var(--accent-text)}
 .vs b{font-weight:600}
-img.shot{display:block;max-width:min(100%,300px);height:auto;margin:8px 0 18px;border-radius:12px;border:1px solid var(--border)}
+/* The IS → reIS loop from the homepage (/navody/uis); /loops.js keeps it muted and still for reduced motion. */
+video.loop{display:block;width:min(100%,280px);height:auto;aspect-ratio:1080/2340;object-fit:cover;margin:4px 0 18px;border-radius:22px;border:1px solid var(--border);background:var(--surface-2)}
