@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Data for student projects: MENDELU success rates and Erasmus (JSON, CSV) – reIS</title>
+<meta name="description" content="Real MENDELU data for a web or Java course project: subject success rates 2005–2025 and numbers from Erasmus reports. JSON and CSV, no sign-up, no key.">
+<link rel="canonical" href="https://reisapp.cz/en/guides/project-data">
+<link rel="alternate" hreflang="en" href="https://reisapp.cz/navody/data-pro-projekty">
+<link rel="alternate" hreflang="en" href="https://reisapp.cz/en/guides/project-data">
+<link rel="alternate" hreflang="x-default" href="https://reisapp.cz/navody/data-pro-projekty">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="reIS">
+<meta property="og:url" content="https://reisapp.cz/en/guides/project-data">
+<meta property="og:title" content="Data for student projects: real MENDELU data">
+<meta property="og:description" content="Subject success rates and Erasmus numbers for your web or Java project. JSON and CSV, no sign-up.">
+<meta property="og:image" content="https://reisapp.cz/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/reIS_logo.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/theme.css">
+<meta name="theme-color" content="#0d110e">
+<link href="/navod/fonts.css" rel="stylesheet">
+<link rel="stylesheet" href="/navody/guide.css">
+<script src="/ph.js"></script>
+<script src="/navody/guide.js" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","headline":"Data for student projects: MENDELU success rates and Erasmus (JSON, CSV)","inLanguage":"en","url":"https://reisapp.cz/en/guides/project-data","datePublished":"2026-11-28","dateModified":"2026-11-28","author":{"@type":"Organization","name":"reIS","url":"https://reisapp.cz/"},"publisher":{"@id":"https://reisapp.cz/#org"},"about":"Open data on subject success rates and Erasmus experiences for student projects at Mendel University in Brno"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"reIS","item":"https://reisapp.cz/en"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://reisapp.cz/en/guides"},{"@type":"ListItem","position":3,"name":"Project data","item":"https://reisapp.cz/en/guides/project-data"}]}]}</script>
+<style>
+.sec-h{margin:30px 0 12px;font-size:20px;font-weight:700;letter-spacing:-.01em;scroll-margin-top:16px}
+.jump{display:grid;gap:10px;margin:0 0 6px}
+@media (min-width:600px){.jump{grid-template-columns:repeat(2,1fr)}}
+.ds{display:grid;gap:10px;margin:0 0 14px}
+.ds a{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 16px;border-radius:14px;background:var(--surface);border:1.5px solid var(--border);text-decoration:none;color:var(--text)}
+.ds a:hover{border-color:var(--accent)}
+.ds b{display:block;font-size:16px;font-weight:600}
+.ds small{display:block;margin-top:2px;font-size:13px;color:var(--text-3)}
+.ds .big{flex:none;font-size:13px;font-weight:700;padding:6px 12px;border-radius:999px;background:var(--btn);color:var(--on-btn)}
+pre{margin:0 0 18px;padding:12px 14px;border-radius:12px;background:var(--surface-2);border:1px solid var(--border);overflow-x:auto;font-size:13px;line-height:1.55;-webkit-overflow-scrolling:touch}
+pre code{background:none;border:0;padding:0;font-size:inherit;white-space:pre}
+.lab{margin:0 0 6px;font-size:13px;font-weight:600;color:var(--text-3)}
+.asks{list-style:none;margin:0 0 8px;padding:0;display:grid;gap:12px}
+.asks li{padding:2px 0 2px 14px;border-left:3px solid var(--accent);font-size:16px;font-weight:600;line-height:1.4}
+.asks small{display:block;margin-top:3px;font-size:13px;font-weight:400;color:var(--text-3)}
+.cols{margin:0 0 6px;padding:0;list-style:none}
+.cols li{margin:0 0 6px;font-size:15px;line-height:1.5;color:var(--text-2)}
+.cols code{font-size:.85em}
+</style>
+</head>
+<body>
+<div class="col">
+  <header>
+    <a class="brand" href="/"><img src="/assets/reIS_logo.svg" alt="" width="40" height="40"><span>reIS</span></a>
+    <a class="lang" href="/navody/data-pro-projekty" hreflang="cs" data-lang-switch="guide">CZ</a>
+  </header>
+  <main>
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="/en">reIS</a><span aria-hidden="true">›</span><a href="/en/guides">Guides</a><span aria-hidden="true">›</span><span aria-current="page">Project data</span></nav>
+    <h1>Data for student projects</h1>
+    <p class="lead">Real MENDELU data for a course project: subject success rates and numbers from Erasmus. One link, no key, no sign-up. Use it and credit “data from reIS”.</p>
+
+    <div class="jump">
+      <a class="device" href="#web"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg><span><b>For web</b><small>JSON via fetch</small></span></a>
+      <a class="device" href="#java"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 8h1a4 4 0 0 1 0 8h-1"/><path d="M3 8h14v7a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4z"/><path d="M7 2v3M11 2v3"/></svg><span><b>For Java</b><small>CSV from a file</small></span></a>
+    </div>
+
+    <h2 class="sec-h" id="web">For web</h2>
+    <div class="ds">
+      <a href="https://cdn.jsdelivr.net/gh/reis-mendelu/reis-data@main/student-data/success-rates.json"><span><b>Subject success rates</b><small>17,459 rows, 2005–2025, all faculties</small></span><span class="big">JSON</span></a>
+      <a href="https://cdn.jsdelivr.net/gh/reis-mendelu/reis-data@main/student-data/erasmus.json"><span><b>Erasmus</b><small>1,717 reports, 189 universities, 28 countries</small></span><span class="big">JSON</span></a>
+    </div>
+    <p class="lab">Paste into the browser console:</p>
+<pre><code>const url = 'https://cdn.jsdelivr.net/gh/reis-mendelu/reis-data@main/student-data/success-rates.json';
+const rows = await (await fetch(url)).json();
+console.log(rows.filter(r => r.code === 'EBC-PJ'));</code></pre>
+    <p class="lab">What to build:</p>
+    <ul class="asks">
+      <li>Chart: how hard a subject is over time<small>exam success by year, pick a subject</small></li>
+      <li>A map of Erasmus universities<small>cost per day and rating for each</small></li>
+      <li>An Erasmus cost calculator<small>how much money I need after the grant</small></li>
+    </ul>
+
+    <h2 class="sec-h" id="java">For Java</h2>
+    <div class="ds">
+      <a href="https://cdn.jsdelivr.net/gh/reis-mendelu/reis-data@main/student-data/success-rates.csv"><span><b>Subject success rates</b><small>17,459 rows, 2005–2025, all faculties</small></span><span class="big">CSV</span></a>
+      <a href="https://cdn.jsdelivr.net/gh/reis-mendelu/reis-data@main/student-data/erasmus.csv"><span><b>Erasmus</b><small>1,717 reports, 189 universities, 28 countries</small></span><span class="big">CSV</span></a>
+    </div>
+    <p class="hint">Some rows have a comma inside quotes, so a plain <code>split</code> sometimes breaks them. For the whole file use a CSV library, for example OpenCSV.</p>
+    <p class="lab">Download the file next to your project and read it:</p>
+<pre><code>var lines = Files.readAllLines(Path.of("success-rates.csv"));
+String[] p = lines.get(1).split(",");   // first row after the header</code></pre>
+    <p class="lab">What to build:</p>
+    <ul class="asks">
+      <li>A console app that takes a subject code<small>prints its success rate by year</small></li>
+      <li>A REST API over the file<small>for example <code>/subjects/EBC-PJ</code>, in Spring Boot</small></li>
+      <li>A ranking of Erasmus universities<small>classes University and Report, sorted by rating and cost</small></li>
+    </ul>
+
+    <div class="share-box" data-share-here></div>
+
+    <details id="sloupce">
+      <summary>What is in the files</summary>
+        <p><b>Success rates:</b> one row is one subject in one semester.</p>
+        <ul class="cols">
+          <li><code>code</code>, <code>nameCs</code>, <code>nameEn</code>: subject code and name</li>
+          <li><code>facultyId</code>: faculty in IS (PEF 2, AF 14, FRRMS 23, LDF 38, ZF 60, ICV 220)</li>
+          <li><code>semester</code>, <code>year</code>: for example <code>ZS 2025/2026 - PEF</code> and 2025</li>
+          <li><code>kind</code>: <code>exam</code> or <code>credit</code></li>
+          <li><code>a</code> to <code>fn</code>: number of grades A, B, C, D, E, F, FN</li>
+          <li><code>pass</code>, <code>fail</code>: how many students passed and failed</li>
+        </ul>
+<pre><code>{"code":"EBC-PJ","nameCs":"Programovací jazyk Java","facultyId":2,
+ "semester":"ZS 2025/2026 - PEF","year":2025,"kind":"exam",
+ "a":19,"b":12,"c":17,"d":13,"e":13,"f":4,"fn":1,"pass":74,"fail":5}</code></pre>
+        <p><b>Erasmus:</b> one row is one student report, numbers only.</p>
+        <ul class="cols">
+          <li><code>hostUniversity</code>, <code>hostCountry</code>: where the student went</li>
+          <li><code>stayFrom</code>, <code>stayMonths</code>: start (<code>YYYY-MM-DD</code>) and length in months</li>
+          <li><code>accommodationPerDay</code>, <code>foodPerDay</code>, <code>transportCost</code>, <code>totalCostCZK</code>: costs as the student wrote them</li>
+          <li><code>grantCoveragePercent</code>: what percent of the cost the grant covered</li>
+          <li><code>recognized</code>: <code>true</code> or <code>false</code>, whether the stay was recognised</li>
+          <li><code>rating</code>: rating 1 to 5</li>
+        </ul>
+<pre><code>{"hostUniversity":"FH Wien der WKW University of Applied Sciences for Management &amp; Communication",
+ "hostCountry":"Rakouská republika","stayFrom":"2024-02-05","stayMonths":4.9,
+ "accommodationPerDay":13,"foodPerDay":10,"transportCost":2000,
+ "totalCostCZK":80000,"grantCoveragePercent":80,"recognized":true,"rating":4}</code></pre>
+    </details>
+    <details id="pozor">
+      <summary>Watch out for</summary>
+        <ul>
+          <li><strong>Erasmus numbers are as the student wrote them.</strong> Units are not unified (accommodation sometimes shows a monthly price instead of a daily one) and a missing value is <code>null</code>. Cleaning the data is part of the project.</li>
+          <li><strong>These are aggregated numbers.</strong> There are no names of students or teachers, so do not look for them.</li>
+          <li><strong>No warranty.</strong> The statistics come from the MENDELU IS pages. If you use the data, credit “data from reIS”.</li>
+        </ul>
+    </details>
+    <details id="zdroj">
+      <summary>Where the data comes from</summary>
+        <p>Success rates are the subject statistics in MENDELU IS. Erasmus numbers come from reports students handed in at MENDELU, without names, e-mails or free-text answers. The files and the script that builds them are public on <a href="https://github.com/reis-mendelu/reis-data/tree/main/student-data">GitHub</a>.</p>
+    </details>
+    <p class="checked">Checked 28 November 2026: both files open and the web snippet works. reIS is made by MENDELU students; it is not an official MENDELU app.</p>
+    <p class="checked">More guides: <a href="/en/guides/uis">UIS MENDELU</a> · <a href="/en/guides/exam-registration">Exam registration</a> · <a href="/en/guides/campus-map">Campus map</a> · <a href="/en/guides/eduroam">eduroam</a> · <a href="/en/guides/library">MENDELU library</a> · <a href="/en/guides/canteen">Canteen and menu</a> · <a href="/en/guides/dorms">Dorms</a> · <a href="/en/guides/subjects">Course files and syllabus</a> · <a href="/en/guides/isic-top-up">ISIC top-up</a> · <a href="/en/guides/webiskam">WebISKAM</a> · <a href="/en/guides/confirmation-of-study">Confirmation of study</a> · <a href="/en/guides/reis-for-claude">reIS for Claude</a></p>
+  </main>
+  <footer>
+    <div style="display:flex;align-items:center;gap:12px"><img src="/assets/reIS_logo.svg" alt="" width="28" height="28"><span style="color:var(--text-3);line-height:1.5">reIS is made by MENDELU students.</span></div>
+    <nav><a href="/en">reisapp.cz</a><a href="/en/guides">Guides</a><a href="/en/navod">Install guide</a><a href="/bezpecnost">Data &amp; security</a><a href="mailto:reis.mendelu@gmail.com">reis.mendelu@gmail.com</a></nav>
+  </footer>
+</div>
+</body>
+</html>
