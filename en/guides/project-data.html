@@ -6,7 +6,7 @@
 <title>Data for student projects: MENDELU success rates and Erasmus (JSON, CSV) – reIS</title>
 <meta name="description" content="Real MENDELU data for a course project in any subject: subject success rates 2005–2025 and numbers from Erasmus reports. JSON and CSV for web, Java, Python and databases, no sign-up.">
 <link rel="canonical" href="https://reisapp.cz/en/guides/project-data">
-<link rel="alternate" hreflang="en" href="https://reisapp.cz/navody/data-pro-projekty">
+<link rel="alternate" hreflang="cs" href="https://reisapp.cz/navody/data-pro-projekty">
 <link rel="alternate" hreflang="en" href="https://reisapp.cz/en/guides/project-data">
 <link rel="alternate" hreflang="x-default" href="https://reisapp.cz/navody/data-pro-projekty">
 <meta property="og:type" content="article">
@@ -77,7 +77,8 @@ console.log(rows.filter(r => r.code === 'EBC-PJ'));</code></pre>
 df = pd.read_csv('https://cdn.jsdelivr.net/gh/reis-mendelu/reis-data@main/student-data/success-rates.csv')
 print(df[df.code == 'EBC-PJ'])</code></pre>
     <p class="lab">Java, with the file downloaded next to your project:</p>
-<pre><code>var lines = Files.readAllLines(Path.of("success-rates.csv"));
+<pre><code>import java.nio.file.*;   // in a method that throws IOException
+var lines = Files.readAllLines(Path.of("success-rates.csv"));
 String[] p = lines.get(1).split(",");   // first row after the header</code></pre>
     <p class="hint">Some rows have a comma inside quotes, so a plain <code>split</code> sometimes breaks them. For the whole file use a CSV library, for example OpenCSV.</p>
 
@@ -107,7 +108,7 @@ String[] p = lines.get(1).split(",");   // first row after the header</code></pr
 <pre><code>{"code":"EBC-PJ","nameCs":"Programovací jazyk Java","facultyId":2,
  "semester":"ZS 2025/2026 - PEF","year":2025,"kind":"exam",
  "a":19,"b":12,"c":17,"d":13,"e":13,"f":4,"fn":1,"pass":74,"fail":5}</code></pre>
-        <p><b>Erasmus:</b> one row is one student report, numbers only.</p>
+        <p><b>Erasmus:</b> one row is one student report: costs, length of stay and rating, without names or free-text answers.</p>
         <ul class="cols">
           <li><code>hostUniversity</code>, <code>hostCountry</code>: where the student went</li>
           <li><code>stayFrom</code>, <code>stayMonths</code>: start (<code>YYYY-MM-DD</code>) and length in months</li>

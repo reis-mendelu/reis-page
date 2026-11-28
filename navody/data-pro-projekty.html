@@ -77,7 +77,8 @@ console.log(rows.filter(r => r.code === 'EBC-PJ'));</code></pre>
 df = pd.read_csv('https://cdn.jsdelivr.net/gh/reis-mendelu/reis-data@main/student-data/success-rates.csv')
 print(df[df.code == 'EBC-PJ'])</code></pre>
     <p class="lab">Java, soubor stažený vedle projektu:</p>
-<pre><code>var lines = Files.readAllLines(Path.of("success-rates.csv"));
+<pre><code>import java.nio.file.*;   // v metodě s throws IOException
+var lines = Files.readAllLines(Path.of("success-rates.csv"));
 String[] p = lines.get(1).split(",");   // první řádek po hlavičce</code></pre>
     <p class="hint">Některé řádky mají čárku v uvozovkách, takže jednoduchý <code>split</code> je občas rozbije. Na celý soubor použij knihovnu na CSV, třeba OpenCSV.</p>
 
@@ -107,7 +108,7 @@ String[] p = lines.get(1).split(",");   // první řádek po hlavičce</code></p
 <pre><code>{"code":"EBC-PJ","nameCs":"Programovací jazyk Java","facultyId":2,
  "semester":"ZS 2025/2026 - PEF","year":2025,"kind":"exam",
  "a":19,"b":12,"c":17,"d":13,"e":13,"f":4,"fn":1,"pass":74,"fail":5}</code></pre>
-        <p><b>Erasmus:</b> jeden řádek je jedna zpráva studenta, jen čísla.</p>
+        <p><b>Erasmus:</b> jeden řádek je jedna zpráva studenta: náklady, délka pobytu a hodnocení, bez jmen a volných odpovědí.</p>
         <ul class="cols">
           <li><code>hostUniversity</code>, <code>hostCountry</code>: kam student jel</li>
           <li><code>stayFrom</code>, <code>stayMonths</code>: začátek (<code>RRRR-MM-DD</code>) a délka v měsících</li>
