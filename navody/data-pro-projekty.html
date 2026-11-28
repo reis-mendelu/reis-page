@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Data pro projekty: úspěšnost předmětů a Erasmus z MENDELU (JSON, CSV) – reIS</title>
+<meta name="description" content="Skutečná data z MENDELU pro semestrální projekt v jakémkoli předmětu: úspěšnost předmětů 2005–2025 a čísla ze zpráv z Erasmu. JSON a CSV pro web, Javu, Python i databáze, bez registrace.">
+<link rel="canonical" href="https://reisapp.cz/navody/data-pro-projekty">
+<link rel="alternate" hreflang="cs" href="https://reisapp.cz/navody/data-pro-projekty">
+<link rel="alternate" hreflang="en" href="https://reisapp.cz/en/guides/project-data">
+<link rel="alternate" hreflang="x-default" href="https://reisapp.cz/navody/data-pro-projekty">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="cs_CZ">
+<meta property="og:site_name" content="reIS">
+<meta property="og:url" content="https://reisapp.cz/navody/data-pro-projekty">
+<meta property="og:title" content="Data pro projekty: skutečná data z MENDELU">
+<meta property="og:description" content="Úspěšnost předmětů a čísla z Erasmu pro tvůj projekt, ať je z webu, Javy, Pythonu nebo databází. JSON a CSV, bez registrace.">
+<meta property="og:image" content="https://reisapp.cz/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/reIS_logo.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/theme.css">
+<meta name="theme-color" content="#0d110e">
+<link href="/navod/fonts.css" rel="stylesheet">
+<link rel="stylesheet" href="/navody/guide.css">
+<script src="/ph.js"></script>
+<script src="/navody/guide.js" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","headline":"Data pro projekty: úspěšnost předmětů a Erasmus z MENDELU (JSON, CSV)","inLanguage":"cs","url":"https://reisapp.cz/navody/data-pro-projekty","datePublished":"2026-11-28","dateModified":"2026-11-28","author":{"@type":"Organization","name":"reIS","url":"https://reisapp.cz/"},"publisher":{"@id":"https://reisapp.cz/#org"},"about":"Otevřená data o úspěšnosti předmětů a zkušenostech z Erasmu pro studentské projekty na Mendelově univerzitě v Brně"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"reIS","item":"https://reisapp.cz/"},{"@type":"ListItem","position":2,"name":"Návody","item":"https://reisapp.cz/navody"},{"@type":"ListItem","position":3,"name":"Data pro projekty","item":"https://reisapp.cz/navody/data-pro-projekty"}]}]}</script>
+<style>
+.sec-h{margin:30px 0 12px;font-size:20px;font-weight:700;letter-spacing:-.01em;scroll-margin-top:16px}
+.ds{display:grid;gap:10px;margin:0 0 14px}
+.dset{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 16px;border-radius:14px;background:var(--surface);border:1.5px solid var(--border)}
+.dset b{display:block;font-size:16px;font-weight:600}
+.dset small{display:block;margin-top:2px;font-size:13px;color:var(--text-3)}
+.fmt{flex:none;display:flex;gap:6px}
+.fmt a{font-size:13px;font-weight:700;padding:8px 12px;border-radius:999px;background:var(--btn);color:var(--on-btn);text-decoration:none}
+.fmt a:hover{background:var(--btn-hover);color:var(--on-btn)}
+.asks li b{display:block}
+.asks li .ex{display:block;margin-top:2px;font-size:12px;font-weight:600;color:var(--accent-text)}
+pre{margin:0 0 18px;padding:12px 14px;border-radius:12px;background:var(--surface-2);border:1px solid var(--border);overflow-x:auto;font-size:13px;line-height:1.55;-webkit-overflow-scrolling:touch}
+pre code{background:none;border:0;padding:0;font-size:inherit;white-space:pre}
+.lab{margin:0 0 6px;font-size:13px;font-weight:600;color:var(--text-3)}
+.asks{list-style:none;margin:0 0 8px;padding:0;display:grid;gap:12px}
+.asks li{padding:2px 0 2px 14px;border-left:3px solid var(--accent);font-size:16px;font-weight:600;line-height:1.4}
+.asks small{display:block;margin-top:3px;font-size:13px;font-weight:400;color:var(--text-3)}
+.cols{margin:0 0 6px;padding:0;list-style:none}
+.cols li{margin:0 0 6px;font-size:15px;line-height:1.5;color:var(--text-2)}
+.cols code{font-size:.85em}
+</style>
+</head>
+<body>
+<div class="col">
+  <header>
+    <a class="brand" href="/"><img src="/assets/reIS_logo.svg" alt="" width="40" height="40"><span>reIS</span></a>
+    <a class="lang" href="/en/guides/project-data" hreflang="en" data-lang-switch="guide">EN</a>
+  </header>
+  <main>
+    <nav class="crumbs" aria-label="Drobečková navigace"><a href="/">reIS</a><span aria-hidden="true">›</span><a href="/navody">Návody</a><span aria-hidden="true">›</span><span aria-current="page">Data pro projekty</span></nav>
+    <h1>Data pro projekty</h1>
+    <p class="lead">Skutečná data z MENDELU pro tvůj semestrální projekt, ať je z jakéhokoli předmětu. Jeden odkaz, bez klíče a bez registrace. Použij je a uveď „data z reIS“.</p>
+
+    <h2 class="sec-h" id="data">Stáhni data</h2>
+    <div class="ds">
+      <div class="dset"><span><b>Úspěšnost předmětů</b><small>17 459 řádků, 2005–2025, všechny fakulty</small></span><span class="fmt"><a href="https://cdn.jsdelivr.net/gh/reis-mendelu/reis-data@main/student-data/success-rates.json">JSON</a><a href="https://cdn.jsdelivr.net/gh/reis-mendelu/reis-data@main/student-data/success-rates.csv">CSV</a></span></div>
+      <div class="dset"><span><b>Erasmus</b><small>1 717 zpráv, 189 univerzit, 28 zemí</small></span><span class="fmt"><a href="https://cdn.jsdelivr.net/gh/reis-mendelu/reis-data@main/student-data/erasmus.json">JSON</a><a href="https://cdn.jsdelivr.net/gh/reis-mendelu/reis-data@main/student-data/erasmus.csv">CSV</a></span></div>
+    </div>
+
+    <h2 class="sec-h" id="nacist">Jak je načíst</h2>
+    <p class="lab">Web (JavaScript), do konzole prohlížeče:</p>
+<pre><code>const url = 'https://cdn.jsdelivr.net/gh/reis-mendelu/reis-data@main/student-data/success-rates.json';
+const rows = await (await fetch(url)).json();
+console.log(rows.filter(r => r.code === 'EBC-PJ'));</code></pre>
+    <p class="lab">Python s pandas:</p>
+<pre><code>import pandas as pd
+df = pd.read_csv('https://cdn.jsdelivr.net/gh/reis-mendelu/reis-data@main/student-data/success-rates.csv')
+print(df[df.code == 'EBC-PJ'])</code></pre>
+    <p class="lab">Java, soubor stažený vedle projektu:</p>
+<pre><code>import java.nio.file.*;   // v metodě s throws IOException
+var lines = Files.readAllLines(Path.of("success-rates.csv"));
+String[] p = lines.get(1).split(",");   // první řádek po hlavičce</code></pre>
+    <p class="hint">Některé řádky mají čárku v uvozovkách, takže jednoduchý <code>split</code> je občas rozbije. Na celý soubor použij knihovnu na CSV, třeba OpenCSV.</p>
+
+    <h2 class="sec-h" id="napady">Co z toho postavit</h2>
+    <p class="lab">Předměty jsou jen příklady: nápad se hodí do kteréhokoli.</p>
+    <ul class="asks">
+      <li><b>Web</b><small>Graf, jak těžký je předmět v čase, nebo mapa univerzit pro Erasmus s cenou a hodnocením.</small><span class="ex">třeba Vývoj webových aplikací, Webové aplikace: frontend</span></li>
+      <li><b>Java, Python, C++</b><small>Konzolová aplikace s kódem předmětu, nebo REST API nad souborem.</small><span class="ex">třeba Programovací jazyk Java, Python</span></li>
+      <li><b>Databáze a SQL</b><small>Návrh databáze a dotazy: kde je nejvíc propadů, kam se jezdí nejlevněji.</small><span class="ex">třeba Databázové systémy a návrh databází</span></li>
+      <li><b>Mobilní aplikace</b><small>Aplikace „Kam na Erasmus“ s daty uloženými v telefonu.</small><span class="ex">třeba Vývoj aplikací pro Android a iOS</span></li>
+      <li><b>Statistika a umělá inteligence</b><small>Co souvisí s propadem předmětu, nebo kolik stojí Erasmus podle země.</small><span class="ex">třeba Statistika, Základy umělé inteligence</span></li>
+    </ul>
+
+    <div class="share-box" data-share-here></div>
+
+    <details id="sloupce">
+      <summary>Co je v souborech</summary>
+        <p><b>Úspěšnost předmětů:</b> jeden řádek je jeden předmět v jednom semestru.</p>
+        <ul class="cols">
+          <li><code>code</code>, <code>nameCs</code>, <code>nameEn</code>: kód a název předmětu</li>
+          <li><code>facultyId</code>: fakulta v IS (PEF 2, AF 14, FRRMS 23, LDF 38, ZF 60, ICV 220)</li>
+          <li><code>semester</code>, <code>year</code>: například <code>ZS 2025/2026 - PEF</code> a 2025</li>
+          <li><code>kind</code>: <code>exam</code> zkouška, <code>credit</code> zápočet</li>
+          <li><code>a</code> až <code>fn</code>: počty známek A, B, C, D, E, F, FN</li>
+          <li><code>pass</code>, <code>fail</code>: kolik studentů uspělo a neuspělo</li>
+        </ul>
+<pre><code>{"code":"EBC-PJ","nameCs":"Programovací jazyk Java","facultyId":2,
+ "semester":"ZS 2025/2026 - PEF","year":2025,"kind":"exam",
+ "a":19,"b":12,"c":17,"d":13,"e":13,"f":4,"fn":1,"pass":74,"fail":5}</code></pre>
+        <p><b>Erasmus:</b> jeden řádek je jedna zpráva studenta: náklady, délka pobytu a hodnocení, bez jmen a volných odpovědí.</p>
+        <ul class="cols">
+          <li><code>hostUniversity</code>, <code>hostCountry</code>: kam student jel</li>
+          <li><code>stayFrom</code>, <code>stayMonths</code>: začátek (<code>RRRR-MM-DD</code>) a délka v měsících</li>
+          <li><code>accommodationPerDay</code>, <code>foodPerDay</code>, <code>transportCost</code>, <code>totalCostCZK</code>: náklady, jak je student uvedl</li>
+          <li><code>grantCoveragePercent</code>: kolik procent pokryl grant</li>
+          <li><code>recognized</code>: <code>true</code> nebo <code>false</code>, zda se pobyt uznal</li>
+          <li><code>rating</code>: hodnocení 1 až 5</li>
+        </ul>
+<pre><code>{"hostUniversity":"FH Wien der WKW University of Applied Sciences for Management &amp; Communication",
+ "hostCountry":"Rakouská republika","stayFrom":"2024-02-05","stayMonths":4.9,
+ "accommodationPerDay":13,"foodPerDay":10,"transportCost":2000,
+ "totalCostCZK":80000,"grantCoveragePercent":80,"recognized":true,"rating":4}</code></pre>
+    </details>
+    <details id="pozor">
+      <summary>Na co si dát pozor</summary>
+        <ul>
+          <li><strong>Erasmus čísla jsou, jak je student napsal.</strong> Jednotky nejsou sjednocené (u ubytování se občas objeví cena za měsíc místo za den) a chybějící hodnota je <code>null</code>. Čištění dat je součást projektu.</li>
+          <li><strong>Jsou to agregovaná čísla.</strong> Nejsou tu jména studentů ani vyučujících, tak ať je v projektu nehledáš.</li>
+          <li><strong>Bez záruky.</strong> Statistiky přebíráme ze stránek IS MENDELU. Když data použiješ, uveď „data z reIS“.</li>
+        </ul>
+    </details>
+    <details id="zdroj">
+      <summary>Odkud data jsou</summary>
+        <p>Úspěšnost jsou čísla ze statistik předmětů v IS MENDELU. Erasmus jsou zprávy, které studenti odevzdali na MENDELU, bez jmen, e-mailů a volných odpovědí. Soubory a skript, který je skládá, jsou veřejné na <a href="https://github.com/reis-mendelu/reis-data/tree/main/student-data">GitHubu</a>.</p>
+    </details>
+    <p class="checked">Ověřeno 28. 11. 2026: oba soubory se otevřou a ukázka pro web funguje. reIS dělají studenti MENDELU, není to oficiální aplikace MENDELU.</p>
+    <p class="checked">Další návody: <a href="/navody/obory">Obory</a> · <a href="/navody/informatika-v-brne">Informatika v Brně</a> · <a href="/navody/prijimacky-mendelu">Přijímačky na MENDELU</a> · <a href="/navody/prvni-rocnik">První ročník</a> · <a href="/navody/koleje">Koleje</a> · <a href="/navody/uis">UIS MENDELU</a> · <a href="/navody/prihlaseni-na-zkousku">Přihlášení na zkoušku</a> · <a href="/navody/mapa-kampusu">Mapa kampusu</a> · <a href="/navody/eduroam">eduroam</a> · <a href="/navody/knihovna">Knihovna MENDELU</a> · <a href="/navody/menza">Menza a jídelníček</a> · <a href="/navody/predmety">Soubory a sylabus předmětu</a> · <a href="/navody/dobiti-isic">Dobití ISIC</a> · <a href="/navody/webiskam">WebISKAM</a> · <a href="/navody/potvrzeni-o-studiu">Potvrzení o studiu</a> · <a href="/navody/reis-v-claude">reIS pro Claude</a></p>
+  </main>
+  <footer>
+    <div style="display:flex;align-items:center;gap:12px"><img src="/assets/reIS_logo.svg" alt="" width="28" height="28"><span style="color:var(--text-3);line-height:1.5">reIS dělají studenti MENDELU.</span></div>
+    <nav><a href="/">reisapp.cz</a><a href="/navody">Návody</a><a href="/navod">Návod k instalaci</a><a href="/bezpecnost">Data a bezpečnost</a><a href="mailto:reis.mendelu@gmail.com">reis.mendelu@gmail.com</a></nav>
+  </footer>
+</div>
+</body>
+</html>
