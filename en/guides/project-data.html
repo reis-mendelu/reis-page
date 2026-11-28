@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Data for student projects: MENDELU success rates and Erasmus (JSON, CSV) – reIS</title>
-<meta name="description" content="Real MENDELU data for a web or Java course project: subject success rates 2005–2025 and numbers from Erasmus reports. JSON and CSV, no sign-up, no key.">
+<meta name="description" content="Real MENDELU data for a course project in any subject: subject success rates 2005–2025 and numbers from Erasmus reports. JSON and CSV for web, Java, Python and databases, no sign-up.">
 <link rel="canonical" href="https://reisapp.cz/en/guides/project-data">
 <link rel="alternate" hreflang="en" href="https://reisapp.cz/navody/data-pro-projekty">
 <link rel="alternate" hreflang="en" href="https://reisapp.cz/en/guides/project-data">
@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="reIS">
 <meta property="og:url" content="https://reisapp.cz/en/guides/project-data">
 <meta property="og:title" content="Data for student projects: real MENDELU data">
-<meta property="og:description" content="Subject success rates and Erasmus numbers for your web or Java project. JSON and CSV, no sign-up.">
+<meta property="og:description" content="Subject success rates and Erasmus numbers for your project, whether it is web, Java, Python or databases. JSON and CSV, no sign-up.">
 <meta property="og:image" content="https://reisapp.cz/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
@@ -30,14 +30,15 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","headline":"Data for student projects: MENDELU success rates and Erasmus (JSON, CSV)","inLanguage":"en","url":"https://reisapp.cz/en/guides/project-data","datePublished":"2026-11-28","dateModified":"2026-11-28","author":{"@type":"Organization","name":"reIS","url":"https://reisapp.cz/"},"publisher":{"@id":"https://reisapp.cz/#org"},"about":"Open data on subject success rates and Erasmus experiences for student projects at Mendel University in Brno"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"reIS","item":"https://reisapp.cz/en"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://reisapp.cz/en/guides"},{"@type":"ListItem","position":3,"name":"Project data","item":"https://reisapp.cz/en/guides/project-data"}]}]}</script>
 <style>
 .sec-h{margin:30px 0 12px;font-size:20px;font-weight:700;letter-spacing:-.01em;scroll-margin-top:16px}
-.jump{display:grid;gap:10px;margin:0 0 6px}
-@media (min-width:600px){.jump{grid-template-columns:repeat(2,1fr)}}
 .ds{display:grid;gap:10px;margin:0 0 14px}
-.ds a{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 16px;border-radius:14px;background:var(--surface);border:1.5px solid var(--border);text-decoration:none;color:var(--text)}
-.ds a:hover{border-color:var(--accent)}
-.ds b{display:block;font-size:16px;font-weight:600}
-.ds small{display:block;margin-top:2px;font-size:13px;color:var(--text-3)}
-.ds .big{flex:none;font-size:13px;font-weight:700;padding:6px 12px;border-radius:999px;background:var(--btn);color:var(--on-btn)}
+.dset{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 16px;border-radius:14px;background:var(--surface);border:1.5px solid var(--border)}
+.dset b{display:block;font-size:16px;font-weight:600}
+.dset small{display:block;margin-top:2px;font-size:13px;color:var(--text-3)}
+.fmt{flex:none;display:flex;gap:6px}
+.fmt a{font-size:13px;font-weight:700;padding:8px 12px;border-radius:999px;background:var(--btn);color:var(--on-btn);text-decoration:none}
+.fmt a:hover{background:var(--btn-hover);color:var(--on-btn)}
+.asks li b{display:block}
+.asks li .ex{display:block;margin-top:2px;font-size:12px;font-weight:600;color:var(--accent-text)}
 pre{margin:0 0 18px;padding:12px 14px;border-radius:12px;background:var(--surface-2);border:1px solid var(--border);overflow-x:auto;font-size:13px;line-height:1.55;-webkit-overflow-scrolling:touch}
 pre code{background:none;border:0;padding:0;font-size:inherit;white-space:pre}
 .lab{margin:0 0 6px;font-size:13px;font-weight:600;color:var(--text-3)}
@@ -58,43 +59,36 @@ pre code{background:none;border:0;padding:0;font-size:inherit;white-space:pre}
   <main>
     <nav class="crumbs" aria-label="Breadcrumb"><a href="/en">reIS</a><span aria-hidden="true">›</span><a href="/en/guides">Guides</a><span aria-hidden="true">›</span><span aria-current="page">Project data</span></nav>
     <h1>Data for student projects</h1>
-    <p class="lead">Real MENDELU data for a course project: subject success rates and numbers from Erasmus. One link, no key, no sign-up. Use it and credit “data from reIS”.</p>
+    <p class="lead">Real MENDELU data for your course project, whatever the subject. One link, no key, no sign-up. Use it and credit “data from reIS”.</p>
 
-    <div class="jump">
-      <a class="device" href="#web"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg><span><b>For web</b><small>JSON via fetch</small></span></a>
-      <a class="device" href="#java"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 8h1a4 4 0 0 1 0 8h-1"/><path d="M3 8h14v7a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4z"/><path d="M7 2v3M11 2v3"/></svg><span><b>For Java</b><small>CSV from a file</small></span></a>
-    </div>
-
-    <h2 class="sec-h" id="web">For web</h2>
+    <h2 class="sec-h" id="data">Get the data</h2>
     <div class="ds">
-      <a href="https://cdn.jsdelivr.net/gh/reis-mendelu/reis-data@main/student-data/success-rates.json"><span><b>Subject success rates</b><small>17,459 rows, 2005–2025, all faculties</small></span><span class="big">JSON</span></a>
-      <a href="https://cdn.jsdelivr.net/gh/reis-mendelu/reis-data@main/student-data/erasmus.json"><span><b>Erasmus</b><small>1,717 reports, 189 universities, 28 countries</small></span><span class="big">JSON</span></a>
+      <div class="dset"><span><b>Subject success rates</b><small>17,459 rows, 2005–2025, all faculties</small></span><span class="fmt"><a href="https://cdn.jsdelivr.net/gh/reis-mendelu/reis-data@main/student-data/success-rates.json">JSON</a><a href="https://cdn.jsdelivr.net/gh/reis-mendelu/reis-data@main/student-data/success-rates.csv">CSV</a></span></div>
+      <div class="dset"><span><b>Erasmus</b><small>1,717 reports, 189 universities, 28 countries</small></span><span class="fmt"><a href="https://cdn.jsdelivr.net/gh/reis-mendelu/reis-data@main/student-data/erasmus.json">JSON</a><a href="https://cdn.jsdelivr.net/gh/reis-mendelu/reis-data@main/student-data/erasmus.csv">CSV</a></span></div>
     </div>
-    <p class="lab">Paste into the browser console:</p>
+
+    <h2 class="sec-h" id="nacist">How to load it</h2>
+    <p class="lab">Web (JavaScript), in the browser console:</p>
 <pre><code>const url = 'https://cdn.jsdelivr.net/gh/reis-mendelu/reis-data@main/student-data/success-rates.json';
 const rows = await (await fetch(url)).json();
 console.log(rows.filter(r => r.code === 'EBC-PJ'));</code></pre>
-    <p class="lab">What to build:</p>
-    <ul class="asks">
-      <li>Chart: how hard a subject is over time<small>exam success by year, pick a subject</small></li>
-      <li>A map of Erasmus universities<small>cost per day and rating for each</small></li>
-      <li>An Erasmus cost calculator<small>how much money I need after the grant</small></li>
-    </ul>
-
-    <h2 class="sec-h" id="java">For Java</h2>
-    <div class="ds">
-      <a href="https://cdn.jsdelivr.net/gh/reis-mendelu/reis-data@main/student-data/success-rates.csv"><span><b>Subject success rates</b><small>17,459 rows, 2005–2025, all faculties</small></span><span class="big">CSV</span></a>
-      <a href="https://cdn.jsdelivr.net/gh/reis-mendelu/reis-data@main/student-data/erasmus.csv"><span><b>Erasmus</b><small>1,717 reports, 189 universities, 28 countries</small></span><span class="big">CSV</span></a>
-    </div>
-    <p class="hint">Some rows have a comma inside quotes, so a plain <code>split</code> sometimes breaks them. For the whole file use a CSV library, for example OpenCSV.</p>
-    <p class="lab">Download the file next to your project and read it:</p>
+    <p class="lab">Python with pandas:</p>
+<pre><code>import pandas as pd
+df = pd.read_csv('https://cdn.jsdelivr.net/gh/reis-mendelu/reis-data@main/student-data/success-rates.csv')
+print(df[df.code == 'EBC-PJ'])</code></pre>
+    <p class="lab">Java, with the file downloaded next to your project:</p>
 <pre><code>var lines = Files.readAllLines(Path.of("success-rates.csv"));
 String[] p = lines.get(1).split(",");   // first row after the header</code></pre>
-    <p class="lab">What to build:</p>
+    <p class="hint">Some rows have a comma inside quotes, so a plain <code>split</code> sometimes breaks them. For the whole file use a CSV library, for example OpenCSV.</p>
+
+    <h2 class="sec-h" id="napady">What to build</h2>
+    <p class="lab">The subjects are only examples: the idea fits any of them.</p>
     <ul class="asks">
-      <li>A console app that takes a subject code<small>prints its success rate by year</small></li>
-      <li>A REST API over the file<small>for example <code>/subjects/EBC-PJ</code>, in Spring Boot</small></li>
-      <li>A ranking of Erasmus universities<small>classes University and Report, sorted by rating and cost</small></li>
+      <li><b>Web</b><small>A chart of how hard a subject is over time, or a map of Erasmus universities with cost and rating.</small><span class="ex">for example Web Applications Development, Web Applications: Frontend</span></li>
+      <li><b>Java, Python, C++</b><small>A console app that takes a subject code, or a REST API over the file.</small><span class="ex">for example Java Programming Language, Python Programming Language</span></li>
+      <li><b>Databases and SQL</b><small>A database design and queries: where most students fail, where Erasmus is cheapest.</small><span class="ex">for example Database Systems and Database Design</span></li>
+      <li><b>Mobile apps</b><small>A “Where to go on Erasmus” app with the data stored on the phone.</small><span class="ex">for example Application Development for Android and iOS</span></li>
+      <li><b>Statistics and AI</b><small>What goes with failing a subject, or what Erasmus costs by country.</small><span class="ex">for example Statistics, Introduction to Artificial Intelligence</span></li>
     </ul>
 
     <div class="share-box" data-share-here></div>
